@@ -21,6 +21,7 @@ const PROJECTS = [
     type: 'B2B Catalog Platform',
     year: '2024',
     imgKey: 'MT',
+    url: 'https://mthelmets.com/es-es',
     role: "Built an international B2B platform for one of Europe's leading motorcycle helmet manufacturers. The platform supports dealer authentication, custom pricing tiers, and a multi-language product catalog spanning European markets.",
     detail: 'Custom Shopify Plus development with advanced B2B features: dealer-specific login, volume-based pricing logic, PDF catalog export, and multilingual support with Shopify Markets integration.'
   },
@@ -70,6 +71,22 @@ const PROJECTS = [
   }
 ];
 
+/* ── Browser bar ────────────────────────────────────────────── */
+function browserBar(p) {
+  const urlHtml = p.url
+    ? `<div class="bf-url bf-url--text" data-url="${p.url}" title="Copy URL">
+         <span class="bf-url-text">${p.url}</span>
+         <span class="bf-url-copied">Copied!</span>
+       </div>`
+    : `<div class="bf-url"></div>`;
+  return `<div class="bf-bar">
+    <span class="bf-dot r"></span>
+    <span class="bf-dot y"></span>
+    <span class="bf-dot g"></span>
+    ${urlHtml}
+  </div>`;
+}
+
 /* ── Image helpers ──────────────────────────────────────────── */
 function gridImg(p) {
   if (!p.imgKey) return '<div class="screen-placeholder"></div>';
@@ -94,12 +111,7 @@ function renderProjects() {
     >
       <div class="card-mockup">
         <div class="browser-frame">
-          <div class="bf-bar">
-            <span class="bf-dot r"></span>
-            <span class="bf-dot y"></span>
-            <span class="bf-dot g"></span>
-            <div class="bf-url"></div>
-          </div>
+          ${browserBar(p)}
           <div class="bf-screen">
             ${gridImg(p)}
           </div>
@@ -130,12 +142,7 @@ function openModal(id) {
 
   document.getElementById('modal-body').innerHTML = `
     <div class="modal-hero-frame browser-frame">
-      <div class="bf-bar">
-        <span class="bf-dot r"></span>
-        <span class="bf-dot y"></span>
-        <span class="bf-dot g"></span>
-        <div class="bf-url"></div>
-      </div>
+      ${browserBar(p)}
       <div class="bf-screen">
         ${bannerImg(p)}
       </div>
@@ -197,4 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
 
   document.getElementById('contact-form').addEventListener('submit', handleContactSubmit);
+
+  document.addEventListener('click', e => {
+    const bar = e.target.closest('.bf-url--text');
+    if (!bar) return;
+    e.stopPropagation();
+    navigator.clipboard.writeText(bar.dataset.url).then(() => {
+      bar.classList.add('copied');
+      setTimeout(() => bar.classList.remove('copied'), 1800);
+    });
+  });
 });

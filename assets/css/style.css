@@ -233,6 +233,44 @@ ul { list-style: none; }
   margin-left: 6px;
 }
 
+.bf-url--text {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.15s;
+}
+.bf-url--text:hover { background: #d8d8d8; }
+
+.bf-url-text {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.2s;
+}
+
+.bf-url-copied {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: #2a9d5c;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.bf-url--text.copied .bf-url-text { opacity: 0; }
+.bf-url--text.copied .bf-url-copied { opacity: 1; }
+
 .screen-placeholder {
   width: 100%;
   aspect-ratio: 16 / 10;
