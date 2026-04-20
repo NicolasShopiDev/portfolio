@@ -75,7 +75,8 @@
 
 html { scroll-behavior: smooth; font-size: 16px; }
 
-body { overflow-x: hidden; }
+body {
+  overflow-x: hidden;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--fg);
@@ -385,6 +386,33 @@ ul { list-style: none; }
 }
 .screen-img--banner { aspect-ratio: 16 / 7; display: block; width: 100%; }
 
+/* ── Scroll hint arrow ──────────────────────────────────────── */
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: 48px; height: 48px;
+  background: transparent;
+  border: 1.5px solid rgba(0,0,0,0.14);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg);
+  animation: scroll-hint-float 3s ease-in-out infinite;
+  opacity: 1;
+  transition: opacity 0.6s ease, border-color 0.2s;
+  z-index: 5;
+}
+.scroll-hint:hover { border-color: rgba(0,0,0,0.35); }
+.scroll-hint.is-hidden { opacity: 0; pointer-events: none; }
+
+@keyframes scroll-hint-float {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+
 /* ── Section common ─────────────────────────────────────────── */
 .section { padding: 128px 0; }
 
@@ -436,12 +464,12 @@ ul { list-style: none; }
   background: var(--bg);
   border: 1px solid var(--border);
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out),
-              opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-              translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+              opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              translate 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 10px 12px 48px rgba(0,0,0,0.07);
   outline: none;
   opacity: 0;
-  translate: 0 14px;
+  translate: 0 6px;
 }
 
 .project-card:nth-child(3n+1) {

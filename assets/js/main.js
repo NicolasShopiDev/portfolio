@@ -627,6 +627,18 @@ function initScrollReveal() {
   });
 }
 
+/* ── Scroll hint ────────────────────────────────────────────── */
+function initScrollHint() {
+  const hint = document.getElementById('scroll-hint');
+  if (!hint) return;
+  hint.addEventListener('click', () => {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', () => {
+    hint.classList.toggle('is-hidden', window.scrollY > 80);
+  }, { passive: true });
+}
+
 /* ── Contact form ───────────────────────────────────────────── */
 function handleContactSubmit(e) {
   e.preventDefault();
@@ -650,6 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
 
   initHeroParallax();
+  initScrollHint();
 
   document.getElementById('contact-form').addEventListener('submit', handleContactSubmit);
 
