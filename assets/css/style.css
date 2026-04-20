@@ -75,7 +75,7 @@
 
 html { scroll-behavior: smooth; font-size: 16px; }
 
-body {
+body { overflow-x: hidden; }
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--fg);
@@ -436,11 +436,12 @@ ul { list-style: none; }
   background: var(--bg);
   border: 1px solid var(--border);
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out),
-              opacity 0.55s var(--ease-out), translate 0.55s var(--ease-out);
+              opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: 10px 12px 48px rgba(0,0,0,0.07);
   outline: none;
   opacity: 0;
-  translate: 0 28px;
+  translate: 0 14px;
 }
 
 .project-card:nth-child(3n+1) {
@@ -918,7 +919,7 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
-  .section { padding: 80px 0; }
+  .section { padding: 72px 0; }
   .nav-inner { padding: 0 20px; }
   .hero-sticky { padding-left: 20px; padding-right: 20px; }
 
@@ -932,21 +933,55 @@ ul { list-style: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .skills-cols { grid-template-columns: 1fr 1fr; padding-top: 0; }
 
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-heading { position: static; }
   .form-row { grid-template-columns: 1fr; }
 
-  .modal-body { padding: 24px; }
-  .modal-meta { grid-template-columns: 1fr; gap: 32px; }
-  .modal-close { margin: 16px 16px -52px 0; }
+  .modal-body { padding: 20px; }
+  .modal-meta { grid-template-columns: 1fr; gap: 28px; }
+  .modal-close { margin: 12px 12px -52px 0; }
+
+  .footer-inner { gap: 24px; text-align: center; }
+  .footer-social { justify-content: center; }
 }
 
 @media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section { padding: 56px 0; }
+  .nav-inner { padding: 0 16px; }
+  .hero-sticky {
+    padding-top: calc(var(--nav-h) + 32px);
+    padding-bottom: 52px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .hero-heading { letter-spacing: 0.06em; }
-  .skills-cols { grid-template-columns: 1fr; }
+  .hero-sub { font-size: 15px; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .btn { padding: 12px 22px; font-size: 13px; }
+
   .section-heading { font-size: clamp(32px, 10vw, 48px); }
+  .section-desc { font-size: 14px; }
+
+  .skills-cols { grid-template-columns: 1fr; gap: 24px; }
+  .about-heading { font-size: clamp(22px, 6vw, 32px); }
+  .about-text { font-size: 14px; }
+
   .contact-heading { font-size: clamp(36px, 11vw, 52px); }
-  .footer-inner { gap: 24px; }
+  .contact-desc { font-size: 14px; }
+  .clink { min-height: 44px; padding: 8px 0; }
+
+  .nav-logo-img { height: 18px; }
+  .nav-cta { padding: 7px 16px; font-size: 13px; }
+
+  .card-info { padding: 16px 16px 18px; }
+
+  .modal-body { padding: 16px; }
+  .modal-slogan { font-size: clamp(18px, 5vw, 24px); }
+
+  .footer-inner { gap: 20px; }
+  .footer-bio { font-size: 13px; }
 }
 
 /* ── Accessibility: reduced motion ──────────────────────────── */
