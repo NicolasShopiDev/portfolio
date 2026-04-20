@@ -22,6 +22,7 @@ const PROJECTS = [
     year: '2024',
     imgKey: 'MT',
     url: 'https://mthelmets.com/es-es',
+    slogan: 'A RIDING LEGACY',
     role: "Built an international B2B platform for one of Europe's leading motorcycle helmet manufacturers. The platform supports dealer authentication, custom pricing tiers, and a multi-language product catalog spanning European markets.",
     detail: 'Custom Shopify Plus development with advanced B2B features: dealer-specific login, volume-based pricing logic, PDF catalog export, and multilingual support with Shopify Markets integration.'
   },
@@ -141,6 +142,7 @@ function openModal(id) {
   if (!p) return;
 
   document.getElementById('modal-body').innerHTML = `
+    <h2 class="modal-title" id="modal-title">${p.name}</h2>
     <div class="modal-hero-frame browser-frame">
       ${browserBar(p)}
       <div class="bf-screen">
@@ -155,7 +157,7 @@ function openModal(id) {
         <div class="card-tags" style="margin-top:8px">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
       </div>
       <div class="modal-meta-right">
-        <h3 id="modal-title">${p.name}</h3>
+        ${p.slogan ? `<p class="modal-slogan">${p.slogan}</p>` : ''}
         <p>${p.role}</p>
         <p>${p.detail}</p>
       </div>
