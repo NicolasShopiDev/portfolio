@@ -739,6 +739,26 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
+.banner-visit {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--fg);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.2s var(--ease);
+  white-space: nowrap;
+}
+.banner-visit span { font-size: 15px; }
+.banner-visit:hover { background: #f0f0f0; transform: translateY(-2px); }
+
 .modal-slogan {
   font-family: var(--font-display);
   font-size: clamp(22px, 3vw, 32px);
