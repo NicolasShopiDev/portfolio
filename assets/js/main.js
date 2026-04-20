@@ -645,12 +645,35 @@ function initScrollHint() {
 }
 
 /* ── Contact form ───────────────────────────────────────────── */
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('[type="submit"]');
-  btn.textContent = "Sent! I'll be in touch soon.";
+  const form = e.target;
+  const btn = form.querySelector('[type="submit"]');
+  const original = btn.textContent;
+
+  btn.textContent = 'Sending…';
   btn.disabled = true;
-  btn.style.opacity = '0.65';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      btn.textContent = "Sent! I'll be in touch soon.";
+      btn.style.opacity = '0.65';
+      form.reset();
+    } else {
+      btn.textContent = 'Something went wrong — try again.';
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = original; }, 3000);
+    }
+  } catch {
+    btn.textContent = 'Something went wrong — try again.';
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = original; }, 3000);
+  }
 }
 
 /* ── Init ───────────────────────────────────────────────────── */
