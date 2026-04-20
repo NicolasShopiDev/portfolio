@@ -73,10 +73,9 @@
   --nav-h: 64px;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 
 body {
-  overflow-x: hidden;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--fg);

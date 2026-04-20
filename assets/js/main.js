@@ -572,6 +572,7 @@ function initHeroParallax() {
 
   const moveEls = mocks.map(m => m.querySelector('.mock-move'));
   const hovering = new Set();
+  const wasVisible = new Array(mocks.length).fill(false);
   let heroVisible = true;
 
   const observer = new IntersectionObserver(
@@ -592,12 +593,16 @@ function initHeroParallax() {
     const t = ts / 1000;
     const progress = Math.min(1, window.scrollY / window.innerHeight);
 
+    const sy = window.scrollY;
     mocks.forEach((mock, i) => {
       const { threshold, spd, freq, amp, phase } = CFG[i];
-      mock.classList.toggle('is-visible', progress >= threshold);
-
+      const visible = progress >= threshold;
+      if (visible !== wasVisible[i]) {
+        mock.classList.toggle('is-visible', visible);
+        wasVisible[i] = visible;
+      }
       const floatY  = amp * Math.sin(2 * Math.PI * freq * t + phase);
-      const scrollY = hovering.has(i) ? -10 : window.scrollY * spd;
+      const scrollY = hovering.has(i) ? -10 : sy * spd;
       moveEls[i].style.transform = `translateY(${(floatY + scrollY).toFixed(2)}px)`;
     });
   }
