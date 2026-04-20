@@ -620,8 +620,9 @@ function initScrollReveal() {
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
+  const cols = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
   document.querySelectorAll('.project-card').forEach((card, i) => {
-    card.style.transitionDelay = `${(i % 3) * 75}ms`;
+    card.style.transitionDelay = `${(i % cols) * 100}ms`;
     observer.observe(card);
   });
 }
