@@ -778,7 +778,7 @@ ul { list-style: none; }
 /* ── Highlights grid ────────────────────────────────────────── */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-top: 40px;
   padding-top: 40px;
@@ -795,13 +795,11 @@ ul { list-style: none; }
 .highlight-item img {
   width: 100%;
   display: block;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
   transition: transform 0.4s var(--ease);
 }
 
-.highlight-item:hover img { transform: scale(1.04); }
+.highlight-item:hover img { transform: scale(1.02); }
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
