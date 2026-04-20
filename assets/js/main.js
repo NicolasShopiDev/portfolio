@@ -142,11 +142,14 @@ function openModal(id) {
   if (!p) return;
 
   document.getElementById('modal-body').innerHTML = `
-    <h2 class="modal-title" id="modal-title">${p.name}</h2>
     <div class="modal-hero-frame browser-frame">
       ${browserBar(p)}
       <div class="bf-screen">
-        ${bannerImg(p)}
+        <div class="banner-wrap">
+          ${bannerImg(p)}
+          <div class="banner-overlay"></div>
+          <h2 class="banner-title" id="modal-title">${p.name}</h2>
+        </div>
       </div>
     </div>
     <div class="modal-meta">
