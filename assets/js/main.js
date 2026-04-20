@@ -453,7 +453,7 @@ function highlightsGrid(p) {
     <div class="highlights-grid">
       ${p.highlights.map(file => `
         <div class="highlight-item">
-          <img src="${imgPath(p, file)}" alt="" loading="lazy" />
+          <img src="${imgPath(p, file)}" alt="${p.name} — project highlight" loading="lazy" />
         </div>
       `).join('')}
     </div>
@@ -533,7 +533,7 @@ function openModal(id) {
   const overlay = document.getElementById('modal-overlay');
   overlay.setAttribute('aria-hidden', 'false');
   overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('no-scroll');
 
   document.getElementById('modal-close').focus();
 }
@@ -542,12 +542,69 @@ function closeModal() {
   const overlay = document.getElementById('modal-overlay');
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+  document.body.classList.remove('no-scroll');
 }
 
 /* ── Nav scroll effect ──────────────────────────────────────── */
 function onScroll() {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+}
+
+/* ── Hero parallax ──────────────────────────────────────────── */
+function initHeroParallax() {
+  const hero = document.getElementById('hero');
+  const mocks = Array.from(hero.querySelectorAll('.float-mock'));
+  if (!mocks.length) return;
+
+  // threshold: fraction of 1vh scroll to appear
+  // spd: parallax px per px scrolled (neg = moves up faster, pos = slower)
+  // freq: float oscillation Hz  amp: float amplitude px  phase: sine offset
+  const CFG = [
+    { threshold: 0.00, spd: -0.07, freq: 0.18, amp: 6, phase: 0              },
+    { threshold: 0.12, spd:  0.11, freq: 0.22, amp: 7, phase: Math.PI * 0.7  },
+    { threshold: 0.22, spd: -0.05, freq: 0.16, amp: 5, phase: Math.PI * 1.3  },
+    { threshold: 0.32, spd:  0.09, freq: 0.20, amp: 6, phase: Math.PI * 0.4  },
+    { threshold: 0.42, spd: -0.08, freq: 0.19, amp: 7, phase: Math.PI * 1.8  },
+  ];
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    mocks.forEach(m => m.classList.add('is-visible'));
+    return;
+  }
+
+  const moveEls = mocks.map(m => m.querySelector('.mock-move'));
+  const hovering = new Set();
+  let heroVisible = true;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => { heroVisible = entry.isIntersecting; },
+    { threshold: 0 }
+  );
+  observer.observe(hero);
+
+  mocks.forEach((mock, i) => {
+    mock.addEventListener('mouseenter', () => { hovering.add(i);    mock.classList.add('is-hovering'); });
+    mock.addEventListener('mouseleave', () => { hovering.delete(i); mock.classList.remove('is-hovering'); });
+  });
+
+  function loop(ts) {
+    requestAnimationFrame(loop);
+    if (window.innerWidth <= 1024 || !heroVisible) return;
+
+    const t = ts / 1000;
+    const progress = Math.min(1, window.scrollY / window.innerHeight);
+
+    mocks.forEach((mock, i) => {
+      const { threshold, spd, freq, amp, phase } = CFG[i];
+      mock.classList.toggle('is-visible', progress >= threshold);
+
+      const floatY  = amp * Math.sin(2 * Math.PI * freq * t + phase);
+      const scrollY = hovering.has(i) ? -10 : window.scrollY * spd;
+      moveEls[i].style.transform = `translateY(${(floatY + scrollY).toFixed(2)}px)`;
+    });
+  }
+
+  requestAnimationFrame(loop);
 }
 
 /* ── Contact form ───────────────────────────────────────────── */
@@ -571,7 +628,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  initHeroParallax();
+
   document.getElementById('contact-form').addEventListener('submit', handleContactSubmit);
+
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   document.addEventListener('click', e => {
     const bar = e.target.closest('.bf-url--text');
