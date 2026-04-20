@@ -19,8 +19,8 @@ const PROJECTS = [
       '696e8d5e3af2eb460228ecd0_Coleccion hifas.png',
       '696e8d5e2a5402616a62ff62_Grid home Hifas.png',
     ],
-    role: 'Built a comprehensive B2B ecommerce platform for a biotech company specializing in medicinal mushroom supplements. The project included custom pricing tiers, a wholesale portal, and advanced product filtering tailored for health professionals.',
-    detail: 'Custom Shopify B2B implementation featuring tiered wholesale pricing, customer segment-based catalog visibility, performance-optimized product pages, and a streamlined checkout experience supporting both B2C and B2B flows.'
+    role: 'Architected a comprehensive B2B ecommerce platform for a leading biotech company specializing in medicinal mushroom supplements. Delivered a full-stack Shopify B2B solution with tiered wholesale pricing, a dedicated professional portal, and advanced product filtering tailored for healthcare practitioners.',
+    detail: 'Custom Shopify B2B implementation: customer segment-based catalog visibility, performance-optimized product pages with lazy-loaded media, streamlined dual-flow checkout supporting both B2C and B2B transactions, and a clinical-grade product information architecture.'
   },
   {
     id: 2,
@@ -39,8 +39,8 @@ const PROJECTS = [
       '696e86b213d3a33c62003fc6_Carrito b2b.png',
     ],
     slogan: 'A RIDING LEGACY',
-    role: "Built an international B2B platform for one of Europe's leading motorcycle helmet manufacturers. The platform supports dealer authentication, custom pricing tiers, and a multi-language product catalog spanning European markets.",
-    detail: 'Custom Shopify Plus development with advanced B2B features: dealer-specific login, volume-based pricing logic, PDF catalog export, and multilingual support with Shopify Markets integration.'
+    role: "Built an international B2B catalog platform for one of Europe's leading motorcycle helmet manufacturers, enabling dealer networks across multiple European markets through a custom Shopify Plus implementation.",
+    detail: 'Dealer-specific authentication with volume-based pricing logic, PDF catalog export functionality, multilingual storefront via Shopify Markets integration, and a custom collection architecture supporting complex variant management.'
   },
   {
     id: 3,
@@ -59,11 +59,33 @@ const PROJECTS = [
       '696e81952e43857cb5eb4174_producto cosmeticos.png',
       '696e81c9de2a9a2ea9992987_Coleccion cosmeticos.png',
     ],
-    role: 'Upgraded and optimized a high-traffic beauty ecommerce store with advanced faceted filtering, B2B wholesale features, and measurable Core Web Vitals improvements.',
-    detail: 'Delivered a full Shopify Plus overhaul including custom collection filtering, B2B customer portal, drawer cart optimization, lazy-loading improvements, and a redesigned product detail page for higher conversion.'
+    role: 'Delivered a full Shopify Plus overhaul for a high-traffic beauty retailer, targeting measurable Core Web Vitals improvements alongside new B2B wholesale capabilities and a redesigned conversion funnel.',
+    detail: 'Shopify Plus optimization: advanced faceted collection filtering, B2B customer portal with tiered pricing, optimized drawer cart with lazy-loading, and a redesigned product detail page that demonstrably improved conversion metrics.'
   },
   {
     id: 4,
+    name: 'Ewheel B2B',
+    badge: 'Shopify B2B',
+    tags: ['Shopify B2B', 'WebSockets', 'Custom Features', 'Mobility'],
+    client: 'Ewheel',
+    type: 'B2B Ecommerce',
+    year: '2024',
+    imgDir: 'Ewheel B2B',
+    imgKey: 'Ewheel',
+    bannerExt: 'webp',
+    url: 'https://ewheel.es/',
+    slogan: 'MAKE LIFE ELECTRIC',
+    highlights: [
+      '69693eb898aeb2c388f0f4fc_Choose options.png',
+      '69693f242e4056a82bfbad25_My account.png',
+      '69693f24a70bb7eae9ad7aca_Cart ewheel.png',
+      '69693f51819a7bf7695d2b82_Home.png',
+    ],
+    role: "Engineered a next-generation B2B ecommerce platform for Spain's leading electric mobility retailer, introducing real-time collaborative cart functionality via WebSockets — a first for the client's Shopify environment.",
+    detail: 'Custom Shopify B2B features: real-time multi-user cart synchronization using WebSockets, high-performance responsive variant grid handling complex inventory logic (units vs. boxes), corporate account management, and a dealer portal with tiered pricing visibility.'
+  },
+  {
+    id: 5,
     name: 'CoastBCN',
     badge: 'Shopify',
     tags: ['Shopify', 'Liquid', 'Custom Features', 'Fashion'],
@@ -80,11 +102,11 @@ const PROJECTS = [
       '667055cad1001f3f5ab2e061_Product BCN.png',
       '667055caa06afa3da2078019_Collections BCN.png',
     ],
-    role: "As a developer collaborating with Reduncle for CoastBCN, I maintained their Shopify storefront and shipped several custom features — including a fully customizable scrolling banner and a quick-add-to-cart flow that lets customers select size directly from the product grid.",
-    detail: 'Custom Shopify features delivered: adjustable-speed announcement banner, quick-add with size picker from collection grids, custom drawer cart redesign, out-of-stock badge system, and password page customization.'
+    role: 'Collaborated with Reduncle agency on an ongoing Shopify development engagement for a Barcelona-based fashion brand, delivering high-impact UX improvements and custom storefront features.',
+    detail: 'Shipped: configurable-speed announcement banner, quick-add with inline size selection from collection grids, custom drawer cart redesign, automated out-of-stock badge logic, and a bespoke password page experience.'
   },
   {
-    id: 5,
+    id: 6,
     name: 'Fernando García',
     badge: 'Shopify Plus',
     tags: ['Shopify Plus', 'Fashion', 'Liquid', 'Custom Theme'],
@@ -102,11 +124,11 @@ const PROJECTS = [
       '667060c4f2fe2e92094f8e6a_chrome-capture-2024-6-17 (3).png',
       '667060a8c2259e99e56a7e89_chrome-capture-2024-6-17 (1).png',
     ],
-    role: 'Custom Shopify Plus theme development for a premium Spanish fashion brand. Delivered an elegant, performance-focused storefront with tailored UI components and international market support.',
-    detail: 'End-to-end theme build: optimized LCP and layout shift scores, custom collection filtering with live updates, dynamic size guide modals, wishlist integration, and Shopify Markets configuration for multi-currency.'
+    role: 'End-to-end custom Shopify Plus theme development for a premium Spanish fashion brand — from architecture to launch — with a strong focus on performance scores and international market readiness.',
+    detail: 'Custom theme with optimized LCP and CLS scores, live-update collection filtering, dynamic size guide modals, wishlist integration, and Shopify Markets configuration for multi-currency and multi-region support.'
   },
   {
-    id: 6,
+    id: 7,
     name: 'El Capote',
     badge: 'Shopify',
     tags: ['Shopify', 'Liquid', 'Promotions', 'Fashion'],
@@ -124,9 +146,272 @@ const PROJECTS = [
       '66705738116d9b0cd63c7f4c_Product.png',
       '667057e1c00da3e9cfb1aebf_Casillas (1).png',
     ],
-    role: 'Custom Shopify development for a Spanish menswear brand, focusing on promotional mechanics and specialized product showcases for their seasonal collections.',
-    detail: 'Built custom promo campaign components: countdown timers, bundle-based discount messaging, specialized product cards with multi-image hover, and a configurable featured collection module.'
-  }
+    role: 'Custom Shopify development for a storied Spanish menswear brand specializing in traditional equestrian fashion, focused on promotional campaign mechanics and rich product storytelling.',
+    detail: 'Delivered: countdown timer components for seasonal campaigns, bundle discount messaging, multi-image hover product cards, and a configurable featured collection module for editorial-style layouts.'
+  },
+  {
+    id: 8,
+    name: 'Adamina',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'UX', 'Jewelry'],
+    client: 'Adamina',
+    type: 'Shopify Customization',
+    year: '2023',
+    imgDir: 'Adamina',
+    imgKey: 'Adamina',
+    bannerExt: 'jpg',
+    url: 'https://www.adaminajewelry.com/',
+    slogan: 'Redefining Jewelry Brilliance',
+    highlights: [
+      '667028bd2dfdc5f7e21187e5_Adamina colecctions.png',
+      '667028bd787e325a4664cda5_Adamina product.png',
+      '667028bc3963a3304e3895d9_Product grid.png',
+      '667028bc3d05ca5816996f31_Adamina home.png',
+    ],
+    role: 'Ongoing Shopify customization and UX enhancement for a contemporary jewelry brand through Reduncle agency, improving product discovery and post-purchase upsell performance.',
+    detail: 'Implemented: horizontal scroll product grid for editorial collection layouts, customized product detail page with variant-specific media, in-cart upsell integration, and UX refinements to support conversion optimization.'
+  },
+  {
+    id: 9,
+    name: 'HD Cosmetics',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'Performance', 'Beauty'],
+    client: 'HD Cosmetics',
+    type: 'Shopify Maintenance',
+    year: '2023',
+    imgDir: 'HD Cosmetics',
+    imgKey: 'HD',
+    bannerExt: 'webp',
+    url: 'https://hddermocosmetics.com/',
+    slogan: 'SENSE OF TOUCH',
+    highlights: [
+      '66714a5621c86e15d2caca64_Blog grid.png',
+      '66714a552f4f40cc2c011d8a_Entrar.png',
+      '66714a567564c9568e606d0c_Mas info.png',
+      '66714a55e437391766d0dacf_Product.png',
+    ],
+    role: 'Provided targeted Shopify development and maintenance for an established dermocosmetics brand through Reduncle agency, delivering seasonal campaign features, app customizations, and ongoing site improvements.',
+    detail: 'Seasonal Black Friday cart modifications, promotional offer management, app-level customization for brand-specific workflows, and responsive layout fixes ensuring consistency across all device types.'
+  },
+  {
+    id: 10,
+    name: 'Born Living Yoga',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'Sustainability', 'Fashion'],
+    client: 'Born Living Yoga',
+    type: 'Shopify Customization',
+    year: '2022',
+    imgDir: 'Born Living Yoga',
+    imgKey: 'BLY',
+    bannerExt: 'jpg',
+    url: 'https://bornlivingyoga.com',
+    slogan: 'Uniting mind, body, and planet',
+    highlights: [
+      '66705368bf754ee70db1f1fc_BLY Colecctions.png',
+      '667053671bb969becc00dccc_Completa tu look.png',
+      '66705367a0f37ddd043158ce_Drawer cart.png',
+      '66705367031d146cd5750504_Producto.png',
+    ],
+    role: 'Delivered feature enhancements and UX improvements for a sustainable yoga lifestyle brand through Shopigurus agency, streamlining the product discovery and purchase flow across key conversion touchpoints.',
+    detail: 'Quick-add from collection grids, custom "Complete your look" cross-sell module, editable product tag customization, and drawer cart refinements to reduce friction in the purchase journey.'
+  },
+  {
+    id: 11,
+    name: 'Qurado',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'Custom Theme', 'DTC'],
+    client: 'Qurado',
+    type: 'Custom Theme',
+    year: '2023',
+    imgDir: 'Qurado',
+    imgKey: 'Qurado',
+    bannerExt: 'jpg',
+    url: 'https://qurado.es/',
+    slogan: 'REAL PRODUCTS. NO MIDDLEMEN.',
+    highlights: [
+      '66673a740265050e492841d5_chrome-capture-2024-6-10.png',
+      '666c17a9e8fc6ab713443aa1_Reviews.gif',
+      '666c1c4496d47aba901e0165_93088f09-b651-43d6-a845-b505dcd635b7.gif',
+    ],
+    role: 'Developed a fully customized Shopify storefront for an emerging direct-to-consumer brand in collaboration with Shopigurus agency, following a provided design system and delivering a brand-coherent, conversion-optimized experience.',
+    detail: 'Custom theme with pixel-accurate design execution, enhanced product discovery with custom filtering, brand-aligned typography and color system, and a streamlined mobile-first checkout flow.'
+  },
+  {
+    id: 12,
+    name: 'Name The Brand',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'Custom Features', 'Fashion'],
+    client: 'Name The Brand',
+    type: 'Shopify Customization',
+    year: '2023',
+    imgDir: 'Name The Brand',
+    imgKey: 'NTB',
+    bannerExt: 'jpg',
+    slogan: 'Sunlight birds',
+    highlights: [
+      '667d9d73777e3e1f2752dc09_Collections.png',
+      '667d9d7320d47ee73e026da5_Home grid.png',
+      '667d9d737e300ef925dad85c_Product.png',
+      '667d9d73f534efba7f6a656d_Products home.png',
+    ],
+    role: 'Provided ongoing Shopify customization and app integration for a fashion retailer through Shopigurus agency, delivering targeted feature enhancements and a more conversion-optimized storefront.',
+    detail: 'Custom product form modifications, automated discount badge tagging for sale items, smart search integration, cart upsell logic, and third-party app customizations to match precise brand requirements.'
+  },
+  {
+    id: 13,
+    name: 'Moncho Moreno',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'Performance', 'Beauty'],
+    client: 'Moncho Moreno',
+    type: 'Shopify Maintenance',
+    year: '2021 - 2022',
+    imgDir: 'Moncho Moreno',
+    imgKey: 'Moncho',
+    bannerExt: 'jpg',
+    url: 'https://monchomoreno.com/',
+    slogan: 'Hair surgeons',
+    highlights: [
+      '66714778c5d9c74a14351cd3_Carrito.png',
+      '66714778c5bbc6c2614e4388_Info.png',
+      '667147788dd3319daa098bce_Ingredientes.png',
+      '667147783a9c99d1e6b94ddd_Marcas.png',
+    ],
+    role: 'Led ongoing Shopify development and technical strategy for a premium Spanish haircare brand at VRANDED HAUS, serving as their primary development partner across a multi-year engagement.',
+    detail: 'Weekly technical audits, custom user profile system with order history, complex app installations and integrations, promotional mechanics, and paid media oversight — consistent improvements delivered across a 12+ month retainer.'
+  },
+  {
+    id: 14,
+    name: 'The Villa Concept',
+    badge: 'Shopify',
+    tags: ['Shopify', 'Liquid', 'Optimization', 'Lifestyle'],
+    client: 'The Villa Concept',
+    type: 'Shopify Maintenance',
+    year: '2021',
+    imgDir: 'The villa concept',
+    imgKey: 'TVC',
+    bannerExt: 'jpg',
+    url: 'https://www.thevillaconcept.com/',
+    slogan: 'Timeless Elegance',
+    highlights: [
+      '667022d7280fd18ab14a344b_TVC grid de colecciones.png',
+      '667022d7abfff397937dde1d_TVC product.png',
+      '667022d7a680c63319ba31b5_TVC destacados.png',
+      '667025e38a82ff6606a76844_TVC home.png',
+    ],
+    role: 'Provided ongoing Shopify development and maintenance for a high-end lifestyle brand at VRANDED HAUS, replacing costly third-party app subscriptions with lean, purpose-built internal solutions.',
+    detail: 'Daily site maintenance, custom feature development, and an app replacement strategy that eliminated recurring SaaS costs — bespoke Liquid and JavaScript components for wishlist, recently viewed, and promotional logic.'
+  },
+  {
+    id: 15,
+    name: 'Quipu',
+    badge: 'Webflow',
+    tags: ['Webflow', 'SaaS', 'Multilingual', 'No-code'],
+    client: 'Quipu',
+    type: 'Webflow Site',
+    year: '2023',
+    imgDir: 'Quipu',
+    imgKey: 'Quipu',
+    bannerExt: 'png',
+    url: 'https://getquipu.com',
+    slogan: 'A new way to manage your business',
+    highlights: [
+      '66706244c64fcda6601f878a_Chat with us.png',
+      '66706244f0ea0325ad25772f_Compare plans.png',
+      '66706244e98377532e17a998_Home.png',
+    ],
+    role: "Built Quipu's current website from scratch in Webflow, supporting a multilingual SaaS product targeting freelancers and SMEs across Spain, France, and Catalonia.",
+    detail: 'Full Webflow build with 4-language support (ES/FR/EN/CA), custom pricing page architecture, interactive product tour sections, academy video integration, and an SEO-optimized content structure for competitive SaaS markets.'
+  },
+  {
+    id: 16,
+    name: 'Ardevisual',
+    badge: 'Webflow',
+    tags: ['Webflow', 'Agency', 'Creative', 'UX'],
+    client: 'Ardevisual',
+    type: 'Webflow Site',
+    year: '2023',
+    imgDir: 'Ardevisual',
+    imgKey: 'Ardevisual',
+    bannerExt: 'webp',
+    url: 'https://www.ardevisual.com/',
+    slogan: '#Empowering you',
+    highlights: [
+      '667d94b9d2203b78da93d29c_chrome-capture-2024-6-27 (2).png',
+      '667d94ba9af726c33abb92bf_HOME GRID.png',
+      '667d94ba290fe29016c365ae_WORK.png',
+      '667d94f976de3f48ba562c3f_fOOTER.png',
+    ],
+    role: 'Took full creative and technical ownership of a complete website rebuild for a Spanish audiovisual production agency, designing and developing the entire Webflow site from scratch without a provided design brief.',
+    detail: 'Competitor-informed UI design, animated hero sections, custom portfolio filtering system, performance-optimized media delivery, and a contact-driven conversion architecture.'
+  },
+  {
+    id: 17,
+    name: 'Amagi Coach',
+    badge: 'Webflow',
+    tags: ['Webflow', 'Coaching', 'Animation', 'Brand'],
+    client: 'Amagi Coach',
+    type: 'Webflow Site',
+    year: '2021',
+    imgDir: 'Amagi Coach',
+    imgKey: 'Amagi',
+    bannerExt: 'jpg',
+    gridExt: 'gif',
+    url: 'https://amagi.coach/',
+    slogan: 'Facilitating change',
+    highlights: [
+      '66704d9f278e2ad2f20b10fd_Home Amagi.gif',
+      '66704e5a40f33573f312003e_Amagi valores.png',
+      '66705043281b3c8a9550f783_Blog hover Amagi.gif',
+      '6670508bc4d01481fef16b6a_Planes Amagi.png',
+    ],
+    role: 'Led end-to-end Webflow development for a coaching brand at VRANDED HAUS, bringing to life a highly creative and unconventional visual identity that challenged standard implementation patterns.',
+    detail: 'Cookie-aware ambient audio player to avoid repeat intrusions on return visits, fluid animated page transitions, custom interactive components, and a performance-tuned CMS architecture for blog and coaching content.'
+  },
+  {
+    id: 18,
+    name: "Es Racó d'Artà",
+    badge: 'Webflow',
+    tags: ['Webflow', 'Hospitality', 'Interactive', 'UX'],
+    client: "Es Racó d'Artà",
+    type: 'Webflow Site',
+    year: '2021',
+    imgDir: 'Es Raco',
+    imgKey: 'EsRaco',
+    bannerExt: 'png',
+    gridExt: 'gif',
+    url: 'https://www.esracodarta.com/',
+    slogan: "ES RACÓ D'ARTÁ IS NOT A HOTEL",
+    highlights: [
+      '66705c6e941944636d5cc16f_El camino de es raco.png',
+      '66705c6e56320aff65c7ded6_Es raco pop up.png',
+      '66705c7074c3c4942ef83ebd_Respira.png',
+      '66705ce1f176eb1f35d91e5d_Mapa.png',
+    ],
+    role: "Co-developed an immersive Webflow experience for a boutique rural hotel in Mallorca at VRANDED HAUS, prioritizing experiential UX with interactive map features and a unique sound-based ambient brand experience.",
+    detail: 'Cookie-aware ambient audio that avoids repeat intrusions, interactive property map showcasing areas and activities, immersive image galleries, and a UX-first booking flow that mirrors the serenity of the destination.'
+  },
+  {
+    id: 19,
+    name: 'Prrimital',
+    badge: 'Webflow',
+    tags: ['Webflow', 'Fashion', 'Animation', 'Brand'],
+    client: 'Prrimital',
+    type: 'Webflow Site',
+    year: '2021',
+    imgDir: 'Prrimital',
+    imgKey: 'Prrimital',
+    bannerExt: 'jpg',
+    gridExt: 'gif',
+    url: 'https://www.prrimital.com/',
+    slogan: 'Back to the Origin.',
+    highlights: [
+      '66719d12ea1ebe57011232b3_Carta grid.png',
+      '66719d121e159a02d5fdf2a8_Carta.png',
+      '66719d12c254f9c50ddeb893_Prrenz.gif',
+    ],
+    role: 'Built the Prrimital brand website from scratch in Webflow alongside a creative designer at VRANDED HAUS, translating a bold and unconventional visual identity into a fully animated digital experience.',
+    detail: 'Custom animated navigation interactions, editorial-style product showcase layouts, a brand-driven typography and color system, and iterative UX refinements including removal of an initial horizontal scroll menu based on user feedback.'
+  },
 ];
 
 /* ── Browser bar ────────────────────────────────────────────── */
@@ -152,7 +437,8 @@ function imgPath(p, file) {
 
 function gridImg(p) {
   if (!p.imgDir) return '<div class="screen-placeholder"></div>';
-  return `<img src="${imgPath(p, p.imgKey + ' Grid.png')}" alt="${p.name}" class="screen-img" loading="lazy" />`;
+  const ext = p.gridExt || 'png';
+  return `<img src="${imgPath(p, p.imgKey + ' Grid.' + ext)}" alt="${p.name}" class="screen-img" loading="lazy" />`;
 }
 
 function bannerImg(p) {
