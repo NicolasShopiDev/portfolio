@@ -560,11 +560,9 @@ function initHeroParallax() {
   // spd: parallax px per px scrolled (neg = moves up faster, pos = slower)
   // freq: float oscillation Hz  amp: float amplitude px  phase: sine offset
   const CFG = [
-    { threshold: 0.00, spd: -0.07, freq: 0.18, amp: 6, phase: 0              },
-    { threshold: 0.12, spd:  0.11, freq: 0.22, amp: 7, phase: Math.PI * 0.7  },
-    { threshold: 0.22, spd: -0.05, freq: 0.16, amp: 5, phase: Math.PI * 1.3  },
-    { threshold: 0.32, spd:  0.09, freq: 0.20, amp: 6, phase: Math.PI * 0.4  },
-    { threshold: 0.42, spd: -0.08, freq: 0.19, amp: 7, phase: Math.PI * 1.8  },
+    { threshold: 0.00, spd: -0.07, freq: 0.18, amp: 6, phase: 0             },
+    { threshold: 0.00, spd:  0.11, freq: 0.22, amp: 7, phase: Math.PI * 0.7 },
+    { threshold: 0.00, spd: -0.05, freq: 0.16, amp: 5, phase: Math.PI * 1.3 },
   ];
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -607,6 +605,27 @@ function initHeroParallax() {
   requestAnimationFrame(loop);
 }
 
+/* ── Scroll reveal ──────────────────────────────────────────── */
+function initScrollReveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.project-card').forEach(c => c.classList.add('is-revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-revealed');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+  document.querySelectorAll('.project-card').forEach((card, i) => {
+    card.style.transitionDelay = `${(i % 3) * 75}ms`;
+    observer.observe(card);
+  });
+}
+
 /* ── Contact form ───────────────────────────────────────────── */
 function handleContactSubmit(e) {
   e.preventDefault();
@@ -619,6 +638,7 @@ function handleContactSubmit(e) {
 /* ── Init ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
+  initScrollReveal();
 
   const overlay = document.getElementById('modal-overlay');
   document.getElementById('modal-close').addEventListener('click', closeModal);
