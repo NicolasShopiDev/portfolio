@@ -149,6 +149,7 @@ function openModal(id) {
           ${bannerImg(p)}
           <div class="banner-overlay"></div>
           <h2 class="banner-title" id="modal-title">${p.name}</h2>
+          ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" class="banner-visit">Visit project <span>↗</span></a>` : ''}
         </div>
       </div>
     </div>
