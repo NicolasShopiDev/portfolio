@@ -9,6 +9,16 @@ const PROJECTS = [
     client: 'Hifas Da Terra',
     type: 'B2B Ecommerce',
     year: '2024',
+    imgDir: 'Hifas Da Terra',
+    imgKey: 'Hifas',
+    bannerExt: 'webp',
+    url: 'https://hifasdaterra.com/en',
+    slogan: 'Improving Health Worldwide',
+    highlights: [
+      '696e8d5ecc348c6c4983b4e2_Hifas producto.png',
+      '696e8d5e3af2eb460228ecd0_Coleccion hifas.png',
+      '696e8d5e2a5402616a62ff62_Grid home Hifas.png',
+    ],
     role: 'Built a comprehensive B2B ecommerce platform for a biotech company specializing in medicinal mushroom supplements. The project included custom pricing tiers, a wholesale portal, and advanced product filtering tailored for health professionals.',
     detail: 'Custom Shopify B2B implementation featuring tiered wholesale pricing, customer segment-based catalog visibility, performance-optimized product pages, and a streamlined checkout experience supporting both B2C and B2B flows.'
   },
@@ -40,6 +50,15 @@ const PROJECTS = [
     client: 'Cosmeticos24H',
     type: 'Ecommerce Platform',
     year: '2023',
+    imgDir: 'Cosmeticos24H',
+    imgKey: 'Cosmeticos',
+    bannerExt: 'jpg',
+    url: 'https://cosmeticos24h.com/',
+    slogan: 'YOUR SKIN IS OUR UNIVERSE',
+    highlights: [
+      '696e81952e43857cb5eb4174_producto cosmeticos.png',
+      '696e81c9de2a9a2ea9992987_Coleccion cosmeticos.png',
+    ],
     role: 'Upgraded and optimized a high-traffic beauty ecommerce store with advanced faceted filtering, B2B wholesale features, and measurable Core Web Vitals improvements.',
     detail: 'Delivered a full Shopify Plus overhaul including custom collection filtering, B2B customer portal, drawer cart optimization, lazy-loading improvements, and a redesigned product detail page for higher conversion.'
   },
@@ -51,6 +70,16 @@ const PROJECTS = [
     client: 'CoastBCN',
     type: 'Collaboration',
     year: '2023',
+    imgDir: 'Coast Bcn',
+    imgKey: 'Coast',
+    bannerExt: 'webp',
+    url: 'https://www.coastbcn.com/',
+    slogan: 'PASSION AND LIFESTYLE',
+    highlights: [
+      '667055ca504ec69e9652c309_Home BCN.png',
+      '667055cad1001f3f5ab2e061_Product BCN.png',
+      '667055caa06afa3da2078019_Collections BCN.png',
+    ],
     role: "As a developer collaborating with Reduncle for CoastBCN, I maintained their Shopify storefront and shipped several custom features — including a fully customizable scrolling banner and a quick-add-to-cart flow that lets customers select size directly from the product grid.",
     detail: 'Custom Shopify features delivered: adjustable-speed announcement banner, quick-add with size picker from collection grids, custom drawer cart redesign, out-of-stock badge system, and password page customization.'
   },
@@ -62,6 +91,17 @@ const PROJECTS = [
     client: 'Fernando García',
     type: 'Custom Theme',
     year: '2024',
+    imgDir: 'Fernando de carcer',
+    imgKey: 'Fernando',
+    bannerExt: 'jpg',
+    url: 'https://fernandodecarcer.com/',
+    slogan: 'Quality fashion',
+    highlights: [
+      '667060a9e86900a19539ec50_chrome-capture-2024-6-17.png',
+      '667060a9ea32bb134c77a574_chrome-capture-2024-6-17 (2).png',
+      '667060c4f2fe2e92094f8e6a_chrome-capture-2024-6-17 (3).png',
+      '667060a8c2259e99e56a7e89_chrome-capture-2024-6-17 (1).png',
+    ],
     role: 'Custom Shopify Plus theme development for a premium Spanish fashion brand. Delivered an elegant, performance-focused storefront with tailored UI components and international market support.',
     detail: 'End-to-end theme build: optimized LCP and layout shift scores, custom collection filtering with live updates, dynamic size guide modals, wishlist integration, and Shopify Markets configuration for multi-currency.'
   },
@@ -73,6 +113,17 @@ const PROJECTS = [
     client: 'El Capote',
     type: 'Ecommerce',
     year: '2024',
+    imgDir: 'El Capote',
+    imgKey: 'Capote',
+    bannerExt: 'jpg',
+    url: 'https://poloselcapote.com/',
+    slogan: 'Wear the tradition, carry the art',
+    highlights: [
+      '667057382a9768509250b039_Newsletter.png',
+      '66705738438bba6bde64fad3_Collection grid.png',
+      '66705738116d9b0cd63c7f4c_Product.png',
+      '667057e1c00da3e9cfb1aebf_Casillas (1).png',
+    ],
     role: 'Custom Shopify development for a Spanish menswear brand, focusing on promotional mechanics and specialized product showcases for their seasonal collections.',
     detail: 'Built custom promo campaign components: countdown timers, bundle-based discount messaging, specialized product cards with multi-image hover, and a configurable featured collection module.'
   }
@@ -106,7 +157,8 @@ function gridImg(p) {
 
 function bannerImg(p) {
   if (!p.imgDir) return '<div class="screen-placeholder" style="aspect-ratio:16/7"></div>';
-  return `<img src="${imgPath(p, p.imgKey + ' Banner.png')}" alt="${p.name}" class="screen-img screen-img--banner" loading="lazy" />`;
+  const ext = p.bannerExt || 'png';
+  return `<img src="${imgPath(p, p.imgKey + ' Banner.' + ext)}" alt="${p.name}" class="screen-img screen-img--banner" loading="lazy" />`;
 }
 
 function highlightsGrid(p) {
