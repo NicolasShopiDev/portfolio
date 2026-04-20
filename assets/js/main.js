@@ -20,6 +20,7 @@ const PROJECTS = [
     client: 'MT Helmets',
     type: 'B2B Catalog Platform',
     year: '2024',
+    imgKey: 'MT',
     role: "Built an international B2B platform for one of Europe's leading motorcycle helmet manufacturers. The platform supports dealer authentication, custom pricing tiers, and a multi-language product catalog spanning European markets.",
     detail: 'Custom Shopify Plus development with advanced B2B features: dealer-specific login, volume-based pricing logic, PDF catalog export, and multilingual support with Shopify Markets integration.'
   },
@@ -69,6 +70,17 @@ const PROJECTS = [
   }
 ];
 
+/* ── Image helpers ──────────────────────────────────────────── */
+function gridImg(p) {
+  if (!p.imgKey) return '<div class="screen-placeholder"></div>';
+  return `<img src="assets/Img/${p.imgKey} Grid.png" alt="${p.name}" class="screen-img" loading="lazy" />`;
+}
+
+function bannerImg(p) {
+  if (!p.imgKey) return '<div class="screen-placeholder" style="aspect-ratio:16/7"></div>';
+  return `<img src="assets/Img/${p.imgKey} Banner.png" alt="${p.name}" class="screen-img screen-img--banner" loading="lazy" />`;
+}
+
 /* ── Render project cards ───────────────────────────────────── */
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
@@ -89,7 +101,7 @@ function renderProjects() {
             <div class="bf-url"></div>
           </div>
           <div class="bf-screen">
-            <div class="screen-placeholder"></div>
+            ${gridImg(p)}
           </div>
         </div>
         <span class="card-badge">${p.badge}</span>
@@ -125,7 +137,7 @@ function openModal(id) {
         <div class="bf-url"></div>
       </div>
       <div class="bf-screen">
-        <div class="screen-placeholder" style="aspect-ratio:16/7"></div>
+        ${bannerImg(p)}
       </div>
     </div>
     <div class="modal-meta">
