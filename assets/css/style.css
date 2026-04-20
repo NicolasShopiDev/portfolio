@@ -248,6 +248,15 @@ ul { list-style: none; }
   100% { background-position: 0% 50%; }
 }
 
+.screen-img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+.screen-img--banner { aspect-ratio: 16 / 7; }
+
 /* ── Section common ─────────────────────────────────────────── */
 .section { padding: 128px 0; }
 
