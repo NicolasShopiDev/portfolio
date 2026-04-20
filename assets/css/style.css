@@ -82,14 +82,14 @@ ul { list-style: none; }
 }
 
 .nav-logo {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  line-height: 1.15;
-  text-align: center;
-  text-transform: uppercase;
   grid-column: 2;
+  display: flex;
+  align-items: center;
+}
+.nav-logo-img {
+  height: 22px;
+  width: auto;
+  display: block;
 }
 .nav-logo span {
   display: block;
@@ -582,12 +582,14 @@ ul { list-style: none; }
 }
 
 .footer-logo {
-  font-family: var(--font-mono);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  line-height: 1.1;
-  gap: 4px;
+}
+.footer-logo-img {
+  height: 20px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
 }
 .footer-logo-top {
   font-size: 15px;
