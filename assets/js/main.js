@@ -20,8 +20,14 @@ const PROJECTS = [
     client: 'MT Helmets',
     type: 'B2B Catalog Platform',
     year: '2024',
+    imgDir: 'MT Helmets',
     imgKey: 'MT',
     url: 'https://mthelmets.com/es-es',
+    highlights: [
+      '696e87085a88f3f6b5e43c97_Home grid mt helmets b2b.png',
+      '696e86b35aab58a8f483c87d_Product page MT HELMETS B2B.png',
+      '696e86b213d3a33c62003fc6_Carrito b2b.png',
+    ],
     slogan: 'A RIDING LEGACY',
     role: "Built an international B2B platform for one of Europe's leading motorcycle helmet manufacturers. The platform supports dealer authentication, custom pricing tiers, and a multi-language product catalog spanning European markets.",
     detail: 'Custom Shopify Plus development with advanced B2B features: dealer-specific login, volume-based pricing logic, PDF catalog export, and multilingual support with Shopify Markets integration.'
@@ -89,14 +95,31 @@ function browserBar(p) {
 }
 
 /* ── Image helpers ──────────────────────────────────────────── */
+function imgPath(p, file) {
+  return `assets/Img/${p.imgDir}/${file}`;
+}
+
 function gridImg(p) {
-  if (!p.imgKey) return '<div class="screen-placeholder"></div>';
-  return `<img src="assets/Img/${p.imgKey} Grid.png" alt="${p.name}" class="screen-img" loading="lazy" />`;
+  if (!p.imgDir) return '<div class="screen-placeholder"></div>';
+  return `<img src="${imgPath(p, p.imgKey + ' Grid.png')}" alt="${p.name}" class="screen-img" loading="lazy" />`;
 }
 
 function bannerImg(p) {
-  if (!p.imgKey) return '<div class="screen-placeholder" style="aspect-ratio:16/7"></div>';
-  return `<img src="assets/Img/${p.imgKey} Banner.png" alt="${p.name}" class="screen-img screen-img--banner" loading="lazy" />`;
+  if (!p.imgDir) return '<div class="screen-placeholder" style="aspect-ratio:16/7"></div>';
+  return `<img src="${imgPath(p, p.imgKey + ' Banner.png')}" alt="${p.name}" class="screen-img screen-img--banner" loading="lazy" />`;
+}
+
+function highlightsGrid(p) {
+  if (!p.highlights || !p.highlights.length) return '';
+  return `
+    <div class="highlights-grid">
+      ${p.highlights.map(file => `
+        <div class="highlight-item">
+          <img src="${imgPath(p, file)}" alt="" loading="lazy" />
+        </div>
+      `).join('')}
+    </div>
+  `;
 }
 
 /* ── Render project cards ───────────────────────────────────── */
@@ -166,6 +189,7 @@ function openModal(id) {
         <p>${p.detail}</p>
       </div>
     </div>
+    ${highlightsGrid(p)}
   `;
 
   const overlay = document.getElementById('modal-overlay');
