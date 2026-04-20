@@ -775,6 +775,34 @@ ul { list-style: none; }
   margin-bottom: 14px;
 }
 
+/* ── Highlights grid ────────────────────────────────────────── */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.highlight-item {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.highlight-item img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s var(--ease);
+}
+
+.highlight-item:hover img { transform: scale(1.04); }
+
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero {
