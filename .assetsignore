@@ -1,0 +1,7 @@
+.git
+.gitignore
+.claude
+node_modules
+*.ps1
+*.md
+wrangler.jsonc
