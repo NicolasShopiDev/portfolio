@@ -949,67 +949,73 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
-  .section { padding: 72px 0; }
+  .section { padding: 60px 0; }
   .nav-inner { padding: 0 20px; }
   .hero-sticky { padding-left: 20px; padding-right: 20px; }
 
-  .section-intro { grid-template-columns: 1fr; gap: 20px; }
+  .section-intro { grid-template-columns: 1fr; gap: 16px; margin-bottom: 48px; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card:nth-child(n) {
     transform: perspective(1100px) rotateY(0) rotateX(0) !important;
     box-shadow: 0 8px 32px rgba(0,0,0,0.08) !important;
   }
 
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .skills-cols { grid-template-columns: 1fr 1fr; padding-top: 0; }
 
-  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 28px; }
   .contact-heading { position: static; }
   .form-row { grid-template-columns: 1fr; }
 
   .modal-body { padding: 20px; }
-  .modal-meta { grid-template-columns: 1fr; gap: 28px; }
-  .footer-inner { gap: 24px; text-align: center; }
+  .modal-meta { grid-template-columns: 1fr; gap: 24px; }
+  .highlights-grid { grid-template-columns: 1fr; }
+  .footer-inner { gap: 20px; text-align: center; }
   .footer-social { justify-content: center; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .section { padding: 56px 0; }
+  .section { padding: 44px 0; }
   .nav-inner { padding: 0 16px; }
   .hero-sticky {
-    padding-top: calc(var(--nav-h) + 32px);
-    padding-bottom: 52px;
+    padding-top: calc(var(--nav-h) + 16px);
+    padding-bottom: 36px;
     padding-left: 16px;
     padding-right: 16px;
   }
 
   .hero-heading { letter-spacing: 0.06em; }
-  .hero-sub { font-size: 15px; }
+  .hero-sub { font-size: 15px; margin-bottom: 32px; }
   .hero-actions { gap: 10px; }
-  .hero-actions .btn { padding: 12px 22px; font-size: 13px; }
+  .hero-actions .btn { padding: 12px 20px; font-size: 13px; }
 
-  .section-heading { font-size: clamp(32px, 10vw, 48px); }
+  .section-intro { margin-bottom: 36px; }
+  .section-heading { font-size: clamp(28px, 9vw, 40px); }
   .section-desc { font-size: 14px; }
 
-  .skills-cols { grid-template-columns: 1fr; gap: 24px; }
-  .about-heading { font-size: clamp(22px, 6vw, 32px); }
+  .skills-cols { grid-template-columns: 1fr; gap: 0; }
+  .skill-col ul li { padding: 10px 0; }
+  .about-heading { font-size: clamp(20px, 6vw, 28px); }
   .about-text { font-size: 14px; }
 
-  .contact-heading { font-size: clamp(36px, 11vw, 52px); }
+  .contact-heading { font-size: clamp(32px, 10vw, 48px); }
   .contact-desc { font-size: 14px; }
-  .clink { min-height: 44px; padding: 8px 0; }
+  .clink { min-height: 44px; padding: 8px 0; font-size: 13px; }
 
-  .nav-logo-img { height: 18px; }
-  .nav-cta { padding: 7px 16px; font-size: 13px; }
+  .nav-logo-img { height: 22px; }
+  .nav-cta { padding: 9px 20px; font-size: 14px; }
 
-  .card-info { padding: 16px 16px 18px; }
+  .card-info { padding: 14px 14px 16px; }
+  .card-name { font-size: 15px; }
 
   .modal-body { padding: 16px; }
-  .modal-slogan { font-size: clamp(18px, 5vw, 24px); }
+  .modal-slogan { font-size: clamp(16px, 5vw, 22px); }
+  .modal-hero-frame { margin-bottom: 28px; }
 
-  .footer-inner { gap: 20px; }
+  .footer-inner { gap: 18px; }
   .footer-bio { font-size: 13px; }
+  .footer-copy { font-size: 11px; }
 }
 
 /* ── Accessibility: reduced motion ──────────────────────────── */
