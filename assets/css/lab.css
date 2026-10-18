@@ -108,11 +108,10 @@
 }
 
 .lab-quote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(20px, 2vw, 25px);
-  font-weight: 400;
-  line-height: 1.35;
+  padding-left: 16px;
+  border-left: 2px solid var(--fg);
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.6;
   color: var(--fg);
 }
 
