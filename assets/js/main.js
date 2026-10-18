@@ -46,6 +46,27 @@ const PROJECTS = [
     detail: 'A variant order table on the product page and in collection and search cards: stock status per row, wholesale and retail price side by side, colour swatches, quantity steppers, a running total and one button that adds the whole order to the cart. Purchase is closed to anyone who is not a wholesale customer. The table logic was ported from the Émolo build to a different theme, and 29 orphaned templates inherited from the B2C export were removed, cutting the templates folder by 75%.'
   },
   {
+    id: 22,
+    name: 'IVB Wellness B2B',
+    badge: 'Shopify B2B',
+    tags: ['Shopify B2B', 'Liquid', 'Tiered Pricing', 'Health'],
+    client: 'IVB Wellness Lab',
+    type: 'B2B Pharmacy Portal',
+    year: '2026',
+    imgDir: 'IVB Wellness',
+    imgKey: 'IVB',
+    bannerExt: 'webp',
+    gridExt: 'webp',
+    url: 'https://ivbwellness.com/',
+    slogan: 'Wellness backed by science',
+    highlights: [
+      'IVB producto.webp',
+      'IVB coleccion.webp',
+    ],
+    role: "Built the B2B ordering portal for IVB Wellness Lab, a Spanish supplements lab stocked in more than 3,000 pharmacies. Pharmacies buy on volume tiers, so every page had to tell the buyer which tier they are on and what the next one gets them. Built on the Enterprise theme from the brand's Figma designs.",
+    detail: "A multi-variant order table on the product page, with sibling products pulled from metafields, per-variant galleries and a running total. Tier logic across header, product page and cart: the buyer's current tier in the nav, the next tier worked out from a store-level config, and messages that compare the buyer's tier with the product's. Purchase locked to company accounts, a list view by default for fast reordering, discount badges, retail price from a metafield, a promotional material offer when the buyer goes to pay, and a product range megamenu."
+  },
+  {
     id: 1,
     name: 'Hifas Da Terra',
     badge: 'Shopify B2B',
