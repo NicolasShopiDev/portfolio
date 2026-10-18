@@ -169,6 +169,7 @@ ul { list-style: none; }
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
   transition: background 0.2s, color 0.2s;
 }
 .nav-cta:hover { background: var(--fg); color: #fff; }
@@ -967,8 +968,16 @@ ul { list-style: none; }
   .contact-heading { position: static; }
   .form-row { grid-template-columns: 1fr; }
 
+  .modal-overlay { padding: 64px 12px 12px; }
+  .modal-scroll { max-height: calc(100vh - 76px); max-height: calc(100dvh - 76px); }
+  .modal-close { top: 12px; right: 12px; }
   .modal-body { padding: 20px; }
   .modal-meta { grid-template-columns: 1fr; gap: 24px; }
+
+  /* title and button stack instead of sharing the bottom row */
+  .screen-img--banner { aspect-ratio: 16 / 9; }
+  .banner-title { left: 20px; right: 20px; bottom: 68px; font-size: clamp(20px, 6vw, 28px); line-height: 1.15; }
+  .banner-visit { left: 20px; right: auto; bottom: 18px; padding: 8px 14px; font-size: 12px; }
   .highlights-grid { grid-template-columns: 1fr; }
   .footer-inner { gap: 20px; text-align: center; }
   .footer-social { justify-content: center; }
@@ -1016,6 +1025,12 @@ ul { list-style: none; }
   .footer-inner { gap: 18px; }
   .footer-bio { font-size: 13px; }
   .footer-copy { font-size: 11px; }
+}
+
+/* small phones: the centred logo leaves the button less room than it needs */
+@media (max-width: 380px) {
+  .nav-logo-img { height: 19px; }
+  .nav-cta { padding: 8px 14px; font-size: 13px; }
 }
 
 /* ── Accessibility: reduced motion ──────────────────────────── */

@@ -2,6 +2,50 @@
 
 const PROJECTS = [
   {
+    id: 20,
+    name: 'Émolo B2B',
+    badge: 'Shopify B2B',
+    tags: ['Shopify B2B', 'Liquid', 'Quick Order', 'Jewelry'],
+    client: 'Émolo',
+    type: 'B2B Wholesale Portal',
+    year: '2026',
+    imgDir: 'EMOLO',
+    imgKey: 'Emolo',
+    bannerExt: 'webp',
+    gridExt: 'webp',
+    url: 'https://www.emolo.es/',
+    slogan: 'Handcrafted in Spain',
+    highlights: [
+      'Emolo producto B2B.webp',
+      'Emolo listado parrilla.webp',
+      'Emolo listado tabla.webp',
+      'Emolo busqueda referencia.webp',
+    ],
+    role: "Built the wholesale portal for Émolo, a handmade jewelry brand from Murcia, on top of its existing Prestige theme. Retailers browse the same catalogue as consumers, but see their own prices and live stock, and can order every variant of a piece from one table.",
+    detail: 'Prices and checkout locked to approved B2B companies, with a toggle that lets buyers hide their own prices on screen. A variant order table on the product page and inside every collection card, its steppers kept in sync with the cart across the whole page. Per-variant galleries from metafields, a grid and list view switch, stock status on each cart line, and a search that lands on the exact reference the buyer typed.'
+  },
+  {
+    id: 21,
+    name: 'Vidal & Vidal B2B',
+    badge: 'Shopify Plus',
+    tags: ['Shopify Plus', 'B2B', 'Quick Order', 'Jewelry'],
+    client: 'Vidal & Vidal',
+    type: 'B2B Wholesale Portal',
+    year: '2026',
+    imgDir: 'Vidal Vidal',
+    imgKey: 'VidalVidal',
+    bannerExt: 'webp',
+    gridExt: 'webp',
+    url: 'https://www.vidal-vidal.com/',
+    slogan: 'Timeless jewelry, Menorca 1998',
+    highlights: [
+      'VidalVidal producto.webp',
+      'VidalVidal coleccion.webp',
+    ],
+    role: "Turned Vidal & Vidal's consumer theme into a wholesale store for the Menorcan jewelry house. The theme arrived as a straight export of the B2C site, so the job started by clearing out what a wholesale store can't use and then building the ordering flow on top.",
+    detail: 'A variant order table on the product page and in collection and search cards: stock status per row, wholesale and retail price side by side, colour swatches, quantity steppers, a running total and one button that adds the whole order to the cart. Purchase is closed to anyone who is not a wholesale customer. The table logic was ported from the Émolo build to a different theme, and 29 orphaned templates inherited from the B2C export were removed, cutting the templates folder by 75%.'
+  },
+  {
     id: 1,
     name: 'Hifas Da Terra',
     badge: 'Shopify B2B',
@@ -531,6 +575,7 @@ function openModal(id) {
   `;
 
   const overlay = document.getElementById('modal-overlay');
+  overlay.querySelector('.modal-scroll').scrollTop = 0;
   overlay.setAttribute('aria-hidden', 'false');
   overlay.classList.add('open');
   document.body.classList.add('no-scroll');
