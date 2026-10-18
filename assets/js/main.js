@@ -636,6 +636,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   initScrollReveal();
 
+  // the grid above pushes sections down after the browser already jumped to the #hash
+  const hashTarget = location.hash && document.getElementById(location.hash.slice(1));
+  if (hashTarget) hashTarget.scrollIntoView({ behavior: 'instant' });
+
   const overlay = document.getElementById('modal-overlay');
   document.getElementById('modal-close').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });

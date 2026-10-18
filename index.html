@@ -46,6 +46,7 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" /></noscript>
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/lab.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -147,6 +148,104 @@
         <p class="section-desc">Here are a few standout projects I've built with Shopify Plus and B2B solutions. Each one tells a story of innovation and technical craft.</p>
       </div>
       <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- LAB -->
+  <section class="lab-section section" id="lab">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading">CHECKOUT<br>LAB</h2>
+        <p class="section-desc">A real merchant request, solved with a Shopify Function. Reproduce the problem, deploy the fix and follow the code as it runs. It's the same file that ships to a store, tested on GitHub.</p>
+      </div>
+
+      <div class="lab-app" id="lab-app" data-ready="false">
+        <div class="lab-tickets" aria-label="Tickets">
+          <button type="button" class="lab-ticket-tab is-active" aria-current="true"><span class="lab-ticket-num">01</span>Payment rules<span class="lab-ticket-tick" aria-hidden="true"></span></button>
+          <button type="button" class="lab-ticket-tab" disabled><span class="lab-ticket-num">02</span>B2B case packs<span class="lab-soon">Soon</span></button>
+          <button type="button" class="lab-ticket-tab" disabled><span class="lab-ticket-num">03</span>Wholesale tiers<span class="lab-soon">Soon</span></button>
+        </div>
+
+        <div class="lab-brief">
+          <div class="lab-brief-main">
+            <p class="lab-kicker">Ticket #01 · Skincare brand, Barcelona</p>
+            <blockquote class="lab-quote">“Cash on delivery is hurting us: big orders get refused at the door and we pay the return shipping. Keep COD for orders up to €300, and only within Spain.”</blockquote>
+          </div>
+          <div class="lab-checks">
+            <p class="lab-checks-head"><span>Verify the fix</span><span id="lab-progress">0/3</span></p>
+            <ul class="lab-check-list" id="lab-checks"></ul>
+            <p class="lab-done" id="lab-done" hidden>Ticket closed. One Function, settings in a metafield, unit-tested in CI. <a href="https://github.com/NicolasShopiDev/shopify-checkout-lab" target="_blank" rel="noopener noreferrer">See the repo</a></p>
+          </div>
+        </div>
+
+        <div class="lab-bar">
+          <p class="lab-fn" id="lab-fn"><span class="lab-dot"></span><span class="lab-fn-name">cod-guard</span><span class="lab-fn-state" id="lab-fn-state">Not deployed</span></p>
+          <p class="lab-hint" id="lab-hint" aria-live="polite">Loading the function…</p>
+          <button type="button" class="btn btn--dark lab-deploy" id="lab-deploy" disabled>Deploy function</button>
+        </div>
+
+        <div class="lab-stage">
+          <div class="lab-checkout" aria-label="Simulated checkout">
+            <div class="lc-head">
+              <span class="lc-store">LUMEN</span>
+              <span class="lc-steps">Cart <i>›</i> Shipping <i>›</i> <b>Payment</b></span>
+            </div>
+
+            <div class="lc-block lc-item">
+              <div class="lc-thumb" aria-hidden="true"></div>
+              <div class="lc-item-info">
+                <p class="lc-item-name">Hydra Serum</p>
+                <p class="lc-item-meta">50 ml · €45.00</p>
+              </div>
+              <div class="lc-stepper">
+                <button type="button" data-qty="-1" aria-label="Remove one">−</button>
+                <output id="lc-qty" aria-live="polite">3</output>
+                <button type="button" data-qty="1" aria-label="Add one">+</button>
+              </div>
+            </div>
+
+            <div class="lc-block">
+              <p class="lc-label">Ship to</p>
+              <div class="lc-seg" id="lc-countries">
+                <button type="button" data-country="ES" aria-pressed="true">Spain</button>
+                <button type="button" data-country="PT" aria-pressed="false">Portugal</button>
+                <button type="button" data-country="FR" aria-pressed="false">France</button>
+              </div>
+            </div>
+
+            <div class="lc-block">
+              <p class="lc-label">Payment</p>
+              <div class="lc-methods" id="lc-methods"></div>
+              <p class="lc-note" id="lc-note" aria-live="polite"></p>
+            </div>
+
+            <div class="lc-totals">
+              <p><span>Subtotal</span><span id="lc-subtotal">€135.00</span></p>
+              <p><span>Shipping</span><span>Free</span></p>
+              <p class="lc-total"><span>Total</span><span><small>EUR</small> <b id="lc-total">€135.00</b></span></p>
+            </div>
+          </div>
+
+          <div class="lab-code">
+            <div class="lab-code-inner">
+              <div class="lab-code-tabs" id="lab-tabs">
+                <button type="button" data-tab="run" class="is-active">run.js</button>
+                <button type="button" data-tab="query">input.graphql</button>
+                <button type="button" data-tab="input">input.json</button>
+                <button type="button" data-tab="output">output.json</button>
+                <button type="button" data-tab="config">metafield.json</button>
+              </div>
+              <div class="lab-crumb" id="lab-crumb"></div>
+              <div class="lab-code-body" id="lab-code-body"></div>
+              <div class="lab-config-wrap" id="lab-config-wrap" hidden>
+                <textarea class="lab-config" id="lab-config" spellcheck="false" aria-label="Function settings as JSON"></textarea>
+                <p class="lab-config-error" id="lab-config-error" aria-live="polite"></p>
+              </div>
+              <div class="lab-term" id="lab-term" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -267,5 +366,6 @@
   </div>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/lab.js" type="module"></script>
 </body>
 </html>
