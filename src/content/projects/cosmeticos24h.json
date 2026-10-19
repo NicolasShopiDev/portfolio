@@ -1,0 +1,60 @@
+{
+  "order": 6,
+  "name": "Cosmeticos24H",
+  "client": "Cosmeticos24H",
+  "year": "2023",
+  "url": "https://cosmeticos24h.com/",
+  "platform": "shopify-plus",
+  "badge": "Shopify Plus",
+  "slogan": {
+    "es": "TU PIEL ES NUESTRO UNIVERSO",
+    "en": "YOUR SKIN IS OUR UNIVERSE"
+  },
+  "tags": {
+    "en": [
+      "Shopify Plus",
+      "B2B",
+      "Performance",
+      "UX"
+    ],
+    "es": [
+      "Shopify Plus",
+      "B2B",
+      "Rendimiento",
+      "UX"
+    ]
+  },
+  "type": {
+    "en": "Ecommerce Platform",
+    "es": "Plataforma de ecommerce"
+  },
+  "role": {
+    "en": "Shopify Plus overhaul for an online beauty retailer, targeting Core Web Vitals improvements alongside new B2B wholesale capabilities and a redesigned conversion funnel.",
+    "es": "Renovación a fondo en Shopify Plus de una tienda online de belleza, centrada en mejorar las Core Web Vitals, junto con nuevas funciones mayoristas B2B y un embudo de conversión rediseñado."
+  },
+  "detail": {
+    "en": "Shopify Plus work: advanced faceted collection filtering, a B2B customer portal with tiered pricing, an optimized drawer cart with lazy-loading, and a redesigned product detail page.",
+    "es": "Trabajo en Shopify Plus: filtrado avanzado por facetas en las colecciones, un portal de clientes B2B con precios por tramos, un carrito lateral optimizado con carga diferida y una ficha de producto rediseñada."
+  },
+  "images": {
+    "dir": "Cosmeticos24H",
+    "grid": "Cosmeticos Grid.png",
+    "banner": "Cosmeticos Banner.jpg",
+    "highlights": [
+      {
+        "file": "696e81952e43857cb5eb4174_producto cosmeticos.png",
+        "alt": {
+          "es": "Ficha de producto de Cosmeticos24H con muestras de tono, valoraciones y fecha estimada de entrega",
+          "en": "Cosmeticos24H product page with shade swatches, star ratings and an estimated delivery window"
+        }
+      },
+      {
+        "file": "696e81c9de2a9a2ea9992987_Coleccion cosmeticos.png",
+        "alt": {
+          "es": "Colección de rebajas de Cosmeticos24H con filtros por tipo de piel, tratamiento y marca, y etiquetas de descuento",
+          "en": "Cosmeticos24H sale collection with filters for skin type, treatment and brand, plus discount badges"
+        }
+      }
+    ]
+  }
+}

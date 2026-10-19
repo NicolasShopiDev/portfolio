@@ -1,0 +1,71 @@
+{
+  "order": 13,
+  "name": "Born Living Yoga",
+  "client": "Born Living Yoga",
+  "year": "2023",
+  "url": "https://bornlivingyoga.com",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "Uniting mind, body, and planet",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Sustainability",
+      "Fashion"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Sostenibilidad",
+      "Moda"
+    ]
+  },
+  "type": {
+    "en": "Shopify Customization",
+    "es": "Personalización Shopify"
+  },
+  "role": {
+    "en": "Delivered feature enhancements and UX improvements for a sustainable yoga lifestyle brand, streamlining product discovery and the purchase flow across key conversion touchpoints.",
+    "es": "Desarrollo de mejoras funcionales y de UX para una marca sostenible de estilo de vida yoga, que agilizan el descubrimiento de producto y el flujo de compra en los puntos clave de conversión."
+  },
+  "detail": {
+    "en": "Quick-add from collection grids, custom \"Complete your look\" cross-sell module, editable product tag customization, and drawer cart refinements to reduce friction in the purchase journey.",
+    "es": "Añadido rápido al carrito desde las parrillas de colección, módulo de venta cruzada «Completa tu look» a medida, personalización de etiquetas de producto editables y ajustes en el carrito lateral para reducir la fricción en el proceso de compra."
+  },
+  "images": {
+    "dir": "Born Living Yoga",
+    "grid": "BLY Grid.png",
+    "banner": "BLY Banner.jpg",
+    "highlights": [
+      {
+        "file": "66705368bf754ee70db1f1fc_BLY Colecctions.png",
+        "alt": {
+          "es": "Carrusel de colecciones por actividad de Born Living Yoga: yoga y pilates, fitness, running y tenis",
+          "en": "Born Living Yoga shop-by-activity carousel with yoga and pilates, fitness, running and tennis collections"
+        }
+      },
+      {
+        "file": "667053671bb969becc00dccc_Completa tu look.png",
+        "alt": {
+          "es": "Módulo Completa tu look en la ficha de producto de Born Living Yoga, con cuatro productos relacionados",
+          "en": "Complete your look module on a Born Living Yoga product page, with four related products and prices"
+        }
+      },
+      {
+        "file": "66705367a0f37ddd043158ce_Drawer cart.png",
+        "alt": {
+          "es": "Carrito lateral de Born Living Yoga con aviso de envío gratis y productos sugeridos para añadir al pedido",
+          "en": "Born Living Yoga drawer cart with a free shipping message and suggested products to add to the order"
+        }
+      },
+      {
+        "file": "66705367031d146cd5750504_Producto.png",
+        "alt": {
+          "es": "Ficha de producto de Born Living Yoga con galería, selector de color y talla y descripción del tejido",
+          "en": "Born Living Yoga product page with photo gallery, color and size selectors and fabric description"
+        }
+      }
+    ]
+  }
+}

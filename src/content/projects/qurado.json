@@ -1,0 +1,67 @@
+{
+  "order": 14,
+  "name": "Qurado",
+  "client": "Qurado",
+  "year": "2023",
+  "url": "https://qurado.es/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": {
+    "es": "PRODUCTO DE VERDAD. SIN INTERMEDIARIOS.",
+    "en": "REAL PRODUCTS. NO MIDDLEMEN."
+  },
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Custom Theme",
+      "DTC"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Tema a medida",
+      "DTC"
+    ]
+  },
+  "type": {
+    "en": "Custom Theme",
+    "es": "Tema a medida"
+  },
+  "role": {
+    "en": "Developed a fully customized Shopify storefront for an emerging direct-to-consumer brand, following a provided design system and delivering a brand-coherent, conversion-focused experience.",
+    "es": "Desarrollo de una tienda Shopify totalmente personalizada para una marca emergente de venta directa al consumidor, siguiendo un sistema de diseño ya definido y con una experiencia coherente con la marca y orientada a la conversión."
+  },
+  "detail": {
+    "en": "Custom theme with pixel-accurate design execution, enhanced product discovery with custom filtering, brand-aligned typography and color system, and a mobile-first cart and product page flow.",
+    "es": "Tema a medida con una maquetación fiel al diseño píxel a píxel, descubrimiento de producto mejorado con filtros personalizados, tipografía y sistema de color alineados con la marca, y un flujo de carrito y página de producto mobile-first."
+  },
+  "images": {
+    "dir": "Qurado",
+    "grid": "Qurado Grid.png",
+    "banner": "Qurado Banner.jpg",
+    "highlights": [
+      {
+        "file": "66673a740265050e492841d5_chrome-capture-2024-6-10.png",
+        "alt": {
+          "es": "Diseños de Qurado para inicio, B2B, listado de productores y ficha de producto, en escritorio y móvil",
+          "en": "Qurado design frames for home, B2B, producer listing and product page, on desktop and mobile"
+        }
+      },
+      {
+        "file": "666c17a9e8fc6ab713443aa1_Reviews.gif",
+        "alt": {
+          "es": "Carrusel de opiniones de Qurado desplazándose con las flechas: reseñas de restaurantes de cinco estrellas y botón Haz tu pedido",
+          "en": "Qurado reviews carousel sliding with the arrow buttons: five-star restaurant testimonials and an order call to action"
+        }
+      },
+      {
+        "file": "666c1c4496d47aba901e0165_93088f09-b651-43d6-a845-b505dcd635b7.gif",
+        "alt": {
+          "es": "Desplazamiento por el carrito de Qurado: productos, cantidades, campo para el día de entrega del marisco y Finalizar pedido",
+          "en": "Scroll through Qurado's cart: line items with quantities, a delivery day field for seafood orders and the checkout button"
+        }
+      }
+    ]
+  }
+}

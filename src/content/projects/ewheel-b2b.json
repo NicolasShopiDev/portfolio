@@ -1,0 +1,71 @@
+{
+  "order": 7,
+  "name": "Ewheel B2B",
+  "client": "Ewheel",
+  "year": "2024",
+  "url": "https://ewheel.es/",
+  "platform": "shopify",
+  "badge": "Shopify B2B",
+  "slogan": "MAKE LIFE ELECTRIC",
+  "tags": {
+    "en": [
+      "Shopify B2B",
+      "WebSockets",
+      "Custom Features",
+      "Mobility"
+    ],
+    "es": [
+      "Shopify B2B",
+      "WebSockets",
+      "Funcionalidades a medida",
+      "Movilidad"
+    ]
+  },
+  "type": {
+    "en": "B2B Ecommerce",
+    "es": "Ecommerce B2B"
+  },
+  "role": {
+    "en": "Built a B2B store for a Spanish distributor of e-scooter and e-bike parts, including a real-time collaborative cart over WebSockets, a first for the client's Shopify environment.",
+    "es": "Desarrollo de una tienda B2B para un distribuidor español de recambios de patinetes y bicicletas eléctricas, con un carrito colaborativo en tiempo real mediante WebSockets, algo inédito hasta entonces en el entorno Shopify del cliente."
+  },
+  "detail": {
+    "en": "Custom Shopify B2B features: real-time multi-user cart synchronization using WebSockets, a responsive variant grid handling complex inventory logic (units vs. boxes), corporate account management, and a dealer portal with tiered pricing visibility.",
+    "es": "Funcionalidades a medida en Shopify B2B: sincronización en tiempo real del carrito entre varios usuarios con WebSockets, una parrilla de variantes responsive que gestiona una lógica de inventario compleja (unidades frente a cajas), gestión de cuentas de empresa y un portal de distribuidores con visibilidad de precios por tramos."
+  },
+  "images": {
+    "dir": "Ewheel B2B",
+    "grid": "Ewheel Grid.png",
+    "banner": "Ewheel Banner.webp",
+    "highlights": [
+      {
+        "file": "69693eb898aeb2c388f0f4fc_Choose options.png",
+        "alt": {
+          "es": "Selector de variantes de Ewheel B2B en ventana modal, con SKU, EAN, disponibilidad, stock, precio y unidades",
+          "en": "Ewheel B2B variant picker in a modal, with SKU, EAN, availability, stock, price and units per row"
+        }
+      },
+      {
+        "file": "69693f242e4056a82bfbad25_My account.png",
+        "alt": {
+          "es": "Área de cuenta de Ewheel B2B con barra de progreso de gasto por tramos de descuento y accesos rápidos",
+          "en": "Ewheel B2B account area with a spend progress bar across discount tiers and account shortcuts"
+        }
+      },
+      {
+        "file": "69693f24a70bb7eae9ad7aca_Cart ewheel.png",
+        "alt": {
+          "es": "Carrito compartido de Ewheel B2B en formato tabla, con disponibilidad, cantidad, subtotal y aviso de envío gratis",
+          "en": "Ewheel B2B shared cart as a table, with availability, quantity, subtotal and a free shipping notice"
+        }
+      },
+      {
+        "file": "69693f51819a7bf7695d2b82_Home.png",
+        "alt": {
+          "es": "Portada de Ewheel B2B con buscador, menú de patinete y bici eléctrica, cambio de cliente y banner de producto",
+          "en": "Ewheel B2B home page with search, e-scooter and e-bike menu, a client switcher and a product banner"
+        }
+      }
+    ]
+  }
+}

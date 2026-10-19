@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { routes, updated, type Lang } from '../i18n/routes';
+import { t, seo } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, graph } from '../lib/schema';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+const meta = seo.contact[lang];
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: s.navContact, path: routes.contact[lang] },
+];
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'ContactPage', path: routes.contact[lang], name: meta.title, description: meta.description, lang, dateModified: updated.contact }),
+  breadcrumbs(crumbs),
+);
+---
+<Base lang={lang} route="contact" title={meta.title} description={meta.description} schema={schema}>
+  <div class="page-head page-head--tight">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+    </div>
+  </div>
+  <ContactSection lang={lang} asPage />
+</Base>

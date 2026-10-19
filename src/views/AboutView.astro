@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { routes, updated, type Lang } from '../i18n/routes';
+import { t, seo } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, graph } from '../lib/schema';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+const meta = seo.about[lang];
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: s.navAbout, path: routes.about[lang] },
+];
+
+// Facts from the CV. The current agencies stay anonymous until they agree to be named.
+const copy = {
+  es: {
+    eyebrow: 'Sobre mí',
+    lead: 'Nicolás Mateos es un desarrollador Shopify español, freelance, especializado en front-end para Shopify Plus y tiendas B2B. Vive en Madrid y trabaja en remoto con marcas y agencias de España, Países Bajos y el resto de Europa, en español y en inglés. Desarrolla en Shopify desde 2021 y es freelance desde septiembre de 2022. Su especialidad son los portales mayoristas (cuentas de empresa, catálogos y listas de precios), Shopify Functions en JavaScript y Rust, Checkout Extensibility y apps embebidas a medida (Node.js, Express, Shopify CLI). Desde octubre de 2024 es además el único desarrollador front-end de una agencia Shopify Plus centrada en B2B en España.',
+    factsTitle: 'Datos clave',
+    facts: [
+      ['Ubicación', 'Madrid, España. Trabajo en remoto, en horario de Europa central.'],
+      ['Con Shopify desde', 'Abril de 2021'],
+      ['Freelance desde', 'Septiembre de 2022, con más de 10 proyectos'],
+      ['Idiomas', 'Español (nativo) e inglés (profesional)'],
+      ['Especialidades', 'Shopify Plus, B2B (cuentas de empresa, catálogos y listas de precios), Shopify Functions (JavaScript y Rust), Checkout Extensibility y extensiones de cuenta de cliente, apps embebidas, integraciones con ERP por GraphQL'],
+      ['Stack', 'Liquid, JavaScript, TypeScript, Rust, Node.js, Express, React, PostgreSQL, GraphQL Admin y Storefront API, Shopify CLI'],
+    ],
+    timelineTitle: 'Experiencia',
+    timeline: [
+      ['Desde julio de 2026', 'Desarrollador Shopify (contrato, remoto)', 'Agencia de ecommerce de Países Bajos', 'Personalización de temas, funcionalidades de tienda y corrección de errores en las tiendas de sus clientes.'],
+      ['Desde octubre de 2024', 'Único desarrollador front-end', 'Agencia Shopify Plus centrada en B2B, España', 'Tiendas B2B en Shopify Plus con cuentas de empresa, catálogos, listas de precios, metaobjects y metafields. Shopify Functions en JavaScript y Rust (precios por tramos, condiciones de descuento, validaciones), Checkout Extensibility y extensiones de cuenta de cliente, apps embebidas con Node.js, Express y Shopify CLI, e integraciones GraphQL con ERP junto a un equipo de backend.'],
+      ['Desde septiembre de 2022', 'Desarrollador Shopify freelance', 'Agencias y clientes directos', 'Más de 10 proyectos, desde auditorías de tema de una semana hasta tiendas a medida de varios meses, incluidas migraciones a Shopify. Sistemas de asignación y reservas con Shopify Functions, apps embebidas (Node.js, Express, PostgreSQL) y extensiones de cuenta de cliente, también para marcas escandinavas y alemanas.'],
+      ['Agosto de 2023 – febrero de 2024', 'Desarrollador web', 'Reduncle, agencia Shopify', 'Tiendas de influencers y webs de marcas españolas premium con diseños muy personalizados, junto a equipos de growth y CRO.'],
+      ['Enero – octubre de 2023', 'Desarrollador front-end', 'Growthmile, agencia Shopify', 'Temas Shopify a medida desde cero para marcas B2C premium como Born Living Yoga, Polos El Capote, Pompeii y Name The Brand.'],
+      ['Abril de 2021 – julio de 2022', 'Desarrollador front-end', 'VRANDED Haus, agencia digital (Madrid)', 'Primer puesto con Shopify: Liquid, diseño responsive, JavaScript y Git.'],
+    ],
+    updatedLabel: 'Actualizado en octubre de 2026',
+    ctaTitle: '¿Tienes un proyecto Shopify?',
+    cta: 'Escríbeme',
+  },
+  en: {
+    eyebrow: 'About',
+    lead: 'Nicolás Mateos is a Spanish freelance Shopify developer focused on front-end work for Shopify Plus and B2B stores, based in Madrid and working remotely. He has worked with Shopify since 2021 and as a freelancer since September 2022, with brands and agencies in Spain, the Netherlands and the rest of Europe, in Spanish and English. His specialty is wholesale portals (Companies, Catalogs and price lists), Shopify Functions in JavaScript and Rust, Checkout Extensibility and custom embedded apps (Node.js, Express, Shopify CLI). Since October 2024 he has also been the sole front-end developer at a B2B-focused Shopify Plus agency in Spain.',
+    factsTitle: 'Quick facts',
+    facts: [
+      ['Location', 'Madrid, Spain. Works remotely, on Central European time.'],
+      ['On Shopify since', 'April 2021'],
+      ['Freelance since', 'September 2022, with 10+ projects'],
+      ['Languages', 'Spanish (native) and English (professional)'],
+      ['Specialties', 'Shopify Plus, B2B (Companies, Catalogs and price lists), Shopify Functions (JavaScript and Rust), Checkout Extensibility and customer account extensions, embedded apps, GraphQL ERP integrations'],
+      ['Stack', 'Liquid, JavaScript, TypeScript, Rust, Node.js, Express, React, PostgreSQL, GraphQL Admin and Storefront APIs, Shopify CLI'],
+    ],
+    timelineTitle: 'Experience',
+    timeline: [
+      ['Since July 2026', 'Shopify Developer (contract, remote)', 'Ecommerce agency, the Netherlands', "Theme customization, storefront features and bug fixes for the agency's client stores."],
+      ['Since October 2024', 'Sole Front-End Developer', 'B2B-focused Shopify Plus agency, Spain', 'B2B storefronts on Shopify Plus with Companies, Catalogs, price lists, metaobjects and metafields. Shopify Functions in JavaScript and Rust (tiered pricing, discount gates, validation rules), Checkout Extensibility and customer account extensions, embedded apps with Node.js, Express and the Shopify CLI, and GraphQL ERP integrations alongside a backend team.'],
+      ['Since September 2022', 'Freelance Shopify Developer', 'Agencies and direct clients', '10+ engagements, from week-long theme audits to multi-month custom storefront builds, including platform migrations into Shopify. Allocation and reservation systems with Shopify Functions, embedded apps (Node.js, Express, PostgreSQL) and customer account extensibility, including work for Scandinavian and German brands.'],
+      ['August 2023 – February 2024', 'Web Developer', 'Reduncle, Shopify agency', 'Large influencer storefronts and premium Spanish brand sites with highly custom designs, alongside growth and CRO teams.'],
+      ['January – October 2023', 'Front-End Developer', 'Growthmile, Shopify agency', 'Custom Shopify themes built from scratch for premium B2C brands such as Born Living Yoga, Polos El Capote, Pompeii and Name The Brand.'],
+      ['April 2021 – July 2022', 'Front-End Developer', 'VRANDED Haus, digital agency (Madrid)', 'First Shopify role: Liquid, responsive design, JavaScript and Git.'],
+    ],
+    updatedLabel: 'Updated October 2026',
+    ctaTitle: 'Got a Shopify project?',
+    cta: 'Get in touch',
+  },
+}[lang];
+
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'ProfilePage', path: routes.about[lang], name: meta.title, description: meta.description, lang, dateModified: updated.about }),
+  breadcrumbs(crumbs),
+);
+---
+<Base lang={lang} route="about" title={meta.title} description={meta.description} schema={schema}>
+  <section class="page-head">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      <p class="section-label">{copy.eyebrow}</p>
+      <h1 class="section-heading">Nicolás Mateos</h1>
+      <p class="about-lead">{copy.lead}</p>
+      <p class="page-updated"><time datetime={updated.about}>{copy.updatedLabel}</time></p>
+    </div>
+  </section>
+
+  <section class="about-page section">
+    <div class="container about-page-grid">
+      <div>
+        <h2 class="about-heading">{copy.factsTitle}</h2>
+        <dl class="about-facts">
+          {copy.facts.map(([term, value]) => <div class="about-fact"><dt>{term}</dt><dd>{value}</dd></div>)}
+        </dl>
+      </div>
+      <div>
+        <h2 class="about-heading">{copy.timelineTitle}</h2>
+        <ol class="timeline">
+          {copy.timeline.map(([when, role, where, what]) => (
+            <li class="timeline-item">
+              <p class="timeline-when">{when}</p>
+              <h3 class="timeline-role">{role}</h3>
+              <p class="timeline-where">{where}</p>
+              <p class="timeline-what">{what}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-cta section">
+    <div class="container page-cta-inner">
+      <h2 class="contact-heading">{copy.ctaTitle}</h2>
+      <a class="btn btn--dark" href={routes.contact[lang]}>{copy.cta}</a>
+    </div>
+  </section>
+</Base>

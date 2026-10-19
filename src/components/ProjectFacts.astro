@@ -1,0 +1,33 @@
+---
+// Facts, slogan and description of a project. Visible on the projects page; hidden inside the
+// home cards, where the modal clones it. Class names avoid "meta"/"modal", which text extractors
+// (Readability, trafilatura) drop as page chrome. The {' '} keep words apart in extracted text,
+// since the build strips whitespace between tags.
+import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+
+interface Props { lang: Lang; project: CollectionEntry<'projects'>; withTags?: boolean }
+const { lang, project, withTags = false } = Astro.props;
+const p = project.data;
+const s = t(lang);
+const host = p.url?.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+// Brand slogans are mostly English; mark them so screen readers switch voice on Spanish pages.
+const slogan = typeof p.slogan === 'string' ? { text: p.slogan, lang: 'en' } : p.slogan ? { text: p.slogan[lang], lang } : null;
+---
+<div class="project-facts">
+  <div class="project-facts-left">
+    <dl>
+      <div class="fact-item"><dt>{s.factClient}</dt>{' '}<dd>{p.client}</dd></div>{' '}
+      <div class="fact-item"><dt>{s.factType}</dt>{' '}<dd>{p.type[lang]}</dd></div>{' '}
+      <div class="fact-item"><dt>{s.factYear}</dt>{' '}<dd>{p.year}</dd></div>{' '}
+      {p.url && <div class="fact-item"><dt>{s.factWebsite}</dt>{' '}<dd><a href={p.url} target="_blank" rel="noopener">{host}</a></dd></div>}
+    </dl>{' '}
+    {withTags && <div class="card-tags">{p.tags[lang].map((tag) => <><span class="tag">{tag}</span>{' '}</>)}</div>}
+  </div>{' '}
+  <div class="project-facts-right">
+    {slogan && <><p class="project-slogan" lang={slogan.lang !== lang ? slogan.lang : undefined}>{slogan.text}</p>{' '}</>}
+    <p>{p.role[lang]}</p>{' '}
+    <p>{p.detail[lang]}</p>
+  </div>
+</div>

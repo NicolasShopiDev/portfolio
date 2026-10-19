@@ -1,0 +1,71 @@
+{
+  "order": 1,
+  "name": "Émolo B2B",
+  "client": "Émolo",
+  "year": "2026",
+  "url": "https://www.emolo.es/",
+  "platform": "shopify",
+  "badge": "Shopify B2B",
+  "slogan": "Handcrafted in Spain",
+  "tags": {
+    "en": [
+      "Shopify B2B",
+      "Liquid",
+      "Quick Order",
+      "Jewelry"
+    ],
+    "es": [
+      "Shopify B2B",
+      "Liquid",
+      "Pedido rápido",
+      "Joyería"
+    ]
+  },
+  "type": {
+    "en": "B2B Wholesale Portal",
+    "es": "Portal mayorista B2B"
+  },
+  "role": {
+    "en": "Wholesale portal for Émolo, a handmade jewelry brand from Murcia, built on top of its existing Prestige theme. Access is decided by a single Liquid predicate on customer.b2b? that every price, stock badge and buy button reads, so a guest or a customer without a company never receives a price in the HTML. Buyers can still hide their own prices on screen: the toggle lives in localStorage and is applied in the head, before first paint.",
+    "es": "Portal mayorista para Émolo, marca de joyería hecha a mano de Murcia, construido sobre el tema Prestige que ya usaba la tienda. El acceso lo decide una única condición de Liquid sobre customer.b2b? que leen todos los precios, badges de stock y botones de compra, de modo que un visitante sin sesión iniciada o un cliente sin empresa nunca recibe un precio en el HTML. Aun así, los compradores pueden ocultar sus propios precios en pantalla: la preferencia se guarda en localStorage y se aplica en el head, antes de que se pinte la página."
+  },
+  "detail": {
+    "en": "The ordering table is rendered in Liquid and driven by a custom element, one row per variant with live stock. Its steppers are seeded once from /cart.js and kept in step through the theme's cart:change event, so a variant shows the same quantity on the product page, in every collection card and in search results. Submitting sends a single /cart/update.js call with absolute quantities: a first order, a top-up and a reduction are the same request, and a rejected line leaves the cart untouched. Around it: per-variant galleries from a metafield, a grid and list view switch, SKU search that marks the matching row, stock status on each cart line, and a pageshow handler that re-reads the cart when the browser restores the page from bfcache.",
+    "es": "La tabla de pedido se renderiza en Liquid y la controla un custom element, con una fila por variante y stock en tiempo real. Sus selectores de cantidad se inicializan una sola vez desde /cart.js y se mantienen sincronizados con el evento cart:change del tema, así que una variante muestra la misma cantidad en la página de producto, en cada tarjeta de colección y en los resultados de búsqueda. Al enviar, se hace una única llamada a /cart/update.js con cantidades absolutas: un primer pedido, una ampliación y una reducción son la misma petición, y una línea rechazada deja el carrito intacto. Completan la tabla: galerías por variante desde un metafield, cambio entre vista de parrilla y de lista, búsqueda por referencia (SKU) que marca la fila coincidente, estado de stock en cada línea del carrito y un handler de pageshow que vuelve a leer el carrito cuando el navegador restaura la página desde la bfcache."
+  },
+  "images": {
+    "dir": "EMOLO",
+    "grid": "Emolo Grid.webp",
+    "banner": "Emolo Banner.webp",
+    "highlights": [
+      {
+        "file": "Emolo producto B2B.webp",
+        "alt": {
+          "es": "Tabla de pedido por tallas en una ficha de producto B2B de Émolo, con stock y cantidad por fila",
+          "en": "Size-by-size order table on an Émolo B2B product page, with stock and quantity per row"
+        }
+      },
+      {
+        "file": "Emolo listado parrilla.webp",
+        "alt": {
+          "es": "Colección B2B de Émolo en vista de parrilla, cada tarjeta con su tabla de tallas, stock y cantidad",
+          "en": "Émolo B2B collection in grid view, each card with its own size, stock and quantity table"
+        }
+      },
+      {
+        "file": "Emolo listado tabla.webp",
+        "alt": {
+          "es": "Colección B2B de Émolo en vista de lista, con una tabla de pedido por tallas para cada anillo",
+          "en": "Émolo B2B collection in list view, with a size order table for each ring"
+        }
+      },
+      {
+        "file": "Emolo busqueda referencia.webp",
+        "alt": {
+          "es": "Búsqueda por referencia en el portal B2B de Émolo, con la fila de la talla encontrada resaltada",
+          "en": "SKU search on Émolo's B2B portal, with the matching size row highlighted in the order table"
+        }
+      }
+    ]
+  }
+}

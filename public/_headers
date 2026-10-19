@@ -1,0 +1,11 @@
+# Fingerprinted build assets (CSS, JS, fonts) never change under the same URL.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Pre-built image derivatives (npm run images); names don't change often.
+/img/*
+  Cache-Control: public, max-age=2592000
+
+# Logos, OG images and the Checkout Lab files keep stable names, so revalidate daily.
+/assets/*
+  Cache-Control: public, max-age=86400

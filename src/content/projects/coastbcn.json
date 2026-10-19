@@ -1,0 +1,64 @@
+{
+  "order": 8,
+  "name": "CoastBCN",
+  "client": "CoastBCN",
+  "year": "2023",
+  "url": "https://www.coastbcn.com/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "PASSION AND LIFESTYLE",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Custom Features",
+      "Fashion"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Funcionalidades a medida",
+      "Moda"
+    ]
+  },
+  "type": {
+    "en": "Collaboration",
+    "es": "Colaboración"
+  },
+  "role": {
+    "en": "Collaborated with Reduncle agency on an ongoing Shopify development engagement for a Barcelona-based fashion brand, delivering UX improvements and custom storefront features.",
+    "es": "Colaboración con la agencia Reduncle en un proyecto continuo de desarrollo Shopify para una marca de moda de Barcelona, con mejoras de UX y funcionalidades a medida para la tienda."
+  },
+  "detail": {
+    "en": "Shipped: configurable-speed announcement banner, quick-add with inline size selection from collection grids, custom drawer cart redesign, automated out-of-stock badge logic, and a bespoke password page experience.",
+    "es": "Se pusieron en producción una barra de anuncios con velocidad configurable, el añadido rápido desde las parrillas de colección con selección de talla integrada, un rediseño a medida del carrito lateral, la lógica automática de badges de agotado y una experiencia propia para la página de contraseña."
+  },
+  "images": {
+    "dir": "Coast Bcn",
+    "grid": "Coast Grid.png",
+    "banner": "Coast Banner.webp",
+    "highlights": [
+      {
+        "file": "667055ca504ec69e9652c309_Home BCN.png",
+        "alt": {
+          "es": "Portada de CoastBCN con el lookbook Palm Springs SS'24 y barra de anuncios con envío y regalo",
+          "en": "CoastBCN home page with the Palm Springs SS'24 lookbook hero and a shipping and gift announcement bar"
+        }
+      },
+      {
+        "file": "667055cad1001f3f5ab2e061_Product BCN.png",
+        "alt": {
+          "es": "Ficha de producto de CoastBCN con galería, selector de color, indicador de stock y pago con PayPal",
+          "en": "CoastBCN product page with photo gallery, color selector, stock status and a PayPal button"
+        }
+      },
+      {
+        "file": "667055caa06afa3da2078019_Collections BCN.png",
+        "alt": {
+          "es": "Bloques de colección de CoastBCN para sudaderas, camisetas y todos los productos, con pestañas de categoría",
+          "en": "CoastBCN collection tiles for hoodies, T-shirts and all products, with category tabs below"
+        }
+      }
+    ]
+  }
+}

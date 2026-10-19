@@ -1,0 +1,57 @@
+{
+  "order": 2,
+  "name": "Vidal & Vidal B2B",
+  "client": "Vidal & Vidal",
+  "year": "2026",
+  "url": "https://www.vidal-vidal.com/",
+  "platform": "shopify-plus",
+  "badge": "Shopify Plus",
+  "slogan": "Timeless jewelry, Menorca 1998",
+  "tags": {
+    "en": [
+      "Shopify Plus",
+      "B2B",
+      "Quick Order",
+      "Jewelry"
+    ],
+    "es": [
+      "Shopify Plus",
+      "B2B",
+      "Pedido rápido",
+      "Joyería"
+    ]
+  },
+  "type": {
+    "en": "B2B Wholesale Portal",
+    "es": "Portal mayorista B2B"
+  },
+  "role": {
+    "en": "Wholesale store for Vidal & Vidal, a Menorcan jewelry house, on Shopify Plus. The B2B theme started as a straight export of the consumer Sleek theme with no B2B logic in it, so the first job was clearing 29 orphaned templates inherited from the export. Seven of them referenced videos that only exist on the consumer store and broke shopify theme dev; removing them cut the templates folder by 75%.",
+    "es": "Tienda mayorista para Vidal & Vidal, casa joyera menorquina, en Shopify Plus. El tema B2B nació como una exportación directa del tema Sleek de la tienda B2C, sin ninguna lógica B2B, así que el primer trabajo fue limpiar 29 plantillas huérfanas heredadas de esa exportación. Siete de ellas hacían referencia a vídeos que solo existen en la tienda B2C y rompían shopify theme dev; eliminarlas redujo la carpeta templates en un 75 %."
+  },
+  "detail": {
+    "en": "The ordering table is a port of the Émolo one to a different theme: same logic, with an adapter layer that swaps Prestige's cart events for Sleek's pub/sub and section bundling, and the same network contract as Sleek's native quick order list, so the cart drawer and header update with no extra code. Each row shows stock, the wholesale price next to the retail price from a variant-level money metafield, and a colour swatch resolved from a metaobject. Only the rows that changed are sent to /cart/update.js, as absolute quantities, in a request flagged as XHR so Shopify validates inventory. The running total is formatted from a Liquid money sample, so it matches the session currency in every market. Purchase is closed to anyone who is not a wholesale customer.",
+    "es": "La tabla de pedido es la de Émolo llevada a otro tema: la misma lógica, con una capa de adaptación que sustituye los eventos de carrito de Prestige por el pub/sub y el section bundling de Sleek, y el mismo contrato de red que la lista de pedido rápido nativa de Sleek, así que el carrito lateral y la cabecera se actualizan sin código adicional. Cada fila muestra el stock, el precio mayorista junto al PVP, que sale de un metafield de tipo dinero de la variante, y una muestra de color resuelta desde un metaobject. A /cart/update.js solo se envían las filas que han cambiado, con cantidades absolutas y en una petición marcada como XHR para que Shopify valide el inventario. El total acumulado se formatea a partir de un importe de ejemplo renderizado con Liquid, así que coincide con la moneda de la sesión en todos los mercados. La compra está cerrada a cualquiera que no sea cliente mayorista."
+  },
+  "images": {
+    "dir": "Vidal Vidal",
+    "grid": "VidalVidal Grid.webp",
+    "banner": "VidalVidal Banner.webp",
+    "highlights": [
+      {
+        "file": "VidalVidal producto.webp",
+        "alt": {
+          "es": "Ficha de producto de la tienda B2C de Vidal & Vidal, de la que se exportó el tema B2B, con galería, ventajas de compra desplegables y módulo Consigue el look",
+          "en": "Product page on Vidal & Vidal's consumer store, the source of the B2B theme, with photo gallery, expandable purchase benefits and a Get the look module"
+        }
+      },
+      {
+        "file": "VidalVidal coleccion.webp",
+        "alt": {
+          "es": "Colección Best Sellers de la tienda B2C de Vidal & Vidal con filtros, ordenación, etiquetas Top venta y botón de favoritos",
+          "en": "Best Sellers collection on Vidal & Vidal's consumer store with filters, sorting, Top seller badges and wishlist buttons"
+        }
+      }
+    ]
+  }
+}

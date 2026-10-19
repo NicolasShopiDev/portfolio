@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProjectEntry from '../components/ProjectEntry.astro';
+import { routes, updated, type Lang } from '../i18n/routes';
+import { t, seo } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, creativeWorks, graph } from '../lib/schema';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+const meta = seo.projects[lang];
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: s.navProjects, path: routes.projects[lang] },
+];
+const intro = lang === 'es'
+  ? 'Diecisiete proyectos Shopify desde 2021: portales mayoristas B2B, tiendas Shopify Plus, temas a medida y mantenimiento para marcas de España y Europa. Cada ficha cuenta qué se construyó, con qué y para quién.'
+  : 'Seventeen Shopify projects since 2021: B2B wholesale portals, Shopify Plus stores, custom themes and maintenance for brands in Spain and Europe. Each entry covers what was built, how and for whom.';
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'CollectionPage', path: routes.projects[lang], name: meta.title, description: meta.description, lang, dateModified: updated.projects }),
+  breadcrumbs(crumbs),
+  creativeWorks(routes.projects[lang], projects.map((p) => ({
+    slug: p.id,
+    name: p.data.name,
+    client: p.data.client,
+    url: p.data.url,
+    year: p.data.year,
+    description: p.data.role[lang],
+    keywords: p.data.tags[lang],
+  }))),
+);
+---
+<Base lang={lang} route="projects" title={meta.title} description={meta.description} schema={schema}>
+  <section class="page-head">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      <div class="section-intro">
+        <h1 class="section-heading">{lang === 'es' ? 'Proyectos Shopify y B2B' : 'Shopify and B2B projects'}</h1>
+        <p class="section-desc">{intro}</p>
+      </div>
+    </div>
+  </section>
+  <div class="container project-list">
+    {projects.map((project, i) => <ProjectEntry lang={lang} project={project} priority={i === 0} />)}
+  </div>
+</Base>

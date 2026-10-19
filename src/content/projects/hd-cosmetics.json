@@ -1,0 +1,70 @@
+{
+  "order": 12,
+  "name": "HD Cosmetics",
+  "client": "HD Cosmetics",
+  "year": "2023",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "SENSE OF TOUCH",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Performance",
+      "Beauty"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Rendimiento",
+      "Belleza"
+    ]
+  },
+  "type": {
+    "en": "Shopify Maintenance",
+    "es": "Mantenimiento Shopify"
+  },
+  "role": {
+    "en": "Provided targeted Shopify development and maintenance for an established dermocosmetics brand through Reduncle agency, delivering seasonal campaign features, app customizations, and ongoing site improvements.",
+    "es": "Desarrollo y mantenimiento Shopify específicos para una marca consolidada de dermocosmética, a través de la agencia Reduncle, con funcionalidades para campañas de temporada, personalizaciones de apps y mejoras continuas en la web."
+  },
+  "detail": {
+    "en": "Seasonal Black Friday cart modifications, promotional offer management, app-level customization for brand-specific workflows, and responsive layout fixes ensuring consistency across all device types.",
+    "es": "Modificaciones de temporada en el carrito para Black Friday, gestión de ofertas promocionales, personalización de apps para flujos de trabajo propios de la marca y correcciones de maquetación responsive para garantizar la coherencia en todo tipo de dispositivos."
+  },
+  "images": {
+    "dir": "HD Cosmetics",
+    "grid": "HD Grid.png",
+    "banner": "HD Banner.webp",
+    "highlights": [
+      {
+        "file": "66714a5621c86e15d2caca64_Blog grid.png",
+        "alt": {
+          "es": "Sección de blog de HD Cosmetics sobre cuidado de la piel, con tres artículos y botón Ver más",
+          "en": "HD Cosmetics skincare blog section with three article cards and a See more button"
+        }
+      },
+      {
+        "file": "66714a552f4f40cc2c011d8a_Entrar.png",
+        "alt": {
+          "es": "Página de entrada de HD Cosmetics y Sense of Touch con selector de país y botón Entrar",
+          "en": "HD Cosmetics and Sense of Touch entry page with a country selector and an Enter button"
+        }
+      },
+      {
+        "file": "66714a567564c9568e606d0c_Mas info.png",
+        "alt": {
+          "es": "Bloque de más información de un producto de HD Cosmetics, con descripción, tipo de piel, función y foto",
+          "en": "HD Cosmetics product information block with description, skin type, function and a product photo"
+        }
+      },
+      {
+        "file": "66714a55e437391766d0dacf_Product.png",
+        "alt": {
+          "es": "Ficha de un pack de crema y mascarilla de HD Cosmetics, con indicación, beneficios, modo de empleo y composición",
+          "en": "HD Cosmetics product page for a cream and mask pack, with indications, benefits, directions and ingredients"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "order": 4,
+  "name": "Hifas da Terra",
+  "client": "Hifas da Terra",
+  "year": "2024",
+  "url": "https://hifasdaterra.com/",
+  "platform": "shopify",
+  "badge": "Shopify B2B",
+  "slogan": "Improving Health Worldwide",
+  "tags": {
+    "en": [
+      "Shopify B2B",
+      "Liquid",
+      "Custom Theme"
+    ],
+    "es": [
+      "Shopify B2B",
+      "Liquid",
+      "Tema a medida"
+    ]
+  },
+  "type": {
+    "en": "B2B Ecommerce",
+    "es": "Ecommerce B2B"
+  },
+  "role": {
+    "en": "Built a B2B ecommerce platform for a Spanish biotech company specializing in medicinal mushroom supplements: tiered wholesale pricing, a dedicated professional portal, and product filtering tailored for healthcare practitioners.",
+    "es": "Desarrollo de una plataforma de ecommerce B2B para una empresa biotecnológica española especializada en suplementos de hongos medicinales: precios mayoristas por tramos, un portal específico para profesionales y un filtrado de productos adaptado a profesionales sanitarios."
+  },
+  "detail": {
+    "en": "Shopify B2B implementation: customer segment-based catalog visibility, performance-optimized product pages with lazy-loaded media, a dual B2C and B2B purchase flow, and a product information architecture built for healthcare practitioners.",
+    "es": "Implementación de Shopify B2B: visibilidad del catálogo según el segmento de cliente, páginas de producto optimizadas para el rendimiento con contenido multimedia de carga diferida, un doble flujo de compra B2C y B2B, y una arquitectura de información de producto pensada para profesionales sanitarios."
+  },
+  "images": {
+    "dir": "Hifas Da Terra",
+    "grid": "Hifas Grid.png",
+    "banner": "Hifas Banner.webp",
+    "highlights": [
+      {
+        "file": "696e8d5ecc348c6c4983b4e2_Hifas producto.png",
+        "alt": {
+          "es": "Ficha de producto del portal profesional de Hifas da Terra, con PVP, precio profesional y cantidad por formato",
+          "en": "Product page on Hifas da Terra's professional portal, with retail price, pro price and quantity per format"
+        }
+      },
+      {
+        "file": "696e8d5e3af2eb460228ecd0_Coleccion hifas.png",
+        "alt": {
+          "es": "Listado de Hifas da Terra en formato tabla, con bote y recarga, precios, cantidad y aviso de agotado",
+          "en": "Hifas da Terra product list as a table, with bottle and refill rows, prices, quantities and a sold-out badge"
+        }
+      },
+      {
+        "file": "696e8d5e2a5402616a62ff62_Grid home Hifas.png",
+        "alt": {
+          "es": "Carrusel de productos del portal profesional de Hifas da Terra, con PVP, precio profesional y cantidad por tarjeta",
+          "en": "Product carousel on Hifas da Terra's professional portal, with retail price, pro price and quantity on each card"
+        }
+      }
+    ]
+  }
+}

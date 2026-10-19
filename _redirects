@@ -1,8 +1,0 @@
-# Old Webflow URLs still indexed by search engines. Specific rules first, splat last.
-/contact /#contact 301
-/projects/el-capote /#el-capote 301
-/projects/cosmeticos24h /#cosmeticos24h 301
-/moncho-moreno /#moncho-moreno 301
-/es-raco-darta /#projects 301
-/projects /#projects 301
-/projects/* /#projects 301

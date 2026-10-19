@@ -1,0 +1,38 @@
+---
+// Serves the pre-built AVIF/WebP derivatives from public/img (npm run images), with width/height
+// from the manifest so the browser reserves space. Fails the build if an image was not generated.
+import manifest from '../data/image-manifest.json';
+
+interface Props {
+  image: string; // "<dir>/<file>" as in the project JSON
+  alt: string;
+  sizes: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  hideBelow?: number; // skip the download under this viewport width (e.g. hero mocks hidden on mobile)
+}
+
+const { image, alt, sizes, class: className, loading = 'lazy', fetchpriority, hideBelow } = Astro.props;
+const entry = (manifest as Record<string, { width: number; height: number; animated: boolean; base: string; widths: number[]; formats: string[] }>)[image];
+if (!entry) throw new Error(`Image missing from src/data/image-manifest.json: ${image}. Run npm run images.`);
+
+const srcset = (fmt: string) => entry.widths.map((w) => `${entry.base}-${w}.${fmt} ${w}w`).join(', ');
+const fallbackWidth = entry.widths.find((w) => w >= 800) ?? entry.widths[entry.widths.length - 1];
+const BLANK = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+---
+<picture>
+  {hideBelow && <source media={`(max-width: ${hideBelow - 1}px)`} srcset={BLANK} />}
+  {entry.formats.includes('avif') && <source type="image/avif" srcset={srcset('avif')} sizes={sizes} />}
+  <source type="image/webp" srcset={srcset('webp')} sizes={sizes} />
+  <img
+    src={`${entry.base}-${fallbackWidth}.webp`}
+    width={entry.width}
+    height={entry.height}
+    alt={alt}
+    class={className}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+  />
+</picture>

@@ -1,0 +1,1378 @@
+{
+  "Adamina/667028bc3963a3304e3895d9_Product grid.png": {
+    "width": 2491,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/adamina/667028bc3963a3304e3895d9-product-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Adamina/667028bc3d05ca5816996f31_Adamina home.png": {
+    "width": 2491,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/adamina/667028bc3d05ca5816996f31-adamina-home",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Adamina/667028bd2dfdc5f7e21187e5_Adamina colecctions.png": {
+    "width": 2491,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/adamina/667028bd2dfdc5f7e21187e5-adamina-colecctions",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Adamina/667028bd787e325a4664cda5_Adamina product.png": {
+    "width": 2493,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/adamina/667028bd787e325a4664cda5-adamina-product",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Adamina/Adamina Banner.jpg": {
+    "width": 4032,
+    "height": 3024,
+    "animated": false,
+    "base": "/img/adamina/adamina-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Adamina/Adamina Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/adamina/adamina-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Born Living Yoga/66705367031d146cd5750504_Producto.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/born-living-yoga/66705367031d146cd5750504-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Born Living Yoga/667053671bb969becc00dccc_Completa tu look.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/born-living-yoga/667053671bb969becc00dccc-completa-tu-look",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Born Living Yoga/66705367a0f37ddd043158ce_Drawer cart.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/born-living-yoga/66705367a0f37ddd043158ce-drawer-cart",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Born Living Yoga/66705368bf754ee70db1f1fc_BLY Colecctions.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/born-living-yoga/66705368bf754ee70db1f1fc-bly-colecctions",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Born Living Yoga/BLY Banner.jpg": {
+    "width": 1920,
+    "height": 874,
+    "animated": false,
+    "base": "/img/born-living-yoga/bly-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Born Living Yoga/BLY Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/born-living-yoga/bly-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Coast Bcn/667055ca504ec69e9652c309_Home BCN.png": {
+    "width": 2493,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/coast-bcn/667055ca504ec69e9652c309-home-bcn",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Coast Bcn/667055caa06afa3da2078019_Collections BCN.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/coast-bcn/667055caa06afa3da2078019-collections-bcn",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Coast Bcn/667055cad1001f3f5ab2e061_Product BCN.png": {
+    "width": 2493,
+    "height": 1384,
+    "animated": false,
+    "base": "/img/coast-bcn/667055cad1001f3f5ab2e061-product-bcn",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Coast Bcn/Coast Banner.webp": {
+    "width": 2048,
+    "height": 1706,
+    "animated": false,
+    "base": "/img/coast-bcn/coast-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Coast Bcn/Coast Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/coast-bcn/coast-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Cosmeticos24H/696e81952e43857cb5eb4174_producto cosmeticos.png": {
+    "width": 2488,
+    "height": 1431,
+    "animated": false,
+    "base": "/img/cosmeticos24h/696e81952e43857cb5eb4174-producto-cosmeticos",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Cosmeticos24H/696e81c9de2a9a2ea9992987_Coleccion cosmeticos.png": {
+    "width": 2493,
+    "height": 1428,
+    "animated": false,
+    "base": "/img/cosmeticos24h/696e81c9de2a9a2ea9992987-coleccion-cosmeticos",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Cosmeticos24H/Cosmeticos Banner.jpg": {
+    "width": 1920,
+    "height": 1280,
+    "animated": false,
+    "base": "/img/cosmeticos24h/cosmeticos-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Cosmeticos24H/Cosmeticos Grid.png": {
+    "width": 2490,
+    "height": 1426,
+    "animated": false,
+    "base": "/img/cosmeticos24h/cosmeticos-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "El Capote/66705738116d9b0cd63c7f4c_Product.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/el-capote/66705738116d9b0cd63c7f4c-product",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "El Capote/667057382a9768509250b039_Newsletter.png": {
+    "width": 2493,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/el-capote/667057382a9768509250b039-newsletter",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "El Capote/66705738438bba6bde64fad3_Collection grid.png": {
+    "width": 2493,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/el-capote/66705738438bba6bde64fad3-collection-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "El Capote/667057e1c00da3e9cfb1aebf_Casillas (1).png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/el-capote/667057e1c00da3e9cfb1aebf-casillas-1",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "El Capote/Capote Banner.jpg": {
+    "width": 3754,
+    "height": 1848,
+    "animated": false,
+    "base": "/img/el-capote/capote-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "El Capote/Capote Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/el-capote/capote-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "EMOLO/Emolo Banner.webp": {
+    "width": 3200,
+    "height": 1400,
+    "animated": false,
+    "base": "/img/emolo/emolo-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "EMOLO/Emolo busqueda referencia.webp": {
+    "width": 1976,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/emolo/emolo-busqueda-referencia",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "EMOLO/Emolo Grid.webp": {
+    "width": 2000,
+    "height": 1250,
+    "animated": false,
+    "base": "/img/emolo/emolo-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "EMOLO/Emolo listado parrilla.webp": {
+    "width": 1976,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/emolo/emolo-listado-parrilla",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "EMOLO/Emolo listado tabla.webp": {
+    "width": 1976,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/emolo/emolo-listado-tabla",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "EMOLO/Emolo producto B2B.webp": {
+    "width": 1976,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/emolo/emolo-producto-b2b",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Ewheel B2B/69693eb898aeb2c388f0f4fc_Choose options.png": {
+    "width": 2518,
+    "height": 1394,
+    "animated": false,
+    "base": "/img/ewheel-b2b/69693eb898aeb2c388f0f4fc-choose-options",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Ewheel B2B/69693f242e4056a82bfbad25_My account.png": {
+    "width": 2493,
+    "height": 1384,
+    "animated": false,
+    "base": "/img/ewheel-b2b/69693f242e4056a82bfbad25-my-account",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Ewheel B2B/69693f24a70bb7eae9ad7aca_Cart ewheel.png": {
+    "width": 2493,
+    "height": 1144,
+    "animated": false,
+    "base": "/img/ewheel-b2b/69693f24a70bb7eae9ad7aca-cart-ewheel",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Ewheel B2B/69693f51819a7bf7695d2b82_Home.png": {
+    "width": 2488,
+    "height": 1387,
+    "animated": false,
+    "base": "/img/ewheel-b2b/69693f51819a7bf7695d2b82-home",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Ewheel B2B/Ewheel Banner.webp": {
+    "width": 3200,
+    "height": 1511,
+    "animated": false,
+    "base": "/img/ewheel-b2b/ewheel-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Ewheel B2B/Ewheel Grid.png": {
+    "width": 2496,
+    "height": 1287,
+    "animated": false,
+    "base": "/img/ewheel-b2b/ewheel-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Fernando de carcer/667060a8c2259e99e56a7e89_chrome-capture-2024-6-17 (1).png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/fernando-de-carcer/667060a8c2259e99e56a7e89-chrome-capture-2024-6-17-1",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Fernando de carcer/667060a9e86900a19539ec50_chrome-capture-2024-6-17.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/fernando-de-carcer/667060a9e86900a19539ec50-chrome-capture-2024-6-17",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Fernando de carcer/667060a9ea32bb134c77a574_chrome-capture-2024-6-17 (2).png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/fernando-de-carcer/667060a9ea32bb134c77a574-chrome-capture-2024-6-17-2",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Fernando de carcer/667060c4f2fe2e92094f8e6a_chrome-capture-2024-6-17 (3).png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/fernando-de-carcer/667060c4f2fe2e92094f8e6a-chrome-capture-2024-6-17-3",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Fernando de carcer/Fernando Banner.jpg": {
+    "width": 3840,
+    "height": 2160,
+    "animated": false,
+    "base": "/img/fernando-de-carcer/fernando-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Fernando de carcer/Fernando Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/fernando-de-carcer/fernando-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "HD Cosmetics/66714a552f4f40cc2c011d8a_Entrar.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/hd-cosmetics/66714a552f4f40cc2c011d8a-entrar",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "HD Cosmetics/66714a55e437391766d0dacf_Product.png": {
+    "width": 2491,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/hd-cosmetics/66714a55e437391766d0dacf-product",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "HD Cosmetics/66714a5621c86e15d2caca64_Blog grid.png": {
+    "width": 2491,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/hd-cosmetics/66714a5621c86e15d2caca64-blog-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "HD Cosmetics/66714a567564c9568e606d0c_Mas info.png": {
+    "width": 2491,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/hd-cosmetics/66714a567564c9568e606d0c-mas-info",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "HD Cosmetics/HD Banner.webp": {
+    "width": 2560,
+    "height": 1016,
+    "animated": false,
+    "base": "/img/hd-cosmetics/hd-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "HD Cosmetics/HD Grid.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/hd-cosmetics/hd-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hifas Da Terra/696e8d5e2a5402616a62ff62_Grid home Hifas.png": {
+    "width": 2483,
+    "height": 1450,
+    "animated": false,
+    "base": "/img/hifas-da-terra/696e8d5e2a5402616a62ff62-grid-home-hifas",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hifas Da Terra/696e8d5e3af2eb460228ecd0_Coleccion hifas.png": {
+    "width": 2495,
+    "height": 1438,
+    "animated": false,
+    "base": "/img/hifas-da-terra/696e8d5e3af2eb460228ecd0-coleccion-hifas",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hifas Da Terra/696e8d5ecc348c6c4983b4e2_Hifas producto.png": {
+    "width": 2493,
+    "height": 1426,
+    "animated": false,
+    "base": "/img/hifas-da-terra/696e8d5ecc348c6c4983b4e2-hifas-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hifas Da Terra/Hifas Banner.webp": {
+    "width": 2400,
+    "height": 960,
+    "animated": false,
+    "base": "/img/hifas-da-terra/hifas-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hifas Da Terra/Hifas Grid.png": {
+    "width": 2490,
+    "height": 1436,
+    "animated": false,
+    "base": "/img/hifas-da-terra/hifas-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "IVB Wellness/IVB Banner.webp": {
+    "width": 2000,
+    "height": 875,
+    "animated": false,
+    "base": "/img/ivb-wellness/ivb-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "IVB Wellness/IVB coleccion.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/ivb-wellness/ivb-coleccion",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "IVB Wellness/IVB Grid.webp": {
+    "width": 2000,
+    "height": 1250,
+    "animated": false,
+    "base": "/img/ivb-wellness/ivb-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "IVB Wellness/IVB producto.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/ivb-wellness/ivb-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Moncho Moreno/667147783a9c99d1e6b94ddd_Marcas.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/moncho-moreno/667147783a9c99d1e6b94ddd-marcas",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Moncho Moreno/667147788dd3319daa098bce_Ingredientes.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/moncho-moreno/667147788dd3319daa098bce-ingredientes",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Moncho Moreno/66714778c5bbc6c2614e4388_Info.png": {
+    "width": 2491,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/moncho-moreno/66714778c5bbc6c2614e4388-info",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Moncho Moreno/66714778c5d9c74a14351cd3_Carrito.png": {
+    "width": 2491,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/moncho-moreno/66714778c5d9c74a14351cd3-carrito",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Moncho Moreno/Moncho Banner.jpg": {
+    "width": 3840,
+    "height": 2160,
+    "animated": false,
+    "base": "/img/moncho-moreno/moncho-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Moncho Moreno/Moncho Grid.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/moncho-moreno/moncho-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "MT Helmets/696e86b213d3a33c62003fc6_Carrito b2b.png": {
+    "width": 2495,
+    "height": 1435,
+    "animated": false,
+    "base": "/img/mt-helmets/696e86b213d3a33c62003fc6-carrito-b2b",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "MT Helmets/696e86b35aab58a8f483c87d_Product page MT HELMETS B2B.png": {
+    "width": 2493,
+    "height": 1436,
+    "animated": false,
+    "base": "/img/mt-helmets/696e86b35aab58a8f483c87d-product-page-mt-helmets-b2b",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "MT Helmets/696e87085a88f3f6b5e43c97_Home grid mt helmets b2b.png": {
+    "width": 2495,
+    "height": 1298,
+    "animated": false,
+    "base": "/img/mt-helmets/696e87085a88f3f6b5e43c97-home-grid-mt-helmets-b2b",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "MT Helmets/MT Banner.png": {
+    "width": 1437,
+    "height": 597,
+    "animated": false,
+    "base": "/img/mt-helmets/mt-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "MT Helmets/MT Grid.png": {
+    "width": 2493,
+    "height": 1443,
+    "animated": false,
+    "base": "/img/mt-helmets/mt-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Name The Brand/667d9d7320d47ee73e026da5_Home grid.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/name-the-brand/667d9d7320d47ee73e026da5-home-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Name The Brand/667d9d73777e3e1f2752dc09_Collections.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/name-the-brand/667d9d73777e3e1f2752dc09-collections",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Name The Brand/667d9d737e300ef925dad85c_Product.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/name-the-brand/667d9d737e300ef925dad85c-product",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Name The Brand/667d9d73f534efba7f6a656d_Products home.png": {
+    "width": 2493,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/name-the-brand/667d9d73f534efba7f6a656d-products-home",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Name The Brand/NTB Banner.jpg": {
+    "width": 3840,
+    "height": 2160,
+    "animated": false,
+    "base": "/img/name-the-brand/ntb-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Name The Brand/NTB Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/name-the-brand/ntb-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Qurado/66673a740265050e492841d5_chrome-capture-2024-6-10.png": {
+    "width": 2522,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/qurado/66673a740265050e492841d5-chrome-capture-2024-6-10",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Qurado/666c17a9e8fc6ab713443aa1_Reviews.gif": {
+    "width": 1421,
+    "height": 788,
+    "animated": true,
+    "base": "/img/qurado/666c17a9e8fc6ab713443aa1-reviews",
+    "widths": [
+      400,
+      800
+    ],
+    "formats": [
+      "webp"
+    ]
+  },
+  "Qurado/666c1c4496d47aba901e0165_93088f09-b651-43d6-a845-b505dcd635b7.gif": {
+    "width": 854,
+    "height": 480,
+    "animated": true,
+    "base": "/img/qurado/666c1c4496d47aba901e0165-93088f09-b651-43d6-a845-b505dcd635b7",
+    "widths": [
+      400,
+      800
+    ],
+    "formats": [
+      "webp"
+    ]
+  },
+  "Qurado/Qurado Banner.jpg": {
+    "width": 1234,
+    "height": 1020,
+    "animated": false,
+    "base": "/img/qurado/qurado-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Qurado/Qurado Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/qurado/qurado-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The villa concept/667022d7280fd18ab14a344b_TVC grid de colecciones.png": {
+    "width": 2489,
+    "height": 1383,
+    "animated": false,
+    "base": "/img/the-villa-concept/667022d7280fd18ab14a344b-tvc-grid-de-colecciones",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The villa concept/667022d7a680c63319ba31b5_TVC destacados.png": {
+    "width": 2494,
+    "height": 1381,
+    "animated": false,
+    "base": "/img/the-villa-concept/667022d7a680c63319ba31b5-tvc-destacados",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The villa concept/667022d7abfff397937dde1d_TVC product.png": {
+    "width": 2491,
+    "height": 1383,
+    "animated": false,
+    "base": "/img/the-villa-concept/667022d7abfff397937dde1d-tvc-product",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The villa concept/667025e38a82ff6606a76844_TVC home.png": {
+    "width": 2493,
+    "height": 1385,
+    "animated": false,
+    "base": "/img/the-villa-concept/667025e38a82ff6606a76844-tvc-home",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The villa concept/TVC Banner.jpg": {
+    "width": 1700,
+    "height": 1017,
+    "animated": false,
+    "base": "/img/the-villa-concept/tvc-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The villa concept/TVC Grid.png": {
+    "width": 2521,
+    "height": 1386,
+    "animated": false,
+    "base": "/img/the-villa-concept/tvc-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vidal Vidal/VidalVidal Banner.webp": {
+    "width": 3200,
+    "height": 1400,
+    "animated": false,
+    "base": "/img/vidal-vidal/vidalvidal-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vidal Vidal/VidalVidal coleccion.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/vidal-vidal/vidalvidal-coleccion",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vidal Vidal/VidalVidal Grid.webp": {
+    "width": 2000,
+    "height": 1250,
+    "animated": false,
+    "base": "/img/vidal-vidal/vidalvidal-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vidal Vidal/VidalVidal producto.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/vidal-vidal/vidalvidal-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  }
+}

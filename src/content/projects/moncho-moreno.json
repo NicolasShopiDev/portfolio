@@ -1,0 +1,71 @@
+{
+  "order": 16,
+  "name": "Moncho Moreno",
+  "client": "Moncho Moreno",
+  "year": "2021–2022",
+  "url": "https://monchomoreno.com/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "Hair surgeons",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Performance",
+      "Beauty"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Rendimiento",
+      "Belleza"
+    ]
+  },
+  "type": {
+    "en": "Shopify Maintenance",
+    "es": "Mantenimiento Shopify"
+  },
+  "role": {
+    "en": "Led ongoing Shopify development and technical strategy for a premium Spanish haircare brand at VRANDED Haus, serving as their primary development partner for more than a year.",
+    "es": "Dirección, desde VRANDED Haus, del desarrollo Shopify continuo y de la estrategia técnica de una marca española premium de cuidado capilar, como su principal partner de desarrollo durante más de un año."
+  },
+  "detail": {
+    "en": "Weekly technical audits, a custom user profile system with order history, complex app installations and integrations, promotional mechanics and paid media oversight, with improvements delivered across a 12+ month retainer.",
+    "es": "Auditorías técnicas semanales, un sistema de perfil de usuario a medida con historial de pedidos, instalaciones e integraciones de apps complejas, mecánicas promocionales y supervisión de paid media, con mejoras entregadas a lo largo de una colaboración recurrente de más de 12 meses."
+  },
+  "images": {
+    "dir": "Moncho Moreno",
+    "grid": "Moncho Grid.png",
+    "banner": "Moncho Banner.jpg",
+    "highlights": [
+      {
+        "file": "66714778c5d9c74a14351cd3_Carrito.png",
+        "alt": {
+          "es": "Página de carrito de Moncho Moreno con aviso de envío gratis, oferta de tote bag y producto sugerido",
+          "en": "Moncho Moreno cart page with a free shipping message, a tote bag offer and a suggested product"
+        }
+      },
+      {
+        "file": "66714778c5bbc6c2614e4388_Info.png",
+        "alt": {
+          "es": "Bloque de tecnología de Moncho Moreno que explica el activo M28 con un diagrama de sus componentes",
+          "en": "Moncho Moreno technology block explaining the M28 active ingredient with a diagram of its components"
+        }
+      },
+      {
+        "file": "667147788dd3319daa098bce_Ingredientes.png",
+        "alt": {
+          "es": "Secciones Cómo usarlo e Ingredientes de un producto de Moncho Moreno, con iconos y barra fija de compra",
+          "en": "How to use and ingredients sections on a Moncho Moreno product page, with icons and a sticky cart bar"
+        }
+      },
+      {
+        "file": "667147783a9c99d1e6b94ddd_Marcas.png",
+        "alt": {
+          "es": "Carrusel de menciones en prensa de Moncho Moreno con logos de revistas, citas y enlace a cada artículo",
+          "en": "Moncho Moreno press carousel with magazine logos, quotes and a link to each article"
+        }
+      }
+    ]
+  }
+}

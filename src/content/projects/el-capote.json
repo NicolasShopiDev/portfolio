@@ -1,0 +1,71 @@
+{
+  "order": 10,
+  "name": "El Capote",
+  "client": "El Capote",
+  "year": "2023",
+  "url": "https://poloselcapote.com/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "Wear the tradition, carry the art",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Promotions",
+      "Fashion"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Promociones",
+      "Moda"
+    ]
+  },
+  "type": {
+    "en": "Ecommerce",
+    "es": "Ecommerce"
+  },
+  "role": {
+    "en": "Custom Shopify development for a classic Spanish clothing brand, focused on promotional campaign mechanics and rich product storytelling.",
+    "es": "Desarrollo Shopify a medida para una marca española de ropa clásica, centrado en la mecánica de las campañas promocionales y en una narrativa de producto rica en contenido."
+  },
+  "detail": {
+    "en": "Delivered: countdown timer components for seasonal campaigns, bundle discount messaging, multi-image hover product cards, and a configurable featured collection module for editorial-style layouts.",
+    "es": "Se entregaron componentes de cuenta atrás para campañas de temporada, mensajes de descuento por pack, tarjetas de producto con varias imágenes al pasar el ratón y un módulo configurable de colección destacada para maquetaciones de estilo editorial."
+  },
+  "images": {
+    "dir": "El Capote",
+    "grid": "Capote Grid.png",
+    "banner": "Capote Banner.jpg",
+    "highlights": [
+      {
+        "file": "667057382a9768509250b039_Newsletter.png",
+        "alt": {
+          "es": "Ventana emergente de El Capote para suscribirse a la newsletter, con formulario y 10 % de descuento",
+          "en": "El Capote newsletter sign-up pop-up with a form and a 10% discount on the next order"
+        }
+      },
+      {
+        "file": "66705738438bba6bde64fad3_Collection grid.png",
+        "alt": {
+          "es": "Colección de hombre de El Capote con menú lateral de categorías, etiquetas Nuevo y tallas al pasar el ratón",
+          "en": "El Capote men's collection with a category sidebar, New badges and sizes shown on hover"
+        }
+      },
+      {
+        "file": "66705738116d9b0cd63c7f4c_Product.png",
+        "alt": {
+          "es": "Ficha de producto de El Capote para una cazadora vaquera, con selector de tallas y pago con PayPal",
+          "en": "El Capote denim jacket product page with a size selector and a PayPal checkout button"
+        }
+      },
+      {
+        "file": "667057e1c00da3e9cfb1aebf_Casillas (1).png",
+        "alt": {
+          "es": "Bloque editorial de la colección Iker Casillas en El Capote, con cazadora vaquera y detalle del parche bordado",
+          "en": "Editorial block for El Capote's Iker Casillas collection, with a denim jacket and a close-up of the embroidered patch"
+        }
+      }
+    ]
+  }
+}

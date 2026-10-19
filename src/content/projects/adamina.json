@@ -1,0 +1,71 @@
+{
+  "order": 11,
+  "name": "Adamina",
+  "client": "Adamina",
+  "year": "2023",
+  "url": "https://www.adaminajewelry.com/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "Redefining Jewelry Brilliance",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "UX",
+      "Jewelry"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "UX",
+      "Joyería"
+    ]
+  },
+  "type": {
+    "en": "Shopify Customization",
+    "es": "Personalización Shopify"
+  },
+  "role": {
+    "en": "Ongoing Shopify customization and UX work for a contemporary jewelry brand through Reduncle agency, focused on product discovery and in-cart upsells.",
+    "es": "Personalización continua de Shopify y trabajo de UX para una marca de joyería contemporánea, a través de la agencia Reduncle, centrados en el descubrimiento de producto y los upsells en el carrito."
+  },
+  "detail": {
+    "en": "Implemented: horizontal scroll product grid for editorial collection layouts, customized product detail page with variant-specific media, in-cart upsell integration, and UX refinements to support conversion optimization.",
+    "es": "Se implementaron una parrilla de productos con scroll horizontal para colecciones con maquetación editorial, una ficha de producto personalizada con contenido multimedia propio de cada variante, la integración de upsells en el carrito y ajustes de UX orientados a optimizar la conversión."
+  },
+  "images": {
+    "dir": "Adamina",
+    "grid": "Adamina Grid.png",
+    "banner": "Adamina Banner.jpg",
+    "highlights": [
+      {
+        "file": "667028bd2dfdc5f7e21187e5_Adamina colecctions.png",
+        "alt": {
+          "es": "Bloques de colección de Adamina para novedades, pendientes y collares, con fotografía de joyas a gran tamaño",
+          "en": "Adamina collection tiles for new in, earrings and necklaces, with large jewelry photography"
+        }
+      },
+      {
+        "file": "667028bd787e325a4664cda5_Adamina product.png",
+        "alt": {
+          "es": "Ficha de producto de Adamina con galería de fotos, opción unidad o par, colores y botón de añadir al carrito",
+          "en": "Adamina product page with photo gallery, single or pair option, color swatches and add to cart button"
+        }
+      },
+      {
+        "file": "667028bc3963a3304e3895d9_Product grid.png",
+        "alt": {
+          "es": "Fila de productos con scroll horizontal en Adamina junto a una foto editorial de la colección",
+          "en": "Horizontal scroll product row on Adamina next to an editorial collection photo"
+        }
+      },
+      {
+        "file": "667028bc3d05ca5816996f31_Adamina home.png",
+        "alt": {
+          "es": "Portada de Adamina con banner de rebajas de mitad de temporada y barra de anuncios con el descuento",
+          "en": "Adamina home page with a mid-season sale banner and an announcement bar with the discount"
+        }
+      }
+    ]
+  }
+}
