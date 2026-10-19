@@ -1,379 +1,11 @@
 'use strict';
 
-const PROJECTS = [
-  {
-    id: 20,
-    name: 'Émolo B2B',
-    badge: 'Shopify B2B',
-    tags: ['Shopify B2B', 'Liquid', 'Quick Order', 'Jewelry'],
-    client: 'Émolo',
-    type: 'B2B Wholesale Portal',
-    year: '2026',
-    imgDir: 'EMOLO',
-    imgKey: 'Emolo',
-    bannerExt: 'webp',
-    gridExt: 'webp',
-    url: 'https://www.emolo.es/',
-    slogan: 'Handcrafted in Spain',
-    highlights: [
-      'Emolo producto B2B.webp',
-      'Emolo listado parrilla.webp',
-      'Emolo listado tabla.webp',
-      'Emolo busqueda referencia.webp',
-    ],
-    role: "Built the wholesale portal for Émolo, a handmade jewelry brand from Murcia, on top of its existing Prestige theme. Retailers browse the same catalogue as consumers, but see their own prices and live stock, and can order every variant of a piece from one table.",
-    detail: 'Prices and checkout locked to approved B2B companies, with a toggle that lets buyers hide their own prices on screen. A variant order table on the product page and inside every collection card, its steppers kept in sync with the cart across the whole page. Per-variant galleries from metafields, a grid and list view switch, stock status on each cart line, and a search that lands on the exact reference the buyer typed.'
-  },
-  {
-    id: 21,
-    name: 'Vidal & Vidal B2B',
-    badge: 'Shopify Plus',
-    tags: ['Shopify Plus', 'B2B', 'Quick Order', 'Jewelry'],
-    client: 'Vidal & Vidal',
-    type: 'B2B Wholesale Portal',
-    year: '2026',
-    imgDir: 'Vidal Vidal',
-    imgKey: 'VidalVidal',
-    bannerExt: 'webp',
-    gridExt: 'webp',
-    url: 'https://www.vidal-vidal.com/',
-    slogan: 'Timeless jewelry, Menorca 1998',
-    highlights: [
-      'VidalVidal producto.webp',
-      'VidalVidal coleccion.webp',
-    ],
-    role: "Turned Vidal & Vidal's consumer theme into a wholesale store for the Menorcan jewelry house. The theme arrived as a straight export of the B2C site, so the job started by clearing out what a wholesale store can't use and then building the ordering flow on top.",
-    detail: 'A variant order table on the product page and in collection and search cards: stock status per row, wholesale and retail price side by side, colour swatches, quantity steppers, a running total and one button that adds the whole order to the cart. Purchase is closed to anyone who is not a wholesale customer. The table logic was ported from the Émolo build to a different theme, and 29 orphaned templates inherited from the B2C export were removed, cutting the templates folder by 75%.'
-  },
-  {
-    id: 22,
-    name: 'IVB Wellness B2B',
-    badge: 'Shopify B2B',
-    tags: ['Shopify B2B', 'Liquid', 'Tiered Pricing', 'Health'],
-    client: 'IVB Wellness Lab',
-    type: 'B2B Pharmacy Portal',
-    year: '2026',
-    imgDir: 'IVB Wellness',
-    imgKey: 'IVB',
-    bannerExt: 'webp',
-    gridExt: 'webp',
-    url: 'https://ivbwellness.com/',
-    slogan: 'Wellness backed by science',
-    highlights: [
-      'IVB producto.webp',
-      'IVB coleccion.webp',
-    ],
-    role: "Built the B2B ordering portal for IVB Wellness Lab, a Spanish supplements lab stocked in more than 3,000 pharmacies. Pharmacies buy on volume tiers, so every page had to tell the buyer which tier they are on and what the next one gets them. Built on the Enterprise theme from the brand's Figma designs.",
-    detail: "A multi-variant order table on the product page, with sibling products pulled from metafields, per-variant galleries and a running total. Tier logic across header, product page and cart: the buyer's current tier in the nav, the next tier worked out from a store-level config, and messages that compare the buyer's tier with the product's. Purchase locked to company accounts, a list view by default for fast reordering, discount badges, retail price from a metafield, a promotional material offer when the buyer goes to pay, and a product range megamenu."
-  },
-  {
-    id: 1,
-    name: 'Hifas Da Terra',
-    badge: 'Shopify B2B',
-    tags: ['Shopify B2B', 'Liquid', 'Custom Theme'],
-    client: 'Hifas Da Terra',
-    type: 'B2B Ecommerce',
-    year: '2024',
-    imgDir: 'Hifas Da Terra',
-    imgKey: 'Hifas',
-    bannerExt: 'webp',
-    url: 'https://hifasdaterra.com/en',
-    slogan: 'Improving Health Worldwide',
-    highlights: [
-      '696e8d5ecc348c6c4983b4e2_Hifas producto.png',
-      '696e8d5e3af2eb460228ecd0_Coleccion hifas.png',
-      '696e8d5e2a5402616a62ff62_Grid home Hifas.png',
-    ],
-    role: 'Architected a comprehensive B2B ecommerce platform for a leading biotech company specializing in medicinal mushroom supplements. Delivered a full-stack Shopify B2B solution with tiered wholesale pricing, a dedicated professional portal, and advanced product filtering tailored for healthcare practitioners.',
-    detail: 'Custom Shopify B2B implementation: customer segment-based catalog visibility, performance-optimized product pages with lazy-loaded media, streamlined dual-flow checkout supporting both B2C and B2B transactions, and a clinical-grade product information architecture.'
-  },
-  {
-    id: 2,
-    name: 'MT Helmets B2B',
-    badge: 'Shopify Plus',
-    tags: ['Shopify Plus', 'B2B', 'International', 'Liquid'],
-    client: 'MT Helmets',
-    type: 'B2B Catalog Platform',
-    year: '2024',
-    imgDir: 'MT Helmets',
-    imgKey: 'MT',
-    url: 'https://mthelmets.com/es-es',
-    highlights: [
-      '696e87085a88f3f6b5e43c97_Home grid mt helmets b2b.png',
-      '696e86b35aab58a8f483c87d_Product page MT HELMETS B2B.png',
-      '696e86b213d3a33c62003fc6_Carrito b2b.png',
-    ],
-    slogan: 'A RIDING LEGACY',
-    role: "Built an international B2B catalog platform for one of Europe's leading motorcycle helmet manufacturers, enabling dealer networks across multiple European markets through a custom Shopify Plus implementation.",
-    detail: 'Dealer-specific authentication with volume-based pricing logic, PDF catalog export functionality, multilingual storefront via Shopify Markets integration, and a custom collection architecture supporting complex variant management.'
-  },
-  {
-    id: 3,
-    name: 'Cosmeticos24H',
-    badge: 'Shopify Plus',
-    tags: ['Shopify Plus', 'B2B', 'Performance', 'UX'],
-    client: 'Cosmeticos24H',
-    type: 'Ecommerce Platform',
-    year: '2023',
-    imgDir: 'Cosmeticos24H',
-    imgKey: 'Cosmeticos',
-    bannerExt: 'jpg',
-    url: 'https://cosmeticos24h.com/',
-    slogan: 'YOUR SKIN IS OUR UNIVERSE',
-    highlights: [
-      '696e81952e43857cb5eb4174_producto cosmeticos.png',
-      '696e81c9de2a9a2ea9992987_Coleccion cosmeticos.png',
-    ],
-    role: 'Delivered a full Shopify Plus overhaul for a high-traffic beauty retailer, targeting measurable Core Web Vitals improvements alongside new B2B wholesale capabilities and a redesigned conversion funnel.',
-    detail: 'Shopify Plus optimization: advanced faceted collection filtering, B2B customer portal with tiered pricing, optimized drawer cart with lazy-loading, and a redesigned product detail page that demonstrably improved conversion metrics.'
-  },
-  {
-    id: 4,
-    name: 'Ewheel B2B',
-    badge: 'Shopify B2B',
-    tags: ['Shopify B2B', 'WebSockets', 'Custom Features', 'Mobility'],
-    client: 'Ewheel',
-    type: 'B2B Ecommerce',
-    year: '2024',
-    imgDir: 'Ewheel B2B',
-    imgKey: 'Ewheel',
-    bannerExt: 'webp',
-    url: 'https://ewheel.es/',
-    slogan: 'MAKE LIFE ELECTRIC',
-    highlights: [
-      '69693eb898aeb2c388f0f4fc_Choose options.png',
-      '69693f242e4056a82bfbad25_My account.png',
-      '69693f24a70bb7eae9ad7aca_Cart ewheel.png',
-      '69693f51819a7bf7695d2b82_Home.png',
-    ],
-    role: "Engineered a next-generation B2B ecommerce platform for Spain's leading electric mobility retailer, introducing real-time collaborative cart functionality via WebSockets — a first for the client's Shopify environment.",
-    detail: 'Custom Shopify B2B features: real-time multi-user cart synchronization using WebSockets, high-performance responsive variant grid handling complex inventory logic (units vs. boxes), corporate account management, and a dealer portal with tiered pricing visibility.'
-  },
-  {
-    id: 5,
-    name: 'CoastBCN',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Custom Features', 'Fashion'],
-    client: 'CoastBCN',
-    type: 'Collaboration',
-    year: '2023',
-    imgDir: 'Coast Bcn',
-    imgKey: 'Coast',
-    bannerExt: 'webp',
-    url: 'https://www.coastbcn.com/',
-    slogan: 'PASSION AND LIFESTYLE',
-    highlights: [
-      '667055ca504ec69e9652c309_Home BCN.png',
-      '667055cad1001f3f5ab2e061_Product BCN.png',
-      '667055caa06afa3da2078019_Collections BCN.png',
-    ],
-    role: 'Collaborated with Reduncle agency on an ongoing Shopify development engagement for a Barcelona-based fashion brand, delivering high-impact UX improvements and custom storefront features.',
-    detail: 'Shipped: configurable-speed announcement banner, quick-add with inline size selection from collection grids, custom drawer cart redesign, automated out-of-stock badge logic, and a bespoke password page experience.'
-  },
-  {
-    id: 6,
-    name: 'Fernando García',
-    badge: 'Shopify Plus',
-    tags: ['Shopify Plus', 'Fashion', 'Liquid', 'Custom Theme'],
-    client: 'Fernando García',
-    type: 'Custom Theme',
-    year: '2024',
-    imgDir: 'Fernando de carcer',
-    imgKey: 'Fernando',
-    bannerExt: 'jpg',
-    url: 'https://fernandodecarcer.com/',
-    slogan: 'Quality fashion',
-    highlights: [
-      '667060a9e86900a19539ec50_chrome-capture-2024-6-17.png',
-      '667060a9ea32bb134c77a574_chrome-capture-2024-6-17 (2).png',
-      '667060c4f2fe2e92094f8e6a_chrome-capture-2024-6-17 (3).png',
-      '667060a8c2259e99e56a7e89_chrome-capture-2024-6-17 (1).png',
-    ],
-    role: 'End-to-end custom Shopify Plus theme development for a premium Spanish fashion brand — from architecture to launch — with a strong focus on performance scores and international market readiness.',
-    detail: 'Custom theme with optimized LCP and CLS scores, live-update collection filtering, dynamic size guide modals, wishlist integration, and Shopify Markets configuration for multi-currency and multi-region support.'
-  },
-  {
-    id: 7,
-    name: 'El Capote',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Promotions', 'Fashion'],
-    client: 'El Capote',
-    type: 'Ecommerce',
-    year: '2024',
-    imgDir: 'El Capote',
-    imgKey: 'Capote',
-    bannerExt: 'jpg',
-    url: 'https://poloselcapote.com/',
-    slogan: 'Wear the tradition, carry the art',
-    highlights: [
-      '667057382a9768509250b039_Newsletter.png',
-      '66705738438bba6bde64fad3_Collection grid.png',
-      '66705738116d9b0cd63c7f4c_Product.png',
-      '667057e1c00da3e9cfb1aebf_Casillas (1).png',
-    ],
-    role: 'Custom Shopify development for a storied Spanish menswear brand specializing in traditional equestrian fashion, focused on promotional campaign mechanics and rich product storytelling.',
-    detail: 'Delivered: countdown timer components for seasonal campaigns, bundle discount messaging, multi-image hover product cards, and a configurable featured collection module for editorial-style layouts.'
-  },
-  {
-    id: 8,
-    name: 'Adamina',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'UX', 'Jewelry'],
-    client: 'Adamina',
-    type: 'Shopify Customization',
-    year: '2023',
-    imgDir: 'Adamina',
-    imgKey: 'Adamina',
-    bannerExt: 'jpg',
-    url: 'https://www.adaminajewelry.com/',
-    slogan: 'Redefining Jewelry Brilliance',
-    highlights: [
-      '667028bd2dfdc5f7e21187e5_Adamina colecctions.png',
-      '667028bd787e325a4664cda5_Adamina product.png',
-      '667028bc3963a3304e3895d9_Product grid.png',
-      '667028bc3d05ca5816996f31_Adamina home.png',
-    ],
-    role: 'Ongoing Shopify customization and UX enhancement for a contemporary jewelry brand through Reduncle agency, improving product discovery and post-purchase upsell performance.',
-    detail: 'Implemented: horizontal scroll product grid for editorial collection layouts, customized product detail page with variant-specific media, in-cart upsell integration, and UX refinements to support conversion optimization.'
-  },
-  {
-    id: 9,
-    name: 'HD Cosmetics',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Performance', 'Beauty'],
-    client: 'HD Cosmetics',
-    type: 'Shopify Maintenance',
-    year: '2023',
-    imgDir: 'HD Cosmetics',
-    imgKey: 'HD',
-    bannerExt: 'webp',
-    url: 'https://hddermocosmetics.com/',
-    slogan: 'SENSE OF TOUCH',
-    highlights: [
-      '66714a5621c86e15d2caca64_Blog grid.png',
-      '66714a552f4f40cc2c011d8a_Entrar.png',
-      '66714a567564c9568e606d0c_Mas info.png',
-      '66714a55e437391766d0dacf_Product.png',
-    ],
-    role: 'Provided targeted Shopify development and maintenance for an established dermocosmetics brand through Reduncle agency, delivering seasonal campaign features, app customizations, and ongoing site improvements.',
-    detail: 'Seasonal Black Friday cart modifications, promotional offer management, app-level customization for brand-specific workflows, and responsive layout fixes ensuring consistency across all device types.'
-  },
-  {
-    id: 10,
-    name: 'Born Living Yoga',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Sustainability', 'Fashion'],
-    client: 'Born Living Yoga',
-    type: 'Shopify Customization',
-    year: '2022',
-    imgDir: 'Born Living Yoga',
-    imgKey: 'BLY',
-    bannerExt: 'jpg',
-    url: 'https://bornlivingyoga.com',
-    slogan: 'Uniting mind, body, and planet',
-    highlights: [
-      '66705368bf754ee70db1f1fc_BLY Colecctions.png',
-      '667053671bb969becc00dccc_Completa tu look.png',
-      '66705367a0f37ddd043158ce_Drawer cart.png',
-      '66705367031d146cd5750504_Producto.png',
-    ],
-    role: 'Delivered feature enhancements and UX improvements for a sustainable yoga lifestyle brand through Shopigurus agency, streamlining the product discovery and purchase flow across key conversion touchpoints.',
-    detail: 'Quick-add from collection grids, custom "Complete your look" cross-sell module, editable product tag customization, and drawer cart refinements to reduce friction in the purchase journey.'
-  },
-  {
-    id: 11,
-    name: 'Qurado',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Custom Theme', 'DTC'],
-    client: 'Qurado',
-    type: 'Custom Theme',
-    year: '2023',
-    imgDir: 'Qurado',
-    imgKey: 'Qurado',
-    bannerExt: 'jpg',
-    url: 'https://qurado.es/',
-    slogan: 'REAL PRODUCTS. NO MIDDLEMEN.',
-    highlights: [
-      '66673a740265050e492841d5_chrome-capture-2024-6-10.png',
-      '666c17a9e8fc6ab713443aa1_Reviews.gif',
-      '666c1c4496d47aba901e0165_93088f09-b651-43d6-a845-b505dcd635b7.gif',
-    ],
-    role: 'Developed a fully customized Shopify storefront for an emerging direct-to-consumer brand in collaboration with Shopigurus agency, following a provided design system and delivering a brand-coherent, conversion-optimized experience.',
-    detail: 'Custom theme with pixel-accurate design execution, enhanced product discovery with custom filtering, brand-aligned typography and color system, and a streamlined mobile-first checkout flow.'
-  },
-  {
-    id: 12,
-    name: 'Name The Brand',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Custom Features', 'Fashion'],
-    client: 'Name The Brand',
-    type: 'Shopify Customization',
-    year: '2023',
-    imgDir: 'Name The Brand',
-    imgKey: 'NTB',
-    bannerExt: 'jpg',
-    slogan: 'Sunlight birds',
-    highlights: [
-      '667d9d73777e3e1f2752dc09_Collections.png',
-      '667d9d7320d47ee73e026da5_Home grid.png',
-      '667d9d737e300ef925dad85c_Product.png',
-      '667d9d73f534efba7f6a656d_Products home.png',
-    ],
-    role: 'Provided ongoing Shopify customization and app integration for a fashion retailer through Shopigurus agency, delivering targeted feature enhancements and a more conversion-optimized storefront.',
-    detail: 'Custom product form modifications, automated discount badge tagging for sale items, smart search integration, cart upsell logic, and third-party app customizations to match precise brand requirements.'
-  },
-  {
-    id: 13,
-    name: 'Moncho Moreno',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Performance', 'Beauty'],
-    client: 'Moncho Moreno',
-    type: 'Shopify Maintenance',
-    year: '2021 - 2022',
-    imgDir: 'Moncho Moreno',
-    imgKey: 'Moncho',
-    bannerExt: 'jpg',
-    url: 'https://monchomoreno.com/',
-    slogan: 'Hair surgeons',
-    highlights: [
-      '66714778c5d9c74a14351cd3_Carrito.png',
-      '66714778c5bbc6c2614e4388_Info.png',
-      '667147788dd3319daa098bce_Ingredientes.png',
-      '667147783a9c99d1e6b94ddd_Marcas.png',
-    ],
-    role: 'Led ongoing Shopify development and technical strategy for a premium Spanish haircare brand at VRANDED HAUS, serving as their primary development partner across a multi-year engagement.',
-    detail: 'Weekly technical audits, custom user profile system with order history, complex app installations and integrations, promotional mechanics, and paid media oversight — consistent improvements delivered across a 12+ month retainer.'
-  },
-  {
-    id: 14,
-    name: 'The Villa Concept',
-    badge: 'Shopify',
-    tags: ['Shopify', 'Liquid', 'Optimization', 'Lifestyle'],
-    client: 'The Villa Concept',
-    type: 'Shopify Maintenance',
-    year: '2021',
-    imgDir: 'The villa concept',
-    imgKey: 'TVC',
-    bannerExt: 'jpg',
-    url: 'https://www.thevillaconcept.com/',
-    slogan: 'Timeless Elegance',
-    highlights: [
-      '667022d7280fd18ab14a344b_TVC grid de colecciones.png',
-      '667022d7abfff397937dde1d_TVC product.png',
-      '667022d7a680c63319ba31b5_TVC destacados.png',
-      '667025e38a82ff6606a76844_TVC home.png',
-    ],
-    role: 'Provided ongoing Shopify development and maintenance for a high-end lifestyle brand at VRANDED HAUS, replacing costly third-party app subscriptions with lean, purpose-built internal solutions.',
-    detail: 'Daily site maintenance, custom feature development, and an app replacement strategy that eliminated recurring SaaS costs — bespoke Liquid and JavaScript components for wishlist, recently viewed, and promotional logic.'
-  },
-];
-
 /* ── Browser bar ────────────────────────────────────────────── */
-function browserBar(p) {
-  const urlHtml = p.url
-    ? `<div class="bf-url bf-url--text" data-url="${p.url}" title="Copy URL">
-         <span class="bf-url-text">${p.url}</span>
-         <span class="bf-url-copied">Copied!</span>
+function browserBar(url) {
+  const urlHtml = url
+    ? `<div class="bf-url bf-url--text" data-url="${url}" title="Copy URL">
+         <span class="bf-url-text">${url}</span>
+         <span class="bf-url-copied" aria-hidden="true">Copied!</span>
        </div>`
     : `<div class="bf-url"></div>`;
   return `<div class="bf-bar">
@@ -384,105 +16,71 @@ function browserBar(p) {
   </div>`;
 }
 
-/* ── Image helpers ──────────────────────────────────────────── */
-function imgPath(p, file) {
-  return `assets/Img/${p.imgDir}/${file}`;
-}
-
-function gridImg(p) {
-  if (!p.imgDir) return '<div class="screen-placeholder"></div>';
-  const ext = p.gridExt || 'png';
-  return `<img src="${imgPath(p, p.imgKey + ' Grid.' + ext)}" alt="${p.name}" class="screen-img" loading="lazy" />`;
-}
-
-function bannerImg(p) {
-  if (!p.imgDir) return '<div class="screen-placeholder" style="aspect-ratio:16/7"></div>';
-  const ext = p.bannerExt || 'png';
-  return `<img src="${imgPath(p, p.imgKey + ' Banner.' + ext)}" alt="${p.name}" class="screen-img screen-img--banner" loading="lazy" />`;
-}
-
-function highlightsGrid(p) {
-  if (!p.highlights || !p.highlights.length) return '';
-  return `
-    <div class="highlights-grid">
-      ${p.highlights.map(file => `
-        <div class="highlight-item">
-          <img src="${imgPath(p, file)}" alt="${p.name} — project highlight" loading="lazy" />
-        </div>
-      `).join('')}
-    </div>
-  `;
-}
-
-/* ── Render project cards ───────────────────────────────────── */
-function renderProjects() {
-  const grid = document.getElementById('projects-grid');
-  grid.innerHTML = PROJECTS.map(p => `
-    <article
-      class="project-card"
-      data-id="${p.id}"
-      tabindex="0"
-      role="button"
-      aria-label="View project: ${p.name}"
-    >
-      <div class="card-mockup">
-        <div class="browser-frame">
-          ${browserBar(p)}
-          <div class="bf-screen">
-            ${gridImg(p)}
-          </div>
-        </div>
-        <span class="card-badge">${p.badge}</span>
-      </div>
-      <div class="card-info">
-        <div class="card-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <h3 class="card-name">${p.name}</h3>
-        <span class="card-link">View project</span>
-      </div>
-    </article>
-  `).join('');
-
-  grid.querySelectorAll('.project-card').forEach(card => {
-    const id = parseInt(card.dataset.id, 10);
-    card.addEventListener('click', () => openModal(id));
+/* ── Project cards ──────────────────────────────────────────── */
+// Cards and their detail text are plain HTML in index.html, so crawlers that
+// don't run JavaScript still read every project. JS only wires up the modal.
+function initProjectCards() {
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card));
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(id); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
     });
   });
 }
 
 /* ── Modal ──────────────────────────────────────────────────── */
-function openModal(id) {
-  const p = PROJECTS.find(x => x.id === id);
-  if (!p) return;
+function openModal(card) {
+  const name = card.querySelector('.card-name').textContent;
+  const { url, banner, highlights } = card.dataset;
+  const files = highlights ? highlights.split('|') : [];
 
-  document.getElementById('modal-body').innerHTML = `
+  const body = document.getElementById('modal-body');
+  body.innerHTML = `
     <div class="modal-hero-frame browser-frame">
-      ${browserBar(p)}
+      ${browserBar(url)}
       <div class="bf-screen">
         <div class="banner-wrap">
-          ${bannerImg(p)}
+          ${banner
+            ? `<img src="${banner}" alt="" class="screen-img screen-img--banner" loading="lazy" />`
+            : '<div class="screen-placeholder" style="aspect-ratio:16/7"></div>'}
           <div class="banner-overlay"></div>
-          <h2 class="banner-title" id="modal-title">${p.name}</h2>
-          ${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" class="banner-visit">Visit project <span>↗</span></a>` : ''}
+          <h2 class="banner-title" id="modal-title"></h2>
+          ${url ? `<a href="${url}" target="_blank" rel="noopener" class="banner-visit">Visit project <span>↗</span></a>` : ''}
         </div>
       </div>
     </div>
-    <div class="modal-meta">
-      <div class="modal-meta-left">
-        <div class="meta-item"><label>Client</label><span>${p.client}</span></div>
-        <div class="meta-item"><label>Project Type</label><span>${p.type}</span></div>
-        <div class="meta-item"><label>Year</label><span>${p.year}</span></div>
-        <div class="card-tags" style="margin-top:8px">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-      </div>
-      <div class="modal-meta-right">
-        ${p.slogan ? `<p class="modal-slogan">${p.slogan}</p>` : ''}
-        <p>${p.role}</p>
-        <p>${p.detail}</p>
-      </div>
-    </div>
-    ${highlightsGrid(p)}
   `;
+  body.querySelector('#modal-title').textContent = name;
+
+  // The static markup avoids "meta"/"modal" class names, which text extractors
+  // (Readability, trafilatura) drop as page chrome; the modal keeps its own classes.
+  const meta = card.querySelector('.project-detail .project-facts').cloneNode(true);
+  meta.className = 'modal-meta';
+  meta.querySelector('.project-facts-left').className = 'modal-meta-left';
+  meta.querySelector('.project-facts-right').className = 'modal-meta-right';
+  meta.querySelectorAll('.fact-item').forEach(el => { el.className = 'meta-item'; });
+  const slogan = meta.querySelector('.project-slogan');
+  if (slogan) slogan.className = 'modal-slogan';
+  const tags = card.querySelector('.card-info .card-tags').cloneNode(true);
+  tags.style.marginTop = '8px';
+  meta.querySelector('.modal-meta-left').appendChild(tags);
+  body.appendChild(meta);
+
+  if (files.length) {
+    const grid = document.createElement('div');
+    grid.className = 'highlights-grid';
+    files.forEach((file, i) => {
+      const item = document.createElement('div');
+      item.className = 'highlight-item';
+      const img = document.createElement('img');
+      img.src = file;
+      img.alt = `${name}: screenshot ${i + 1}`;
+      img.loading = 'lazy';
+      item.appendChild(img);
+      grid.appendChild(item);
+    });
+    body.appendChild(grid);
+  }
 
   const overlay = document.getElementById('modal-overlay');
   overlay.querySelector('.modal-scroll').scrollTop = 0;
@@ -633,10 +231,10 @@ async function handleContactSubmit(e) {
 
 /* ── Init ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  renderProjects();
+  initProjectCards();
   initScrollReveal();
 
-  // the grid above pushes sections down after the browser already jumped to the #hash
+  // re-anchor to the #hash in case layout moved after the browser's first jump
   const hashTarget = location.hash && document.getElementById(location.hash.slice(1));
   if (hashTarget) hashTarget.scrollIntoView({ behavior: 'instant' });
 

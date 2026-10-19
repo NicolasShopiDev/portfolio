@@ -467,9 +467,19 @@ ul { list-style: none; }
               translate 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 10px 12px 48px rgba(0,0,0,0.07);
   outline: none;
+}
+
+/* hidden until revealed only when JS runs; without JS the cards stay visible */
+.js .project-card {
   opacity: 0;
   translate: 0 6px;
 }
+
+/* detail text lives in the card's HTML for crawlers; the modal shows it */
+.project-detail { display: none; }
+
+/* /#slug links (and the old Webflow URLs redirected to them) land below the fixed nav */
+.project-card { scroll-margin-top: calc(var(--nav-h) + 24px); }
 
 .project-card:nth-child(3n+1) {
   transform: perspective(1100px) rotateY(-5deg) rotateX(1.5deg);
@@ -654,6 +664,7 @@ ul { list-style: none; }
 }
 
 .form-field input,
+.form-field select,
 .form-field textarea {
   font-family: var(--font-body);
   font-size: 15px;
@@ -668,7 +679,18 @@ ul { list-style: none; }
   width: 100%;
 }
 .form-field input:focus,
+.form-field select:focus,
 .form-field textarea:focus { border-color: var(--fg); }
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
 
 .contact-form .btn { margin-top: 4px; }
 
@@ -844,6 +866,12 @@ ul { list-style: none; }
   font-size: 15px;
   font-weight: 500;
 }
+.meta-item a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--fg-3);
+}
+.meta-item a:hover { text-decoration-color: currentColor; }
 
 .banner-wrap {
   position: relative;
@@ -1046,7 +1074,7 @@ ul { list-style: none; }
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .project-card { opacity: 1; translate: 0 0; }
+  .js .project-card { opacity: 1; translate: 0 0; }
 }
 
 /* ── Utilities ───────────────────────────────────────────────── */
