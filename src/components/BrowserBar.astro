@@ -1,0 +1,11 @@
+---
+import type { Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+
+interface Props { lang: Lang; url?: string; label?: string }
+const { lang, url, label } = Astro.props;
+const s = t(lang);
+---
+<div class="bf-bar"><span class="bf-dot r"></span><span class="bf-dot y"></span><span class="bf-dot g"></span>{url
+  ? <div class="bf-url bf-url--text" data-url={url} title={s.copyUrl}><span class="bf-url-text">{label ?? url}</span><span class="bf-url-copied" aria-hidden="true">{s.copied}</span></div>
+  : <div class="bf-url"></div>}</div>

@@ -1,0 +1,16 @@
+# Old Webflow URLs (English site) still indexed by search engines. Specific rules first, splat last.
+/contact /en/contact/ 301
+/projects/el-capote /en/projects/#el-capote 301
+/projects/cosmeticos24h /en/projects/#cosmeticos24h 301
+/moncho-moreno /en/projects/#moncho-moreno 301
+/es-raco-darta /en/projects/ 301
+/projects /en/projects/ 301
+# Page URLs without the trailing slash: permanent instead of the default 307.
+/proyectos /proyectos/ 301
+/sobre-mi /sobre-mi/ 301
+/contacto /contacto/ 301
+/en /en/ 301
+/en/projects /en/projects/ 301
+/en/about /en/about/ 301
+/en/contact /en/contact/ 301
+/projects/* /en/projects/ 301

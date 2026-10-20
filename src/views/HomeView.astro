@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Lab from '../components/Lab.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Modal from '../components/Modal.astro';
+import { routes, updated, type Lang } from '../i18n/routes';
+import { t, seo } from '../i18n/ui';
+import { person, website, webPage, graph } from '../lib/schema';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+const meta = seo.home[lang];
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'WebPage', path: routes.home[lang], name: meta.title, description: meta.description, lang, dateModified: updated.home }),
+);
+---
+<Base lang={lang} route="home" title={meta.title} description={meta.description} schema={schema}>
+  <Hero lang={lang} />
+
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading" set:html={s.projectsHeading} />
+        <div>
+          <p class="section-desc">{s.projectsDesc}</p>
+          <a class="text-link" href={routes.projects[lang]}>{s.projectsAll}</a>
+        </div>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        {projects.map((project) => <ProjectCard lang={lang} project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <Lab lang={lang} />
+  <AboutSection lang={lang} />
+  <ContactSection lang={lang} />
+  <Modal lang={lang} />
+</Base>

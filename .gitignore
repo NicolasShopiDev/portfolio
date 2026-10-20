@@ -1,2 +1,6 @@
 docs/
 download_images.ps1
+node_modules/
+dist/
+.astro/
+.wrangler/

@@ -1,0 +1,59 @@
+---
+import Picture from './Picture.astro';
+import BrowserBar from './BrowserBar.astro';
+import type { Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+
+// The floating mocks are hidden under 1025px, so their images are never downloaded there.
+const mocks = [
+  { mod: 'a', url: 'https://hifasdaterra.com', label: 'hifasdaterra.com', image: 'Hifas Da Terra/Hifas Banner.webp', alt: 'Hifas da Terra', priority: true },
+  { mod: 'b', url: 'https://cosmeticos24h.com', label: 'cosmeticos24h.com', image: 'Cosmeticos24H/Cosmeticos Banner.jpg', alt: 'Cosmeticos24H', priority: false },
+  { mod: 'c', url: 'https://mthelmets.com', label: 'mthelmets.com', image: 'MT Helmets/MT Banner.png', alt: 'MT Helmets', priority: false },
+];
+---
+<section class="hero" id="hero">
+  <div class="hero-sticky">
+    <div class="hero-content">
+      <p class="hero-eyebrow">{s.heroEyebrow}</p>
+      <h1 class="hero-heading">
+        <span class="hero-name">Nicolás<br> Mateos</span>{' '}
+        <span class="hero-role" set:html={s.heroRole} />
+      </h1>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn--dark">{s.heroProjects}</a>
+        <a href="#contact" class="btn btn--outline">{s.heroContact}</a>
+      </div>
+    </div>
+    <div class="hero-visual" id="hero-visual">
+      {mocks.map((m) => (
+        <div class={`float-mock float-mock--${m.mod}`}>
+          <div class="mock-3d">
+            <div class="mock-move">
+              <div class="browser-frame">
+                <BrowserBar lang={lang} url={m.url} label={m.label} />
+                <div class="bf-screen">
+                  <Picture
+                    image={m.image}
+                    alt={m.alt}
+                    sizes="(min-width: 1025px) 340px, 1px"
+                    class="hero-mock-img"
+                    loading="eager"
+                    fetchpriority={m.priority ? 'high' : undefined}
+                    hideBelow={1025}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <button class="scroll-hint" id="scroll-hint" aria-label={s.scrollHint}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="4" x2="12" y2="20"/><polyline points="18 14 12 20 6 14"/></svg>
+  </button>
+</section>

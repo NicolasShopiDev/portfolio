@@ -1,0 +1,77 @@
+---
+import '@fontsource-variable/cormorant-garamond/wght.css';
+import '@fontsource-variable/inter/wght.css';
+import '@fontsource/space-mono/latin-400.css';
+import '@fontsource/space-mono/latin-700.css';
+import displayFont from '@fontsource-variable/cormorant-garamond/files/cormorant-garamond-latin-wght-normal.woff2?url';
+import '../styles/style.css';
+import '../styles/lab.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { routes, absolute, LANGS, type Lang, type RouteKey } from '../i18n/routes';
+import { t } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  route: RouteKey;
+  title: string;
+  description: string;
+  schema: string;
+}
+
+const { lang, route, title, description, schema } = Astro.props;
+const canonical = absolute(routes[route][lang]);
+const ogImage = absolute(lang === 'es' ? '/assets/og-image-es.png' : '/assets/og-image.png');
+const ogAlt = lang === 'es'
+  ? 'Nicolás Mateos, desarrollador Shopify Plus y B2B freelance en Madrid, España'
+  : 'Nicolás Mateos, freelance Shopify Plus and B2B developer in Madrid, Spain';
+const s = t(lang);
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="author" content="Nicolás Mateos" />
+  <script is:inline>document.documentElement.classList.add('js');</script>
+  <link rel="canonical" href={canonical} />
+  {LANGS.map((l) => <link rel="alternate" hreflang={l} href={absolute(routes[route][l])} />)}
+  <link rel="alternate" hreflang="x-default" href={absolute(routes[route].en)} />
+  <link rel="sitemap" href="/sitemap.xml" />
+
+  <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <meta property="og:type" content={route === 'about' ? 'profile' : 'website'} />
+  <meta property="og:site_name" content="Nicolás Mateos" />
+  <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+  <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_ES'} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={ogAlt} />
+  {route === 'about' && <meta property="profile:first_name" content="Nicolás" />}
+  {route === 'about' && <meta property="profile:last_name" content="Mateos" />}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <script type="application/ld+json" set:html={schema} />
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">{s.skip}</a>
+  <Nav lang={lang} route={route} />
+  <main id="main-content">
+    <slot />
+  </main>
+  <Footer lang={lang} route={route} />
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

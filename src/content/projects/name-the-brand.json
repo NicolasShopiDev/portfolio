@@ -1,0 +1,70 @@
+{
+  "order": 15,
+  "name": "Name The Brand",
+  "client": "Name The Brand",
+  "year": "2023",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "Sunlight birds",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Custom Features",
+      "Fashion"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Funcionalidades a medida",
+      "Moda"
+    ]
+  },
+  "type": {
+    "en": "Shopify Customization",
+    "es": "Personalización Shopify"
+  },
+  "role": {
+    "en": "Provided ongoing Shopify customization and app integration for a fashion retailer, delivering targeted feature enhancements and a more conversion-focused storefront.",
+    "es": "Personalización continua de Shopify e integración de apps para un comercio de moda, con mejoras de funcionalidad concretas y una tienda más orientada a la conversión."
+  },
+  "detail": {
+    "en": "Custom product form modifications, automated discount badge tagging for sale items, smart search integration, cart upsell logic, and third-party app customizations to match precise brand requirements.",
+    "es": "Modificaciones a medida del formulario de producto, etiquetado automático con badge de descuento para los artículos rebajados, integración de búsqueda inteligente, lógica de upsell en el carrito y personalización de apps de terceros para ajustarse a requisitos precisos de la marca."
+  },
+  "images": {
+    "dir": "Name The Brand",
+    "grid": "NTB Grid.png",
+    "banner": "NTB Banner.jpg",
+    "highlights": [
+      {
+        "file": "667d9d73777e3e1f2752dc09_Collections.png",
+        "alt": {
+          "es": "Colecciones de Name The Brand en franjas a todo el ancho, como Sunlight Birds y Fall Winter 23",
+          "en": "Name The Brand collections shown as full-width bands, such as Sunlight Birds and Fall Winter 23"
+        }
+      },
+      {
+        "file": "667d9d7320d47ee73e026da5_Home grid.png",
+        "alt": {
+          "es": "Carrusel de mejores descuentos en la portada de Name The Brand, con precio rebajado, precio anterior y aviso de agotado",
+          "en": "Best discounts carousel on Name The Brand's home page, with sale price, original price and a sold-out label"
+        }
+      },
+      {
+        "file": "667d9d737e300ef925dad85c_Product.png",
+        "alt": {
+          "es": "Ficha de producto de Name The Brand con precio rebajado, selector de talla, ayuda de tallas y pago con PayPal",
+          "en": "Name The Brand product page with sale price, size selector, a size help link and PayPal checkout"
+        }
+      },
+      {
+        "file": "667d9d73f534efba7f6a656d_Products home.png",
+        "alt": {
+          "es": "Carrusel de nueva colección en la portada de Name The Brand, con fotografía de producto a gran tamaño",
+          "en": "New collection carousel on Name The Brand's home page, with large product photography"
+        }
+      }
+    ]
+  }
+}

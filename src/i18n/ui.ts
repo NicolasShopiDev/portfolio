@@ -1,0 +1,180 @@
+import type { Lang, RouteKey } from './routes';
+
+export const ui = {
+  es: {
+    skip: 'Saltar al contenido',
+    navProjects: 'Proyectos',
+    navAbout: 'Sobre mí',
+    navContact: 'Contacto',
+    cta: '¡Hablemos!',
+    switchLabel: 'English',
+    breadcrumbAria: 'Ruta de navegación',
+    home: 'Inicio',
+
+    heroEyebrow: 'Hola',
+    heroRole: 'Desarrollador Shopify Plus y B2B freelance<br> con base en Madrid, España.',
+    heroProjects: 'Ver proyectos',
+    heroContact: 'Contactar',
+    scrollHint: 'Ir a los proyectos',
+
+    projectsHeading: 'Proyectos<br>destacados',
+    projectsDesc: 'Trabajo con Shopify desde 2021: portales mayoristas B2B para marcas de joyería, suplementos y movilidad eléctrica, tiendas Shopify Plus, y temas y funcionalidades a medida para marcas españolas de moda y belleza.',
+    projectsAll: 'Ver todos los proyectos en detalle',
+    viewProject: 'Ver proyecto',
+    factClient: 'Cliente',
+    factType: 'Tipo de proyecto',
+    factYear: 'Año',
+    factWebsite: 'Web',
+    visitProject: 'Ver la web',
+    copyUrl: 'Copiar URL',
+    copied: '¡Copiado!',
+    closeModal: 'Cerrar',
+    shot: 'captura',
+
+    aboutLabel: 'Sobre mí',
+    aboutHeading: 'Convierto requisitos complejos en soluciones Shopify elegantes.',
+    aboutP1: 'Soy Nicolás Mateos, desarrollador Shopify freelance español. Vivo en Madrid y trabajo en remoto para marcas y agencias de España, Países Bajos y el resto de Europa, en español y en inglés. Desarrollo en Shopify desde 2021 y soy freelance desde 2022.',
+    aboutP2: 'Me centro en Shopify Plus y B2B: tiendas mayoristas con cuentas de empresa, catálogos y listas de precios, Shopify Functions en JavaScript y Rust para reglas de carrito y checkout, Checkout Extensibility y apps embebidas a medida con Node.js, Express y Shopify CLI. Desde octubre de 2024 soy además el único desarrollador front-end de una agencia Shopify Plus centrada en B2B en España.',
+    aboutMore: 'Más sobre mí',
+    skillsPlatforms: 'Plataformas',
+    skillsStack: 'Stack',
+    skillsSpecialties: 'Especialidades',
+    skills: {
+      platforms: ['Shopify Plus', 'Shopify B2B', 'Checkout Extensibility'],
+      stack: ['Liquid', 'JS y TypeScript', 'Rust (Functions)', 'Node.js y React', 'API GraphQL'],
+      specialties: ['Portales B2B', 'Shopify Functions', 'Apps a medida', 'Rendimiento', 'Multimercado'],
+    },
+
+    contactHeading: 'Trabajemos<br> juntos',
+    contactDesc: '¿Necesitas ayuda con tu tienda Shopify? Escríbeme y normalmente te respondo en uno o dos días laborables.',
+    formName: 'Nombre',
+    formEmail: 'Email',
+    formMessage: 'Mensaje',
+    formSource: '¿Cómo me has encontrado?',
+    formSourceEmpty: 'Elige una (opcional)',
+    formSources: {
+      'Google or another search engine': 'Google u otro buscador',
+      'ChatGPT, Claude, Perplexity or another AI assistant': 'Asistente de IA (ChatGPT, Claude…)',
+      'LinkedIn': 'LinkedIn',
+      'Upwork or another freelance platform': 'Upwork o similar',
+      'GitHub': 'GitHub',
+      'Referral from a client or agency': 'Recomendación de un cliente o agencia',
+      'Other': 'Otro',
+    },
+    formSubmit: 'Enviar',
+
+    footerBio: 'Desarrollador Shopify Plus y B2B freelance con base en Madrid, España, trabajando con Shopify desde 2021. Convierto requisitos complejos en tiendas limpias y escalables. Construyamos algo grande.',
+    footerRights: 'Todos los derechos reservados.',
+  },
+  en: {
+    skip: 'Skip to main content',
+    navProjects: 'Projects',
+    navAbout: 'About',
+    navContact: 'Contact',
+    cta: 'Say hi!',
+    switchLabel: 'Español',
+    breadcrumbAria: 'Breadcrumb',
+    home: 'Home',
+
+    heroEyebrow: 'Welcome!',
+    heroRole: 'Freelance Shopify Plus &amp; B2B developer<br> based in Madrid, Spain.',
+    heroProjects: 'View projects',
+    heroContact: 'Get in touch',
+    scrollHint: 'Scroll to projects',
+
+    projectsHeading: 'Selected<br>projects',
+    projectsDesc: 'Shopify work since 2021: B2B wholesale portals for jewelry, supplements and electric mobility brands, Shopify Plus stores, and custom themes and features for Spanish fashion and beauty labels.',
+    projectsAll: 'See every project in detail',
+    viewProject: 'View project',
+    factClient: 'Client',
+    factType: 'Project Type',
+    factYear: 'Year',
+    factWebsite: 'Website',
+    visitProject: 'Visit project',
+    copyUrl: 'Copy URL',
+    copied: 'Copied!',
+    closeModal: 'Close modal',
+    shot: 'screenshot',
+
+    aboutLabel: 'About me',
+    aboutHeading: 'Turning complex requirements into elegant Shopify solutions.',
+    aboutP1: "I'm Nicolás Mateos, a Spanish freelance Shopify developer based in Madrid and working remotely. I've built on Shopify since 2021 and freelanced since 2022, for brands and agencies in Spain, the Netherlands and the rest of Europe, in Spanish and English.",
+    aboutP2: "My focus is Shopify Plus and B2B: wholesale storefronts built on Companies, Catalogs and price lists, Shopify Functions in JavaScript and Rust for cart and checkout rules, Checkout Extensibility, and custom embedded apps with Node.js, Express and the Shopify CLI. Since October 2024 I've also been the sole front-end developer at a B2B-focused Shopify Plus agency in Spain.",
+    aboutMore: 'More about me',
+    skillsPlatforms: 'Platforms',
+    skillsStack: 'Stack',
+    skillsSpecialties: 'Specialties',
+    skills: {
+      platforms: ['Shopify Plus', 'Shopify B2B', 'Checkout Extensibility'],
+      stack: ['Liquid', 'JS & TypeScript', 'Rust (Functions)', 'Node.js & React', 'GraphQL APIs'],
+      specialties: ['B2B Portals', 'Shopify Functions', 'Custom Apps', 'Performance', 'Intl. Markets'],
+    },
+
+    contactHeading: "Let's work<br> together",
+    contactDesc: "Hey there! Need help with your Shopify store? Drop me a message, and I'll usually get back to you within 1–2 business days.",
+    formName: 'Name',
+    formEmail: 'Email address',
+    formMessage: 'Message',
+    formSource: 'How did you find me?',
+    formSourceEmpty: 'Choose one (optional)',
+    formSources: {
+      'Google or another search engine': 'Google or other search',
+      'ChatGPT, Claude, Perplexity or another AI assistant': 'AI assistant (ChatGPT, Claude…)',
+      'LinkedIn': 'LinkedIn',
+      'Upwork or another freelance platform': 'Upwork or similar',
+      'GitHub': 'GitHub',
+      'Referral from a client or agency': 'Referral from a client or agency',
+      'Other': 'Other',
+    },
+    formSubmit: 'Submit',
+
+    footerBio: "Freelance Shopify Plus &amp; B2B developer based in Madrid, Spain, building on Shopify since 2021. I turn complex requirements into clean, scalable storefronts. Let's build something great.",
+    footerRights: 'All rights reserved.',
+  },
+} as const;
+
+export const t = (lang: Lang) => ui[lang];
+
+// Page titles and meta descriptions (plan section 2.5).
+export const seo: Record<RouteKey, Record<Lang, { title: string; description: string }>> = {
+  home: {
+    es: {
+      title: 'Desarrollador Shopify freelance en España | Nicolás Mateos',
+      description: 'Desarrollador Shopify español con base en Madrid, en remoto: tiendas B2B, Shopify Plus, Functions, Checkout Extensibility y apps a medida para marcas y agencias.',
+    },
+    en: {
+      title: 'Freelance Shopify Plus & B2B Developer in Spain | Nicolás Mateos',
+      description: 'Spanish freelance Shopify Plus developer in Madrid. B2B wholesale storefronts, Shopify Functions, Checkout Extensibility and custom apps for brands and agencies.',
+    },
+  },
+  projects: {
+    es: {
+      title: 'Proyectos Shopify, Shopify Plus y B2B | Nicolás Mateos',
+      description: '17 proyectos Shopify: portales mayoristas B2B para joyería, suplementos y recambios de movilidad eléctrica, y temas a medida para moda y cosmética.',
+    },
+    en: {
+      title: 'Shopify, Shopify Plus & B2B Projects | Nicolás Mateos',
+      description: '17 Shopify projects: B2B wholesale portals for jewelry, supplements and e-mobility parts, plus custom themes for fashion and beauty brands.',
+    },
+  },
+  about: {
+    es: {
+      title: 'Nicolás Mateos, desarrollador Shopify en Madrid | Sobre mí',
+      description: 'Desarrollador Shopify español: front-end con Shopify desde 2021 y freelance desde 2022, especializado en Shopify Plus y B2B. Español nativo, inglés profesional.',
+    },
+    en: {
+      title: 'About Nicolás Mateos, Shopify Developer in Madrid',
+      description: 'Spanish Shopify developer: front-end on Shopify since 2021 and freelance since 2022, focused on Shopify Plus and B2B. Native Spanish, professional English.',
+    },
+  },
+  contact: {
+    es: {
+      title: 'Contacto | Nicolás Mateos, desarrollador Shopify',
+      description: 'Escribe a Nicolás Mateos, desarrollador Shopify Plus y B2B freelance en Madrid. Respuesta en 1–2 días laborables.',
+    },
+    en: {
+      title: 'Contact | Nicolás Mateos, Shopify Developer',
+      description: 'Get in touch with Nicolás Mateos, freelance Shopify Plus and B2B developer in Madrid. Replies within 1–2 business days.',
+    },
+  },
+};

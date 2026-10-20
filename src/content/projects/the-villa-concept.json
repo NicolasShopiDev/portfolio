@@ -1,0 +1,70 @@
+{
+  "order": 17,
+  "name": "The Villa Concept",
+  "client": "The Villa Concept",
+  "year": "2021",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "Timeless Elegance",
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Optimization",
+      "Lifestyle"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Optimización",
+      "Estilo de vida"
+    ]
+  },
+  "type": {
+    "en": "Shopify Maintenance",
+    "es": "Mantenimiento Shopify"
+  },
+  "role": {
+    "en": "Provided ongoing Shopify development and maintenance for a high-end lifestyle brand at VRANDED Haus, replacing costly third-party app subscriptions with lean, purpose-built internal solutions.",
+    "es": "Desarrollo y mantenimiento Shopify continuos, desde VRANDED Haus, para una marca de estilo de vida de alta gama, sustituyendo suscripciones costosas a apps de terceros por soluciones internas, ligeras y hechas a medida."
+  },
+  "detail": {
+    "en": "Daily site maintenance, custom feature development, and an app replacement strategy that eliminated recurring SaaS costs: bespoke Liquid and JavaScript components for wishlist, recently viewed and promotional logic.",
+    "es": "Mantenimiento diario de la web, desarrollo de funcionalidades a medida y una estrategia de sustitución de apps que eliminó costes recurrentes de SaaS: componentes propios en Liquid y JavaScript para lista de deseos, productos vistos recientemente y lógica promocional."
+  },
+  "images": {
+    "dir": "The villa concept",
+    "grid": "TVC Grid.png",
+    "banner": "TVC Banner.jpg",
+    "highlights": [
+      {
+        "file": "667022d7280fd18ab14a344b_TVC grid de colecciones.png",
+        "alt": {
+          "es": "Mosaico de colecciones de The Villa Concept con cinco bloques de joyería en plata y enlaces Discover",
+          "en": "The Villa Concept collection mosaic with five silver jewelry tiles and Discover links"
+        }
+      },
+      {
+        "file": "667022d7abfff397937dde1d_TVC product.png",
+        "alt": {
+          "es": "Ficha de producto de The Villa Concept en preventa, con miniaturas, talla no disponible tachada y recogida en showroom",
+          "en": "The Villa Concept pre-order product page with thumbnail gallery, a crossed-out unavailable size and showroom pickup"
+        }
+      },
+      {
+        "file": "667022d7a680c63319ba31b5_TVC destacados.png",
+        "alt": {
+          "es": "Sección Últimos lanzamientos de The Villa Concept con foto editorial, texto de marca y productos con precio",
+          "en": "The Villa Concept latest releases section with an editorial photo, brand copy and products with prices"
+        }
+      },
+      {
+        "file": "667025e38a82ff6606a76844_TVC home.png",
+        "alt": {
+          "es": "Portada de The Villa Concept con slider de la campaña Pure Linen y aviso de envío gratis",
+          "en": "The Villa Concept home page with a Pure Linen campaign slider and a free shipping notice"
+        }
+      }
+    ]
+  }
+}

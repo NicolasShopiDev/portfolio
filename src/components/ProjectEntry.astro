@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Picture from './Picture.astro';
+import BrowserBar from './BrowserBar.astro';
+import ProjectFacts from './ProjectFacts.astro';
+import type { Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+import { imageKey } from '../lib/images';
+
+interface Props { lang: Lang; project: CollectionEntry<'projects'>; priority?: boolean }
+const { lang, project, priority = false } = Astro.props;
+const p = project.data;
+const slug = project.id;
+const s = t(lang);
+const img = p.images;
+---
+<section class="project-entry" id={slug} aria-labelledby={`${slug}-title`}>
+  <div class="entry-head">
+    <h2 class="entry-title" id={`${slug}-title`}>{p.name}</h2>{' '}
+    <span class="card-badge entry-badge">{p.badge}</span>
+  </div>
+  {p.url && <a class="entry-visit" href={p.url} target="_blank" rel="noopener">{s.visitProject} <span aria-hidden="true">↗</span></a>}
+  <div class="entry-frame browser-frame">
+    <BrowserBar lang={lang} url={p.url} />
+    <div class="bf-screen">
+      <Picture
+        image={imageKey(img.dir, img.banner)}
+        alt={p.name}
+        sizes="(max-width: 1200px) 100vw, 1120px"
+        class="screen-img screen-img--banner"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : undefined}
+      />
+    </div>
+  </div>
+  <ProjectFacts lang={lang} project={project} withTags />
+  {img.highlights.length > 0 && (
+    <div class="highlights-grid">
+      {img.highlights.map((h) => (
+        <div class="highlight-item">
+          <Picture image={imageKey(img.dir, h.file)} alt={h.alt[lang]} sizes="(max-width: 768px) 100vw, 560px" />
+        </div>
+      ))}
+    </div>
+  )}
+</section>

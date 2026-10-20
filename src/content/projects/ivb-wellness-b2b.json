@@ -1,0 +1,57 @@
+{
+  "order": 3,
+  "name": "IVB Wellness B2B",
+  "client": "IVB Wellness Lab",
+  "year": "2026",
+  "url": "https://ivbwellness.com/",
+  "platform": "shopify",
+  "badge": "Shopify B2B",
+  "slogan": "Wellness backed by science",
+  "tags": {
+    "en": [
+      "Shopify B2B",
+      "Liquid",
+      "Tiered Pricing",
+      "Health"
+    ],
+    "es": [
+      "Shopify B2B",
+      "Liquid",
+      "Precios por tramos",
+      "Salud"
+    ]
+  },
+  "type": {
+    "en": "B2B Pharmacy Portal",
+    "es": "Portal B2B para farmacias"
+  },
+  "role": {
+    "en": "B2B ordering portal for IVB Wellness Lab, a Spanish supplements lab stocked in more than 3,000 pharmacies, built on the Enterprise theme from the brand's Figma designs. Pharmacies buy on volume tiers, so tier logic runs through header, product page and cart: the buyer's current tier sits in the nav, and the next tier is worked out in Liquid from a store-level metafield config, so the client changes thresholds without a theme release.",
+    "es": "Portal de pedidos B2B para IVB Wellness Lab, un laboratorio español de suplementos presente en más de 3000 farmacias, construido sobre el tema Enterprise a partir de los diseños de la marca en Figma. Las farmacias compran por tramos de volumen, así que la lógica de tramos recorre la cabecera, la página de producto y el carrito: el tramo actual del comprador aparece en la navegación, y el siguiente se calcula en Liquid a partir de una configuración en un metafield de la tienda, de modo que el cliente cambia los umbrales sin publicar una nueva versión del tema."
+  },
+  "detail": {
+    "en": "The product page carries a multi-variant order table whose rows can also be sibling products linked through a metafield, with per-variant galleries and a totals footer, and it keeps the dependent sections in sync when a row changes variant. Product badges and colour schemes are metaobjects that the theme turns into markup and CSS classes, so merchandising stays in the admin. Purchase is locked to company accounts, collections open in a list view built for reordering, discount badges round down the same way everywhere, retail price comes from a metafield, and the cart offers promotional material through a pop-up when the buyer goes to pay.",
+    "es": "La página de producto incluye una tabla de pedido multivariante cuyas filas también pueden ser productos hermanos enlazados mediante un metafield, con galerías por variante y un pie con los totales, y mantiene sincronizadas las secciones dependientes cuando una fila cambia de variante. Los badges de producto y los esquemas de color son metaobjects que el tema convierte en marcado y clases CSS, así que el merchandising se gestiona desde el admin. La compra está restringida a cuentas de empresa, las colecciones se abren en una vista de lista pensada para repetir pedidos, los badges de descuento redondean a la baja igual en todas partes, el PVP sale de un metafield y el carrito ofrece material promocional en un pop-up cuando el comprador va a pagar."
+  },
+  "images": {
+    "dir": "IVB Wellness",
+    "grid": "IVB Grid.webp",
+    "banner": "IVB Banner.webp",
+    "highlights": [
+      {
+        "file": "IVB producto.webp",
+        "alt": {
+          "es": "Ficha de producto de la tienda B2C de IVB Wellness Lab con galería, valoraciones, insignias, aviso de regalo por importe y botón Añadir",
+          "en": "IVB Wellness Lab consumer store product page with gallery, ratings, badges, a free gift threshold banner and an add button"
+        }
+      },
+      {
+        "file": "IVB coleccion.webp",
+        "alt": {
+          "es": "Colección de la tienda B2C de IVB Wellness Lab con filtros por línea, insignias, selector de formato y botón Añadir por tarjeta",
+          "en": "IVB Wellness Lab consumer store collection with range filters, product badges, a format selector and an add button on each card"
+        }
+      }
+    ]
+  }
+}

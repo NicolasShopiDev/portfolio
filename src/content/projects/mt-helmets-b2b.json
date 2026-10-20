@@ -1,0 +1,64 @@
+{
+  "order": 5,
+  "name": "MT Helmets B2B",
+  "client": "MT Helmets",
+  "year": "2024",
+  "url": "https://mthelmets.com/",
+  "platform": "shopify-plus",
+  "badge": "Shopify Plus",
+  "slogan": "A RIDING LEGACY",
+  "tags": {
+    "en": [
+      "Shopify Plus",
+      "B2B",
+      "International",
+      "Liquid"
+    ],
+    "es": [
+      "Shopify Plus",
+      "B2B",
+      "Internacional",
+      "Liquid"
+    ]
+  },
+  "type": {
+    "en": "B2B Catalog Platform",
+    "es": "Plataforma de catálogo B2B"
+  },
+  "role": {
+    "en": "Built an international B2B catalog platform for a motorcycle helmet manufacturer, serving its dealer networks across multiple European markets on Shopify Plus.",
+    "es": "Desarrollo en Shopify Plus de una plataforma internacional de catálogo B2B para un fabricante de cascos de moto, que da servicio a sus redes de distribuidores en varios mercados europeos."
+  },
+  "detail": {
+    "en": "Dealer-specific authentication with volume-based pricing logic, PDF catalog export functionality, multilingual storefront via Shopify Markets integration, and a custom collection architecture supporting complex variant management.",
+    "es": "Autenticación específica para distribuidores con lógica de precios por volumen, exportación del catálogo a PDF, tienda multiidioma mediante la integración con Shopify Markets y una arquitectura de colecciones a medida que soporta una gestión de variantes compleja."
+  },
+  "images": {
+    "dir": "MT Helmets",
+    "grid": "MT Grid.png",
+    "banner": "MT Banner.png",
+    "highlights": [
+      {
+        "file": "696e87085a88f3f6b5e43c97_Home grid mt helmets b2b.png",
+        "alt": {
+          "es": "Más vendidos de MT Helmets B2B en lista, con cantidad y stock por talla y columnas PVPR y neto",
+          "en": "MT Helmets B2B top sellers list, with quantity and stock per size and RRP and net price columns"
+        }
+      },
+      {
+        "file": "696e86b35aab58a8f483c87d_Product page MT HELMETS B2B.png",
+        "alt": {
+          "es": "Ficha de producto de MT Helmets B2B con casillas de cantidad por talla, stock por talla y subtotal",
+          "en": "MT Helmets B2B product page with quantity boxes per size, stock per size and a running subtotal"
+        }
+      },
+      {
+        "file": "696e86b213d3a33c62003fc6_Carrito b2b.png",
+        "alt": {
+          "es": "Carrito B2B de MT Helmets agrupado por categoría, con unidades por talla, observaciones del pedido y botón de pago",
+          "en": "MT Helmets B2B cart grouped by category, with units per size, an order notes field and checkout button"
+        }
+      }
+    ]
+  }
+}

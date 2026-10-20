@@ -1,0 +1,71 @@
+{
+  "order": 9,
+  "name": "Fernando de Cárcer",
+  "client": "Fernando de Cárcer",
+  "year": "2024",
+  "url": "https://fernandodecarcer.com/",
+  "platform": "shopify-plus",
+  "badge": "Shopify Plus",
+  "slogan": "Quality fashion",
+  "tags": {
+    "en": [
+      "Shopify Plus",
+      "Fashion",
+      "Liquid",
+      "Custom Theme"
+    ],
+    "es": [
+      "Shopify Plus",
+      "Moda",
+      "Liquid",
+      "Tema a medida"
+    ]
+  },
+  "type": {
+    "en": "Custom Theme",
+    "es": "Tema a medida"
+  },
+  "role": {
+    "en": "End-to-end custom Shopify Plus theme for a premium Spanish menswear brand, from architecture to launch, with a strong focus on performance scores and international market readiness.",
+    "es": "Desarrollo integral de un tema a medida en Shopify Plus para una marca española de moda masculina premium, desde la arquitectura hasta el lanzamiento, con especial atención a las puntuaciones de rendimiento y a la preparación para mercados internacionales."
+  },
+  "detail": {
+    "en": "Custom theme with optimized LCP and CLS scores, live-update collection filtering, dynamic size guide modals, wishlist integration, and Shopify Markets configuration for multi-currency and multi-region support.",
+    "es": "Tema a medida con puntuaciones de LCP y CLS optimizadas, filtrado de colecciones con actualización en vivo, modales dinámicos de guía de tallas, integración de lista de deseos y configuración de Shopify Markets para dar soporte multidivisa y multirregión."
+  },
+  "images": {
+    "dir": "Fernando de carcer",
+    "grid": "Fernando Grid.png",
+    "banner": "Fernando Banner.jpg",
+    "highlights": [
+      {
+        "file": "667060a9e86900a19539ec50_chrome-capture-2024-6-17.png",
+        "alt": {
+          "es": "Ficha de producto de Fernando de Cárcer con colores, tallas agotadas tachadas, guía de tallas y aviso de pocas unidades",
+          "en": "Fernando de Cárcer product page with color swatches, crossed-out sold-out sizes, a size guide and a low stock notice"
+        }
+      },
+      {
+        "file": "667060a9ea32bb134c77a574_chrome-capture-2024-6-17 (2).png",
+        "alt": {
+          "es": "Ventana de compra rápida en Fernando de Cárcer con carrusel de fotos, colores y tallas disponibles",
+          "en": "Fernando de Cárcer quick view modal with photo carousel, color swatches and available sizes"
+        }
+      },
+      {
+        "file": "667060c4f2fe2e92094f8e6a_chrome-capture-2024-6-17 (3).png",
+        "alt": {
+          "es": "Carrito lateral de Fernando de Cárcer con un pantalón de lino, nota al pedido y botón de finalizar compra",
+          "en": "Fernando de Cárcer drawer cart with linen trousers, an order note option and the checkout button"
+        }
+      },
+      {
+        "file": "667060a8c2259e99e56a7e89_chrome-capture-2024-6-17 (1).png",
+        "alt": {
+          "es": "Carrusel de arreglos de americana en Fernando de Cárcer, con precio, campo para las medidas y botón de compra",
+          "en": "Fernando de Cárcer blazer alterations carousel, each with a price, a measurements field and add to cart button"
+        }
+      }
+    ]
+  }
+}
