@@ -25,6 +25,38 @@ Qué hay que escribir a mano: el artículo, `seoTitle`, `description`, `keyword`
 
 `draft: true` deja el artículo fuera del índice, del sitemap y del RSS, y lo marca `noindex`, pero sigue teniendo URL. Sirve para enseñarlo en una rama de preview antes de publicarlo.
 
+## El borrador de cada mañana
+
+Una tarea programada (`blog-borrador-diario`, a las 8:00) deja el borrador del día listo y **no publica nada**. Lo que hace:
+
+1. Busca preguntas reales de los últimos 60 días en el foro de Shopify, en Reddit, en Stack Overflow y en foros en español, dentro de lo que tú dominas.
+2. Busca cada candidata en Google y se queda con la que tenga peor respuesta: hilos sin resolver, artículos viejos, páginas de agencia sin sustancia, nada en español.
+3. Comprueba los datos de plataforma en la documentación de Shopify ese mismo día.
+4. Escribe el artículo con `draft: true` en una rama `borrador-<fecha>-<slug>`, pasa `npm run build` y la sube.
+5. Anota en [BLOG-RADAR.md](BLOG-RADAR.md) la pregunta elegida, el enlace al hilo y lo que descartó.
+
+Tú lo lees, lo corriges y decides. Mientras tenga `draft: true` no está en el índice, ni en el sitemap, ni en el RSS, y lleva `noindex`.
+
+Para revisarlo:
+
+```bash
+git checkout borrador-2026-10-22-mi-slug
+npm run dev          # http://localhost:4321/blog/mi-slug/
+```
+
+Para publicarlo, cuando te convenza:
+
+```bash
+npm run publish -- mi-slug    # quita el draft y le pone la fecha de hoy
+npm run build
+git add -A && git commit -m "blog: mi-slug"
+git checkout master && git merge --no-ff borrador-2026-10-22-mi-slug && git push origin master
+```
+
+Y si no te convence, se borra la rama y no ha pasado nada. Un artículo flojo resta más de lo que suma.
+
+Cuando el artículo esté publicado, vuelve al hilo donde viste la pregunta y contéstala allí, enlazando el artículo. Ahí es donde llegan los primeros lectores, y de paso es el enlace que Google ve primero.
+
 ## El listón de cada artículo
 
 No es un blog de volumen, es la prueba de que sabes de lo que hablas. Un artículo flojo al día hace más daño que tres buenos a la semana.

@@ -12,6 +12,7 @@ Portfolio of Nicolás Mateos, freelance Shopify Plus and B2B developer. Static s
 | `npm run preview` | Serve the built `dist/` locally |
 | `npm run images` | Regenerate the optimized images in `public/img/` (see below) |
 | `npm run post -- es <slug> "<Title>"` | Create a new article with today's date and the frontmatter filled in |
+| `npm run publish -- <slug>` | Take an article out of draft and date it today, ready to merge |
 | `npx wrangler dev` | Serve `dist/` the way Cloudflare does, with `_redirects`, `_headers` and the 404 page |
 
 ## Structure
@@ -59,7 +60,7 @@ Add the route to `routes` in `src/i18n/routes.ts` (both languages), its title an
 3. `npm run build`. It fails if the title tag is over 65 characters, the meta description is outside 70 to 165, or a date is not `YYYY-MM-DD`.
 4. The URL, the sitemap entry and its alternates, the feed, the JSON-LD (`BlogPosting`, `FAQPage`, breadcrumbs), the table of contents, the reading time and the author box all follow from the file. Nothing else to update.
 
-`draft: true` keeps an article out of the listing, the sitemap and the feed and marks it `noindex`, but still builds its page, which is enough to read it on a preview branch. What to write and the editorial standard are in [BLOG.md](BLOG.md).
+`draft: true` keeps an article out of the listing, the sitemap and the feed and marks it `noindex`, but still builds its page, which is enough to read it on a branch before it goes out. A scheduled task writes one draft every morning on its own branch and never publishes; `npm run publish -- <slug>` is the other half, after the draft has been read and corrected. What to write, the editorial standard and that routine are in [BLOG.md](BLOG.md); the questions it finds are logged in [BLOG-RADAR.md](BLOG-RADAR.md).
 
 ## Deploy
 
