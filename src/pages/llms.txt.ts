@@ -47,6 +47,7 @@ export const GET: APIRoute = async () => {
     '## Public repositories',
     '',
     '- [shopify-checkout-lab](https://github.com/NicolasShopiDev/shopify-checkout-lab): the Shopify Function that runs in the Checkout Lab on the home page, with its input query and tests',
+    '- [shopify-b2b-order-portal](https://github.com/NicolasShopiDev/shopify-b2b-order-portal): a wholesale order form for Shopify B2B that runs without Shopify Plus, built on Dawn',
     '- [portfolio](https://github.com/NicolasShopiDev/portfolio): the source of this site (Astro, two languages, build-time image pipeline)',
     '',
   ];

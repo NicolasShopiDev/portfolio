@@ -20,7 +20,7 @@ export const person = (lang: Lang, image?: string) => ({
   '@type': 'Person',
   '@id': PERSON_ID,
   name: 'Nicolás Mateos',
-  alternateName: ['Nicolas Mateos', 'NicolasShopiDev'],
+  alternateName: ['Nicolas Mateos', 'Nicolás Mateos Henrich', 'NicolasShopiDev'],
   givenName: 'Nicolás',
   familyName: 'Mateos',
   url: `${SITE}/`,
