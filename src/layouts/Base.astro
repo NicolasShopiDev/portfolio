@@ -68,6 +68,26 @@ const s = t(lang);
   <meta name="author" content="Nicolás Mateos" />
   {noindex && <meta name="robots" content="noindex, follow" />}
   <script is:inline>document.documentElement.classList.add('js');</script>
+  {route === 'home' && lang === 'es' && (
+    <script is:inline>
+      // The home page, and only the home page, reads the browser language. It sits here in the
+      // head, undeferred, so the call is made before anything paints. It stands aside for crawlers
+      // (they should see both versions) and for anyone who already picked a language with the
+      // ES/EN switch, which writes the cookie main.js reads.
+      (function () {
+        try {
+          if (location.pathname !== '/') return;
+          if (/(^|;\s*)lang=/.test(document.cookie)) return;
+          if (/bot|crawl|spider|slurp|lighthouse|pagespeed|preview/i.test(navigator.userAgent)) return;
+          var idioma = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+          if (!idioma || idioma.toLowerCase().indexOf('es') === 0) return;
+          location.replace('/en/' + location.search + location.hash);
+        } catch (e) {
+          // If anything in here fails, the home page simply stays as it is.
+        }
+      })();
+    </script>
+  )}
   <link rel="canonical" href={canonical} />
   {LANGS.map((l) => pairs[l] && <link rel="alternate" hreflang={l} href={absolute(pairs[l]!)} />)}
   <link rel="alternate" hreflang="x-default" href={xDefault} />

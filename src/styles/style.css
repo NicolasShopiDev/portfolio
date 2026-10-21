@@ -133,10 +133,12 @@ ul, ol { list-style: none; }
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s;
+  /* La línea de abajo va en box-shadow, no en border: un borde resta 1 px al área de contenido
+     y deja el logo centrado en medio píxel, que es lo que lo hacía verse suave. */
+  box-shadow: 0 1px 0 transparent;
+  transition: box-shadow 0.3s;
 }
-.nav.scrolled { border-bottom-color: var(--border); }
+.nav.scrolled { box-shadow: 0 1px 0 var(--border); }
 
 .nav-inner {
   max-width: 1200px;
@@ -154,6 +156,7 @@ ul, ol { list-style: none; }
   align-items: center;
 }
 .nav-logo-img {
+  color: #000;  /* el SVG va inline y pinta con currentColor */
   height: 22px;
   width: auto;
   display: block;
@@ -209,6 +212,66 @@ ul, ol { list-style: none; }
   transition: background 0.2s, color 0.2s;
 }
 .nav-cta:hover { background: var(--fg); color: #fff; }
+
+/* Burger and its drop-down: hidden on a wide screen, where the links sit in the row above. */
+.nav-burger {
+  display: none;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  width: 34px;
+  height: 34px;
+  margin-left: -7px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.nav-burger span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--fg);
+  transition: transform var(--dur-slow) var(--ease), opacity var(--dur-base);
+}
+.nav.is-open .nav-burger span:first-child { transform: translateY(3.25px) rotate(45deg); }
+.nav.is-open .nav-burger span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 4px 20px 12px;
+  /* Solid, not translucent: a backdrop-filter inside the header's own backdrop-filter
+     composites wrong and the page shows through the links. */
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  /* visibility keeps the links out of the tab order while the menu is closed. */
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--dur-base), transform var(--dur-base) var(--ease), visibility var(--dur-base);
+}
+.nav.is-open .nav-menu { opacity: 1; visibility: visible; transform: none; }
+
+.nav-menu a {
+  display: block;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg-2);
+  border-bottom: 1px solid var(--border);
+}
+.nav-menu a:last-child { border-bottom: 0; }
+.nav-menu a[aria-current="page"] { color: var(--fg); }
+.nav-menu-lang { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; }
 
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
@@ -1129,12 +1192,12 @@ picture { display: contents; }
 
 /* small phones: the centred logo leaves the button less room than it needs */
 @media (max-width: 400px) {
-  .nav-logo-img { height: 19px; }
+  .nav-logo-img { height: 20px; }  /* par: centrado en píxel entero dentro de los 64 de la nav */
   .nav-cta { padding: 8px 14px; font-size: 13px; }
   html[lang="es"] .nav-cta { padding: 7px 10px; font-size: 12px; }
 }
 @media (max-width: 340px) {
-  .nav-logo-img { height: 17px; }
+  .nav-logo-img { height: 18px; }  /* par, por lo mismo */
   html[lang="es"] .nav-cta { padding: 7px 8px; font-size: 11.5px; }
 }
 
@@ -1276,6 +1339,8 @@ picture { display: contents; }
   margin-top: 28px;
 }
 .about-intro--text { grid-template-columns: minmax(0, 1fr); }
+/* Sin la foto al lado, el texto no debe estirarse hasta los 1200 px del contenedor. */
+.about-intro--text .about-intro-text { max-width: 860px; }
 .about-intro .about-lead { margin-top: 0; }
 
 .about-portrait {
@@ -1387,7 +1452,9 @@ picture { display: contents; }
   .about-lead { font-size: 16px; }
   .about-page { margin-top: 56px; }
   .nav-right { display: contents; }
-  .nav-lang { grid-column: 1; grid-row: 1; justify-self: start; padding: 6px 8px; margin-left: -8px; }
+  .nav-burger { display: flex; }
+  .nav-menu { display: block; }
+  .nav-lang { display: none; }  /* vive dentro del menú del botón */
   .nav-cta { grid-column: 3; grid-row: 1; justify-self: end; }
 }
 

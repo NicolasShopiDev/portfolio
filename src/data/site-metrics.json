@@ -12,8 +12,8 @@
   "metrics": {
     "lcpMs": 1900,
     "cls": 0,
-    "tbtMs": 40,
-    "transferBytes": 299176,
+    "tbtMs": 71,
+    "transferBytes": 300193,
     "requests": 20
   }
 }

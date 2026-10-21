@@ -324,6 +324,40 @@ document.querySelectorAll('a[hreflang]').forEach(a => {
   window.addEventListener('hashchange', sync);
 });
 
+/* ── Mobile menu ────────────────────────────────────────────── */
+// The links live in the nav row on a wide screen and behind the burger on a phone. Same list,
+// rendered twice by Nav.astro; CSS decides which one is on screen.
+const nav = document.getElementById('nav');
+const burger = document.getElementById('nav-burger');
+
+if (nav && burger) {
+  const setOpen = open => {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  };
+
+  burger.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+
+  document.addEventListener('click', e => {
+    if (!nav.classList.contains('is-open')) return;
+    // Following a link, or tapping anywhere outside the header, closes it.
+    if (e.target.closest('#nav-menu a') || !e.target.closest('#nav')) setOpen(false);
+  });
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+
+  // Back on a wide screen the row takes over, so the menu should not stay open behind it.
+  matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setOpen(false); });
+}
+
+/* ── Language choice ────────────────────────────────────────── */
+// Picking ES or EN writes a cookie, and functions/index.js reads it: once you have chosen,
+// the home page stops second-guessing you from the browser's Accept-Language.
+document.addEventListener('click', e => {
+  const link = e.target.closest('a[hreflang]');
+  if (link) document.cookie = `lang=${link.getAttribute('hreflang')}; path=/; max-age=31536000; samesite=lax`;
+});
+
 /* ── Right click and the inspect shortcuts ──────────────────── */
 // Asked for on purpose. It is a sign, not a lock: the source is still one Ctrl+U, one browser
 // menu or one curl away, and the repositories on the code page are public anyway. What it does
