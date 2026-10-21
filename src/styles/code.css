@@ -2,8 +2,6 @@
    Reuses the code panel tokens defined in lab.css (--code-bg, --code-bar…). */
 
 /* ── Repositories ───────────────────────────────────────────── */
-.repos { padding-top: 96px; }
-
 .repo-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -35,17 +33,17 @@
 .repo-links .text-link { margin-top: 20px; }
 
 /* ── Patterns ───────────────────────────────────────────────── */
-.patterns { padding-top: 0; position: relative; }
+.patterns { position: relative; }
 
 .pattern {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 48px;
   align-items: start;
-  padding-top: 56px;
+  padding-top: var(--sp-block);
   border-top: 1px solid var(--border);
 }
-.pattern + .pattern { margin-top: 56px; }
+.pattern + .pattern { margin-top: var(--sp-block); }
 
 .pattern-title {
   font-size: 22px;
@@ -143,7 +141,6 @@
 }
 
 /* ── Colophon ───────────────────────────────────────────────── */
-.colophon { padding-top: 0; }
 
 .metrics {
   display: grid;
@@ -224,7 +221,7 @@
 }
 .metric-notes b { color: var(--fg-2); }
 
-.colophon-how { margin-top: 72px; }
+.colophon-how { margin-top: var(--sp-section); }
 
 .how-list { display: flex; flex-direction: column; max-width: 860px; }
 .how-list li {

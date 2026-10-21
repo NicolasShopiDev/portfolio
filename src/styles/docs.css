@@ -28,8 +28,8 @@
 .doc-question { max-width: 900px; }
 
 /* padding-top/bottom, never the shorthand: these sit on a .container and the
-   shorthand would wipe out its horizontal padding. Same rhythm as .case-body. */
-.doc-body { padding-top: 56px; padding-bottom: 96px; }
+   shorthand would wipe out its horizontal padding. */
+.doc-body { padding-top: var(--sp-section); padding-bottom: var(--sp-section); }
 .doc-back { margin-top: var(--sp-6); }
 
 /* ── Internal link blocks (glossary terms, siblings) ── */
@@ -52,9 +52,10 @@
 .doc-links li { font-size: var(--fs-md); line-height: 1.6; color: var(--fg-3); }
 .doc-links a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--gray-400); text-underline-offset: 3px; }
 .doc-links a:hover { text-decoration-color: currentColor; }
+.doc-body > .doc-links:first-child { margin-top: 0; }
 
 /* ── Hub listings ── */
-.hub-body { padding-top: 56px; padding-bottom: 96px; }
+.hub-body { padding-top: var(--sp-section); padding-bottom: var(--sp-section); }
 .hub-group + .hub-group { margin-top: var(--sp-8); }
 .hub-group-title {
   font-family: var(--font-mono);
@@ -140,7 +141,6 @@
 }
 @media (max-width: 768px) {
   .hub-list, .tax-list { grid-template-columns: 1fr; }
-  .doc-body, .hub-body { padding-top: 36px; padding-bottom: 56px; }
   .doc-answer { font-size: var(--fs-lg); }
   .hub-group + .hub-group { margin-top: var(--sp-7); }
   .hub-list--pinned { margin-bottom: var(--sp-7); }
