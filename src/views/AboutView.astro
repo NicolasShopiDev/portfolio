@@ -18,8 +18,12 @@ const crumbs = [
 
 // The portrait shows up as soon as assets/Img/Perfil/nicolas.jpg exists and
 // npm run images has run. Without it the page falls back to a single column.
+//
+// Out for now, waiting on a new photo: set SHOW_PORTRAIT back to true and it returns, with
+// the two-column layout and the image in the page schema. The files stay where they are.
+const SHOW_PORTRAIT = false;
 const PORTRAIT = 'Perfil/nicolas.jpg';
-const portrait = PORTRAIT in manifest ? PORTRAIT : null;
+const portrait = SHOW_PORTRAIT && PORTRAIT in manifest ? PORTRAIT : null;
 const portraitFile = portrait ? (manifest as Record<string, { base: string }>)[PORTRAIT].base : null;
 
 // Facts from the CV. The current agencies stay anonymous until they agree to be named.

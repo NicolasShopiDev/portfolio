@@ -1336,6 +1336,8 @@ picture { display: contents; }
   margin-top: 28px;
 }
 .about-intro--text { grid-template-columns: minmax(0, 1fr); }
+/* Sin la foto al lado, el texto no debe estirarse hasta los 1200 px del contenedor. */
+.about-intro--text .about-intro-text { max-width: 860px; }
 .about-intro .about-lead { margin-top: 0; }
 
 .about-portrait {
