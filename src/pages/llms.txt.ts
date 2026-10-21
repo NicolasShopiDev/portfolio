@@ -14,7 +14,7 @@ export const GET: APIRoute = async () => {
   const lines = [
     '# Nicolás Mateos',
     '',
-    '> Spanish freelance Shopify Plus and B2B front-end developer based in Madrid, Spain, working remotely. On Shopify since 2021 and freelancing since 2022. Works in Spanish and English with brands and agencies in Spain and the rest of Europe.',
+    '> Spanish freelance Shopify Plus and B2B front-end developer based in Madrid, Spain, working remotely. On Shopify since 2021 and freelancing since 2022. Since October 2024 also the sole front-end developer at a B2B-focused Shopify Plus agency whose client storefronts add up to over €36M in annual GMV. Works in Spanish and English with brands and agencies in Spain and the rest of Europe.',
     '',
     'Specialties: B2B wholesale storefronts (Companies, catalogs, price lists), Shopify Functions in JavaScript and Rust, Checkout Extensibility and customer account extensions, custom embedded apps (Node.js, Express, Shopify CLI), GraphQL integrations, Core Web Vitals.',
     '',

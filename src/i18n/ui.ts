@@ -31,6 +31,7 @@ export const ui = {
 
     heroEyebrow: 'Hola',
     heroRole: 'Desarrollador Shopify Plus y B2B freelance<br> con base en Madrid, España.',
+    heroProof: 'Front-end de tiendas B2B que mueven en conjunto <strong>más de 36 M€</strong> al año.',
     heroProjects: 'Ver proyectos',
     heroContact: 'Contactar',
     scrollHint: 'Ir a los proyectos',
@@ -52,7 +53,7 @@ export const ui = {
     aboutLabel: 'Sobre mí',
     aboutHeading: 'Convierto requisitos complejos en soluciones Shopify elegantes.',
     aboutP1: 'Soy Nicolás Mateos, desarrollador Shopify freelance español. Vivo en Madrid y trabajo en remoto para marcas y agencias de España, Países Bajos y el resto de Europa, en español y en inglés. Desarrollo en Shopify desde 2021 y soy freelance desde 2022.',
-    aboutP2: 'Me centro en Shopify Plus y B2B: tiendas mayoristas con cuentas de empresa, catálogos y listas de precios, Shopify Functions en JavaScript y Rust para reglas de carrito y checkout, Checkout Extensibility y apps embebidas a medida con Node.js, Express y Shopify CLI. Desde octubre de 2024 soy además el único desarrollador front-end de una agencia Shopify Plus centrada en B2B en España.',
+    aboutP2: 'Me centro en Shopify Plus y B2B: tiendas mayoristas con cuentas de empresa, catálogos y listas de precios, Shopify Functions en JavaScript y Rust para reglas de carrito y checkout, Checkout Extensibility y apps embebidas a medida con Node.js, Express y Shopify CLI. Desde octubre de 2024 soy además el único desarrollador front-end de una agencia Shopify Plus centrada en B2B en España, cuyas tiendas mueven en conjunto más de 36 M€ al año.',
     aboutMore: 'Más sobre mí',
     skillsPlatforms: 'Plataformas',
     skillsStack: 'Stack',
@@ -114,6 +115,7 @@ export const ui = {
 
     heroEyebrow: 'Welcome!',
     heroRole: 'Freelance Shopify Plus &amp; B2B developer<br> based in Madrid, Spain.',
+    heroProof: 'Front-end for B2B storefronts with over <strong>€36M</strong> in combined annual GMV.',
     heroProjects: 'View projects',
     heroContact: 'Get in touch',
     scrollHint: 'Scroll to projects',
@@ -135,7 +137,7 @@ export const ui = {
     aboutLabel: 'About me',
     aboutHeading: 'Turning complex requirements into elegant Shopify solutions.',
     aboutP1: "I'm Nicolás Mateos, a Spanish freelance Shopify developer based in Madrid and working remotely. I've built on Shopify since 2021 and freelanced since 2022, for brands and agencies in Spain, the Netherlands and the rest of Europe, in Spanish and English.",
-    aboutP2: "My focus is Shopify Plus and B2B: wholesale storefronts built on Companies, Catalogs and price lists, Shopify Functions in JavaScript and Rust for cart and checkout rules, Checkout Extensibility, and custom embedded apps with Node.js, Express and the Shopify CLI. Since October 2024 I've also been the sole front-end developer at a B2B-focused Shopify Plus agency in Spain.",
+    aboutP2: "My focus is Shopify Plus and B2B: wholesale storefronts built on Companies, Catalogs and price lists, Shopify Functions in JavaScript and Rust for cart and checkout rules, Checkout Extensibility, and custom embedded apps with Node.js, Express and the Shopify CLI. Since October 2024 I've also been the sole front-end developer at a B2B-focused Shopify Plus agency in Spain, whose client storefronts add up to over €36M in annual GMV.",
     aboutMore: 'More about me',
     skillsPlatforms: 'Platforms',
     skillsStack: 'Stack',
@@ -176,11 +178,11 @@ export const seo: Record<RouteKey, Record<Lang, { title: string; description: st
   home: {
     es: {
       title: 'Desarrollador Shopify freelance en España | Nicolás Mateos',
-      description: 'Desarrollador Shopify español con base en Madrid, en remoto: tiendas B2B, Shopify Plus, Functions, Checkout Extensibility y apps a medida para marcas y agencias.',
+      description: 'Desarrollador Shopify español en Madrid: front-end de tiendas B2B que mueven más de 36 M€ al año. Shopify Plus, Functions, Checkout Extensibility y apps a medida.',
     },
     en: {
       title: 'Freelance Shopify Plus & B2B Developer in Spain | Nicolás Mateos',
-      description: 'Spanish freelance Shopify Plus developer in Madrid. B2B wholesale storefronts, Shopify Functions, Checkout Extensibility and custom apps for brands and agencies.',
+      description: 'Spanish freelance Shopify Plus developer in Madrid. Front-end for B2B storefronts with €36M+ combined annual GMV: Functions, Checkout Extensibility, custom apps.',
     },
   },
   projects: {
