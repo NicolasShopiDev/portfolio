@@ -27,7 +27,9 @@
 /* A question is a sentence, so it reads better than a headline at display size. */
 .doc-question { max-width: 900px; }
 
-.doc-body { padding: var(--sp-7) 0 var(--sp-8); }
+/* padding-top/bottom, never the shorthand: these sit on a .container and the
+   shorthand would wipe out its horizontal padding. Same rhythm as .case-body. */
+.doc-body { padding-top: 56px; padding-bottom: 96px; }
 .doc-back { margin-top: var(--sp-6); }
 
 /* ── Internal link blocks (glossary terms, siblings) ── */
@@ -52,7 +54,7 @@
 .doc-links a:hover { text-decoration-color: currentColor; }
 
 /* ── Hub listings ── */
-.hub-body { padding: var(--sp-7) 0 var(--sp-8); }
+.hub-body { padding-top: 56px; padding-bottom: 96px; }
 .hub-group + .hub-group { margin-top: var(--sp-8); }
 .hub-group-title {
   font-family: var(--font-mono);
@@ -67,13 +69,15 @@
 .hub-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--sp-5) var(--sp-6);
+  /* Rows need more air than columns: without it, an entry runs into the one below. */
+  gap: var(--sp-7) var(--sp-6);
   margin-top: var(--sp-5);
   padding: 0;
   list-style: none;
 }
 .hub-list--pinned { margin-bottom: var(--sp-8); }
-.hub-item { max-width: 520px; }
+/* No max-width: the two columns already cap the measure, and capping again would
+   leave the right-hand column short of the container edge. */
 .hub-item-name { font-size: var(--fs-xl); font-weight: 600; line-height: 1.35; }
 .hub-item-name a { color: var(--fg); text-decoration: none; }
 .hub-item-name a:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -103,13 +107,17 @@
   padding: 0;
   list-style: none;
 }
+/* Same card contract as .case-card: a fixed 16/10 crop so every card in a row starts
+   its text at the same height, and the text flexes so the links line up at the bottom. */
+.tax-item { display: flex; flex-direction: column; }
 .tax-item-img {
+  aspect-ratio: 16 / 10;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--card-bg);
 }
-.tax-item-img img { display: block; width: 100%; height: auto; }
+.tax-item-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .tax-item-type {
   margin-top: var(--sp-3);
   font-size: var(--fs-sm);
@@ -121,16 +129,26 @@
 }
 .tax-item-year { font-family: var(--font-mono); }
 .tax-item-name { margin-top: var(--sp-2); font-size: var(--fs-xl); font-weight: 600; }
-.tax-item-text { margin-top: var(--sp-2); font-size: var(--fs-base); line-height: 1.7; color: var(--fg-2); }
+.tax-item-text { flex: 1; margin-top: var(--sp-2); font-size: var(--fs-base); line-height: 1.7; color: var(--fg-2); }
 .tax-item-tags { margin-top: var(--sp-3); font-size: var(--fs-sm); color: var(--fg-3); }
-.tax-item .text-link { margin-top: var(--sp-3); }
+.tax-item .text-link { align-self: flex-start; margin-top: var(--sp-3); }
 
-@media (max-width: 900px) {
+/* Breakpoints follow style.css: 1024 / 768 / 480. */
+@media (max-width: 1024px) {
   .tax-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hub-list { gap: var(--sp-5); }
 }
-@media (max-width: 680px) {
+@media (max-width: 768px) {
   .hub-list, .tax-list { grid-template-columns: 1fr; }
+  .doc-body, .hub-body { padding-top: 36px; padding-bottom: 56px; }
   .doc-answer { font-size: var(--fs-lg); }
+  .hub-group + .hub-group { margin-top: var(--sp-7); }
+  .hub-list--pinned { margin-bottom: var(--sp-7); }
+  /* The table keeps its three columns and scrolls: stacking it loses the comparison. */
   .compare-table-wrap { overflow-x: auto; }
   .compare-table { min-width: 520px; }
+}
+@media (max-width: 480px) {
+  .doc-links { margin-top: var(--sp-6); }
+  .compare-table th, .compare-table td { padding: 10px 8px; }
 }
