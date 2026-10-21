@@ -1,0 +1,161 @@
+---
+// The joke at the bottom right of the code page: a button that drops the whole page into the
+// Matrix. Black background, colours flipped, green characters falling behind everything, and
+// a track that fades in very quietly.
+//
+// Nothing is loaded or built until the button is pressed: no canvas, no audio, no work on a
+// visit that never asks for it. Nothing is remembered either, so leaving the page and coming
+// back brings it up white and quiet, which is what the page should look like by default.
+interface Props {
+  lang: 'es' | 'en';
+}
+const { lang } = Astro.props;
+
+const copy = {
+  es: {
+    off: '¿Por qué no le damos ambiente?',
+    offShort: '¿Ambiente?',
+    on: 'Desconectar',
+    onShort: 'Salir',
+  },
+  en: {
+    off: 'Shall we set the mood?',
+    offShort: 'Mood?',
+    on: 'Unplug',
+    onShort: 'Unplug',
+  },
+}[lang];
+---
+<button class="matrix-toggle" type="button" data-matrix-toggle aria-pressed="false"
+        data-on={copy.on} data-on-short={copy.onShort} data-off={copy.off} data-off-short={copy.offShort}>
+  <span class="matrix-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="matrix-text">{copy.off}</span>
+  <span class="matrix-text matrix-text--short">{copy.offShort}</span>
+</button>
+
+<script>
+  import { createRain } from '../scripts/rain.js';
+
+  const AUDIO = '/assets/audio/ambient.m4a';
+  const VOLUME = 0.05;   // barely there: it should colour the room, not fill it
+  const FADE_IN = 5000;
+  const FADE_OUT = 900;
+
+  const root = document.documentElement;
+
+  // The black rain behind the patterns. It runs while its section is on screen and stands
+  // down in Matrix mode, which brings its own rain over the whole page.
+  const sectionCanvas = document.querySelector('[data-code-rain]');
+  let sectionRain = null;
+  let sectionOnScreen = false;
+
+  function updateSectionRain() {
+    if (!sectionRain) return;
+    if (sectionOnScreen && !root.classList.contains('matrix')) sectionRain.start();
+    else sectionRain.stop();
+  }
+
+  if (sectionCanvas) {
+    sectionRain = createRain(sectionCanvas, { ink: '10,10,10', veil: '255,255,255' });
+    new IntersectionObserver(
+      ([entry]) => {
+        sectionOnScreen = entry.isIntersecting;
+        updateSectionRain();
+      },
+      { rootMargin: '200px 0px' },
+    ).observe(sectionCanvas.parentElement || sectionCanvas);
+  }
+
+  const toggle = document.querySelector('[data-matrix-toggle]');
+  if (toggle) {
+    const long = toggle.querySelector('.matrix-text');
+    const short = toggle.querySelector('.matrix-text--short');
+    let canvas = null;
+    let rain = null;
+    let audio = null;
+    let fadeTimer = 0;
+    let settle = 0;
+
+    // The track is passed in: a fade can outlive the variable that pointed at it.
+    function volumeTo(track, target, ms, done) {
+      cancelAnimationFrame(fadeTimer);
+      const from = track.volume;
+      const t0 = performance.now();
+      const step = (now) => {
+        const k = Math.min(1, (now - t0) / ms);
+        // Clamped: rounding can land a hair outside [0, 1], and that throws.
+        track.volume = Math.min(1, Math.max(0, from + (target - from) * k));
+        if (k < 1) fadeTimer = requestAnimationFrame(step);
+        else done?.();
+      };
+      fadeTimer = requestAnimationFrame(step);
+    }
+
+    function on() {
+      // The transition lives on a class of its own, so the page only pays for it while it flips.
+      root.classList.add('matrix-flip', 'matrix');
+      clearTimeout(settle);
+      settle = setTimeout(() => root.classList.remove('matrix-flip'), 1200);
+
+      canvas = document.createElement('canvas');
+      canvas.className = 'matrix-rain';
+      canvas.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(canvas);
+      rain = createRain(canvas, { ink: '120,255,140', veil: '0,0,0', fade: 0.055 });
+      rain.start();
+      requestAnimationFrame(() => canvas.classList.add('is-on'));
+
+      // The click is the gesture that lets a browser play sound. A missing or blocked file
+      // only costs the music: the page still flips.
+      audio = new Audio(AUDIO);
+      audio.loop = true;
+      audio.volume = 0;
+      const track = audio;
+      track.play().then(() => volumeTo(track, VOLUME, FADE_IN)).catch(() => { audio = null; });
+
+      updateSectionRain();
+      label(true);
+    }
+
+    function off() {
+      root.classList.add('matrix-flip');
+      root.classList.remove('matrix');
+      clearTimeout(settle);
+      settle = setTimeout(() => root.classList.remove('matrix-flip'), 1200);
+
+      canvas?.classList.remove('is-on');
+      const dying = { canvas, rain };
+      setTimeout(() => {
+        dying.rain?.destroy();
+        dying.canvas?.remove();
+      }, 600);
+      canvas = null;
+      rain = null;
+
+      if (audio) {
+        const track = audio;
+        volumeTo(track, 0, FADE_OUT, () => {
+          track.pause();
+          // Not src = "": that would send the browser fetching the page itself.
+          track.removeAttribute('src');
+          track.load();
+        });
+        audio = null;
+      }
+
+      updateSectionRain();
+      label(false);
+    }
+
+    function label(isOn) {
+      toggle.setAttribute('aria-pressed', String(isOn));
+      long.textContent = isOn ? toggle.dataset.on : toggle.dataset.off;
+      short.textContent = isOn ? toggle.dataset.onShort : toggle.dataset.offShort;
+    }
+
+    toggle.addEventListener('click', () => (root.classList.contains('matrix') ? off() : on()));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && root.classList.contains('matrix')) off();
+    });
+  }
+</script>

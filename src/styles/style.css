@@ -66,6 +66,7 @@
   /* ── Z-index ────────────────────────────────────────────────── */
   --z-mock:     10;
   --z-nav:     100;
+  --z-float:   120;  /* sobre la nav, por debajo del modal */
   --z-modal-bg: 200;
   --z-modal:    210;
 

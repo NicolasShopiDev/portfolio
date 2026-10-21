@@ -246,8 +246,6 @@
   background: var(--gray-400);
 }
 
-/* The ambient player is a draft and lives in ambient-draft.css, which nothing imports. */
-
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .pattern { grid-template-columns: minmax(0, 1fr); gap: 32px; }

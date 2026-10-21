@@ -1,0 +1,186 @@
+/* Matrix mode for the code page: the button that turns it on, the full-screen rain, and the
+   palette the whole page flips to. Every rule here is scoped to .matrix on <html> or to the
+   button itself, so a page that never turns it on pays only for the bytes.
+   Behaviour lives in src/components/MatrixMode.astro. */
+
+/* ── The button ─────────────────────────────────────────────── */
+.matrix-toggle {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: var(--z-float);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  /* The footer is dark: the border gives the button an edge when it floats over it. */
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-full);
+  background: var(--fg);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform var(--dur-base) var(--ease);
+}
+.matrix-toggle:hover { transform: translateY(-2px); }
+.matrix-text--short { display: none; }
+
+/* Three bars, flat until the page is in the Matrix. */
+.matrix-eq { display: flex; align-items: flex-end; gap: 2px; height: 12px; }
+.matrix-eq i { width: 2px; height: 4px; border-radius: 1px; background: currentColor; }
+.matrix .matrix-eq i { animation: matrix-bounce 0.9s var(--ease) infinite; }
+.matrix .matrix-eq i:nth-child(2) { animation-delay: 0.15s; }
+.matrix .matrix-eq i:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes matrix-bounce {
+  0%, 100% { height: 4px; }
+  50% { height: 12px; }
+}
+
+.matrix .matrix-toggle {
+  background: #04140a;
+  border-color: #1d6b2c;
+  color: #a6ffb8;
+  box-shadow: 0 0 26px rgba(60, 220, 100, 0.22);
+}
+
+/* ── The rain ───────────────────────────────────────────────── */
+/* Fixed to the viewport and sized to it, so the cost does not grow with the page. It sits
+   below the content and above the black of <html>, which is why body goes transparent. */
+.matrix-rain {
+  position: fixed;
+  inset: 0;
+  /* A canvas is a replaced element: without a size of its own it would sit at its intrinsic
+     300x150 and inset would do nothing. */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.4s var(--ease);
+}
+.matrix-rain.is-on { opacity: 0.7; }
+
+/* ── The palette ────────────────────────────────────────────── */
+/* Redefining the tokens turns the whole page over at once; what follows are the few places
+   that hard-code a colour and cannot follow a token. */
+.matrix {
+  --bg: #000000;
+  --fg: #ccffcc;
+  --fg-2: #8fe39a;
+  --fg-3: #5f9d6a;
+  --border: #16341c;
+  --card-bg: #050d07;
+  --gray-100: #040a06;
+  --gray-200: #06110a;
+  --gray-300: #0c1f12;
+  --gray-400: #16341c;
+  --gray-muted: rgba(143, 227, 154, 0.5);
+  --nav-bg: rgba(0, 0, 0, 0.88);
+  background: #000000;
+}
+.matrix body { background: transparent; }
+
+.matrix .nav { background: rgba(0, 0, 0, 0.86); }
+.matrix .nav-logo-img {
+  filter: invert(1) sepia(1) saturate(6) hue-rotate(68deg);
+  /* 92 % of the cycle is the logo sitting still: the glitch is a tenth of a second of work
+     on a 154x22 image, every four seconds. */
+  animation: matrix-glitch 4s steps(1, end) infinite;
+}
+
+@keyframes matrix-glitch {
+  0%, 92%, 100% { clip-path: none; transform: none; }
+  93% { clip-path: inset(8% 0 68% 0); transform: translate(-3px, 0); }
+  94% { clip-path: inset(58% 0 22% 0); transform: translate(3px, -1px); }
+  95% { clip-path: inset(32% 0 44% 0); transform: translate(-2px, 1px); }
+  96% { clip-path: none; transform: translate(2px, 0); filter: invert(1) sepia(1) saturate(9) hue-rotate(68deg) brightness(1.5); }
+  97% { clip-path: inset(44% 0 34% 0); transform: translate(-4px, 0); }
+  98% { clip-path: inset(74% 0 6% 0); transform: translate(2px, 1px); }
+}
+.matrix .nav-cta { background: #07200e; color: var(--fg); border-color: #1d6b2c; }
+.matrix .nav-cta:hover { background: var(--fg); color: #02160a; }
+
+.matrix .btn--dark { color: #02160a; }
+.matrix .btn--dark:hover { background: #a9ffb6; }
+.matrix .skip-to-content { color: #02160a; }
+
+.matrix .footer { background: #030703; color: var(--fg); border-top: 1px solid var(--border); }
+
+/* Green on black with green rain behind it: a dark halo keeps the words off the glyphs.
+   Cheaper than another veil, and it reads like a terminal. */
+.matrix main,
+.matrix .footer { text-shadow: 0 0 10px rgba(0, 0, 0, 0.95), 0 0 3px rgba(0, 0, 0, 0.9); }
+
+/* The veil under the text turns with the page, or the rain would read straight through it. */
+.matrix .patterns .section-intro::before,
+.matrix .pattern-text::before {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 26px 18px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Every block of text sits on a dark veil. The rain keeps falling behind it, which is the
+   point: it should read as background, not as something on top of the words.
+   z-index 0 gives each block a stacking context of its own, so its veil (-1) lands above the
+   canvas (also -1) instead of under it. */
+.matrix .page-head .container,
+.matrix .colophon .section-intro,
+.matrix .metrics,
+.matrix .metric-method,
+.matrix .metric-notes,
+.matrix .colophon-how,
+.matrix .how-list,
+.matrix .page-cta-inner { position: relative; z-index: 0; }
+
+.matrix .page-head .container::before,
+.matrix .colophon .section-intro::before,
+.matrix .metrics::before,
+.matrix .metric-method::before,
+.matrix .metric-notes::before,
+.matrix .colophon-how::before,
+.matrix .how-list::before,
+.matrix .page-cta-inner::before {
+  content: '';
+  position: absolute;
+  inset: -16px -20px;
+  z-index: -1;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* The repo cards go translucent for the same reason. */
+.matrix .repo { background: rgba(0, 0, 0, 0.45); }
+
+/* Only one rain at a time: the black one behind the patterns stands down (and MatrixMode
+   stops its loop, so it is not just hidden). */
+.matrix .code-rain { display: none; }
+
+/* ── The flip ───────────────────────────────────────────────── */
+/* Only while the page is turning over: a blanket transition is cheap for a second and wrong
+   to leave on. MatrixMode removes the class when the flip is done. */
+.matrix-flip,
+.matrix-flip *,
+.matrix-flip *::before,
+.matrix-flip *::after {
+  transition: background-color 0.9s linear, color 0.9s linear, border-color 0.9s linear,
+              box-shadow 0.9s linear, filter 0.9s linear !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matrix-flip, .matrix-flip *, .matrix-flip *::before, .matrix-flip *::after {
+    transition: none !important;
+  }
+  .matrix-rain { transition: none; }
+  .matrix .nav-logo-img { animation: none; }
+}
+
+/* On a phone the button keeps the short version of the joke. */
+@media (max-width: 600px) {
+  .matrix-toggle { right: 16px; bottom: 16px; }
+  .matrix-text { display: none; }
+  .matrix-text--short { display: inline; }
+}
