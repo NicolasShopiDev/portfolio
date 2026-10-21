@@ -31,7 +31,10 @@ export async function onRequest(context) {
     // A surprise in here must never take the home page down.
   }
 
-  return next();
+  const res = await next();
+  const marcado = new Response(res.body, res);
+  marcado.headers.set('x-lang-mw', '1');  // diagnóstico temporal
+  return marcado;
 }
 
 function wantsEnglish(request) {
