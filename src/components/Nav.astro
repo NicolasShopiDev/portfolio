@@ -2,8 +2,8 @@
 import { routes, type Lang, type RouteKey } from '../i18n/routes';
 import { t } from '../i18n/ui';
 
-interface Props { lang: Lang; route: RouteKey }
-const { lang, route } = Astro.props;
+interface Props { lang: Lang; route: RouteKey; switchHref?: string }
+const { lang, route, switchHref } = Astro.props;
 const s = t(lang);
 const other: Lang = lang === 'es' ? 'en' : 'es';
 const home = routes.home[lang];
@@ -15,12 +15,13 @@ const ctaHref = route === 'home' ? '#contact' : routes.contact[lang];
     <nav class="nav-left" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
       <a href={routes.projects[lang]} aria-current={route === 'projects' ? 'page' : undefined}>{s.navProjects}</a>
       <a href={routes.about[lang]} aria-current={route === 'about' ? 'page' : undefined}>{s.navAbout}</a>
+      <a href={routes.blog[lang]} aria-current={route === 'blog' ? 'page' : undefined}>{s.navBlog}</a>
     </nav>
     <a href={route === 'home' ? '#hero' : home} class="nav-logo">
       <img src="/assets/logo/logo-black.svg" alt="Nicolás Mateos" class="nav-logo-img" width="154" height="22" />
     </a>
     <div class="nav-right">
-      <a href={routes[route][other]} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>
+      <a href={switchHref ?? routes[route][other]} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>
       <a href={ctaHref} class="nav-cta">{s.cta}</a>
     </div>
   </div>

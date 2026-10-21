@@ -11,6 +11,7 @@ Portfolio of Nicolás Mateos, freelance Shopify Plus and B2B developer. Static s
 | `npm run build` | Build the site into `dist/` |
 | `npm run preview` | Serve the built `dist/` locally |
 | `npm run images` | Regenerate the optimized images in `public/img/` (see below) |
+| `npm run post -- es <slug> "<Title>"` | Create a new article with today's date and the frontmatter filled in |
 | `npx wrangler dev` | Serve `dist/` the way Cloudflare does, with `_redirects`, `_headers` and the 404 page |
 
 ## Structure
@@ -18,11 +19,13 @@ Portfolio of Nicolás Mateos, freelance Shopify Plus and B2B developer. Static s
 ```
 src/
   content/projects/*.json   one file per project (ES + EN text, images, year, URL); the order field sets the order
+  content/posts/<lang>/*.md  one Markdown file per article; the folder sets the language, the file name the URL
   content.config.ts          schema: the build fails if a field or a translation is missing
   i18n/routes.ts             URL of every page in each language, and its last-updated date
   i18n/ui.ts                 interface text, titles and meta descriptions in both languages
   views/                     page layouts shared by the ES and EN routes
-  pages/                     routes: index, proyectos, sobre-mi, contacto and the same under en/
+  pages/                     routes: index, proyectos, sobre-mi, blog, contacto and the same under en/
+  lib/posts.ts               reads the articles: language, URL, reading time, translation, related
   components/                hero, cards, project entries, Checkout Lab, nav, footer...
   lib/schema.ts              JSON-LD (Person, WebSite, page, breadcrumbs, projects)
   styles/, scripts/main.js   CSS and the small client script (modal, nav, form)
@@ -35,7 +38,7 @@ public/
 assets/Img/                  original screenshots (not published, only used by npm run images)
 ```
 
-`sitemap.xml` and `llms.txt` are generated at build time from `src/i18n/routes.ts` and the project files.
+`sitemap.xml`, `llms.txt` and both RSS feeds are generated at build time from `src/i18n/routes.ts`, the project files and the articles.
 
 ## Add or edit a project
 
@@ -48,6 +51,15 @@ assets/Img/                  original screenshots (not published, only used by n
 ## Add a page
 
 Add the route to `routes` in `src/i18n/routes.ts` (both languages), its title and description to `seo` in `src/i18n/ui.ts`, a view in `src/views/` and the two files in `src/pages/`. The sitemap, hreflang tags and language switch pick it up automatically.
+
+## Add an article
+
+1. `npm run post -- es <slug> "<Title>"`. Add `--pair <key>` on the English version to link it to the Spanish one, which is what hreflang, the language switch and the related links read.
+2. Write it, and fill in `seoTitle`, `description`, `keyword`, `tags`, `faq` and `cta`.
+3. `npm run build`. It fails if the title tag is over 65 characters, the meta description is outside 70 to 165, or a date is not `YYYY-MM-DD`.
+4. The URL, the sitemap entry and its alternates, the feed, the JSON-LD (`BlogPosting`, `FAQPage`, breadcrumbs), the table of contents, the reading time and the author box all follow from the file. Nothing else to update.
+
+`draft: true` keeps an article out of the listing, the sitemap and the feed and marks it `noindex`, but still builds its page, which is enough to read it on a preview branch. What to write and the editorial standard are in [BLOG.md](BLOG.md).
 
 ## Deploy
 

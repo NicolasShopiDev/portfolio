@@ -8,16 +8,19 @@ export const routes = {
   home: { es: '/', en: '/en/' },
   projects: { es: '/proyectos/', en: '/en/projects/' },
   about: { es: '/sobre-mi/', en: '/en/about/' },
+  blog: { es: '/blog/', en: '/en/blog/' },
   contact: { es: '/contacto/', en: '/en/contact/' },
 } as const;
 
 export type RouteKey = keyof typeof routes;
 
 // Date of the last real content change per page (sitemap lastmod, dateModified). Update by hand.
+// The blog index moves on its own: the newest article's date wins, see lib/posts.ts.
 export const updated: Record<RouteKey, string> = {
   home: '2026-10-19',
   projects: '2026-10-19',
   about: '2026-10-19',
+  blog: '2026-10-21',
   contact: '2026-10-19',
 };
 

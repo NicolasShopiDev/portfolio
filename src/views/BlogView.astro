@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PostCard from '../components/PostCard.astro';
+import { routes, updated, type Lang } from '../i18n/routes';
+import { t, seo } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, blog, graph } from '../lib/schema';
+import { publishedPosts, latestDate } from '../lib/posts';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+const meta = seo.blog[lang];
+const posts = await publishedPosts(lang);
+const lastmod = latestDate(posts, updated.blog);
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: s.navBlog, path: routes.blog[lang] },
+];
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'CollectionPage', path: routes.blog[lang], name: meta.title, description: meta.description, lang, dateModified: lastmod }),
+  breadcrumbs(crumbs),
+  blog({
+    path: routes.blog[lang],
+    name: meta.title,
+    description: meta.description,
+    lang,
+    posts: posts.map((p) => ({
+      path: p.path,
+      title: p.entry.data.title,
+      description: p.entry.data.description,
+      date: p.entry.data.date,
+      modified: p.modified,
+    })),
+  }),
+);
+---
+<Base lang={lang} route="blog" title={meta.title} description={meta.description} schema={schema}>
+  <section class="page-head page-head--tight">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      <div class="section-intro">
+        <h1 class="section-heading">{s.blogHeading}</h1>
+        <p class="section-desc">{s.blogIntro}</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container post-list">
+    {posts.length === 0 && <p class="section-desc">{s.blogEmpty}</p>}
+    {posts.map((post, i) => <PostCard lang={lang} post={post} featured={i === 0} />)}
+    <p class="post-feed-link">
+      <a href={`${routes.blog[lang]}rss.xml`}>RSS</a>
+    </p>
+  </div>
+
+  <section class="page-cta section">
+    <div class="container page-cta-inner">
+      <h2 class="contact-heading" set:html={s.contactHeading} />
+      <a class="btn btn--dark" href={routes.contact[lang]}>{s.blogCtaLabel}</a>
+    </div>
+  </section>
+</Base>

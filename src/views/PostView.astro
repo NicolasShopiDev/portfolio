@@ -1,0 +1,132 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PostCta from '../components/PostCta.astro';
+import PostAuthor from '../components/PostAuthor.astro';
+import { routes, type Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, blogPosting, faqPage, graph } from '../lib/schema';
+import { allPosts, formatDate, relatedTo, translationOf } from '../lib/posts';
+
+interface Props { lang: Lang; slug: string }
+const { lang, slug } = Astro.props;
+const s = t(lang);
+const other: Lang = lang === 'es' ? 'en' : 'es';
+
+const posts = await allPosts();
+const post = posts.find((p) => p.lang === lang && p.slug === slug);
+if (!post) throw new Error(`No post at src/content/posts/${lang}/${slug}.md`);
+const d = post.entry.data;
+const { Content, headings } = await render(post.entry);
+
+const twin = translationOf(post, posts);
+const related = relatedTo(post, posts);
+const alternates = { [lang]: post.path, ...(twin ? { [twin.lang]: twin.path } : {}) } as Partial<Record<Lang, string>>;
+const switchHref = twin?.path ?? routes.blog[other];
+// Only the H2s: the sections a reader scans for. Shown from four onwards.
+const toc = headings.filter((h) => h.depth === 2);
+const words = (post.entry.body ?? '').trim().split(/\s+/).length;
+
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: s.navBlog, path: routes.blog[lang] },
+  { name: d.title, path: post.path },
+];
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'WebPage', path: post.path, name: d.seoTitle, description: d.description, lang, dateModified: post.modified }),
+  breadcrumbs(crumbs),
+  blogPosting({
+    path: post.path,
+    blogPath: routes.blog[lang],
+    headline: d.title,
+    description: d.description,
+    lang,
+    datePublished: d.date,
+    dateModified: post.modified,
+    keywords: [d.keyword, ...d.tags],
+    image: lang === 'es' ? '/assets/og-image-es.png' : '/assets/og-image.png',
+    wordCount: words,
+    translationPath: twin?.path,
+  }),
+  ...(d.faq ? [faqPage(post.path, d.faq)] : []),
+);
+---
+<Base
+  lang={lang}
+  route="blog"
+  title={d.seoTitle}
+  description={d.description}
+  schema={schema}
+  canonicalPath={post.path}
+  alternates={alternates}
+  switchHref={switchHref}
+  ogType="article"
+  noindex={d.draft}
+  publishedTime={d.date}
+  modifiedTime={post.modified}
+>
+  <article class="post">
+    <div class="container post-container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      <header class="post-head">
+        <ul class="post-tags">{d.tags.map((tag) => <li class="tag">{tag}</li>)}</ul>
+        <h1 class="post-title">{d.title}</h1>
+        <p class="post-meta">
+          <span>{s.blogPublished} <time datetime={d.date}>{formatDate(d.date, lang)}</time></span>
+          {d.updated && (
+            <span>· {s.blogUpdatedOn} <time datetime={d.updated}>{formatDate(d.updated, lang)}</time></span>
+          )}
+          <span>· {post.minutes} {s.blogMinutes}</span>
+          <span>· Nicolás Mateos</span>
+        </p>
+      </header>
+
+      {toc.length >= 4 && (
+        <nav class="post-toc" aria-labelledby="post-toc-title">
+          <p class="post-toc-title" id="post-toc-title">{s.blogToc}</p>
+          <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </nav>
+      )}
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {d.faq && (
+        <section class="post-faq">
+          <h2 id="faq">{s.blogFaq}</h2>
+          <dl>
+            {d.faq.map((item) => (
+              <div class="post-faq-item">
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
+      <PostCta lang={lang} cta={d.cta} />
+      <PostAuthor lang={lang} />
+
+      {related.length > 0 && (
+        <section class="post-related">
+          <p class="section-label">{s.blogRelated}</p>
+          <ul>
+            {related.map((p) => (
+              <li>
+                <a href={p.path}>{p.entry.data.title}</a>
+                <span class="post-related-meta">{formatDate(p.entry.data.date, lang)} · {p.minutes} {s.blogMinutes}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <p class="post-back"><a href={routes.blog[lang]}>← {s.blogAll}</a></p>
+    </div>
+  </article>
+</Base>

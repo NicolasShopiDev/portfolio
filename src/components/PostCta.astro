@@ -1,0 +1,16 @@
+---
+import { routes, type Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+
+interface Props { lang: Lang; cta?: { heading: string; text: string; label: string } }
+const { lang, cta } = Astro.props;
+const s = t(lang);
+const heading = cta?.heading ?? s.blogCtaHeading;
+const text = cta?.text ?? s.blogCtaText;
+const label = cta?.label ?? s.blogCtaLabel;
+---
+<aside class="post-cta">
+  <h2 class="post-cta-heading">{heading}</h2>
+  <p class="post-cta-text">{text}</p>
+  <a class="btn btn--dark" href={routes.contact[lang]}>{label}</a>
+</aside>
