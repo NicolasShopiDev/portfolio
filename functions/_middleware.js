@@ -1,9 +1,13 @@
 /* The home page, and only the home page, looks at the browser's language.
  *
- * A Cloudflare Pages Function runs ahead of the static file, so a visitor who reads English
+ * A Cloudflare Pages middleware runs ahead of the static file, so a visitor who reads English
  * lands on /en/ without ever seeing the Spanish page flash by. Everything else on the site is
  * served straight from disk: deep links keep the language they were shared in, which is what
  * hreflang already tells search engines.
+ *
+ * It has to be a _middleware: in Pages a static file wins over functions/index.js, so the home
+ * page would never reach it. The flip side is that this runs on every request, which is why the
+ * first two lines drop everything that is not a GET of "/" before doing any work.
  *
  * Three ways out of the redirect, in order: crawlers (they should see both versions), a visitor
  * who has picked a language with the ES/EN switch (main.js writes the cookie), and anything
@@ -12,12 +16,14 @@
 
 const BOTS = /bot|crawl|spider|slurp|lighthouse|pagespeed|facebookexternalhit|whatsapp|telegram|embedly|preview/i;
 
-export async function onRequestGet(context) {
-  const { request, env } = context;
+export async function onRequest(context) {
+  const { request, next } = context;
+
+  const url = new URL(request.url);
+  if (request.method !== 'GET' || url.pathname !== '/') return next();
 
   try {
     if (wantsEnglish(request)) {
-      const url = new URL(request.url);
       url.pathname = '/en/';
       return Response.redirect(url.toString(), 302);
     }
@@ -25,7 +31,7 @@ export async function onRequestGet(context) {
     // A surprise in here must never take the home page down.
   }
 
-  return env.ASSETS.fetch(request);
+  return next();
 }
 
 function wantsEnglish(request) {
