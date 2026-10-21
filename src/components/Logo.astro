@@ -1,0 +1,27 @@
+---
+// The logotype, inline in the HTML instead of an <img>. Two reasons: the browser rasterises it
+// straight into place rather than scaling a texture, which is what left it looking slightly soft,
+// and the colour comes from CSS (currentColor), so Matrix mode needs neither a filter nor a
+// second file. It also saves the request the image used to cost.
+//
+// logo-mark.svg holds only the paths: no header, no fills, coordinates rounded to two decimals
+// (thousandths of a pixel at this size). public/assets/logo/ keeps the original files, which the
+// footer and any external use still need.
+import mark from './logo-mark.svg?raw';
+
+interface Props {
+  class?: string;
+  label?: string;
+}
+const { class: className, label = 'Nicolás Mateos' } = Astro.props;
+---
+<svg
+  class={className}
+  viewBox="0 0 325.5 46.5"
+  width="154"
+  height="22"
+  fill="currentColor"
+  role="img"
+  aria-label={label}
+  set:html={mark}
+/>

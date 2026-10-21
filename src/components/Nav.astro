@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 import { routes, type Lang, type RouteKey } from '../i18n/routes';
 import { t } from '../i18n/ui';
 
@@ -32,7 +33,7 @@ const links = [
       ))}
     </nav>
     <a href={route === 'home' ? '#hero' : home} class="nav-logo">
-      <img src="/assets/logo/logo-black.svg" alt="Nicolás Mateos" class="nav-logo-img" width="154" height="22" />
+      <Logo class="nav-logo-img" />
     </a>
     <div class="nav-right">
       <a href={langHref} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>

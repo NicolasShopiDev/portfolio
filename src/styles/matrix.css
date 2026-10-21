@@ -85,8 +85,9 @@
 
 .matrix .nav { background: rgba(0, 0, 0, 0.86); }
 .matrix .nav-logo-img {
-  /* Sin filtro: rasteriza el SVG y le quita filo. MatrixMode cambia el src por el logo blanco,
-     que ya existe para el pie. */
+  /* El SVG va inline y pinta con currentColor, así que el modo Matrix solo le cambia el color:
+     sin filtros, que rasterizan y le quitan filo. */
+  color: var(--fg);
   /* 92 % of the cycle is the logo sitting still: the glitch is a tenth of a second of work
      on a 154x22 image, every four seconds. */
   animation: matrix-glitch 4s steps(1, end) infinite;
@@ -97,7 +98,7 @@
   93% { clip-path: inset(8% 0 68% 0); transform: translate(-3px, 0); }
   94% { clip-path: inset(58% 0 22% 0); transform: translate(3px, -1px); }
   95% { clip-path: inset(32% 0 44% 0); transform: translate(-2px, 1px); }
-  96% { clip-path: none; transform: translate(2px, 0); opacity: 0.55; }
+  96% { clip-path: none; transform: translate(2px, 0); opacity: 0.5; }
   97% { clip-path: inset(44% 0 34% 0); transform: translate(-4px, 0); }
   98% { clip-path: inset(74% 0 6% 0); transform: translate(2px, 1px); }
 }

@@ -156,6 +156,7 @@ ul, ol { list-style: none; }
   align-items: center;
 }
 .nav-logo-img {
+  color: #000;  /* el SVG va inline y pinta con currentColor */
   height: 22px;
   width: auto;
   display: block;

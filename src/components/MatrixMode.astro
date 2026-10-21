@@ -67,10 +67,6 @@ const copy = {
   }
 
   const toggle = document.querySelector('[data-matrix-toggle]');
-  // El logo negro no se invierte con un filtro: se cambia por el blanco, que ya existe para el
-  // pie. Un filtro rasteriza el SVG y se nota en un logotipo de trazo fino.
-  const logo = document.querySelector('.nav-logo-img');
-  const LOGO_CLARO = '/assets/logo/logo-white.svg';
   if (toggle) {
     const long = toggle.querySelector('.matrix-text');
     const short = toggle.querySelector('.matrix-text--short');
@@ -117,7 +113,6 @@ const copy = {
       const track = audio;
       track.play().then(() => volumeTo(track, VOLUME, FADE_IN)).catch(() => { audio = null; });
 
-      if (logo) { logo.dataset.src = logo.getAttribute('src'); logo.setAttribute('src', LOGO_CLARO); }
       updateSectionRain();
       label(true);
     }
@@ -148,7 +143,6 @@ const copy = {
         audio = null;
       }
 
-      if (logo && logo.dataset.src) logo.setAttribute('src', logo.dataset.src);
       updateSectionRain();
       label(false);
     }
