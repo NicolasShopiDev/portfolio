@@ -1,0 +1,220 @@
+/* Code page: public repositories, the three patterns and the colophon.
+   Reuses the code panel tokens defined in lab.css (--code-bg, --code-bar…). */
+
+/* ── Repositories ───────────────────────────────────────────── */
+.repos { padding-top: 96px; }
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.repo {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--gray-100);
+}
+
+.repo-lang {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 12px;
+}
+
+.repo-name { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.repo-name code { font-family: var(--font-mono); font-size: 16px; letter-spacing: -0.01em; }
+
+.repo-desc { color: var(--fg-2); font-size: 15px; line-height: 1.8; }
+
+.repo-links { display: flex; flex-wrap: wrap; gap: 24px; }
+.repo-links .text-link { margin-top: 20px; }
+
+/* ── Patterns ───────────────────────────────────────────────── */
+.patterns { padding-top: 0; }
+
+.pattern {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 48px;
+  align-items: start;
+  padding-top: 56px;
+  border-top: 1px solid var(--border);
+}
+.pattern + .pattern { margin-top: 56px; }
+
+.pattern-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.pattern-label {
+  font-size: var(--fs-2xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 6px;
+}
+.pattern-label + .pattern-body { margin-bottom: 24px; }
+
+.pattern-body { color: var(--fg-2); font-size: 15px; line-height: 1.85; }
+.pattern-body:last-child { margin-bottom: 0; }
+
+.pattern-code { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+
+.snippet {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--code-bg);
+}
+
+.snippet-name {
+  padding: 10px 16px;
+  background: var(--code-bar);
+  border-bottom: 1px solid var(--code-line);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--code-dim);
+}
+
+/* Shiki writes the theme background as an inline style, so the override needs the flag. */
+.snippet pre.astro-code {
+  background-color: var(--code-bg) !important;
+  margin: 0;
+  padding: 16px 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.65;
+  scrollbar-width: thin;
+  scrollbar-color: #33333a transparent;
+}
+.snippet pre.astro-code code { display: block; width: max-content; min-width: 100%; }
+.snippet pre.astro-code .line { padding: 0 20px; }
+
+/* ── Colophon ───────────────────────────────────────────────── */
+.colophon { padding-top: 0; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.metric-scores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.metric-score dt {
+  font-size: var(--fs-2xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 10px;
+}
+.metric-score dd {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.metric-vitals { display: flex; flex-direction: column; }
+.metric-vital {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.metric-vital:first-child { border-top: 1px solid var(--border); }
+.metric-vital dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+}
+.metric-vital dd { font-family: var(--font-mono); font-size: 13px; color: var(--fg); }
+
+.metric-method {
+  margin-top: 32px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--fg-3);
+}
+.metric-method a {
+  color: var(--fg-2);
+  border-bottom: 1px solid var(--border);
+  transition: border-color var(--dur-base);
+}
+.metric-method a:hover { border-color: var(--fg); }
+
+.metric-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 860px;
+  margin-top: 20px;
+}
+.metric-notes li {
+  list-style: none;
+  padding-left: 16px;
+  border-left: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--fg-3);
+}
+.metric-notes b { color: var(--fg-2); }
+
+.colophon-how { margin-top: 72px; }
+
+.how-list { display: flex; flex-direction: column; max-width: 860px; }
+.how-list li {
+  list-style: none;
+  padding: 16px 0 16px 28px;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg-2);
+  font-size: 15px;
+  line-height: 1.8;
+  position: relative;
+}
+.how-list li::before {
+  content: '';
+  position: absolute;
+  top: 27px;
+  left: 2px;
+  width: 10px;
+  height: 1px;
+  background: var(--gray-400);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .pattern { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .metrics { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .repo-grid { grid-template-columns: minmax(0, 1fr); }
+  .metric-scores { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
+  .metric-score dd { font-size: 44px; }
+  .repo { padding: 24px 20px; }
+}
+
+@media (max-width: 480px) {
+  .snippet pre.astro-code { font-size: 11px; }
+  .snippet pre.astro-code .line { padding: 0 14px; }
+}

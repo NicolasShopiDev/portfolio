@@ -7,6 +7,7 @@ export const LANGS: Lang[] = ['es', 'en'];
 export const routes = {
   home: { es: '/', en: '/en/' },
   projects: { es: '/proyectos/', en: '/en/projects/' },
+  code: { es: '/codigo/', en: '/en/code/' },
   about: { es: '/sobre-mi/', en: '/en/about/' },
   blog: { es: '/blog/', en: '/en/blog/' },
   contact: { es: '/contacto/', en: '/en/contact/' },
@@ -19,7 +20,8 @@ export type RouteKey = keyof typeof routes;
 export const updated: Record<RouteKey, string> = {
   home: '2026-10-21',
   projects: '2026-10-21',
-  about: '2026-10-19',
+  code: '2026-10-21',
+  about: '2026-10-21',
   blog: '2026-10-21',
   contact: '2026-10-19',
 };

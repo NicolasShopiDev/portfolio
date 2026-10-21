@@ -11,6 +11,7 @@ Portfolio of Nicolás Mateos, freelance Shopify Plus and B2B developer. Static s
 | `npm run build` | Build the site into `dist/` |
 | `npm run preview` | Serve the built `dist/` locally |
 | `npm run images` | Regenerate the optimized images in `public/img/` (see below) |
+| `npm run metrics` | Measure the live site with Lighthouse and rewrite `src/data/site-metrics.json` |
 | `npm run post -- es <slug> "<Title>"` | Create a new article with today's date and the frontmatter filled in |
 | `npm run publish -- <slug>` | Take an article out of draft and date it today, ready to merge |
 | `npx wrangler dev` | Serve `dist/` the way Cloudflare does, with `_redirects`, `_headers` and the 404 page |
@@ -25,9 +26,11 @@ src/
   i18n/routes.ts             URL of every page in each language, and its last-updated date
   i18n/ui.ts                 interface text, titles and meta descriptions in both languages
   views/                     page layouts shared by the ES and EN routes
-  pages/                     routes: index, proyectos, sobre-mi, blog, contacto and the same under en/
+  pages/                     routes: index, proyectos, codigo, sobre-mi, blog, contacto and the same under en/
   lib/posts.ts               reads the articles: language, URL, reading time, translation, related
   components/                hero, cards, project entries, Checkout Lab, nav, footer...
+  snippets/                  the code shown on /codigo/, as real files (imported with ?raw)
+  data/site-metrics.json     Lighthouse scores published on /codigo/ (npm run metrics)
   lib/schema.ts              JSON-LD (Person, WebSite, page, breadcrumbs, projects)
   styles/, scripts/main.js   CSS and the small client script (modal, nav, form)
 public/
@@ -37,6 +40,7 @@ public/
   _redirects, _headers       Cloudflare redirects and cache rules
   robots.txt
 assets/Img/                  original screenshots (not published, only used by npm run images)
+assets/Img/Perfil/nicolas.jpg  the About portrait; optional, the page drops it if missing
 ```
 
 `sitemap.xml`, `llms.txt` and both RSS feeds are generated at build time from `src/i18n/routes.ts`, the project files and the articles.
@@ -48,6 +52,18 @@ assets/Img/                  original screenshots (not published, only used by n
 3. Run `npm run images` to generate the AVIF/WebP variants and update `src/data/image-manifest.json`.
 4. `npm run build`. The build fails with a clear message if an image or a translation is missing.
 5. When page content changes, update its date in `src/i18n/routes.ts` (`updated`), used by the sitemap and the structured data.
+
+## The numbers on /codigo/
+
+The code page publishes real Lighthouse scores, never hand-written ones.
+
+1. Deploy first: the numbers have to describe what is live.
+2. `npm run metrics` (needs Chrome; it fetches Lighthouse with npx, it is not a dependency).
+   Pass a URL to measure something else: `npm run metrics -- http://localhost:4321/`.
+3. It rewrites `src/data/site-metrics.json`. Update `updated.code` in `src/i18n/routes.ts` and push.
+
+A score below 100 prints the note written for it in `src/views/CodeView.astro` (`scoreNotes`);
+the note disappears on its own once the score reaches 100, so stale excuses cannot stay up.
 
 ## Add a page
 

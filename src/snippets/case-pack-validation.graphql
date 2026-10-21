@@ -1,0 +1,23 @@
+# The input query is half the work: a Function only sees what it asks for, and the
+# input is capped at 128 kB, so an order pad with 200 lines cannot afford stray fields.
+# `casePack` is an alias, so the metafield arrives under a name that reads as code.
+
+query RunInput {
+  buyerJourney {
+    step
+  }
+  cart {
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          title
+          casePack: metafield(namespace: "b2b", key: "case_pack") {
+            value
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "measured": "2026-10-21",
+  "url": "https://nicolasmateos.com/",
+  "tool": "Lighthouse 12",
+  "formFactor": "mobile",
+  "scores": {
+    "performance": 97,
+    "accessibility": 96,
+    "bestPractices": 100,
+    "seo": 92
+  },
+  "metrics": {
+    "lcpMs": 1900,
+    "cls": 0,
+    "tbtMs": 47,
+    "transferBytes": 306099,
+    "requests": 20
+  }
+}

@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Picture from '../components/Picture.astro';
+import manifest from '../data/image-manifest.json';
 import { routes, updated, type Lang } from '../i18n/routes';
 import { t, seo } from '../i18n/ui';
 import { person, website, webPage, breadcrumbs, graph } from '../lib/schema';
@@ -14,11 +16,23 @@ const crumbs = [
   { name: s.navAbout, path: routes.about[lang] },
 ];
 
+// The portrait shows up as soon as assets/Img/Perfil/nicolas.jpg exists and
+// npm run images has run. Without it the page falls back to a single column.
+const PORTRAIT = 'Perfil/nicolas.jpg';
+const portrait = PORTRAIT in manifest ? PORTRAIT : null;
+const portraitFile = portrait ? (manifest as Record<string, { base: string }>)[PORTRAIT].base : null;
+
 // Facts from the CV. The current agencies stay anonymous until they agree to be named.
 const copy = {
   es: {
     eyebrow: 'Sobre mí',
-    lead: 'Nicolás Mateos es un desarrollador Shopify español, freelance, especializado en front-end para Shopify Plus y tiendas B2B. Vive en Madrid y trabaja en remoto con marcas y agencias de España, Países Bajos y el resto de Europa, en español y en inglés. Desarrolla en Shopify desde 2021 y es freelance desde septiembre de 2022. Su especialidad son los portales mayoristas (cuentas de empresa, catálogos y listas de precios), Shopify Functions en JavaScript y Rust, Checkout Extensibility y apps embebidas a medida (Node.js, Express, Shopify CLI). Desde octubre de 2024 es además el único desarrollador front-end de una agencia Shopify Plus centrada en B2B en España.',
+    lead: 'Soy Nicolás Mateos, desarrollador Shopify freelance. Vivo en Madrid y trabajo en remoto con marcas y agencias de España, Países Bajos y el resto de Europa, en español y en inglés. Llevo con Shopify desde 2021 y por mi cuenta desde septiembre de 2022; desde octubre de 2024 soy además el único desarrollador front-end de una agencia Shopify Plus centrada en B2B.',
+    storyTitle: 'Cómo llegué aquí',
+    story: [
+      'Empecé en 2021 en VRANDED Haus, una agencia de Madrid, tocando Liquid en temas que no eran míos: responsive, arreglos y aprender dónde duele una tienda. En 2022 me puse por mi cuenta, y entre 2023 y 2024 pasé por Growthmile y Reduncle construyendo temas a medida para marcas premium, de esos en los que el diseño no se parece a nada que venga de serie.',
+      'Desde finales de 2024 casi todo lo que hago es B2B, y es la parte del oficio que más me gusta. Una tienda mayorista no se parece a una tienda: se parece a cómo esa empresa ya compraba por teléfono o por Excel. La mitad del trabajo es front-end y la otra mitad es entender el pedido de verdad —cajas completas, tramos de precio, varias sedes, un ERP al otro lado— y que todo eso quepa en una pantalla sin pedir un manual.',
+    ],
+    portraitAlt: 'Nicolás Mateos, desarrollador Shopify freelance en Madrid',
     factsTitle: 'Datos clave',
     facts: [
       ['Ubicación', 'Madrid, España. Trabajo en remoto, en horario de Europa central.'],
@@ -37,13 +51,28 @@ const copy = {
       ['Enero – octubre de 2023', 'Desarrollador front-end', 'Growthmile, agencia Shopify', 'Temas Shopify a medida desde cero para marcas B2C premium como Born Living Yoga, Polos El Capote, Pompeii y Name The Brand.'],
       ['Abril de 2021 – julio de 2022', 'Desarrollador front-end', 'VRANDED Haus, agencia digital (Madrid)', 'Primer puesto con Shopify: Liquid, diseño responsive, JavaScript y Git.'],
     ],
+    waysTitle: 'Cómo trabajo',
+    waysIntro: 'Cuatro costumbres que se repiten en casi todos los encargos, con el proyecto donde se ven.',
+    ways: [
+      ['Leer antes de escribir', 'En Vidal & Vidal lo primero no fue código nuevo, sino 29 plantillas huérfanas heredadas de una exportación. Siete apuntaban a vídeos que solo existían en la tienda de consumo y rompían shopify theme dev; quitarlas dejó la carpeta un 75 % más pequeña.'],
+      ['Una regla, no veinte parches', 'En Émolo el acceso mayorista entero cuelga de un único predicado Liquid sobre customer.b2b? que leen todos los precios, insignias de stock y botones de compra. Quien no tiene empresa no recibe un precio ni dentro del HTML.'],
+      ['Que lo cambie el cliente, no yo', 'En IVB Wellness los tramos de volumen salen de un metafield de tienda, así que mover un umbral no es una publicación de tema ni una factura: lo hacen ellos desde el admin.'],
+      ['Lo que no se mide, no se promete', 'Los números de rendimiento de esta web están publicados, con la fecha en que se midieron y el comando que los vuelve a medir.'],
+    ],
+    waysLink: 'Ver el código y los números',
     updatedLabel: 'Actualizado en octubre de 2026',
     ctaTitle: '¿Tienes un proyecto Shopify?',
     cta: 'Escríbeme',
   },
   en: {
     eyebrow: 'About',
-    lead: 'Nicolás Mateos is a Spanish freelance Shopify developer focused on front-end work for Shopify Plus and B2B stores, based in Madrid and working remotely. He has worked with Shopify since 2021 and as a freelancer since September 2022, with brands and agencies in Spain, the Netherlands and the rest of Europe, in Spanish and English. His specialty is wholesale portals (Companies, Catalogs and price lists), Shopify Functions in JavaScript and Rust, Checkout Extensibility and custom embedded apps (Node.js, Express, Shopify CLI). Since October 2024 he has also been the sole front-end developer at a B2B-focused Shopify Plus agency in Spain.',
+    lead: "I'm Nicolás Mateos, a freelance Shopify developer. I live in Madrid and work remotely with brands and agencies in Spain, the Netherlands and the rest of Europe, in Spanish and English. I have been on Shopify since 2021 and freelancing since September 2022; since October 2024 I am also the sole front-end developer at a B2B-focused Shopify Plus agency.",
+    storyTitle: 'How I got here',
+    story: [
+      "I started in 2021 at VRANDED Haus, an agency in Madrid, writing Liquid inside themes that were not mine: responsive work, fixes, and learning where a storefront hurts. I went freelance in 2022, and through 2023 and 2024 I worked with Growthmile and Reduncle building custom themes for premium brands — the kind where the design looks like nothing that ships out of the box.",
+      'Since late 2024 almost everything I do is B2B, and it is the part of the job I enjoy most. A wholesale store is not really a store: it looks like the way that company was already buying, over the phone or in a spreadsheet. Half the work is front-end and the other half is understanding the real order — full boxes, price tiers, several locations, an ERP on the other side — and fitting all of it on a screen that needs no manual.',
+    ],
+    portraitAlt: 'Nicolás Mateos, freelance Shopify developer in Madrid',
     factsTitle: 'Quick facts',
     facts: [
       ['Location', 'Madrid, Spain. Works remotely, on Central European time.'],
@@ -62,6 +91,15 @@ const copy = {
       ['January – October 2023', 'Front-End Developer', 'Growthmile, Shopify agency', 'Custom Shopify themes built from scratch for premium B2C brands such as Born Living Yoga, Polos El Capote, Pompeii and Name The Brand.'],
       ['April 2021 – July 2022', 'Front-End Developer', 'VRANDED Haus, digital agency (Madrid)', 'First Shopify role: Liquid, responsive design, JavaScript and Git.'],
     ],
+    waysTitle: 'How I work',
+    waysIntro: 'Four habits that come back on almost every engagement, each with the project where you can see it.',
+    ways: [
+      ['Read before writing', 'At Vidal & Vidal the first job was not new code but 29 orphaned templates inherited from an export. Seven of them pointed at videos that only existed on the consumer store and broke shopify theme dev; removing them cut the folder by 75%.'],
+      ['One rule, not twenty patches', 'At Émolo the whole wholesale gate hangs off a single Liquid predicate on customer.b2b? that every price, stock badge and buy button reads. A visitor without a company never receives a price, not even inside the HTML.'],
+      ['Let the client change it, not me', 'At IVB Wellness the volume tiers come from a store metafield, so moving a threshold is not a theme release and not an invoice: they do it from the admin.'],
+      ['What is not measured is not promised', "This site's performance numbers are published, with the date they were measured and the command that measures them again."],
+    ],
+    waysLink: 'See the code and the numbers',
     updatedLabel: 'Updated October 2026',
     ctaTitle: 'Got a Shopify project?',
     cta: 'Get in touch',
@@ -69,7 +107,7 @@ const copy = {
 }[lang];
 
 const schema = graph(
-  person(lang),
+  person(lang, portraitFile ? `${portraitFile}-800.webp` : undefined),
   website(),
   webPage({ type: 'ProfilePage', path: routes.about[lang], name: meta.title, description: meta.description, lang, dateModified: updated.about }),
   breadcrumbs(crumbs),
@@ -81,7 +119,27 @@ const schema = graph(
       <Breadcrumbs lang={lang} items={crumbs} />
       <p class="section-label">{copy.eyebrow}</p>
       <h1 class="section-heading">Nicolás Mateos</h1>
-      <p class="about-lead">{copy.lead}</p>
+
+      <div class:list={['about-intro', !portrait && 'about-intro--text']}>
+        <div class="about-intro-text">
+          <p class="about-lead">{copy.lead}</p>
+          <h2 class="about-story-title">{copy.storyTitle}</h2>
+          {copy.story.map((paragraph) => <p class="about-story">{paragraph}</p>)}
+        </div>
+        {portrait && (
+          <figure class="about-portrait">
+            <Picture
+              image={portrait}
+              alt={copy.portraitAlt}
+              sizes="(max-width: 1024px) 260px, 360px"
+              loading="eager"
+              fetchpriority="high"
+              class="about-portrait-img"
+            />
+          </figure>
+        )}
+      </div>
+
       <p class="page-updated"><time datetime={updated.about}>{copy.updatedLabel}</time></p>
     </div>
   </section>
@@ -107,6 +165,27 @@ const schema = graph(
           ))}
         </ol>
       </div>
+    </div>
+  </section>
+
+  <section class="section ways">
+    <div class="container">
+      <div class="section-intro">
+        <h2 class="section-heading">{copy.waysTitle}</h2>
+        <div>
+          <p class="section-desc">{copy.waysIntro}</p>
+          <a class="text-link" href={routes.code[lang]}>{copy.waysLink}</a>
+        </div>
+      </div>
+      <ol class="ways-list">
+        {copy.ways.map(([title, body], i) => (
+          <li class="way">
+            <p class="way-num">{String(i + 1).padStart(2, '0')}</p>
+            <h3 class="way-title">{title}</h3>
+            <p class="way-body">{body}</p>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 

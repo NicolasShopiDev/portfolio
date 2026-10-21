@@ -1,11 +1,6 @@
 /* ── Checkout Lab ───────────────────────────────────────────── */
 .lab-section {
-  --code-bg: #111113;
-  --code-bar: #18181b;
-  --code-line: #232327;
-  --code-fg: #e4e4e7;
-  --code-dim: #6e6e76;
-  --code-num: #4d4d55;
+  /* The panel colours live in style.css :root; these are the lab's own syntax tokens. */
   --t-com: #6e6e76;
   --t-str: #a8d8a0;
   --t-kw: #ff9b7a;

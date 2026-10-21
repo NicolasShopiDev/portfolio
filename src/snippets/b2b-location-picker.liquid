@@ -1,0 +1,38 @@
+{%- comment -%}
+  A B2B buyer belongs to a company and often buys for more than one location. The
+  catalog, the price list and the payment terms all follow the location, so the
+  picker belongs in the header, before the cart fills up with the wrong prices.
+
+  Objects: customer.b2b?, customer.current_company, customer.current_location,
+  customer.company_available_locations, location.url_to_set_as_current.
+{%- endcomment -%}
+
+{%- if customer.b2b? -%}
+  {%- assign locations = customer.company_available_locations -%}
+
+  <div class="b2b-bar">
+    <p class="b2b-bar__who">
+      {{ customer.current_company.name }} ·
+      <strong>{{ customer.current_location.name }}</strong>
+    </p>
+
+    {%- if locations.size > 1 -%}
+      {%- comment -%} A details element: it works before the JS bundle arrives. {%- endcomment -%}
+      <details class="b2b-bar__picker">
+        <summary>{{ 'b2b.location.change' | t }}</summary>
+        <ul>
+          {%- for location in locations -%}
+            {%- unless location.current? -%}
+              <li>
+                <a href="{{ location.url_to_set_as_current }}">
+                  {{ location.name }}
+                  <span>{{ location.shipping_address.city }}</span>
+                </a>
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+        </ul>
+      </details>
+    {%- endif -%}
+  </div>
+{%- endif -%}

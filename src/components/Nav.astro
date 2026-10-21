@@ -14,6 +14,7 @@ const ctaHref = route === 'home' ? '#contact' : routes.contact[lang];
   <div class="nav-inner">
     <nav class="nav-left" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
       <a href={routes.projects[lang]} aria-current={route === 'projects' ? 'page' : undefined}>{s.navProjects}</a>
+      <a href={routes.code[lang]} aria-current={route === 'code' ? 'page' : undefined}>{s.navCode}</a>
       <a href={routes.about[lang]} aria-current={route === 'about' ? 'page' : undefined}>{s.navAbout}</a>
       <a href={routes.blog[lang]} aria-current={route === 'blog' ? 'page' : undefined}>{s.navBlog}</a>
     </nav>

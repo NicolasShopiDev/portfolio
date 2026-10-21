@@ -27,6 +27,7 @@ export const GET: APIRoute = async () => {
     `- [Home (Spanish)](${absolute(routes.home.es)}): desarrollador Shopify freelance en España`,
     `- [Home (English)](${absolute(routes.home.en)}): freelance Shopify Plus and B2B developer in Spain`,
     `- [Projects](${absolute(routes.projects.en)}): every project with client, year, scope and stack (Spanish: ${absolute(routes.projects.es)})`,
+    `- [Code](${absolute(routes.code.en)}): public repositories, three annotated B2B patterns and how this site is built (Spanish: ${absolute(routes.code.es)})`,
     `- [About](${absolute(routes.about.en)}): facts and work history (Spanish: ${absolute(routes.about.es)})`,
     `- [Blog](${absolute(routes.blog.en)}): articles on Shopify Plus, B2B, Functions and checkout (Spanish: ${absolute(routes.blog.es)})`,
     `- [Contact](${absolute(routes.contact.en)}) (Spanish: ${absolute(routes.contact.es)})`,
@@ -42,6 +43,11 @@ export const GET: APIRoute = async () => {
     '- [LinkedIn](https://www.linkedin.com/in/nicolas-mateos-shopify/)',
     '- [GitHub](https://github.com/NicolasShopiDev)',
     '- [Upwork](https://www.upwork.com/freelancers/~0167007dc504c9b9ab)',
+    '',
+    '## Public repositories',
+    '',
+    '- [shopify-checkout-lab](https://github.com/NicolasShopiDev/shopify-checkout-lab): the Shopify Function that runs in the Checkout Lab on the home page, with its input query and tests',
+    '- [portfolio](https://github.com/NicolasShopiDev/portfolio): the source of this site (Astro, two languages, build-time image pipeline)',
     '',
   ];
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

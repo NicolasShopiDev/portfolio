@@ -118,7 +118,8 @@ const subtotal = money.format(PRICE * QTY);
         <button type="button" class="btn btn--dark lab-deploy" id="lab-deploy" disabled>{t.deploy}</button>
       </div>
 
-      <div class="lab-stage">
+      {/* inert until lab.js is ready: no keyboard focus and no screen-reader output for a widget that cannot answer yet. */}
+      <div class="lab-stage" inert>
         <div class="lab-checkout" aria-label={t.checkout}>
           <div class="lc-head">
             <span class="lc-store">LUMEN</span>{' '}

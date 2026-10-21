@@ -25,6 +25,10 @@ const OUT_DIR = path.join(ROOT, 'public', 'img');
 const MANIFEST_PATH = path.join(ROOT, 'src', 'data', 'image-manifest.json');
 const PUBLIC_BASE = '/img';
 
+// Imágenes que no pertenecen a ningún proyecto (el retrato de Sobre mí). Son
+// opcionales: si el original no está, se avisa y el build sigue sin ellas.
+const SITE_IMAGES = [{ dir: 'Perfil', file: 'nicolas.jpg' }];
+
 const STATIC_WIDTHS = [400, 800, 1200];
 const ANIMATED_WIDTHS = [400, 800];
 const AVIF_OPTIONS = { quality: 50, effort: 4 };
@@ -86,6 +90,22 @@ async function collectSources() {
       });
     }
   }
+  for (const { dir, file } of SITE_IMAGES) {
+    const key = `${dir}/${file}`;
+    const abs = path.join(SOURCE_DIR, dir, file);
+    if (!existsSync(abs)) {
+      console.warn(`  Aviso: falta ${path.relative(ROOT, abs)}; la página que lo use seguirá sin imagen.`);
+      continue;
+    }
+    sources.set(key, {
+      key,
+      abs,
+      dirSlug: slugify(dir),
+      fileSlug: slugify(path.parse(file).name),
+      project: '(sitio)',
+    });
+  }
+
   return { projectCount: files.length, sources: [...sources.values()] };
 }
 

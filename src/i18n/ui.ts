@@ -4,6 +4,7 @@ export const ui = {
   es: {
     skip: 'Saltar al contenido',
     navProjects: 'Proyectos',
+    navCode: 'Código',
     navAbout: 'Sobre mí',
     navContact: 'Contacto',
     navBlog: 'Blog',
@@ -86,6 +87,7 @@ export const ui = {
   en: {
     skip: 'Skip to main content',
     navProjects: 'Projects',
+    navCode: 'Code',
     navAbout: 'About',
     navContact: 'Contact',
     navBlog: 'Blog',
@@ -189,6 +191,16 @@ export const seo: Record<RouteKey, Record<Lang, { title: string; description: st
     en: {
       title: 'Shopify, Shopify Plus & B2B Projects | Nicolás Mateos',
       description: '19 Shopify projects: B2B wholesale portals for jewelry, supplements and e-mobility parts, plus custom themes for fashion and beauty brands.',
+    },
+  },
+  code: {
+    es: {
+      title: 'Código: Shopify Functions, B2B y Liquid | Nicolás Mateos',
+      description: 'Código Shopify que puedes leer y clonar: una Function de validación de carrito, un bloc de pedido B2B sin framework, un selector de sede, y cómo está hecha esta web.',
+    },
+    en: {
+      title: 'Code: Shopify Functions, B2B and Liquid | Nicolás Mateos',
+      description: 'Shopify code you can read and clone: a cart validation Function, a framework-free B2B order pad, a company location picker, and how this site is built.',
     },
   },
   about: {

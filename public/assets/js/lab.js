@@ -641,6 +641,7 @@ async function init() {
   const app = document.getElementById('lab-app');
   els = {
     app,
+    stage: app.querySelector('.lab-stage'),
     qty: document.getElementById('lc-qty'),
     minus: app.querySelector('[data-qty="-1"]'),
     plus: app.querySelector('[data-qty="1"]'),
@@ -683,6 +684,7 @@ async function init() {
   renderMethodsOnce();
   bindEvents();
   app.dataset.ready = 'true';
+  els.stage.removeAttribute('inert');
   render();
 }
 

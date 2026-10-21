@@ -16,7 +16,7 @@ const personText = {
   },
 };
 
-export const person = (lang: Lang) => ({
+export const person = (lang: Lang, image?: string) => ({
   '@type': 'Person',
   '@id': PERSON_ID,
   name: 'Nicolás Mateos',
@@ -27,6 +27,7 @@ export const person = (lang: Lang) => ({
   jobTitle: personText[lang].jobTitle,
   description: personText[lang].description,
   email: 'nicolasmhbusiness@gmail.com',
+  ...(image ? { image: absolute(image) } : {}),
   nationality: { '@type': 'Country', name: 'Spain' },
   address: { '@type': 'PostalAddress', addressLocality: 'Madrid', addressCountry: 'ES' },
   knowsLanguage: ['es', 'en'],
@@ -102,6 +103,27 @@ export const creativeWorks = (
       keywords: p.keywords.join(', '),
       creator: { '@id': PERSON_ID },
       about: { '@type': 'Organization', name: p.client, ...(p.url ? { url: p.url } : {}) },
+    },
+  })),
+});
+
+export const sourceCode = (
+  pagePath: string,
+  items: { id: string; name: string; description: string; language: string }[],
+) => ({
+  '@type': 'ItemList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'SoftwareSourceCode',
+      '@id': `${absolute(pagePath)}#${item.id}`,
+      url: `${absolute(pagePath)}#${item.id}`,
+      name: item.name,
+      description: item.description,
+      programmingLanguage: item.language,
+      runtimePlatform: 'Shopify',
+      author: { '@id': PERSON_ID },
     },
   })),
 });

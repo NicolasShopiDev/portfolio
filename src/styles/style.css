@@ -25,6 +25,14 @@
   --accent-success: #2a9d5c;
   --nav-bg: rgba(255,255,255,0.92);
 
+  /* Code panels: the Checkout Lab and the snippets on the code page. */
+  --code-bg: #111113;
+  --code-bar: #18181b;
+  --code-line: #232327;
+  --code-fg: #e4e4e7;
+  --code-dim: #9a9aa3;  /* 5.5:1 sobre --code-bar: nombres de archivo y pestañas son texto, no adorno */
+  --code-num: #4d4d55;
+
   /* ── Typography ─────────────────────────────────────────────── */
   --font-display: 'Cormorant Garamond Variable', 'Cormorant Garamond', serif;
   --font-body: 'Inter Variable', 'Inter', sans-serif;
@@ -1257,6 +1265,38 @@ picture { display: contents; }
   color: var(--fg-2);
 }
 .page-updated { margin-top: 16px; font-size: 12px; color: var(--fg-3); }
+
+/* Retrato y relato. Sin foto (ver AboutView) la columna de texto ocupa el ancho. */
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 72px;
+  align-items: start;
+  margin-top: 28px;
+}
+.about-intro--text { grid-template-columns: minmax(0, 1fr); }
+.about-intro .about-lead { margin-top: 0; }
+
+.about-portrait {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card-bg);
+}
+.about-portrait-img { display: block; width: 100%; height: auto; }
+
+.about-story-title {
+  margin-top: 48px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.about-story {
+  max-width: 860px;
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--fg-2);
+}
 .about-page { background: #fafafa; margin-top: 96px; }
 .about-page-grid {
   display: grid;
@@ -1288,6 +1328,24 @@ picture { display: contents; }
 .timeline-where { font-size: 14px; color: var(--fg-2); margin-top: 2px; }
 .timeline-what { font-size: 15px; line-height: 1.8; color: var(--fg-2); margin-top: 10px; }
 
+/* How I work */
+.ways-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 64px;
+}
+.way { list-style: none; }
+.way-num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--fg-3);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.way-title { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+.way-body { margin-top: 12px; font-size: 15px; line-height: 1.85; color: var(--fg-2); }
+
 .page-cta-inner {
   display: flex;
   align-items: center;
@@ -1316,6 +1374,9 @@ picture { display: contents; }
 
 @media (max-width: 1024px) {
   .about-page-grid { grid-template-columns: 1fr; gap: 64px; }
+  .about-intro { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .about-intro .about-portrait { order: -1; max-width: 260px; }
+  .ways-list { grid-template-columns: minmax(0, 1fr); gap: 40px; }
 }
 @media (max-width: 768px) {
   .page-head { padding-top: calc(var(--nav-h) + 40px); }
