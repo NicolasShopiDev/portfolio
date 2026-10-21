@@ -1,0 +1,12 @@
+---
+import PostView from '../../../../views/PostView.astro';
+import { allPosts } from '../../../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = (await allPosts()).filter((post) => post.lang === 'en');
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { slug: post.slug } }));
+}
+
+const { slug } = Astro.props;
+---
+<PostView lang="en" slug={slug} />

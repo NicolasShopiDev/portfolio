@@ -1,0 +1,17 @@
+---
+import { routes, type Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+---
+<aside class="post-author">
+  <p class="section-label">{s.blogAuthorHeading}</p>
+  <p class="post-author-bio">{s.blogAuthorBio}</p>
+  <p class="post-author-links">
+    <a href={routes.about[lang]}>{s.aboutMore}</a>
+    <a href="https://www.linkedin.com/in/nicolas-mateos-shopify/" rel="me noopener noreferrer" target="_blank">LinkedIn</a>
+    <a href="https://github.com/NicolasShopiDev" rel="me noopener noreferrer" target="_blank">GitHub</a>
+  </p>
+</aside>

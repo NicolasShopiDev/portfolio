@@ -1,0 +1,23 @@
+---
+import { type Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+import { formatDate, type Post } from '../lib/posts';
+
+interface Props { lang: Lang; post: Post; featured?: boolean }
+const { lang, post, featured = false } = Astro.props;
+const s = t(lang);
+const d = post.entry.data;
+---
+<article class={featured ? 'post-card post-card--featured' : 'post-card'}>
+  <div class="post-card-meta">
+    <time datetime={d.date}>{formatDate(d.date, lang)}</time>
+    <span aria-hidden="true">·</span>
+    <span>{post.minutes} {s.blogMinutes}</span>
+  </div>
+  <h2 class="post-card-title"><a href={post.path}>{d.title}</a></h2>
+  <p class="post-card-desc">{d.description}</p>
+  <ul class="post-card-tags">
+    {d.tags.map((tag) => <li class="tag">{tag}</li>)}
+  </ul>
+  <p class="post-card-link"><a href={post.path} class="text-link">{s.blogRead}</a></p>
+</article>

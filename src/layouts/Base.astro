@@ -6,6 +6,7 @@ import '@fontsource/space-mono/latin-700.css';
 import displayFont from '@fontsource-variable/cormorant-garamond/files/cormorant-garamond-latin-wght-normal.woff2?url';
 import '../styles/style.css';
 import '../styles/lab.css';
+import '../styles/blog.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { routes, absolute, LANGS, type Lang, type RouteKey } from '../i18n/routes';
@@ -17,10 +18,36 @@ interface Props {
   title: string;
   description: string;
   schema: string;
+  /** For pages that are not a fixed entry in the routes map (articles). Defaults to routes[route][lang]. */
+  canonicalPath?: string;
+  /** This same page in each language. A language that is missing gets no hreflang tag. */
+  alternates?: Partial<Record<Lang, string>>;
+  /** Where the language switch points. Defaults to the same page in the other language. */
+  switchHref?: string;
+  ogType?: string;
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
-const { lang, route, title, description, schema } = Astro.props;
-const canonical = absolute(routes[route][lang]);
+const {
+  lang,
+  route,
+  title,
+  description,
+  schema,
+  canonicalPath,
+  alternates,
+  switchHref,
+  ogType,
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
+
+const canonical = absolute(canonicalPath ?? routes[route][lang]);
+const pairs = alternates ?? { es: routes[route].es, en: routes[route].en };
+const xDefault = pairs.en ?? canonical;
 const ogImage = absolute(lang === 'es' ? '/assets/og-image-es.png' : '/assets/og-image.png');
 const ogAlt = lang === 'es'
   ? 'Nicolás Mateos, desarrollador Shopify Plus y B2B freelance en Madrid, España'
@@ -35,17 +62,24 @@ const s = t(lang);
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="author" content="Nicolás Mateos" />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <script is:inline>document.documentElement.classList.add('js');</script>
   <link rel="canonical" href={canonical} />
-  {LANGS.map((l) => <link rel="alternate" hreflang={l} href={absolute(routes[route][l])} />)}
-  <link rel="alternate" hreflang="x-default" href={absolute(routes[route].en)} />
+  {LANGS.map((l) => pairs[l] && <link rel="alternate" hreflang={l} href={absolute(pairs[l]!)} />)}
+  <link rel="alternate" hreflang="x-default" href={absolute(xDefault)} />
   <link rel="sitemap" href="/sitemap.xml" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={lang === 'es' ? 'Blog de Nicolás Mateos' : "Nicolás Mateos' blog"}
+    href={`${routes.blog[lang]}rss.xml`}
+  />
 
   <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
 
-  <meta property="og:type" content={route === 'about' ? 'profile' : 'website'} />
+  <meta property="og:type" content={ogType ?? (route === 'about' ? 'profile' : 'website')} />
   <meta property="og:site_name" content="Nicolás Mateos" />
   <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
   <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_ES'} />
@@ -58,6 +92,9 @@ const s = t(lang);
   <meta property="og:image:alt" content={ogAlt} />
   {route === 'about' && <meta property="profile:first_name" content="Nicolás" />}
   {route === 'about' && <meta property="profile:last_name" content="Mateos" />}
+  {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+  {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+  {publishedTime && <meta property="article:author" content="Nicolás Mateos" />}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
@@ -67,11 +104,11 @@ const s = t(lang);
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">{s.skip}</a>
-  <Nav lang={lang} route={route} />
+  <Nav lang={lang} route={route} switchHref={switchHref} />
   <main id="main-content">
     <slot />
   </main>
-  <Footer lang={lang} route={route} />
+  <Footer lang={lang} route={route} switchHref={switchHref} />
   <script src="../scripts/main.js"></script>
 </body>
 </html>

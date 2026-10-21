@@ -107,3 +107,78 @@ export const creativeWorks = (
 });
 
 export const graph = (...nodes: object[]) => JSON.stringify({ '@context': 'https://schema.org', '@graph': nodes });
+
+export const blog = (opts: {
+  path: string;
+  name: string;
+  description: string;
+  lang: Lang;
+  posts: { path: string; title: string; description: string; date: string; modified: string }[];
+}) => {
+  const url = absolute(opts.path);
+  return {
+    '@type': 'Blog',
+    '@id': `${url}#blog`,
+    url,
+    name: opts.name,
+    description: opts.description,
+    inLanguage: opts.lang,
+    isPartOf: { '@id': WEBSITE_ID },
+    author: { '@id': PERSON_ID },
+    publisher: { '@id': PERSON_ID },
+    blogPost: opts.posts.map((p) => ({
+      '@type': 'BlogPosting',
+      '@id': `${absolute(p.path)}#article`,
+      url: absolute(p.path),
+      headline: p.title,
+      description: p.description,
+      datePublished: p.date,
+      dateModified: p.modified,
+      author: { '@id': PERSON_ID },
+    })),
+  };
+};
+
+export const blogPosting = (opts: {
+  path: string;
+  blogPath: string;
+  headline: string;
+  description: string;
+  lang: Lang;
+  datePublished: string;
+  dateModified: string;
+  keywords: string[];
+  image: string;
+  wordCount: number;
+  translationPath?: string;
+}) => {
+  const url = absolute(opts.path);
+  return {
+    '@type': 'BlogPosting',
+    '@id': `${url}#article`,
+    url,
+    mainEntityOfPage: { '@id': `${url}#webpage` },
+    headline: opts.headline,
+    description: opts.description,
+    inLanguage: opts.lang,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    keywords: opts.keywords.join(', '),
+    wordCount: opts.wordCount,
+    image: absolute(opts.image),
+    author: { '@id': PERSON_ID },
+    publisher: { '@id': PERSON_ID },
+    isPartOf: { '@id': `${absolute(opts.blogPath)}#blog` },
+    ...(opts.translationPath ? { workTranslation: { '@id': `${absolute(opts.translationPath)}#article` } } : {}),
+  };
+};
+
+export const faqPage = (path: string, items: { q: string; a: string }[]) => ({
+  '@type': 'FAQPage',
+  '@id': `${absolute(path)}#faq`,
+  mainEntity: items.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+});

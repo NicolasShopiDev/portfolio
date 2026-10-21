@@ -1,10 +1,16 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { routes, absolute, updated } from '../i18n/routes';
+import { allPosts } from '../lib/posts';
 
 // Plain factual summary for tools that read /llms.txt. Generated from the same data as the pages.
 export const GET: APIRoute = async () => {
   const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+  const posts = (await allPosts()).filter((post) => !post.entry.data.draft);
+  const articles = (lang: 'es' | 'en') =>
+    posts
+      .filter((post) => post.lang === lang)
+      .map((post) => `- [${post.entry.data.title}](${absolute(post.path)}) — ${post.entry.data.date}: ${post.entry.data.description}`);
   const lines = [
     '# Nicolás Mateos',
     '',
@@ -22,12 +28,15 @@ export const GET: APIRoute = async () => {
     `- [Home (English)](${absolute(routes.home.en)}): freelance Shopify Plus and B2B developer in Spain`,
     `- [Projects](${absolute(routes.projects.en)}): every project with client, year, scope and stack (Spanish: ${absolute(routes.projects.es)})`,
     `- [About](${absolute(routes.about.en)}): facts and work history (Spanish: ${absolute(routes.about.es)})`,
+    `- [Blog](${absolute(routes.blog.en)}): articles on Shopify Plus, B2B, Functions and checkout (Spanish: ${absolute(routes.blog.es)})`,
     `- [Contact](${absolute(routes.contact.en)}) (Spanish: ${absolute(routes.contact.es)})`,
     '',
     '## Projects',
     '',
     ...projects.map((p) => `- [${p.data.name}](${absolute(routes.projects.en)}#${p.id}) (${p.data.year}, ${p.data.badge}): ${p.data.role.en}`),
     '',
+    ...(articles('en').length ? ['## Articles (English)', '', ...articles('en'), ''] : []),
+    ...(articles('es').length ? ['## Artículos (español)', '', ...articles('es'), ''] : []),
     '## Profiles',
     '',
     '- [LinkedIn](https://www.linkedin.com/in/nicolas-mateos-shopify/)',
