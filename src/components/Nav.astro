@@ -9,21 +9,43 @@ const other: Lang = lang === 'es' ? 'en' : 'es';
 const home = routes.home[lang];
 // On the home page the CTA scrolls to the contact section; elsewhere it opens the contact page.
 const ctaHref = route === 'home' ? '#contact' : routes.contact[lang];
+const langHref = switchHref ?? routes[route][other];
+
+// One list, two places: the row on a wide screen and the drop-down behind the burger on a phone.
+const links = [
+  { key: 'projects', href: routes.projects[lang], label: s.navProjects },
+  { key: 'code', href: routes.code[lang], label: s.navCode },
+  { key: 'about', href: routes.about[lang], label: s.navAbout },
+  { key: 'blog', href: routes.blog[lang], label: s.navBlog },
+];
 ---
 <header class="nav" id="nav">
   <div class="nav-inner">
+    <button class="nav-burger" type="button" id="nav-burger" aria-expanded="false" aria-controls="nav-menu"
+            aria-label={lang === 'es' ? 'Menú' : 'Menu'}>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
     <nav class="nav-left" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
-      <a href={routes.projects[lang]} aria-current={route === 'projects' ? 'page' : undefined}>{s.navProjects}</a>
-      <a href={routes.code[lang]} aria-current={route === 'code' ? 'page' : undefined}>{s.navCode}</a>
-      <a href={routes.about[lang]} aria-current={route === 'about' ? 'page' : undefined}>{s.navAbout}</a>
-      <a href={routes.blog[lang]} aria-current={route === 'blog' ? 'page' : undefined}>{s.navBlog}</a>
+      {links.map((link) => (
+        <a href={link.href} aria-current={route === link.key ? 'page' : undefined}>{link.label}</a>
+      ))}
     </nav>
     <a href={route === 'home' ? '#hero' : home} class="nav-logo">
       <img src="/assets/logo/logo-black.svg" alt="Nicolás Mateos" class="nav-logo-img" width="154" height="22" />
     </a>
     <div class="nav-right">
-      <a href={switchHref ?? routes[route][other]} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>
+      <a href={langHref} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>
       <a href={ctaHref} class="nav-cta">{s.cta}</a>
     </div>
+  </div>
+
+  <div class="nav-menu" id="nav-menu">
+    <nav aria-label={lang === 'es' ? 'Menú del móvil' : 'Mobile menu'}>
+      {links.map((link) => (
+        <a href={link.href} aria-current={route === link.key ? 'page' : undefined}>{link.label}</a>
+      ))}
+      <a href={langHref} hreflang={other} lang={other} class="nav-menu-lang">{s.switchLabel}</a>
+    </nav>
   </div>
 </header>
