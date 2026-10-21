@@ -1229,6 +1229,21 @@
       "webp"
     ]
   },
+  "Perfil/nicolas.jpg": {
+    "width": 1600,
+    "height": 2000,
+    "animated": false,
+    "base": "/img/perfil/nicolas",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
   "Qurado/66673a740265050e492841d5_chrome-capture-2024-6-10.png": {
     "width": 2522,
     "height": 1386,
