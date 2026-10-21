@@ -133,10 +133,12 @@ ul, ol { list-style: none; }
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s;
+  /* La línea de abajo va en box-shadow, no en border: un borde resta 1 px al área de contenido
+     y deja el logo centrado en medio píxel, que es lo que lo hacía verse suave. */
+  box-shadow: 0 1px 0 transparent;
+  transition: box-shadow 0.3s;
 }
-.nav.scrolled { border-bottom-color: var(--border); }
+.nav.scrolled { box-shadow: 0 1px 0 var(--border); }
 
 .nav-inner {
   max-width: 1200px;
@@ -1189,12 +1191,12 @@ picture { display: contents; }
 
 /* small phones: the centred logo leaves the button less room than it needs */
 @media (max-width: 400px) {
-  .nav-logo-img { height: 19px; }
+  .nav-logo-img { height: 20px; }  /* par: centrado en píxel entero dentro de los 64 de la nav */
   .nav-cta { padding: 8px 14px; font-size: 13px; }
   html[lang="es"] .nav-cta { padding: 7px 10px; font-size: 12px; }
 }
 @media (max-width: 340px) {
-  .nav-logo-img { height: 17px; }
+  .nav-logo-img { height: 18px; }  /* par, por lo mismo */
   html[lang="es"] .nav-cta { padding: 7px 8px; font-size: 11.5px; }
 }
 
