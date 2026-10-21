@@ -98,3 +98,16 @@ To roll back, open Deployments in the Cloudflare dashboard and promote the previ
 ## Checkout Lab
 
 The lab runs the real Shopify Function from the `shopify-checkout-lab` repo. After changing the Function there, run `./scripts/sync-lab.ps1` to copy it into `public/assets/lab/`. Interface text for both languages is in `public/assets/js/lab.js` and `src/components/Lab.astro`.
+
+## License
+
+Two licenses, one repository. See [LICENSE](LICENSE).
+
+- **The code is MIT.** The components, views, scripts, styles and build
+  configuration. Fork it, read it, build your own site with it.
+- **The content and the brand are not.** The articles and project files under
+  `src/content/`, the copy in `src/i18n/`, the published metrics, every image in
+  `assets/` and `public/img/`, the name and the client work shown on the site are
+  all rights reserved.
+
+Write your own words and use your own images.
