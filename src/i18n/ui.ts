@@ -1,8 +1,11 @@
-import type { Lang, RouteKey } from './routes';
+import type { Lang, RouteKey, routes } from './routes';
 
 export const ui = {
   es: {
     skip: 'Saltar al contenido',
+    navServices: 'Servicios',
+    navB2b: 'Shopify B2B',
+    navPlus: 'Shopify Plus',
     navProjects: 'Proyectos',
     navCode: 'Código',
     navAbout: 'Sobre mí',
@@ -40,6 +43,7 @@ export const ui = {
     projectsDesc: 'Trabajo con Shopify desde 2021: portales mayoristas B2B para marcas de joyería, suplementos y movilidad eléctrica, tiendas Shopify Plus, y temas y funcionalidades a medida para marcas españolas de moda y belleza.',
     projectsAll: 'Ver todos los proyectos en detalle',
     viewProject: 'Ver proyecto',
+    readCase: 'Leer el caso completo',
     factClient: 'Cliente',
     factType: 'Tipo de proyecto',
     factYear: 'Año',
@@ -82,11 +86,15 @@ export const ui = {
     },
     formSubmit: 'Enviar',
 
-    footerBio: 'Desarrollador Shopify Plus y B2B freelance con base en Madrid, España, trabajando con Shopify desde 2021. Convierto requisitos complejos en tiendas limpias y escalables. Construyamos algo grande.',
+    identity: 'Desarrollador Shopify Plus freelance en Madrid, España. Especialista en B2B, Shopify Functions y Checkout Extensibility.',
+    footerBio: 'Desarrollador Shopify Plus freelance en Madrid, España. Especialista en B2B, Shopify Functions y Checkout Extensibility. Trabajando con Shopify desde 2021.',
     footerRights: 'Todos los derechos reservados.',
   },
   en: {
     skip: 'Skip to main content',
+    navServices: 'Services',
+    navB2b: 'Shopify B2B',
+    navPlus: 'Shopify Plus',
     navProjects: 'Projects',
     navCode: 'Code',
     navAbout: 'About',
@@ -124,6 +132,7 @@ export const ui = {
     projectsDesc: 'Shopify work since 2021: B2B wholesale portals for jewelry, supplements and electric mobility brands, Shopify Plus stores, and custom themes and features for Spanish fashion and beauty labels.',
     projectsAll: 'See every project in detail',
     viewProject: 'View project',
+    readCase: 'Read the full case study',
     factClient: 'Client',
     factType: 'Project Type',
     factYear: 'Year',
@@ -166,15 +175,17 @@ export const ui = {
     },
     formSubmit: 'Submit',
 
-    footerBio: "Freelance Shopify Plus &amp; B2B developer based in Madrid, Spain, building on Shopify since 2021. I turn complex requirements into clean, scalable storefronts. Let's build something great.",
+    identity: 'Freelance Shopify Plus developer based in Madrid, Spain. Specialist in B2B, Shopify Functions and Checkout Extensibility.',
+    footerBio: 'Freelance Shopify Plus developer based in Madrid, Spain. Specialist in B2B, Shopify Functions and Checkout Extensibility. Building on Shopify since 2021.',
     footerRights: 'All rights reserved.',
   },
 } as const;
 
 export const t = (lang: Lang) => ui[lang];
 
-// Page titles and meta descriptions (plan section 2.5).
-export const seo: Record<RouteKey, Record<Lang, { title: string; description: string }>> = {
+// Page titles and meta descriptions (plan section 2.5), one per language the page exists in.
+type Meta = { title: string; description: string };
+export const seo: { [K in RouteKey]: Record<keyof (typeof routes)[K] & Lang, Meta> } = {
   home: {
     es: {
       title: 'Desarrollador Shopify freelance en España | Nicolás Mateos',
@@ -183,6 +194,22 @@ export const seo: Record<RouteKey, Record<Lang, { title: string; description: st
     en: {
       title: 'Freelance Shopify Plus & B2B Developer in Spain | Nicolás Mateos',
       description: 'Spanish freelance Shopify Plus developer in Madrid. Front-end for B2B storefronts with €36M+ combined annual GMV: Functions, Checkout Extensibility, custom apps.',
+    },
+  },
+  b2b: {
+    es: {
+      title: 'Desarrollo Shopify B2B: portales mayoristas | Nicolás Mateos',
+      description: 'Portales mayoristas en Shopify, con o sin Plus: empresas, catálogos, listas de precios, precios por volumen y pedido rápido por variantes. Casos reales en joyería y farmacia.',
+    },
+    en: {
+      title: 'Shopify B2B Developer for Wholesale Portals | Nicolás Mateos',
+      description: 'Wholesale storefronts on Shopify and Plus: Companies, catalogs, price lists, volume pricing and quick-order tables for brands in Spain and Europe.',
+    },
+  },
+  plus: {
+    es: {
+      title: 'Desarrollador Shopify Plus: Functions y Checkout | Nicolás Mateos',
+      description: 'Shopify Functions en JavaScript y Rust (precios por tramos, descuentos, validaciones), Checkout Extensibility y extensiones de cuenta de cliente para tiendas Plus.',
     },
   },
   projects: {

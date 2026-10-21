@@ -1,0 +1,66 @@
+---
+// Shared layout of the service pages. Each page passes its copy (src/views/B2bView.astro, PlusView.astro).
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CaseCards from '../components/CaseCards.astro';
+import Faq from '../components/Faq.astro';
+import Pending from '../components/Pending.astro';
+import { routes, updated, absolute, type Lang, type RouteKey } from '../i18n/routes';
+import { t } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, service, graph } from '../lib/schema';
+import type { ServiceCopy } from '../lib/service';
+
+interface Props { lang: Lang; route: RouteKey; path: string; meta: { title: string; description: string }; copy: ServiceCopy }
+const { lang, route, path, meta, copy } = Astro.props;
+const s = t(lang);
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: copy.crumb, path },
+];
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'WebPage', path, name: meta.title, description: meta.description, lang, dateModified: updated[route], mainEntity: `${absolute(path)}#service` }),
+  breadcrumbs(crumbs),
+  service({ path, lang, name: copy.serviceName, serviceType: copy.serviceType, description: copy.lead }),
+);
+---
+<Base lang={lang} route={route} title={meta.title} description={meta.description} schema={schema}>
+  <section class="page-head service-head">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />{' '}
+      <p class="section-label">{copy.label}</p>{' '}
+      <h1 class="case-title">{copy.h1}</h1>{' '}
+      <p class="case-summary">{copy.lead}</p>{' '}
+      {copy.proof && <><p class="service-proof" set:html={s.heroProof} />{' '}</>}
+      <p class="page-updated"><time datetime={updated[route]}>{copy.updatedLabel}</time></p>
+    </div>
+  </section>{' '}
+
+  <div class="container service-body"><div class="longform">
+    {copy.sections.map((section) => (
+      <><section>
+        <h2>{section.h2}</h2>{' '}
+        {section.html && <Fragment set:html={section.html} />}
+        {section.pending && <Pending>{section.pending}</Pending>}
+      </section>{' '}</>
+    ))}
+  </div></div>{' '}
+
+  <section class="section service-cases" aria-labelledby="service-cases-title">
+    <div class="container">
+      <h2 class="about-heading" id="service-cases-title">{copy.casesTitle}</h2>{' '}
+      <CaseCards lang={lang} slugs={copy.cases} />{' '}
+      {copy.casesMore && <p class="service-more" set:html={copy.casesMore} />}
+    </div>
+  </section>{' '}
+
+  <Faq title={copy.faqTitle} items={copy.faq} />{' '}
+
+  <section class="page-cta section">
+    <div class="container page-cta-inner">
+      <h2 class="contact-heading">{copy.ctaTitle}</h2>
+      <a class="btn btn--dark" href={routes.contact[lang]}>{copy.cta}</a>
+    </div>
+  </section>
+</Base>

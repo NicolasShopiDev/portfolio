@@ -1,0 +1,41 @@
+---
+// Home "Servicios" block: one card per service with a link to its page (plan 1.3, internal links).
+// The English Shopify Plus page is batch 2, so on /en/ that card points to the Checkout Lab instead.
+import { routes, type Lang } from '../i18n/routes';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const copy = {
+  es: {
+    label: 'Servicios',
+    heading: 'Qué hago',
+    items: [
+      { title: 'Portales mayoristas en Shopify B2B', text: 'Empresas, catálogos, listas de precios, precios por tramos y tablas de pedido por variantes, con o sin Shopify Plus.', href: routes.b2b.es, link: 'Desarrollo Shopify B2B' },
+      { title: 'Shopify Plus: Functions y Checkout', text: 'Shopify Functions en JavaScript y Rust, extensiones de checkout y de cuenta de cliente, y apps embebidas a medida.', href: routes.plus.es, link: 'Desarrollo Shopify Plus' },
+    ],
+  },
+  en: {
+    label: 'Services',
+    heading: 'What I do',
+    items: [
+      { title: 'Shopify B2B wholesale portals', text: 'Companies, catalogs, price lists, volume tiers and variant order tables, with or without Shopify Plus.', href: routes.b2b.en, link: 'Shopify B2B development' },
+      { title: 'Shopify Plus: Functions and Checkout', text: 'Shopify Functions in JavaScript and Rust, checkout and customer account extensions, and custom embedded apps.', href: '#lab', link: 'Try the Checkout Lab' },
+    ],
+  },
+}[lang];
+---
+<section class="services section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <p class="section-label">{copy.label}</p>{' '}
+    <h2 class="about-heading" id="services-title">{copy.heading}</h2>{' '}
+    <ul class="services-grid">
+      {copy.items.map((item) => (
+        <><li class="service-card">
+          <h3 class="service-card-title">{item.title}</h3>{' '}
+          <p class="service-card-text">{item.text}</p>{' '}
+          <a class="text-link" href={item.href}>{item.link}</a>
+        </li>{' '}</>
+      ))}
+    </ul>
+  </div>
+</section>

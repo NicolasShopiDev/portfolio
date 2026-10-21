@@ -1,4 +1,4 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
@@ -60,4 +60,41 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { projects, posts };
+
+// Case studies (plan 2.3), one Markdown file per language: src/content/cases/<es|en>/<project slug>.md.
+// The body holds the problem and the solution; the facts and the parts that need data from the
+// client are in the frontmatter. A field left out shows as pending on previews (and blocks master);
+// `false` means "confirmed: none", and the row or section is left out.
+const optional = z.union([z.string(), z.literal(false)]).optional();
+const cases = defineCollection({
+  loader: glob({ pattern: '{es,en}/*.md', base: './src/content/cases' }),
+  schema: z.object({
+    project: reference('projects'),
+    title: z.string().max(70),
+    description: z.string().max(170),
+    h1: z.string(),
+    summary: z.string(),
+    published: isoDate,
+    updated: isoDate,
+    facts: z.object({
+      sector: z.string(),
+      country: z.string(),
+      theme: z.string(),
+      plan: optional,
+      engagement: optional, // direct client or through an agency
+      duration: optional,
+      team: optional,
+    }),
+    stack: z.array(z.string()).min(1),
+    results: z.array(z.string()).optional(),
+    resultsDone: z.boolean().default(false), // true once business metrics are in `results` or confirmed unavailable
+    lessons: optional,
+    testimonial: z.union([
+      z.object({ quote: z.string(), name: z.string(), role: z.string(), company: z.string(), date: isoDate }),
+      z.literal(false),
+    ]).optional(),
+    pending: z.array(z.string()).default([]), // open items that do not fit a field above
+  }),
+});
+
+export const collections = { projects, posts, cases };

@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Lab from '../components/Lab.astro';
+import Services from '../components/Services.astro';
 import AboutSection from '../components/AboutSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Modal from '../components/Modal.astro';
@@ -16,6 +17,7 @@ const { lang } = Astro.props;
 const s = t(lang);
 const meta = seo.home[lang];
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const withCase = new Set((await getCollection('cases', (c) => c.id.startsWith(`${lang}/`))).map((c) => c.data.project.id));
 const schema = graph(
   person(lang),
   website(),
@@ -35,11 +37,12 @@ const schema = graph(
         </div>
       </div>
       <div class="projects-grid" id="projects-grid">
-        {projects.map((project) => <ProjectCard lang={lang} project={project} />)}
+        {projects.map((project) => <ProjectCard lang={lang} project={project} hasCase={withCase.has(project.id)} />)}
       </div>
     </div>
   </section>
 
+  <Services lang={lang} />
   <Lab lang={lang} />
   <AboutSection lang={lang} />
   <ContactSection lang={lang} />

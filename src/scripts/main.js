@@ -2,11 +2,11 @@
 const LANG = document.documentElement.lang.startsWith('es') ? 'es' : 'en';
 const STRINGS = {
   es: {
-    copyUrl: 'Copiar URL', copied: '¡Copiado!', visit: 'Ver la web', shot: 'captura',
+    copyUrl: 'Copiar URL', copied: '¡Copiado!', visit: 'Ver la web', shot: 'captura', readCase: 'Leer el caso completo',
     sending: 'Enviando…', sent: '¡Enviado! Te escribo pronto.', failed: 'Algo ha fallado, inténtalo de nuevo.',
   },
   en: {
-    copyUrl: 'Copy URL', copied: 'Copied!', visit: 'Visit project', shot: 'screenshot',
+    copyUrl: 'Copy URL', copied: 'Copied!', visit: 'Visit project', shot: 'screenshot', readCase: 'Read the full case study',
     sending: 'Sending…', sent: "Sent! I'll be in touch soon.", failed: 'Something went wrong, try again.',
   },
 }[LANG];
@@ -80,6 +80,13 @@ function openModal(card) {
   const tags = card.querySelector('.card-info .card-tags').cloneNode(true);
   tags.style.marginTop = '8px';
   meta.querySelector('.modal-meta-left').appendChild(tags);
+  if (card.dataset.case) {
+    const link = document.createElement('a');
+    link.className = 'text-link';
+    link.href = card.dataset.case;
+    link.textContent = STRINGS.readCase;
+    meta.querySelector('.modal-meta-left').appendChild(link);
+  }
   body.appendChild(meta);
 
   if (shots.length) {
@@ -116,6 +123,21 @@ function closeModal() {
   overlay.inert = true;
   document.body.classList.remove('no-scroll');
   if (lastTrigger) lastTrigger.focus({ preventScroll: true });
+}
+
+/* ── Services menu ──────────────────────────────────────────── */
+// Opens on hover and focus through CSS; the button toggles it for clicks and touch.
+function initServicesMenu() {
+  const toggle = document.querySelector('.nav-services-toggle');
+  if (!toggle) return;
+  const menu = toggle.closest('.nav-services');
+  const set = open => toggle.setAttribute('aria-expanded', String(open));
+  toggle.addEventListener('click', () => set(toggle.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('click', e => { if (!menu.contains(e.target)) set(false); });
+  menu.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { set(false); toggle.focus(); }
+  });
+  menu.addEventListener('focusout', e => { if (!menu.contains(e.relatedTarget)) set(false); });
 }
 
 /* ── Nav scroll effect ──────────────────────────────────────── */
@@ -253,6 +275,7 @@ async function handleContactSubmit(e) {
 /* ── Init ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initProjectCards();
+  initServicesMenu();
   initScrollReveal();
 
   // re-anchor to the #hash in case layout moved after the browser's first jump
