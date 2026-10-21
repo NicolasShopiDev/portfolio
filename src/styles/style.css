@@ -1375,7 +1375,7 @@ picture { display: contents; }
 @media (max-width: 1024px) {
   .about-page-grid { grid-template-columns: 1fr; gap: 64px; }
   .about-intro { grid-template-columns: minmax(0, 1fr); gap: 40px; }
-  .about-intro .about-portrait { order: -1; max-width: 260px; }
+  .about-intro .about-portrait { order: -1; max-width: 260px; justify-self: center; }
   .ways-list { grid-template-columns: minmax(0, 1fr); gap: 40px; }
 }
 @media (max-width: 768px) {
