@@ -13,8 +13,8 @@ Formato de cada bloque:
 - Artículo: <slug> (<rama>)
 
 **Descartadas:**
-- <pregunta> <enlace> — <motivo>
-- <pregunta> <enlace> — <motivo>
+- <pregunta> <enlace>: <motivo>
+- <pregunta> <enlace>: <motivo>
 ```
 
 ---
@@ -27,5 +27,5 @@ Formato de cada bloque:
 - Artículo: `shopify-b2b-sin-plus` (publicado el 21-10-2026, también en inglés)
 
 **Descartadas:**
-- Migración de Scripts a Functions — la fecha límite ya pasó en junio de 2026, el pico de búsquedas se fue; se queda como tema de rescate.
-- Cuánto cuesta un portal B2B — buen tema de conversión, pero mejor después de un artículo técnico que demuestre criterio.
+- Migración de Scripts a Functions: la fecha límite ya pasó en junio de 2026, el pico de búsquedas se fue; se queda como tema de rescate.
+- Cuánto cuesta un portal B2B: buen tema de conversión, pero mejor después de un artículo técnico que demuestre criterio.
