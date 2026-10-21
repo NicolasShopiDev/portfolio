@@ -8,7 +8,8 @@
 .post-list {
   display: flex;
   flex-direction: column;
-  padding-bottom: 96px;
+  padding-top: var(--sp-section);
+  padding-bottom: var(--sp-section);
 }
 
 .post-card {
@@ -71,7 +72,7 @@
 .post-feed-link a:hover { color: var(--fg); border-color: var(--fg); }
 
 /* ── Article ───────────────────────────────────────────────────── */
-.post { padding: calc(var(--nav-h) + 40px) 0 0; }
+.post { padding: var(--sp-head) 0 0; }
 
 .post-container {
   max-width: 800px;
@@ -139,7 +140,7 @@
 .prose > * + * { margin-top: 24px; }
 
 .prose h2 {
-  margin-top: 64px;
+  margin-top: var(--sp-8);
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(26px, 3.2vw, 36px);
@@ -216,7 +217,7 @@
 .prose th { background: var(--gray-100); color: var(--fg); font-weight: 600; }
 
 /* ── FAQ ───────────────────────────────────────────────────────── */
-.post-faq { margin-top: 72px; }
+.post-faq { margin-top: var(--sp-section); }
 .post-faq h2 {
   font-family: var(--font-display);
   font-weight: 400;
@@ -230,7 +231,7 @@
 
 /* ── Closing call to action ────────────────────────────────────── */
 .post-cta {
-  margin-top: 80px;
+  margin-top: var(--sp-section);
   padding: 40px;
   background: var(--fg);
   border-radius: var(--radius-xl);
@@ -249,8 +250,8 @@
 
 /* ── Author ────────────────────────────────────────────────────── */
 .post-author {
-  margin-top: 48px;
-  padding-top: 32px;
+  margin-top: var(--sp-7);
+  padding-top: var(--sp-5);
   border-top: 1px solid var(--border);
 }
 .post-author-bio { font-size: var(--fs-md); line-height: 1.75; color: var(--fg-2); max-width: 70ch; }
@@ -265,7 +266,7 @@
 .post-author-links a:hover { border-color: var(--fg); }
 
 /* ── Related ───────────────────────────────────────────────────── */
-.post-related { margin-top: 64px; }
+.post-related { margin-top: var(--sp-section); }
 .post-related ul { display: flex; flex-direction: column; }
 .post-related li {
   padding: 18px 0;
@@ -284,7 +285,7 @@
   text-transform: uppercase;
 }
 
-.post-back { margin: 56px 0 96px; }
+.post-back { margin: var(--sp-section) 0; }
 .post-back a {
   font-size: var(--fs-xs);
   font-weight: 700;
@@ -297,7 +298,6 @@
 /* ── Small screens ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .post-container { padding: 0 24px; }
-  .post { padding-top: calc(var(--nav-h) + 24px); }
   .post-head { margin: 24px 0 32px; }
   .prose { font-size: var(--fs-md); }
   .prose h2 { margin-top: 48px; }
