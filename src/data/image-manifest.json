@@ -674,6 +674,81 @@
       "webp"
     ]
   },
+  "Hagen/Hagen alimentacion.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/hagen/hagen-alimentacion",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hagen/Hagen Banner.webp": {
+    "width": 2880,
+    "height": 1260,
+    "animated": false,
+    "base": "/img/hagen/hagen-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hagen/Hagen coleccion.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/hagen/hagen-coleccion",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hagen/Hagen Grid.webp": {
+    "width": 2000,
+    "height": 1250,
+    "animated": false,
+    "base": "/img/hagen/hagen-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Hagen/Hagen producto.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/hagen/hagen-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
   "HD Cosmetics/66714a552f4f40cc2c011d8a_Entrar.png": {
     "width": 2493,
     "height": 1386,
@@ -1365,6 +1440,81 @@
     "height": 1625,
     "animated": false,
     "base": "/img/vidal-vidal/vidalvidal-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vini Trading/ViniTrading acceso.webp": {
+    "width": 2000,
+    "height": 1458,
+    "animated": false,
+    "base": "/img/vini-trading/vinitrading-acceso",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vini Trading/ViniTrading Banner.webp": {
+    "width": 2880,
+    "height": 1260,
+    "animated": false,
+    "base": "/img/vini-trading/vinitrading-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vini Trading/ViniTrading catalogo.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/vini-trading/vinitrading-catalogo",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vini Trading/ViniTrading Grid.webp": {
+    "width": 2000,
+    "height": 1250,
+    "animated": false,
+    "base": "/img/vini-trading/vinitrading-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "Vini Trading/ViniTrading producto.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/vini-trading/vinitrading-producto",
     "widths": [
       400,
       800,

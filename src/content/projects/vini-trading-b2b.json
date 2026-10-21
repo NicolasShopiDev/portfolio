@@ -1,0 +1,67 @@
+{
+  "order": 6,
+  "name": "Vini Trading B2B",
+  "client": "Vini Trading",
+  "year": "2024",
+  "url": "https://vinitrading.com/",
+  "platform": "shopify",
+  "badge": "Shopify B2B",
+  "slogan": {
+    "es": "Distribución de pilas y electrónica de consumo",
+    "en": "Battery and consumer electronics distribution"
+  },
+  "tags": {
+    "en": [
+      "Shopify B2B",
+      "Liquid",
+      "Customer area",
+      "Distribution"
+    ],
+    "es": [
+      "Shopify B2B",
+      "Liquid",
+      "Área de cliente",
+      "Distribución"
+    ]
+  },
+  "type": {
+    "en": "B2B Wholesale Portal",
+    "es": "Portal mayorista B2B"
+  },
+  "role": {
+    "en": "Wholesale portal for Vini Trading, an official distributor of batteries and consumer electronics for brands like Duracell, Varta, Energizer, Philips and Panasonic, on Shopify B2B and in three languages: Spanish, English and Portuguese. The catalogue is open, the prices are not: every price, stock figure and buy button goes through customer.b2b?, so a visitor gets the full product page with a Ver precio profesional button where the amount would be, and the cart refuses anyone who is not a trade customer. Each row carries the data a buyer orders by rather than the data a shopper browses by: the Vini Trading reference, the manufacturer reference, the EAN and the units per inner box, outer box and pallet.",
+    "es": "Portal mayorista para Vini Trading, distribuidor oficial de pilas y electrónica de consumo de marcas como Duracell, Varta, Energizer, Philips o Panasonic, en Shopify B2B y en tres idiomas: español, inglés y portugués. El catálogo está abierto, los precios no: todos los precios, el stock y los botones de compra pasan por customer.b2b?, así que un visitante ve la ficha entera con un botón de «Ver precio profesional» donde iría el importe, y el carrito rechaza a quien no sea cliente profesional. Cada fila lleva los datos con los que se pide, no los datos con los que se mira escaparate: la referencia de Vini Trading, la del fabricante, el EAN y las unidades por caja inner, caja outer y palet."
+  },
+  "detail": {
+    "en": "The customer area goes well past Shopify's order history: invoices, delivery notes, outstanding balances, the Spanish modelo 347 declaration, replenishment orders, secondary users inside the same company, saved favourites and a document library, plus a catalogue export to CSV and a product sheet export. An order can be built three ways, because a wholesaler rarely starts from a product page: the quick order grid, the variant matrix and add-by-reference. Listings switch between grid, list and compact table. The cart works out what Shopify will not: the recycling levy, shown and added only for the companies it applies to, and the equivalence surcharge for companies under that Spanish tax regime. A discreet mode hides every price on screen, kept in sessionStorage, so a buyer can place an order in front of someone else. Sales agents sign in with their own account, pick which of their companies they are ordering for and keep a separate cart per company.",
+    "es": "El área de cliente va mucho más allá del historial de pedidos de Shopify: facturas, albaranes, deudas pendientes, modelo 347, pedidos de reposición, usuarios secundarios dentro de la misma empresa, favoritos y una biblioteca de documentos, más un exportador del catálogo a CSV y otro de la ficha de producto. El pedido se puede montar de tres formas, porque un mayorista casi nunca empieza por una ficha: la parrilla de pedido rápido, la matriz de variantes y el alta por referencia. El listado se ve en parrilla, en lista o en tabla compacta. El carrito calcula lo que Shopify no calcula: el canon de reciclaje, que solo se muestra y se suma a las empresas a las que se les aplica, y el recargo de equivalencia para las que están en ese régimen. Un «modo discreto» esconde todos los precios de la pantalla, guardado en sessionStorage, para poder pedir delante de alguien. Los agentes comerciales entran con su propia cuenta, eligen por cuál de sus empresas piden y mantienen un carrito distinto para cada una."
+  },
+  "images": {
+    "dir": "Vini Trading",
+    "grid": "ViniTrading Grid.webp",
+    "banner": "ViniTrading Banner.webp",
+    "highlights": [
+      {
+        "file": "ViniTrading catalogo.webp",
+        "alt": {
+          "es": "Listado de pilas alcalinas de Vini Trading en vista de tabla, con filtros, referencia propia, referencia de fabricante, EAN y unidades por caja y palet",
+          "en": "Vini Trading alkaline battery listing in table view, with filters, own reference, manufacturer reference, EAN and units per box and pallet"
+        }
+      },
+      {
+        "file": "ViniTrading producto.webp",
+        "alt": {
+          "es": "Ficha de producto de Vini Trading sin precio para un visitante, con referencias, EAN y el botón Ver precio profesional",
+          "en": "Vini Trading product page with no price for a visitor, showing references, EAN and the professional price button"
+        }
+      },
+      {
+        "file": "ViniTrading acceso.webp",
+        "alt": {
+          "es": "Pantalla de acceso de Vini Trading, con inicio de sesión para clientes profesionales y alta de nueva cuenta",
+          "en": "Vini Trading sign-in screen, with trade customer login and professional account registration"
+        }
+      }
+    ]
+  }
+}

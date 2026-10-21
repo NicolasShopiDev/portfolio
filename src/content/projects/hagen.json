@@ -1,0 +1,67 @@
+{
+  "order": 9,
+  "name": "Hagen",
+  "client": "Hagen Group",
+  "year": "2024",
+  "url": "https://www.hagen.es/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": {
+    "es": "Una familia de marcas para mascotas desde 1955",
+    "en": "A family of pet brands since 1955"
+  },
+  "tags": {
+    "en": [
+      "Shopify",
+      "Liquid",
+      "Volume pricing",
+      "Pet care"
+    ],
+    "es": [
+      "Shopify",
+      "Liquid",
+      "Precios por volumen",
+      "Mascotas"
+    ]
+  },
+  "type": {
+    "en": "Shopify Customization",
+    "es": "Personalización Shopify"
+  },
+  "role": {
+    "en": "Spanish store for Hagen Group, the pet brand house behind Fluval, Marina, Catit, Zeus and Dogit, on Clean Canvas' Canopy theme. It serves two audiences from one storefront: pet owners, who browse the catalogue and are sent to a stockist, and pet shops, who sign up as trade customers and order. The work was about the second one: quantity discounts that a shop could see while choosing, not only after reaching the cart.",
+    "es": "Tienda española de Hagen Group, la casa de marcas de mascotas detrás de Fluval, Marina, Catit, Zeus y Dogit, sobre el tema Canopy de Clean Canvas. Atiende a dos públicos desde la misma tienda: los dueños de mascotas, que miran el catálogo y acaban en una tienda donde comprar, y las tiendas de mascotas, que se dan de alta como clientes profesionales y piden. El trabajo iba del segundo: que los descuentos por cantidad se vieran mientras se elige, y no solo al llegar al carrito."
+  },
+  "detail": {
+    "en": "The tiers live in a product metafield as quantity:discount pairs separated by semicolons, and the same string is read in three places. On the product page it becomes a row of cards under the price, one per tier. On the collection and search cards it becomes a one-line note, so a tier is visible before opening anything. In the quick add drawer it is rebuilt in JavaScript from a data attribute on the opener, with the tiers colour-ramped green, orange and red, which keeps the drawer from making a second request just to show a discount. Around it, the collection and search templates were set up for a catalogue this size: filters open by default, sticky on scroll and with result counts, a grid and list toggle, and sixteen products per page.",
+    "es": "Los tramos viven en un metafield del producto, como pares cantidad:descuento separados por punto y coma, y esa misma cadena se lee en tres sitios. En la ficha de producto se convierte en una fila de tarjetas bajo el precio, una por tramo. En las tarjetas de colección y de búsqueda se queda en un aviso de una línea, para que el tramo se vea antes de abrir nada. En el cajón de compra rápida se reconstruye en JavaScript desde un atributo de datos del botón que lo abre, con los tramos en una escala de color verde, naranja y rojo, lo que evita que el cajón tenga que hacer una segunda petición solo para enseñar un descuento. Alrededor, las plantillas de colección y de búsqueda se configuraron para un catálogo de este tamaño: filtros abiertos de entrada, fijos al hacer scroll y con el número de resultados, cambio entre vista de parrilla y de lista, y dieciséis productos por página."
+  },
+  "images": {
+    "dir": "Hagen",
+    "grid": "Hagen Grid.webp",
+    "banner": "Hagen Banner.webp",
+    "highlights": [
+      {
+        "file": "Hagen coleccion.webp",
+        "alt": {
+          "es": "Colección de acuarios de Hagen con carrusel de subcategorías, filtros por disponibilidad y familia, y tarjetas de producto de Marina y Fluval",
+          "en": "Hagen aquarium collection with a subcategory carousel, availability and family filters, and Marina and Fluval product cards"
+        }
+      },
+      {
+        "file": "Hagen producto.webp",
+        "alt": {
+          "es": "Ficha de un acuario Fluval Edge en Hagen, con galería, características desplegables y tabla de referencias por color",
+          "en": "Fluval Edge aquarium page on Hagen, with gallery, expandable features and a reference table per colour"
+        }
+      },
+      {
+        "file": "Hagen alimentacion.webp",
+        "alt": {
+          "es": "Listado de alimentación para peces de Hagen con el panel de filtros abierto y el número de productos de cada familia y marca",
+          "en": "Hagen fish food listing with the filter panel open and the product count for each family and brand"
+        }
+      }
+    ]
+  }
+}

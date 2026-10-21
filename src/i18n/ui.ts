@@ -184,11 +184,11 @@ export const seo: Record<RouteKey, Record<Lang, { title: string; description: st
   projects: {
     es: {
       title: 'Proyectos Shopify, Shopify Plus y B2B | Nicolás Mateos',
-      description: '17 proyectos Shopify: portales mayoristas B2B para joyería, suplementos y recambios de movilidad eléctrica, y temas a medida para moda y cosmética.',
+      description: '19 proyectos Shopify: portales mayoristas B2B para joyería, suplementos y recambios de movilidad eléctrica, y temas a medida para moda y cosmética.',
     },
     en: {
       title: 'Shopify, Shopify Plus & B2B Projects | Nicolás Mateos',
-      description: '17 Shopify projects: B2B wholesale portals for jewelry, supplements and e-mobility parts, plus custom themes for fashion and beauty brands.',
+      description: '19 Shopify projects: B2B wholesale portals for jewelry, supplements and e-mobility parts, plus custom themes for fashion and beauty brands.',
     },
   },
   about: {
