@@ -1,0 +1,215 @@
+---
+// /shopify-b2b/ and /en/shopify-b2b-developer/ (plan T31). Plan facts are checked against Shopify's
+// documentation; recheck them, and the "a octubre de 2026" dates, whenever this page is updated.
+import ServiceView from './ServiceView.astro';
+import { docPath, routes, type Lang } from '../i18n/routes';
+import { seo } from '../i18n/ui';
+import { postPath } from '../lib/posts';
+import type { ServiceCopy } from '../lib/service';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const PLANS = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
+const CHANGELOG = 'https://changelog.shopify.com/posts/key-b2b-features-now-available-on-non-plus-plans';
+const projectLink = (slug: string, name: string) => `<a href="${routes.projects[lang]}#${slug}">${name}</a>`;
+const caseLink = (slug: string, name: string) => `<a href="${routes.projects[lang]}${slug}/">${name}</a>`;
+// The blog article goes deeper into B2B without Plus; this page keeps the summary and links to it.
+const ARTICLE = { es: postPath('es', 'shopify-b2b-sin-plus'), en: postPath('en', 'shopify-b2b-without-plus') }[lang];
+
+const copy: Record<Lang, ServiceCopy> = {
+  es: {
+    crumb: 'Shopify B2B',
+    label: 'Servicio',
+    h1: 'Desarrollo Shopify B2B: portales mayoristas con o sin Plus',
+    lead: 'Un portal mayorista en Shopify es una tienda, o una parte de una tienda, en la que solo compran empresas aprobadas, cada una con su catálogo, sus precios y sus condiciones de pago. Nicolás Mateos, desarrollador Shopify freelance en Madrid, construye estos portales con las funciones B2B nativas de Shopify y un tema adaptado al pedido mayorista: tablas de pedido por variantes, precios por tramos y precios que solo ve quien es cliente.',
+    proof: true,
+    updatedLabel: 'Actualizado en octubre de 2026',
+    serviceName: 'Desarrollo Shopify B2B: portales mayoristas',
+    serviceType: 'Desarrollo de portales mayoristas en Shopify B2B',
+    sections: [
+      {
+        h2: '¿Qué incluye Shopify B2B?',
+        html: `<p>Shopify B2B es el conjunto de funciones nativas para vender a empresas desde el mismo admin de Shopify. A octubre de 2026 está disponible en los planes Basic, Grow, Advanced y Plus, y no en Starter ni Retail (<a href="${PLANS}">documentación de Shopify</a>). Estas son sus piezas:</p>
+<ul>
+<li><strong>Empresas (Companies) y ubicaciones:</strong> cada cliente mayorista es una empresa con una o varias ubicaciones, sus compradores y sus direcciones.</li>
+<li><strong>Catálogos (catalogs):</strong> qué productos se publican para los clientes B2B y a qué precio, con su propia lista de precios.</li>
+<li><strong>Reglas de cantidad (quantity rules):</strong> mínimo, máximo e incremento por variante, por ejemplo cajas de 6 unidades.</li>
+<li><strong>Precios por volumen (volume pricing):</strong> un precio por unidad más bajo a partir de cierta cantidad.</li>
+<li><strong>Condiciones de pago (payment terms):</strong> pago a 30, 60 o 90 días en lugar de pagar en el checkout.</li>
+</ul>`,
+      },
+      {
+        h2: '¿Se puede hacer B2B en Shopify sin Plus?',
+        html: `<p>Sí. Desde el 2 de abril de 2026, los planes Basic, Grow y Advanced incluyen las funciones B2B nativas sin coste adicional (<a href="${CHANGELOG}">changelog de Shopify</a>). Tienen límites: a octubre de 2026, la diferencia con Shopify Plus es esta.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Función B2B</th> <th scope="col">Basic, Grow y Advanced</th> <th scope="col">Shopify Plus</th></tr></thead>
+<tbody>
+<tr><th scope="row">Empresas, compradores y ubicaciones</th> <td>Sí</td> <td>Sí</td></tr>
+<tr><th scope="row">Catálogos B2B activos</th> <td>Hasta 3 en total, asignados a mercados B2B</td> <td>Sin límite</td></tr>
+<tr><th scope="row">Asignar un catálogo directamente a una empresa o ubicación</th> <td>No</td> <td>Sí</td></tr>
+<tr><th scope="row">Condiciones de pago, reglas de cantidad y precios por volumen</th> <td>Sí</td> <td>Sí</td></tr>
+<tr><th scope="row">Depósitos y pagos parciales</th> <td>No</td> <td>Sí</td></tr>
+<tr><th scope="row">Checkout y tienda contextuales por mercado</th> <td>Solo en Advanced</td> <td>Sí</td></tr>
+<tr><th scope="row">Apps a medida (custom apps) con Shopify Functions</th> <td>No</td> <td>Sí</td></tr>
+</tbody>
+</table></div>
+<p>Con tres catálogos caben, por ejemplo, tres tarifas (distribuidor, tienda y profesional), pero no un precio negociado con cada cliente: para eso hay que asignar catálogos a cada empresa, y eso solo se puede en Plus. Además, para usar catálogos B2B fuera de Plus la tienda tiene que estar en los nuevos Shopify Markets (<a href="${PLANS}">funciones B2B por plan</a>).</p>
+<p>Qué cabe en tres catálogos y cuándo compensa pasar a Plus lo explico con más detalle en el artículo <a href="${ARTICLE}">Shopify B2B sin Plus</a>.</p>`,
+      },
+      {
+        h2: '¿Para quién es este servicio?',
+        html: `<p>Para marcas que venden a tiendas, farmacias o distribuidores y quieren que el pedido mayorista entre por su tienda Shopify, con el catálogo y los precios que corresponden a cada cliente. Encaja sobre todo si la tienda ya tiene un tema y no quieres rehacerlo: el portal de Émolo se construyó sobre Prestige y el de Vidal &amp; Vidal sobre Sleek.</p>
+<p>No es para ti si solo necesitas activar el B2B nativo sin cambiar el tema, porque eso se configura desde el admin sin programar. Tampoco si el proyecto es sobre todo una integración con tu ERP: en esos casos trabajo el front-end junto a un equipo de backend.</p>`,
+      },
+      {
+        h2: '¿Qué incluye un portal mayorista?',
+        html: `<ul>
+<li>Configuración del B2B nativo: empresas, catálogos, listas de precios, reglas de cantidad y condiciones de pago.</li>
+<li>Precios, stock y botón de compra solo para compradores de una empresa, decididos en Liquid para que el precio no llegue al HTML de quien no es cliente.</li>
+<li>Tabla de pedido por variantes (tallas, colores o formatos) sincronizada con el carrito en la ficha de producto, las colecciones y la búsqueda.</li>
+<li>Precios por tramos de volumen visibles en la cabecera, el producto y el carrito, con los umbrales en un metafield que el cliente edita.</li>
+<li>PVP junto al precio mayorista, búsqueda por referencia (SKU) y vista de lista para repetir pedidos.</li>
+<li>Badges, colores y contenido del portal gestionados desde el admin con metafields y metaobjects, sin publicar el tema para cada cambio.</li>
+</ul>
+<p>Tres de estas piezas, con el código comentado (cajas completas en el checkout, pedido rápido en una sola petición y selector de sede), están en la <a href="${routes.code.es}">página de código</a>.</p>`,
+      },
+      {
+        h2: '¿Cuánto tarda un portal mayorista?',
+        html: `<p>Entre dos y ocho meses. Lo que mueve esa horquilla no es el diseño: es cuántas reglas tiene que entender el portal.</p>
+<p>En la parte corta están los que necesitan decidir quién puede comprar, servir el catálogo que toca y pedir por tallas o formatos. El de Vidal &amp; Vidal estuvo listo en unos dos meses, y el de Émolo fue por el mismo camino: tabla de variantes sencilla, sin tramos de volumen.</p>
+<p>A partir de ahí, cada regla nueva suma. Un portal con decenas de miles de referencias, control de stock estricto, precios por tramos con saltos de cantidad, reposición, roles de comprador y de agente y dos carritos a la vez no es el mismo proyecto: ${projectLink('ewheel-b2b', 'Ewheel')} ha llevado siete u ocho meses y sigue en marcha, con un equipo de backend trabajando sobre la misma tienda. La mayoría de los proyectos caen en medio, de cuatro meses en adelante.</p>
+<p>Y un aviso que prefiero dar antes de empezar que después: del tiempo que se pierde por el camino, un 30 o 40 % está en tu tejado. Se va en que lleguen las tarifas reales, en decidir qué empresa va a qué nivel y en validar el stock. Si traes eso resuelto, el portal sale por la parte baja de la horquilla.</p>`,
+      },
+    ],
+    casesTitle: 'Portales B2B que he construido',
+    cases: ['emolo-b2b', 'vidal-vidal-b2b', 'ivb-wellness-b2b'],
+    casesMore: `Otros portales B2B, con su ficha en la página de proyectos: ${projectLink('mt-helmets-b2b', 'MT Helmets')}, ${projectLink('ewheel-b2b', 'Ewheel')} y ${projectLink('hifas-da-terra', 'Hifas da Terra')}.`,
+    faqTitle: 'Preguntas frecuentes sobre Shopify B2B',
+    faq: [
+      {
+        q: '¿Puedo tener B2B y B2C en la misma tienda Shopify?',
+        a: `<p>Sí. Shopify B2B funciona en la misma tienda que la venta a consumidor: quien inicia sesión como comprador de una empresa ve su catálogo, sus precios y sus condiciones, y el resto de visitantes ve la tienda de siempre. La otra opción es una tienda aparte solo para mayoristas, que es el caso de ${caseLink('vidal-vidal-b2b', 'Vidal &amp; Vidal')}.</p>`,
+      },
+      {
+        q: '¿Necesito un programador Shopify para activar el B2B?',
+        a: '<p>Para activarlo, no: empresas, catálogos y condiciones de pago se configuran desde el admin. Un programador Shopify hace falta cuando el tema tiene que cambiar para el comprador mayorista, por ejemplo para pedir varias tallas de una vez, ocultar precios a quien no es cliente o mostrar el tramo de volumen en toda la tienda.</p>',
+      },
+      {
+        q: '¿Se pueden ocultar los precios a quien no es cliente?',
+        a: `<p>Sí, y lo seguro es no enviarlos. En el portal de ${caseLink('emolo-b2b', 'Émolo')}, una condición de Liquid sobre <code>customer.b2b?</code> decide si se renderizan los precios, el stock y el botón de compra, así que un visitante sin cuenta de empresa no recibe ningún precio en el HTML. Ocultarlos con CSS o con JavaScript no basta, porque siguen en el código de la página.</p>`,
+      },
+      {
+        q: '¿Qué cambia en B2B si mi tienda pasa a Shopify Plus?',
+        a: '<p>Sobre todo, el precio por cliente: en Plus puedes tener catálogos sin límite y asignarlos directamente a cada empresa o ubicación, además de pedir depósitos y aceptar pagos parciales. También puedes usar apps a medida con Shopify Functions, por ejemplo para validar un pedido mínimo por empresa en el checkout.</p>',
+      },
+      {
+        q: '¿Cuánto cuesta un portal mayorista en Shopify?',
+        a: `<p>Presupuesto a precio cerrado por proyecto, más una bolsa de horas para el mantenimiento posterior. El cerrado sale de la lista de reglas que hay que construir, así que escribir esa lista es lo primero que hacemos.</p>
+<p>Para que te hagas una idea del orden de magnitud: el portal más complejo en el que he trabajado se ha llevado más de cien horas solo de front-end, y yo era uno de varios, con un equipo de backend aparte. Uno con acceso por empresa, catálogos y una tabla de variantes sencilla está en otro orden completamente distinto.</p>
+<p>Lo que más mueve el número es el plan, y no por la cuota de Shopify: sin Plus estás limitado a tres catálogos activos, así que toda tu estructura de precios tiene que caber ahí. Con Plus puedes tener decenas de catálogos y cruzarlos con Markets, y eso cambia el proyecto entero, no solo la factura.</p>
+<p>Los cuatro factores que deciden un presupuesto, y cómo comparar dos que no se parecen en nada, están en <a href="${docPath('questions', 'cuanto-cuesta-un-portal-b2b-en-shopify', 'es')}">cuánto cuesta un portal B2B en Shopify</a>.</p>`,
+      },
+    ],
+    ctaTitle: '¿Quieres vender al por mayor desde tu tienda Shopify?',
+    cta: 'Escríbeme',
+  },
+  en: {
+    crumb: 'Shopify B2B',
+    label: 'Service',
+    h1: 'Shopify B2B developer for wholesale portals, with or without Plus',
+    lead: "A Shopify wholesale portal is a store, or part of one, where only approved companies can buy, each with its own catalog, prices and payment terms. Nicolás Mateos, a freelance Shopify developer based in Madrid, builds these portals on Shopify's native B2B features and a theme adapted to wholesale ordering: variant order tables, volume-tier pricing and prices that only customers can see.",
+    proof: true,
+    updatedLabel: 'Updated October 2026',
+    serviceName: 'Shopify B2B development: wholesale portals',
+    serviceType: 'Shopify B2B wholesale portal development',
+    sections: [
+      {
+        h2: 'What does Shopify B2B include?',
+        html: `<p>Shopify B2B is the set of native features for selling to businesses from the same Shopify admin. As of October 2026 it is available on the Basic, Grow, Advanced and Plus plans, not on Starter or Retail (<a href="${PLANS}">Shopify documentation</a>). These are its building blocks:</p>
+<ul>
+<li><strong>Companies and locations:</strong> each wholesale customer is a company with one or more locations, its buyers and its addresses.</li>
+<li><strong>Catalogs:</strong> which products are published to B2B customers and at what price, each with its own price list.</li>
+<li><strong>Quantity rules:</strong> minimum, maximum and increment per variant, for example cases of 6.</li>
+<li><strong>Volume pricing:</strong> a lower unit price from a given quantity.</li>
+<li><strong>Payment terms:</strong> net 30, 60 or 90 days instead of paying at checkout.</li>
+</ul>`,
+      },
+      {
+        h2: 'Can you do B2B on Shopify without Plus?',
+        html: `<p>Yes. Since April 2, 2026, the Basic, Grow and Advanced plans include native B2B features at no extra cost (<a href="${CHANGELOG}">Shopify changelog</a>). There are limits: as of October 2026, this is how they compare with Shopify Plus.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">B2B feature</th> <th scope="col">Basic, Grow and Advanced</th> <th scope="col">Shopify Plus</th></tr></thead>
+<tbody>
+<tr><th scope="row">Companies, buyers and locations</th> <td>Yes</td> <td>Yes</td></tr>
+<tr><th scope="row">Active B2B catalogs</th> <td>Up to 3 in total, assigned to B2B markets</td> <td>Unlimited</td></tr>
+<tr><th scope="row">Assign a catalog directly to a company or location</th> <td>No</td> <td>Yes</td></tr>
+<tr><th scope="row">Payment terms, quantity rules and volume pricing</th> <td>Yes</td> <td>Yes</td></tr>
+<tr><th scope="row">Deposits and partial payments</th> <td>No</td> <td>Yes</td></tr>
+<tr><th scope="row">Contextual checkout and storefront per market</th> <td>Advanced only</td> <td>Yes</td></tr>
+<tr><th scope="row">Custom apps with Shopify Functions</th> <td>No</td> <td>Yes</td></tr>
+</tbody>
+</table></div>
+<p>Three catalogs fit, for example, three price tiers (distributor, retailer and professional), but not a price negotiated with each customer: that needs catalogs assigned to each company, which only Plus allows. Outside Plus, B2B catalogs also require the store to use new Shopify Markets (<a href="${PLANS}">B2B features by plan</a>).</p>
+<p>What fits in three catalogs, and when moving to Plus pays off, is covered in more detail in the article <a href="${ARTICLE}">Shopify B2B without Plus</a>.</p>`,
+      },
+      {
+        h2: 'Who is this service for?',
+        html: `<p>Brands that sell to shops, pharmacies or distributors and want wholesale orders to come in through their Shopify store, with the catalog and prices each customer is entitled to. It fits best when the store already has a theme you want to keep: Émolo's portal was built on Prestige and Vidal &amp; Vidal's on Sleek.</p>
+<p>It is not for you if you only need to switch on native B2B without changing the theme, since that is configured in the admin with no code. Nor if the project is mainly an ERP integration: there I work on the front end alongside a backend team.</p>`,
+      },
+      {
+        h2: 'What does a wholesale portal include?',
+        html: `<ul>
+<li>Native B2B setup: companies, catalogs, price lists, quantity rules and payment terms.</li>
+<li>Prices, stock and buy buttons for company buyers only, decided in Liquid so prices never reach the HTML of someone who is not a customer.</li>
+<li>A variant order table (sizes, colours or formats) kept in sync with the cart on product pages, collections and search.</li>
+<li>Volume-tier pricing shown in the header, product page and cart, with thresholds in a metafield the client edits.</li>
+<li>Retail price next to the wholesale price, SKU search and a list view for repeat orders.</li>
+<li>Badges, colours and portal content managed from the admin with metafields and metaobjects, with no theme release for each change.</li>
+</ul>
+<p>Three of these pieces, with annotated code (full boxes at checkout, a quick order in a single request and a location picker), are on the <a href="${routes.code.en}">code page</a>.</p>`,
+      },
+      {
+        h2: 'How long does a wholesale portal take?',
+        html: `<p>Between two and eight months. What moves that range is not the design: it is how many rules the portal has to understand.</p>
+<p>At the short end are the ones that need to decide who may buy, serve the right catalog and take orders by size or format. Vidal &amp; Vidal was ready in about two months, and Émolo went the same way: a simple variant table, no volume tiers.</p>
+<p>From there, every new rule adds up. A portal with tens of thousands of SKUs, strict stock control, tiered prices with quantity steps, replenishment, buyer and agent roles and two carts running at once is not the same project: ${projectLink('ewheel-b2b', 'Ewheel')} has taken seven or eight months and is still going, with a backend team working on the same store. Most projects land in between, from four months upwards.</p>
+<p>And a warning I would rather give before we start than after: of the time that gets lost along the way, 30 to 40% sits on your side. It goes on waiting for the real price lists, on deciding which company belongs to which tier, and on validating stock. Bring that settled and the portal lands at the low end of the range.</p>`,
+      },
+    ],
+    casesTitle: 'B2B portals I have built',
+    cases: ['emolo-b2b', 'vidal-vidal-b2b', 'ivb-wellness-b2b'],
+    casesMore: `More B2B portals, with their entries on the projects page: ${projectLink('mt-helmets-b2b', 'MT Helmets')}, ${projectLink('ewheel-b2b', 'Ewheel')} and ${projectLink('hifas-da-terra', 'Hifas da Terra')}.`,
+    faqTitle: 'Shopify B2B FAQ',
+    faq: [
+      {
+        q: 'Can I run B2B and B2C in the same Shopify store?',
+        a: `<p>Yes. Shopify B2B runs in the same store as direct-to-consumer sales: a buyer who logs in for a company sees that company's catalog, prices and terms, and every other visitor sees the usual store. The other option is a separate wholesale-only store, which is what ${caseLink('vidal-vidal-b2b', 'Vidal &amp; Vidal')} has.</p>`,
+      },
+      {
+        q: 'Do I need a Shopify developer to turn on B2B?',
+        a: '<p>Not to turn it on: companies, catalogs and payment terms are configured in the admin. You need a Shopify developer when the theme has to change for wholesale buyers, for example to order several sizes at once, hide prices from non-customers or show the volume tier across the store.</p>',
+      },
+      {
+        q: 'Can prices be hidden from people who are not customers?',
+        a: `<p>Yes, and the safe way is not to send them. On ${caseLink('emolo-b2b', 'Émolo')}'s portal, a Liquid predicate on <code>customer.b2b?</code> decides whether prices, stock and the buy button are rendered, so a visitor without a company account receives no price in the HTML. Hiding them with CSS or JavaScript is not enough, because they are still in the page source.</p>`,
+      },
+      {
+        q: 'What changes for B2B if my store moves to Shopify Plus?',
+        a: '<p>Mostly per-customer pricing: on Plus you can have unlimited catalogs and assign them directly to each company or location, and you can require deposits and accept partial payments. You can also use custom apps with Shopify Functions, for example to validate a minimum order per company at checkout.</p>',
+      },
+      {
+        q: 'How much does a Shopify wholesale portal cost?',
+        a: `<p>I quote a fixed price per project, plus a block of hours for maintenance afterwards. The fixed price comes out of the list of rules that have to be built, so writing that list is the first thing we do.</p>
+<p>For a sense of scale: the most complex portal I have worked on has taken over a hundred hours of front-end work alone, and I was one of several people, with a separate backend team. One with company access, catalogs and a simple variant table sits in a completely different bracket.</p>
+<p>What moves the number most is the plan, and not because of Shopify's fee: without Plus you are capped at three active catalogs, so your whole price structure has to fit inside them. With Plus you can have dozens of catalogs and cross them with Markets, and that changes the entire project, not just the invoice.</p>
+<p>The four factors that decide a quote, and how to compare two that look nothing alike, are in <a href="${docPath('questions', 'how-much-does-a-shopify-b2b-portal-cost', 'en')}">how much a Shopify B2B portal costs</a>.</p>`,
+      },
+    ],
+    ctaTitle: 'Want to sell wholesale from your Shopify store?',
+    cta: 'Get in touch',
+  },
+};
+---
+<ServiceView lang={lang} route="b2b" path={routes.b2b[lang]} meta={seo.b2b[lang]} copy={copy[lang]} />

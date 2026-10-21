@@ -1,0 +1,11 @@
+---
+import TaxonomyView from '../../../../../views/TaxonomyView.astro';
+import { taxonomies } from '../../../../../data/taxonomies';
+
+export async function getStaticPaths() {
+  return taxonomies('sector').map((tax) => ({ params: { slug: tax.slug.en }, props: { tax } }));
+}
+
+const { tax } = Astro.props;
+---
+<TaxonomyView lang="en" kind="sector" tax={tax} />

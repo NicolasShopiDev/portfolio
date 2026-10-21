@@ -7,9 +7,10 @@ import displayFont from '@fontsource-variable/cormorant-garamond/files/cormorant
 import '../styles/style.css';
 import '../styles/lab.css';
 import '../styles/blog.css';
+import '../styles/docs.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { routes, absolute, LANGS, type Lang, type RouteKey } from '../i18n/routes';
+import { routes, absolute, alternatesOf, LANGS, type Lang, type RouteKey } from '../i18n/routes';
 import { t } from '../i18n/ui';
 
 interface Props {
@@ -18,11 +19,11 @@ interface Props {
   title: string;
   description: string;
   schema: string;
-  /** For pages that are not a fixed entry in the routes map (articles). Defaults to routes[route][lang]. */
+  /** For pages that are not a fixed entry in the routes map (articles). Defaults to this page's URL in `alternates`. */
   canonicalPath?: string;
-  /** This same page in each language. A language that is missing gets no hreflang tag. */
+  /** This same page in each language (case studies, articles). Defaults to routes[route]. A language that is missing gets no hreflang tag. */
   alternates?: Partial<Record<Lang, string>>;
-  /** Where the language switch points. Defaults to the same page in the other language. */
+  /** Where the language switch points. Defaults to the same page in the other language, or its home page. */
   switchHref?: string;
   ogType?: string;
   noindex?: boolean;
@@ -45,9 +46,12 @@ const {
   modifiedTime,
 } = Astro.props;
 
-const canonical = absolute(canonicalPath ?? routes[route][lang]);
-const pairs = alternates ?? { es: routes[route].es, en: routes[route].en };
-const xDefault = pairs.en ?? canonical;
+const pairs = alternates ?? alternatesOf(route);
+const canonical = absolute(canonicalPath ?? pairs[lang]!);
+const xDefault = pairs.en ? absolute(pairs.en) : canonical;
+// A page without a version in the other language (/shopify-plus/) switches to that language's home.
+const other: Lang = lang === 'es' ? 'en' : 'es';
+const switchTo = switchHref ?? pairs[other] ?? routes.home[other];
 const ogImage = absolute(lang === 'es' ? '/assets/og-image-es.png' : '/assets/og-image.png');
 const ogAlt = lang === 'es'
   ? 'Nicolás Mateos, desarrollador Shopify Plus y B2B freelance en Madrid, España'
@@ -86,7 +90,7 @@ const s = t(lang);
   )}
   <link rel="canonical" href={canonical} />
   {LANGS.map((l) => pairs[l] && <link rel="alternate" hreflang={l} href={absolute(pairs[l]!)} />)}
-  <link rel="alternate" hreflang="x-default" href={absolute(xDefault)} />
+  <link rel="alternate" hreflang="x-default" href={xDefault} />
   <link rel="sitemap" href="/sitemap.xml" />
   <link
     rel="alternate"
@@ -102,7 +106,7 @@ const s = t(lang);
   <meta property="og:type" content={ogType ?? (route === 'about' ? 'profile' : 'website')} />
   <meta property="og:site_name" content="Nicolás Mateos" />
   <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
-  <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_ES'} />
+  {pairs[other] && <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_ES'} />}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
@@ -124,11 +128,11 @@ const s = t(lang);
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">{s.skip}</a>
-  <Nav lang={lang} route={route} switchHref={switchHref} />
+  <Nav lang={lang} route={route} switchHref={switchTo} />
   <main id="main-content">
     <slot />
   </main>
-  <Footer lang={lang} route={route} switchHref={switchHref} />
+  <Footer lang={lang} route={route} switchHref={switchTo} />
   <script src="../scripts/main.js"></script>
 </body>
 </html>

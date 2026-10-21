@@ -15,12 +15,19 @@ const other: Lang = lang === 'es' ? 'en' : 'es';
     <p class="footer-bio" set:html={s.footerBio} />
     <nav class="footer-nav" aria-label={lang === 'es' ? 'Pie de página' : 'Footer'}>
       <a href={routes.home[lang]}>{s.home}</a>
+      <a href={routes.services[lang]}>{s.navServices}</a>
+      <a href={routes.b2b[lang]}>{s.navB2b}</a>
+      {lang === 'es' && <a href={routes.plus.es}>{s.navPlus}</a>}
       <a href={routes.projects[lang]}>{s.navProjects}</a>
       <a href={routes.code[lang]}>{s.navCode}</a>
+      {/* The reference silos: the footer is the only place that links every hub from every page. */}
+      <a href={routes.glossary[lang]}>{s.glossaryHeading}</a>
+      <a href={routes.questions[lang]}>{s.questionsHeading}</a>
+      <a href={routes.compare[lang]}>{s.compareHeading}</a>
       <a href={routes.about[lang]}>{s.navAbout}</a>
       <a href={routes.blog[lang]}>{s.navBlog}</a>
       <a href={routes.contact[lang]}>{s.navContact}</a>
-      <a href={switchHref ?? routes[route][other]} hreflang={other} lang={other}>{s.switchLabel}</a>
+      <a href={switchHref ?? routes.home[other]} hreflang={other} lang={other}>{s.switchLabel}</a>
     </nav>
     <div class="footer-social">
       <a href="https://www.linkedin.com/in/nicolas-mateos-shopify/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn" class="social-icon">

@@ -7,10 +7,29 @@
 /projects /en/projects/ 301
 # Page URLs without the trailing slash: permanent instead of the default 307.
 /proyectos /proyectos/ 301
+/proyectos/emolo-b2b /proyectos/emolo-b2b/ 301
+/proyectos/vidal-vidal-b2b /proyectos/vidal-vidal-b2b/ 301
+/proyectos/ivb-wellness-b2b /proyectos/ivb-wellness-b2b/ 301
+/shopify-b2b /shopify-b2b/ 301
+/shopify-plus /shopify-plus/ 301
 /sobre-mi /sobre-mi/ 301
 /contacto /contacto/ 301
 /en /en/ 301
 /en/projects /en/projects/ 301
+/en/projects/emolo-b2b /en/projects/emolo-b2b/ 301
+/en/projects/vidal-vidal-b2b /en/projects/vidal-vidal-b2b/ 301
+/en/projects/ivb-wellness-b2b /en/projects/ivb-wellness-b2b/ 301
+/en/shopify-b2b-developer /en/shopify-b2b-developer/ 301
 /en/about /en/about/ 301
 /en/contact /en/contact/ 301
+# Hubs of the generated silos (SEO.md). The pages under them get the default redirect: there are
+# over a hundred and they are reached by link, not typed.
+/servicios /servicios/ 301
+/glosario /glosario/ 301
+/preguntas /preguntas/ 301
+/comparativas /comparativas/ 301
+/en/services /en/services/ 301
+/en/glossary /en/glossary/ 301
+/en/questions /en/questions/ 301
+/en/compare /en/compare/ 301
 /projects/* /en/projects/ 301

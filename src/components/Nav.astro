@@ -12,6 +12,15 @@ const home = routes.home[lang];
 const ctaHref = route === 'home' ? '#contact' : routes.contact[lang];
 const langHref = switchHref ?? routes[route][other];
 
+// Service pages that exist in this language, with the hub last: the two flagship pages are what
+// people come for, the rest of the silo lives behind it. The English Plus page comes in batch 2.
+const services = [
+  { key: 'b2b', label: s.navB2b, href: routes.b2b[lang] },
+  { key: 'plus', label: s.navPlus, href: lang === 'es' ? routes.plus.es : undefined },
+  { key: 'services', label: s.servicesAll, href: routes.services[lang] },
+].filter((x): x is { key: RouteKey; label: string; href: string } => Boolean(x.href));
+const inServices = services.some((x) => x.key === route);
+
 // One list, two places: the row on a wide screen and the drop-down behind the burger on a phone.
 const links = [
   { key: 'projects', href: routes.projects[lang], label: s.navProjects },
@@ -28,6 +37,14 @@ const links = [
       <span aria-hidden="true"></span>
     </button>
     <nav class="nav-left" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
+      <div class="nav-services">
+        <button type="button" class="nav-services-toggle" aria-expanded="false" aria-controls="nav-services-list" data-current={inServices ? 'true' : undefined}>
+          {s.navServices}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="nav-services-list" id="nav-services-list">
+          {services.map((x) => <li><a href={x.href} aria-current={route === x.key ? 'page' : undefined}>{x.label}</a></li>)}
+        </ul>
+      </div>
       {links.map((link) => (
         <a href={link.href} aria-current={route === link.key ? 'page' : undefined}>{link.label}</a>
       ))}
@@ -43,6 +60,10 @@ const links = [
 
   <div class="nav-menu" id="nav-menu">
     <nav aria-label={lang === 'es' ? 'Menú del móvil' : 'Mobile menu'}>
+      {/* The service pages go in the phone menu as plain links: a drop-down inside a drop-down is a trap. */}
+      {services.map((x) => (
+        <a href={x.href} aria-current={route === x.key ? 'page' : undefined}>{x.label}</a>
+      ))}
       {links.map((link) => (
         <a href={link.href} aria-current={route === link.key ? 'page' : undefined}>{link.label}</a>
       ))}

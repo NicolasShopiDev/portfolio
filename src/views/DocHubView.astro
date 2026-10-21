@@ -1,0 +1,138 @@
+---
+// The hub of a generated silo: /servicios/, /glosario/, /preguntas/, /comparativas/ and their
+// English twins. One view for the four of them, because they do the same job — list every child
+// with enough text to choose, group them where there are enough to need grouping, and declare the
+// list as an ItemList so a crawler gets the whole silo from one page.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { routes, type DocHub, type Lang } from '../i18n/routes';
+import { seo, t } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, definedTermSet, itemList, graph } from '../lib/schema';
+import { newestDate, publishedDocs, type Doc, type DocCollection } from '../lib/docs';
+import { updated } from '../i18n/routes';
+
+interface Props { lang: Lang; hub: DocHub }
+const { lang, hub } = Astro.props;
+const s = t(lang);
+
+const COLLECTION: Record<DocHub, DocCollection> = {
+  services: 'services',
+  glossary: 'terms',
+  questions: 'questions',
+  compare: 'compare',
+};
+// Reading order on the hub. A category with nothing in it is not rendered.
+const GROUPS: Partial<Record<DocHub, string[]>> = {
+  glossary: ['b2b', 'functions', 'checkout', 'theme', 'api', 'plan'],
+  questions: ['cost', 'hiring', 'plan', 'b2b', 'functions', 'checkout', 'theme'],
+};
+const COPY = {
+  services: { heading: s.servicesHeading, intro: s.servicesIntro },
+  glossary: { heading: s.glossaryHeading, intro: s.glossaryIntro },
+  questions: { heading: s.questionsHeading, intro: s.questionsIntro },
+  compare: { heading: s.compareHeading, intro: s.compareIntro },
+}[hub];
+
+/** Title, summary and category of one child, whichever collection it comes from. */
+const card = (doc: Doc) => {
+  const d = doc.entry.data as Record<string, any>;
+  if (hub === 'glossary') return { path: doc.path, name: d.term as string, text: d.answer as string, group: d.category as string };
+  if (hub === 'questions') return { path: doc.path, name: d.question as string, text: d.answer as string, group: d.category as string };
+  if (hub === 'compare') return { path: doc.path, name: `${d.a} / ${d.b}`, text: d.verdict as string, group: '' };
+  return { path: doc.path, name: d.h1 as string, text: d.lead as string, group: '' };
+};
+
+const docs = await publishedDocs(COLLECTION[hub], lang);
+const cards = docs.map(card).sort((a, b) => a.name.localeCompare(b.name, lang));
+const groups = (GROUPS[hub] ?? [])
+  .map((group) => ({ group, items: cards.filter((c) => c.group === group) }))
+  .filter((g) => g.items.length > 0);
+
+// The two flagship service pages are hand-built views, so the hub links them explicitly.
+const pinned: { path: string; name: string; text: string }[] =
+  hub === 'services'
+    ? [
+        { path: routes.b2b[lang]!, name: s.navB2b, text: seo.b2b[lang as 'es'].description },
+        ...(lang === 'es' ? [{ path: routes.plus.es, name: s.navPlus, text: seo.plus.es.description }] : []),
+      ]
+    : [];
+
+const meta = seo[hub][lang as 'es'];
+const lastmod = newestDate(docs, updated[hub]);
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: COPY.heading, path: routes[hub][lang]! },
+];
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({
+    type: 'CollectionPage',
+    path: routes[hub][lang]!,
+    name: meta.title,
+    description: meta.description,
+    lang,
+    dateModified: lastmod,
+  }),
+  breadcrumbs(crumbs),
+  ...(hub === 'glossary' ? [definedTermSet({ lang, name: COPY.heading, description: COPY.intro })] : []),
+  itemList([...pinned, ...cards].map((c) => ({ path: c.path, name: c.name, description: c.text }))),
+);
+---
+<Base lang={lang} route={hub} title={meta.title} description={meta.description} schema={schema}>
+  <section class="page-head">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />{' '}
+      <p class="section-label">{COPY.heading}</p>{' '}
+      <h1 class="section-heading">{COPY.heading}</h1>{' '}
+      <p class="about-lead">{COPY.intro}</p>
+    </div>
+  </section>{' '}
+
+  <div class="container hub-body">
+    {pinned.length > 0 && (
+      <ul class="hub-list hub-list--pinned">
+        {pinned.map((item) => (
+          <><li class="hub-item">
+            <h2 class="hub-item-name"><a href={item.path}>{item.name}</a></h2>{' '}
+            <p class="hub-item-text">{item.text}</p>
+          </li>{' '}</>
+        ))}
+      </ul>
+    )}
+
+    {groups.length > 0
+      ? groups.map((group) => (
+          <><section class="hub-group">
+            <h2 class="hub-group-title">{s.categories[group.group as keyof typeof s.categories]}</h2>{' '}
+            <ul class="hub-list">
+              {group.items.map((item) => (
+                <><li class="hub-item">
+                  <h3 class="hub-item-name"><a href={item.path}>{item.name}</a></h3>{' '}
+                  <p class="hub-item-text">{item.text}</p>
+                </li>{' '}</>
+              ))}
+            </ul>
+          </section>{' '}</>
+        ))
+      : (
+        <ul class="hub-list">
+          {cards.map((item) => (
+            <><li class="hub-item">
+              <h2 class="hub-item-name"><a href={item.path}>{item.name}</a></h2>{' '}
+              <p class="hub-item-text">{item.text}</p>
+            </li>{' '}</>
+          ))}
+        </ul>
+      )}
+
+    {cards.length === 0 && pinned.length === 0 && <p class="hub-empty">{s.taxonomyEmpty}</p>}
+  </div>{' '}
+
+  <section class="page-cta section">
+    <div class="container page-cta-inner">
+      <h2 class="contact-heading">{s.blogCtaHeading}</h2>{' '}
+      <a class="btn btn--dark" href={routes.contact[lang]}>{s.blogCtaLabel}</a>
+    </div>
+  </section>
+</Base>

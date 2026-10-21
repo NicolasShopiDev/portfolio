@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ProjectEntry from '../components/ProjectEntry.astro';
-import { routes, updated, type Lang } from '../i18n/routes';
+import { routes, updated, casePath, type Lang } from '../i18n/routes';
 import { t, seo } from '../i18n/ui';
 import { person, website, webPage, breadcrumbs, creativeWorks, graph } from '../lib/schema';
 
@@ -12,13 +12,14 @@ const { lang } = Astro.props;
 const s = t(lang);
 const meta = seo.projects[lang];
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const withCase = new Set((await getCollection('cases', (c) => c.id.startsWith(`${lang}/`))).map((c) => c.data.project.id));
 const crumbs = [
   { name: s.home, path: routes.home[lang] },
   { name: s.navProjects, path: routes.projects[lang] },
 ];
 const intro = lang === 'es'
-  ? 'Veinte proyectos Shopify desde 2021: portales mayoristas B2B, tiendas Shopify Plus, temas a medida y mantenimiento para marcas de España y Europa. Cada ficha cuenta qué se construyó, con qué y para quién.'
-  : 'Twenty Shopify projects since 2021: B2B wholesale portals, Shopify Plus stores, custom themes and maintenance for brands in Spain and Europe. Each entry covers what was built, how and for whom.';
+  ? `Veinte proyectos Shopify desde 2021: portales mayoristas B2B, tiendas Shopify Plus, temas a medida y mantenimiento para marcas de España y Europa. Cada ficha cuenta qué se construyó, con qué y para quién. Los portales mayoristas tienen además su propia página de <a href="${routes.b2b.es}">desarrollo Shopify B2B</a>.`
+  : `Twenty Shopify projects since 2021: B2B wholesale portals, Shopify Plus stores, custom themes and maintenance for brands in Spain and Europe. Each entry covers what was built, how and for whom. Wholesale portals also have their own <a href="${routes.b2b.en}">Shopify B2B development</a> page.`;
 const schema = graph(
   person(lang),
   website(),
@@ -32,6 +33,7 @@ const schema = graph(
     year: p.data.year,
     description: p.data.role[lang],
     keywords: p.data.tags[lang],
+    caseUrl: withCase.has(p.id) ? casePath(p.id, lang) : undefined,
   }))),
 );
 ---
@@ -41,11 +43,11 @@ const schema = graph(
       <Breadcrumbs lang={lang} items={crumbs} />
       <div class="section-intro">
         <h1 class="section-heading">{lang === 'es' ? 'Proyectos Shopify y B2B' : 'Shopify and B2B projects'}</h1>
-        <p class="section-desc">{intro}</p>
+        <p class="section-desc section-desc--links" set:html={intro} />
       </div>
     </div>
   </section>
   <div class="container project-list">
-    {projects.map((project, i) => <ProjectEntry lang={lang} project={project} priority={i === 0} />)}
+    {projects.map((project, i) => <ProjectEntry lang={lang} project={project} priority={i === 0} hasCase={withCase.has(project.id)} />)}
   </div>
 </Base>

@@ -1,0 +1,20 @@
+---
+// Visible FAQ: each question is an h3 and the answer comes right under it (plan 2.1). No FAQPage
+// schema: Google retired the rich result and the value is in the extractable text.
+import Pending from './Pending.astro';
+
+interface Props { title: string; items: { q: string; a?: string; pending?: string }[] }
+const { title, items } = Astro.props;
+---
+<section class="section faq" aria-labelledby="faq-title">
+  <div class="container"><div class="longform">
+    <h2 id="faq-title">{title}</h2>{' '}
+    {items.map((item) => (
+      <><div class="faq-item">
+        <h3>{item.q}</h3>{' '}
+        {item.a && <Fragment set:html={item.a} />}
+        {item.pending && <Pending>{item.pending}</Pending>}
+      </div>{' '}</>
+    ))}
+  </div></div>
+</section>

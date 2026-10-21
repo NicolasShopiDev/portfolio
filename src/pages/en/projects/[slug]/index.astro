@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import CaseView from '../../../../views/CaseView.astro';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases', (c) => c.id.startsWith('en/'));
+  const es = new Set((await getCollection('cases', (c) => c.id.startsWith('es/'))).map((c) => c.data.project.id));
+  return cases.map((entry) => {
+    if (!es.has(entry.data.project.id)) throw new Error(`Case ${entry.id} has no Spanish version in src/content/cases/es/`);
+    return { params: { slug: entry.data.project.id }, props: { entry } };
+  });
+}
+
+const { entry } = Astro.props;
+---
+<CaseView lang="en" entry={entry} />

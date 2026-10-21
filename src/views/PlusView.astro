@@ -1,0 +1,90 @@
+---
+// /shopify-plus/ (plan T32). Spanish only for now; the English page (/en/shopify-plus-developer/)
+// is batch 2. Dates and plan rules are checked against shopify.dev and the Help Center: recheck
+// them, and the "a octubre de 2026" mentions, whenever this page is updated.
+import ServiceView from './ServiceView.astro';
+import { routes, casePath } from '../i18n/routes';
+import { seo } from '../i18n/ui';
+import type { ServiceCopy } from '../lib/service';
+
+const FUNCTIONS = 'https://shopify.dev/docs/api/functions';
+const LANGUAGES = 'https://shopify.dev/docs/apps/build/functions/programming-languages';
+const SCRIPTS = 'https://shopify.dev/changelog/shopify-scripts-will-be-deprecated-on-june-30-2026';
+const UPGRADE = 'https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/checkout-upgrade';
+const LAB_REPO = 'https://github.com/NicolasShopiDev/shopify-checkout-lab';
+
+const copy: ServiceCopy = {
+  crumb: 'Shopify Plus',
+  label: 'Servicio',
+  h1: 'Desarrollador Shopify Plus: Functions y Checkout Extensibility',
+  lead: 'Shopify Functions son pequeños programas que Shopify ejecuta dentro del carrito y del checkout para aplicar descuentos, ocultar o reordenar métodos de pago y de envío o validar un pedido. Nicolás Mateos, desarrollador Shopify Plus freelance en Madrid, los escribe en JavaScript y Rust para tiendas Plus, junto con extensiones de checkout y de cuenta de cliente (Checkout Extensibility).',
+  updatedLabel: 'Actualizado en octubre de 2026',
+  serviceName: 'Desarrollo Shopify Plus: Functions y Checkout Extensibility',
+  serviceType: 'Desarrollo de Shopify Functions y Checkout Extensibility',
+  sections: [
+    {
+      h2: '¿Qué se puede hacer con Shopify Functions?',
+      html: `<p>Cada Function implementa una API concreta de Shopify y se ejecuta en la infraestructura de Shopify, compilada a WebAssembly (<a href="${FUNCTIONS}">documentación de Functions</a>). Estas son algunas de las APIs disponibles:</p>
+<ul>
+<li><strong>Descuentos (Discount):</strong> precios por tramos, descuentos por volumen o condiciones propias de cada cliente.</li>
+<li><strong>Personalización de pagos (Payment Customization):</strong> ocultar, reordenar o renombrar métodos de pago según el carrito, el país o el cliente.</li>
+<li><strong>Personalización de envíos (Delivery Customization):</strong> lo mismo con las opciones de envío.</li>
+<li><strong>Validación de carrito y checkout (Cart and Checkout Validation):</strong> bloquear un pedido que no cumple una regla, como un mínimo de compra o los múltiplos de caja.</li>
+<li><strong>Transformación del carrito (Cart Transform):</strong> agrupar o desglosar líneas del carrito, por ejemplo para vender packs.</li>
+</ul>`,
+    },
+    {
+      h2: '¿Necesito Shopify Plus para usar Functions?',
+      html: `<p>Depende de quién escriba la Function. A octubre de 2026, las apps públicas del App Store que incluyen Functions funcionan en cualquier plan, pero una app a medida (custom app) con Functions solo se puede usar en tiendas Shopify Plus (<a href="${FUNCTIONS}">documentación de Shopify</a>). Por eso una regla propia de tu negocio, escrita solo para tu tienda, necesita Plus.</p>`,
+    },
+    {
+      h2: '¿Qué hago en tiendas Shopify Plus?',
+      html: `<ul>
+<li>Shopify Functions en JavaScript y Rust: precios por tramos, condiciones de descuento y validaciones.</li>
+<li>Extensiones de checkout y de cuenta de cliente con Checkout Extensibility.</li>
+<li>Apps embebidas a medida en el admin, con Node.js, Express y Shopify CLI.</li>
+<li>Integraciones por GraphQL con el ERP, junto al equipo de backend.</li>
+<li>Temas B2B en Shopify Plus, como la <a href="${casePath('vidal-vidal-b2b', 'es')}">tienda mayorista de Vidal &amp; Vidal</a>.</li>
+</ul>
+<p>De esa lista, lo que puedes comprobar por tu cuenta son las Functions: la de personalización de pagos que corre en el Checkout Lab y la de validación de cajas completas de la <a href="${routes.code.es}#case-pack">página de código</a>, las dos en JavaScript, las dos con su consulta de entrada y sus tests. Son dos APIs distintas de Functions y están publicadas para que las clones.</p>
+<p>Buena parte del resto lo he hecho dentro de proyectos de agencia, así que ese código es de sus clientes y no lo puedo publicar. Lo que sí puedo es enseñártelo en una llamada y contarte qué decidí en cada sitio y por qué.</p>`,
+    },
+    {
+      h2: '¿Puedo ver una Function funcionando?',
+      html: `<p>Sí. El <a href="${routes.home.es}#lab">Checkout Lab</a> de la portada es un checkout simulado en el que se despliega una Payment Customization Function real, cod-guard, escrita en JavaScript. La Function oculta el contra reembolso en los pedidos de más de 300 € o con envío fuera de España, lee su configuración de un metafield y tiene tests unitarios en CI. El código está publicado en <a href="${LAB_REPO}">GitHub</a>.</p>
+<p>En la <a href="${routes.code.es}#case-pack">página de código</a> hay además una Function de validación de carrito y checkout que exige cajas completas, con su consulta de entrada comentada.</p>`,
+    },
+    {
+      h2: '¿Cuánto tarda una Function o una extensión de checkout?',
+      html: `<p>El código de una Function de validación sencilla son un par de días. Siendo realista y contando la validación y los tests, de tres a siete días hasta tenerla lista para desplegar.</p>
+<p>A partir de ahí el calendario deja de depender de mí: hay que instalarla como app personalizada, que exige Plus, configurarla y probarla contra los carritos que de verdad dan problemas. En los proyectos de agencia en los que he trabajado, con rondas de validación de gente externa, esas rondas pesan en la fecha bastante más que el desarrollo.</p>
+<p>Y el trabajo de verdad no es teclear, es dar con los casos límite. Una validación que bloquea en todos los pasos del checkout impide al comprador escribir 7 camino de 12, y eso no se descubre escribiendo: se descubre probando.</p>`,
+    },
+  ],
+  casesTitle: 'Proyectos en Shopify Plus',
+  cases: ['vidal-vidal-b2b'],
+  casesMore: `También en Shopify Plus: la plataforma de catálogo B2B de <a href="${routes.projects.es}#mt-helmets-b2b">MT Helmets</a>, con su ficha en la página de proyectos.`,
+  faqTitle: 'Preguntas frecuentes sobre Shopify Plus y Functions',
+  faq: [
+    {
+      q: 'Mis Shopify Scripts dejaron de funcionar: ¿qué hago?',
+      a: `<p>Shopify dejó de permitir editar y publicar Scripts el 15 de abril de 2026 y dejó de ejecutarlos el 30 de junio de 2026 (<a href="${SCRIPTS}">changelog de Shopify</a>). Lo que hacían se rehace con Shopify Functions: los scripts de línea, que cambian precios y descuentos, pasan a Functions de descuento, y los de pago y de envío, a Payment Customization y Delivery Customization. Para empezar, el informe de personalizaciones de Scripts que ofrece Shopify indica qué hay que migrar y si alguna app pública ya lo cubre.</p>`,
+    },
+    {
+      q: '¿JavaScript o Rust para una Shopify Function?',
+      a: `<p>Las dos opciones compilan a WebAssembly. Según la <a href="${LANGUAGES}">documentación de Shopify</a>, Rust rinde mejor que JavaScript y tarda más en llegar al límite de instrucciones de una Function, así que es la opción recomendada cuando hay muchas líneas en el carrito o cálculos complejos. JavaScript sirve bien para reglas sencillas y para probar una idea rápido.</p>`,
+    },
+    {
+      q: '¿Qué pasó con los scripts de la página de gracias?',
+      a: `<p>Desde el 28 de agosto de 2025, la sección de scripts adicionales del checkout es de solo lectura, y las tiendas que no son Plus tenían hasta el 26 de agosto de 2026 para actualizar sus páginas de gracias y de estado del pedido (<a href="${UPGRADE}">ayuda de Shopify</a>). El seguimiento se rehace con píxeles personalizados o de apps, y el contenido visible de esas páginas, con extensiones de checkout.</p>`,
+    },
+    {
+      q: '¿Busco un experto en Shopify Plus o me basta con una app?',
+      a: '<p>Si una app pública del App Store resuelve tu regla, suele ser lo más barato y funciona en cualquier plan. Un desarrollo a medida tiene sentido cuando la regla es propia de tu negocio, como precios por tramos según la empresa, un pedido mínimo por cliente o métodos de pago según el país y el importe, y la tienda es Plus.</p>',
+    },
+  ],
+  ctaTitle: '¿Tienes una regla de checkout que ninguna app resuelve?',
+  cta: 'Escríbeme',
+};
+---
+<ServiceView lang="es" route="plus" path={routes.plus.es} meta={seo.plus.es} copy={copy} />
