@@ -300,3 +300,25 @@ document.querySelectorAll('a[hreflang]').forEach(a => {
   sync();
   window.addEventListener('hashchange', sync);
 });
+
+/* ── Right click and the inspect shortcuts ──────────────────── */
+// Asked for on purpose. It is a sign, not a lock: the source is still one Ctrl+U, one browser
+// menu or one curl away, and the repositories on the code page are public anyway. What it does
+// buy is that text and images are not two clicks from being copied.
+// Form fields stay out of it, or writing an email address would become a fight.
+const EDITABLE = 'input, textarea, select, [contenteditable=""], [contenteditable="true"]';
+
+document.addEventListener('contextmenu', e => {
+  if (e.target.closest(EDITABLE)) return;
+  e.preventDefault();
+});
+
+document.addEventListener('keydown', e => {
+  const key = e.key.toUpperCase();
+  const inspect =
+    key === 'F12' ||
+    ((e.ctrlKey || e.metaKey) && e.shiftKey && (key === 'I' || key === 'J' || key === 'C')) ||
+    (e.metaKey && e.altKey && (key === 'I' || key === 'J' || key === 'C')) ||  // macOS
+    ((e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey && key === 'U');
+  if (inspect) e.preventDefault();
+});
