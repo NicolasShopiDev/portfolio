@@ -4,16 +4,16 @@
   "tool": "Lighthouse 12",
   "formFactor": "mobile",
   "scores": {
-    "performance": 97,
-    "accessibility": 96,
+    "performance": 96,
+    "accessibility": 100,
     "bestPractices": 100,
     "seo": 92
   },
   "metrics": {
-    "lcpMs": 1900,
+    "lcpMs": 2000,
     "cls": 0,
-    "tbtMs": 47,
-    "transferBytes": 306099,
+    "tbtMs": 0,
+    "transferBytes": 306371,
     "requests": 20
   }
 }
