@@ -35,7 +35,7 @@
 .repo-links .text-link { margin-top: 20px; }
 
 /* ── Patterns ───────────────────────────────────────────────── */
-.patterns { padding-top: 0; }
+.patterns { padding-top: 0; position: relative; }
 
 .pattern {
   display: grid;
@@ -99,6 +99,48 @@
 }
 .snippet pre.astro-code code { display: block; width: max-content; min-width: 100%; }
 .snippet pre.astro-code .line { padding: 0 20px; }
+
+/* ── Character rain ────────────────────────────────────────── */
+/* Decoration behind the patterns: letters and numbers falling down the white
+   background. src/components/CodeRain.astro paints the canvas; this only places it,
+   dims it and fades it out at the edges of the section. */
+.code-rain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 140px, #000 calc(100% - 140px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 140px, #000 calc(100% - 140px), transparent);
+}
+
+/* One viewport tall and pinned while the section scrolls past, so a taller section
+   does not mean a bigger canvas to repaint. */
+.code-rain canvas {
+  display: block;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.patterns > .container { position: relative; z-index: 1; }
+
+/* The rain runs behind the words, so every block of text sits on its own white veil.
+   The veil is a pseudo-element with a soft edge: a plain box would read as a card. */
+.patterns .section-intro,
+.pattern-text { position: relative; }
+
+.patterns .section-intro::before,
+.pattern-text::before {
+  content: '';
+  position: absolute;
+  inset: -18px -22px;
+  z-index: -1;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 0 26px 18px rgba(255, 255, 255, 0.82);
+}
 
 /* ── Colophon ───────────────────────────────────────────────── */
 .colophon { padding-top: 0; }
@@ -203,6 +245,8 @@
   height: 1px;
   background: var(--gray-400);
 }
+
+/* The ambient player is a draft and lives in ambient-draft.css, which nothing imports. */
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {

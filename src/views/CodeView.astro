@@ -2,6 +2,10 @@
 import { Code } from 'astro:components';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CodeRain from '../components/CodeRain.astro';
+// Draft: the ambient player is written and tested, but it is not on the site. To bring it
+// back, uncomment this import, the line further down, and import src/styles/ambient-draft.css.
+// import AmbientPlayer from '../components/AmbientPlayer.astro';
 import { routes, updated, type Lang } from '../i18n/routes';
 import { t, seo } from '../i18n/ui';
 import { person, website, webPage, breadcrumbs, sourceCode, graph } from '../lib/schema';
@@ -255,6 +259,7 @@ const schema = graph(
   </section>
 
   <section class="section patterns">
+    <CodeRain />
     <div class="container">
       <div class="section-intro">
         <h2 class="section-heading">{copy.patternsTitle}</h2>
@@ -334,4 +339,5 @@ const schema = graph(
       <a class="btn btn--dark" href={routes.contact[lang]}>{copy.cta}</a>
     </div>
   </section>
+{/* <AmbientPlayer lang={lang} /> */}
 </Base>
