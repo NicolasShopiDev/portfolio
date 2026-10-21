@@ -327,6 +327,14 @@ if (nav && burger) {
   matchMedia('(min-width: 769px)').addEventListener('change', e => { if (e.matches) setOpen(false); });
 }
 
+/* ── Language choice ────────────────────────────────────────── */
+// Picking ES or EN writes a cookie, and functions/index.js reads it: once you have chosen,
+// the home page stops second-guessing you from the browser's Accept-Language.
+document.addEventListener('click', e => {
+  const link = e.target.closest('a[hreflang]');
+  if (link) document.cookie = `lang=${link.getAttribute('hreflang')}; path=/; max-age=31536000; samesite=lax`;
+});
+
 /* ── Right click and the inspect shortcuts ──────────────────── */
 // Asked for on purpose. It is a sign, not a lock: the source is still one Ctrl+U, one browser
 // menu or one curl away, and the repositories on the code page are public anyway. What it does
