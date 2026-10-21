@@ -45,8 +45,9 @@ const copy: ServiceCopy = {
 <li>Apps embebidas a medida en el admin, con Node.js, Express y Shopify CLI.</li>
 <li>Integraciones por GraphQL con el ERP, junto al equipo de backend.</li>
 <li>Temas B2B en Shopify Plus, como la <a href="${casePath('vidal-vidal-b2b', 'es')}">tienda mayorista de Vidal &amp; Vidal</a>.</li>
-</ul>`,
-      pending: 'qué Functions y extensiones tienes en producción (API, JavaScript o Rust, tipo de tienda, aunque sea anónimo) para concretar esta lista con ejemplos reales.',
+</ul>
+<p>De esa lista, lo que puedes comprobar por tu cuenta son las Functions: la de personalización de pagos que corre en el Checkout Lab y la de validación de cajas completas de la <a href="${routes.code.es}#case-pack">página de código</a>, las dos en JavaScript, las dos con su consulta de entrada y sus tests. Son dos APIs distintas de Functions y están publicadas para que las clones.</p>
+<p>Buena parte del resto lo he hecho dentro de proyectos de agencia, así que ese código es de sus clientes y no lo puedo publicar. Lo que sí puedo es enseñártelo en una llamada y contarte qué decidí en cada sitio y por qué.</p>`,
     },
     {
       h2: '¿Puedo ver una Function funcionando?',
@@ -55,7 +56,9 @@ const copy: ServiceCopy = {
     },
     {
       h2: '¿Cuánto tarda una Function o una extensión de checkout?',
-      pending: 'plazos reales de Functions y extensiones que hayas entregado, para dar un rango típico.',
+      html: `<p>El código de una Function de validación sencilla son un par de días. Siendo realista y contando la validación y los tests, de tres a siete días hasta tenerla lista para desplegar.</p>
+<p>A partir de ahí el calendario deja de depender de mí: hay que instalarla como app personalizada, que exige Plus, configurarla y probarla contra los carritos que de verdad dan problemas. En los proyectos de agencia en los que he trabajado, con rondas de validación de gente externa, esas rondas pesan en la fecha bastante más que el desarrollo.</p>
+<p>Y el trabajo de verdad no es teclear, es dar con los casos límite. Una validación que bloquea en todos los pasos del checkout impide al comprador escribir 7 camino de 12, y eso no se descubre escribiendo: se descubre probando.</p>`,
     },
   ],
   casesTitle: 'Proyectos en Shopify Plus',

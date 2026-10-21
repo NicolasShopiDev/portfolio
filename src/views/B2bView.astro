@@ -2,7 +2,7 @@
 // /shopify-b2b/ and /en/shopify-b2b-developer/ (plan T31). Plan facts are checked against Shopify's
 // documentation; recheck them, and the "a octubre de 2026" dates, whenever this page is updated.
 import ServiceView from './ServiceView.astro';
-import { routes, type Lang } from '../i18n/routes';
+import { docPath, routes, type Lang } from '../i18n/routes';
 import { seo } from '../i18n/ui';
 import { postPath } from '../lib/posts';
 import type { ServiceCopy } from '../lib/service';
@@ -76,7 +76,10 @@ const copy: Record<Lang, ServiceCopy> = {
       },
       {
         h2: '¿Cuánto tarda un portal mayorista?',
-        pending: 'plazos reales de cada portal, de principio a fin, para dar un rango típico.',
+        html: `<p>Entre dos y ocho meses. Lo que mueve esa horquilla no es el diseño: es cuántas reglas tiene que entender el portal.</p>
+<p>En la parte corta están los que necesitan decidir quién puede comprar, servir el catálogo que toca y pedir por tallas o formatos. El de Vidal &amp; Vidal estuvo listo en unos dos meses, y el de Émolo fue por el mismo camino: tabla de variantes sencilla, sin tramos de volumen.</p>
+<p>A partir de ahí, cada regla nueva suma. Un portal con decenas de miles de referencias, control de stock estricto, precios por tramos con saltos de cantidad, reposición, roles de comprador y de agente y dos carritos a la vez no es el mismo proyecto: ${projectLink('ewheel-b2b', 'Ewheel')} ha llevado siete u ocho meses y sigue en marcha, con un equipo de backend trabajando sobre la misma tienda. La mayoría de los proyectos caen en medio, de cuatro meses en adelante.</p>
+<p>Y un aviso que prefiero dar antes de empezar que después: del tiempo que se pierde por el camino, un 30 o 40 % está en tu tejado. Se va en que lleguen las tarifas reales, en decidir qué empresa va a qué nivel y en validar el stock. Si traes eso resuelto, el portal sale por la parte baja de la horquilla.</p>`,
       },
     ],
     casesTitle: 'Portales B2B que he construido',
@@ -102,7 +105,10 @@ const copy: Record<Lang, ServiceCopy> = {
       },
       {
         q: '¿Cuánto cuesta un portal mayorista en Shopify?',
-        pending: 'rangos de precio ("desde X €") para un portal mayorista con y sin Plus.',
+        a: `<p>Presupuesto a precio cerrado por proyecto, más una bolsa de horas para el mantenimiento posterior. El cerrado sale de la lista de reglas que hay que construir, así que escribir esa lista es lo primero que hacemos.</p>
+<p>Para que te hagas una idea del orden de magnitud: el portal más complejo en el que he trabajado se ha llevado más de cien horas solo de front-end, y yo era uno de varios, con un equipo de backend aparte. Uno con acceso por empresa, catálogos y una tabla de variantes sencilla está en otro orden completamente distinto.</p>
+<p>Lo que más mueve el número es el plan, y no por la cuota de Shopify: sin Plus estás limitado a tres catálogos activos, así que toda tu estructura de precios tiene que caber ahí. Con Plus puedes tener decenas de catálogos y cruzarlos con Markets, y eso cambia el proyecto entero, no solo la factura.</p>
+<p>Los cuatro factores que deciden un presupuesto, y cómo comparar dos que no se parecen en nada, están en <a href="${docPath('questions', 'cuanto-cuesta-un-portal-b2b-en-shopify', 'es')}">cuánto cuesta un portal B2B en Shopify</a>.</p>`,
       },
     ],
     ctaTitle: '¿Quieres vender al por mayor desde tu tienda Shopify?',
@@ -166,7 +172,10 @@ const copy: Record<Lang, ServiceCopy> = {
       },
       {
         h2: 'How long does a wholesale portal take?',
-        pending: 'plazos reales de cada portal, de principio a fin, para dar un rango típico.',
+        html: `<p>Between two and eight months. What moves that range is not the design: it is how many rules the portal has to understand.</p>
+<p>At the short end are the ones that need to decide who may buy, serve the right catalog and take orders by size or format. Vidal &amp; Vidal was ready in about two months, and Émolo went the same way: a simple variant table, no volume tiers.</p>
+<p>From there, every new rule adds up. A portal with tens of thousands of SKUs, strict stock control, tiered prices with quantity steps, replenishment, buyer and agent roles and two carts running at once is not the same project: ${projectLink('ewheel-b2b', 'Ewheel')} has taken seven or eight months and is still going, with a backend team working on the same store. Most projects land in between, from four months upwards.</p>
+<p>And a warning I would rather give before we start than after: of the time that gets lost along the way, 30 to 40% sits on your side. It goes on waiting for the real price lists, on deciding which company belongs to which tier, and on validating stock. Bring that settled and the portal lands at the low end of the range.</p>`,
       },
     ],
     casesTitle: 'B2B portals I have built',
@@ -192,7 +201,10 @@ const copy: Record<Lang, ServiceCopy> = {
       },
       {
         q: 'How much does a Shopify wholesale portal cost?',
-        pending: 'rangos de precio ("desde X €") para un portal mayorista con y sin Plus.',
+        a: `<p>I quote a fixed price per project, plus a block of hours for maintenance afterwards. The fixed price comes out of the list of rules that have to be built, so writing that list is the first thing we do.</p>
+<p>For a sense of scale: the most complex portal I have worked on has taken over a hundred hours of front-end work alone, and I was one of several people, with a separate backend team. One with company access, catalogs and a simple variant table sits in a completely different bracket.</p>
+<p>What moves the number most is the plan, and not because of Shopify's fee: without Plus you are capped at three active catalogs, so your whole price structure has to fit inside them. With Plus you can have dozens of catalogs and cross them with Markets, and that changes the entire project, not just the invoice.</p>
+<p>The four factors that decide a quote, and how to compare two that look nothing alike, are in <a href="${docPath('questions', 'how-much-does-a-shopify-b2b-portal-cost', 'en')}">how much a Shopify B2B portal costs</a>.</p>`,
       },
     ],
     ctaTitle: 'Want to sell wholesale from your Shopify store?',

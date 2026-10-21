@@ -10,15 +10,20 @@ facts:
   sector: 'Supplements and health'
   country: 'Spain'
   theme: 'Enterprise, from Figma designs'
+  plan: 'Shopify Plus'
+  engagement: 'Through an agency'
+  duration: '6 weeks'
+  team: 'A designer and me'
 stack:
   - 'Shopify B2B (company accounts)'
   - 'Liquid on the Enterprise theme'
   - 'Shop, product and variant metafields'
   - 'Metaobjects (badges and colour schemes)'
   - 'JavaScript'
-pending:
-  - 'Confirmar "más de 3000 farmacias" y, si existe, cuántas compran por el portal o qué parte de los pedidos entra por ahí.'
-  - 'Capturas del portal con sesión de empresa (las de ahora son de la tienda B2C).'
+resultsDone: true
+lessons: false
+testimonial: false
+pending: []
 ---
 
 ## What did IVB Wellness Lab need?

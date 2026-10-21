@@ -11,6 +11,9 @@ facts:
   country: 'España (Menorca)'
   plan: 'Shopify Plus'
   theme: 'Sleek, exportado de la tienda B2C'
+  engagement: 'A través de una agencia'
+  duration: '4 semanas'
+  team: 'Solo yo, en front-end'
 stack:
   - 'Shopify Plus y Shopify B2B'
   - 'Liquid sobre el tema Sleek'
@@ -21,8 +24,10 @@ stack:
 results:
   - '29 plantillas huérfanas eliminadas: la carpeta templates del tema B2B se redujo un 75 %.'
   - 'shopify theme dev volvió a funcionar en el tema B2B tras quitar las siete plantillas que referenciaban vídeos de la tienda B2C.'
-pending:
-  - 'Capturas de la tienda mayorista con sesión de empresa (las de ahora son de la tienda B2C).'
+resultsDone: true
+lessons: false
+testimonial: false
+pending: []
 ---
 
 ## ¿De dónde partía la tienda mayorista de Vidal & Vidal?

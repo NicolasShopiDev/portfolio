@@ -11,6 +11,9 @@ facts:
   country: 'Spain (Menorca)'
   plan: 'Shopify Plus'
   theme: 'Sleek, exported from the consumer store'
+  engagement: 'Through an agency'
+  duration: '4 weeks'
+  team: 'Me alone, on front-end'
 stack:
   - 'Shopify Plus and Shopify B2B'
   - 'Liquid on the Sleek theme'
@@ -21,8 +24,10 @@ stack:
 results:
   - '29 orphaned templates removed: the B2B theme templates folder shrank by 75%.'
   - 'shopify theme dev ran again on the B2B theme once the seven templates pointing at consumer-store videos were gone.'
-pending:
-  - 'Capturas de la tienda mayorista con sesión de empresa (las de ahora son de la tienda B2C).'
+resultsDone: true
+lessons: false
+testimonial: false
+pending: []
 ---
 
 ## Where did Vidal & Vidal's wholesale store start?

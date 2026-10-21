@@ -3,27 +3,32 @@ project: emolo-b2b
 title: 'Émolo: portal B2B en Shopify para joyería | Nicolás Mateos'
 description: 'Portal mayorista sobre el tema Prestige: precios solo para empresas, tabla de pedido por tallas sincronizada con el carrito y búsqueda por referencia.'
 h1: 'Émolo: portal mayorista B2B en Shopify para una marca de joyería'
-summary: 'Émolo es una marca de joyería hecha a mano de Murcia. Su portal mayorista se construyó en 2026 sobre el tema Prestige que ya usaba la tienda: solo los compradores de una empresa ven precios y pueden comprar, y piden todas las tallas de una pieza desde una tabla sincronizada con el carrito.'
+summary: 'Émolo es una marca de joyería hecha a mano de Murcia. Su portal mayorista se construyó en 2026 como una tienda aparte, sobre el mismo tema Prestige de su tienda B2C: solo los compradores de una empresa ven precios y pueden comprar, y piden todas las tallas de una pieza desde una tabla sincronizada con el carrito.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:
   sector: 'Joyería hecha a mano'
   country: 'España (Murcia)'
   theme: 'Prestige'
+  plan: 'Shopify Plus'
+  engagement: 'A través de una agencia'
+  duration: '4 semanas'
+  team: 'Solo yo, en front-end'
 stack:
   - 'Shopify B2B (empresas y compradores)'
   - 'Liquid sobre el tema Prestige'
   - 'JavaScript: custom elements'
   - 'Ajax Cart API (/cart.js y /cart/update.js)'
   - 'Metafields'
-pending:
-  - 'Fragmento de código de la llamada a /cart/update.js (reescrito, no el del cliente), si das el OK.'
-  - '¿Es la misma tienda que la B2C de Émolo o una tienda aparte solo para mayoristas?'
+resultsDone: true
+lessons: false
+testimonial: false
+pending: []
 ---
 
 ## ¿Qué necesitaba Émolo?
 
-Émolo quería vender al por mayor desde Shopify sin cambiar el tema Prestige que ya tenía. El portal B2B de Émolo debía cumplir dos condiciones. La primera, que nadie sin cuenta de empresa viera precios, ni siquiera en el código de la página. La segunda, que un comprador pudiera pedir varias tallas de una misma pieza de una sola vez, desde la ficha de producto, desde las colecciones o desde la búsqueda.
+Émolo quería vender al por mayor desde Shopify sin rehacer su front-end. El portal vive en una tienda aparte, solo para mayoristas y enlazada desde la tienda B2C, y reutiliza el mismo tema Prestige en lugar de empezar de cero. Que sea una tienda aparte no quita el problema de los precios: la dirección es pública y cualquiera puede entrar, así que el acceso hay que decidirlo igual. El portal debía cumplir dos condiciones. La primera, que nadie sin cuenta de empresa viera precios, ni siquiera en el código de la página. La segunda, que un comprador pudiera pedir varias tallas de una misma pieza de una sola vez, desde la ficha de producto, desde las colecciones o desde la búsqueda.
 
 ## ¿Cómo funciona el portal B2B de Émolo?
 
@@ -40,6 +45,38 @@ La tabla de pedido de Émolo se renderiza en Liquid y la controla un custom elem
 ### Una sola petición a /cart/update.js con cantidades absolutas
 
 Al enviar, la tabla hace una única llamada a `/cart/update.js` con cantidades absolutas. Con este contrato, un primer pedido, una ampliación y una reducción son la misma petición, y si Shopify rechaza una línea el carrito queda intacto en lugar de quedarse a medias.
+
+Así es el patrón, reescrito desde cero para poder publicarlo:
+
+```js
+// Cantidades absolutas, no incrementos: la tabla manda el estado final de cada
+// variante. Por eso un 0 retira esa línea, y por eso el primer pedido, la ampliación
+// y la corrección son exactamente la misma petición.
+const updates = Object.fromEntries(
+  [...table.querySelectorAll('input[data-variant-id]')].map((input) => [
+    input.dataset.variantId,
+    Number(input.value) || 0,
+  ]),
+);
+
+const response = await fetch(`${window.Shopify.routes.root}cart/update.js`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+  // Shopify devuelve el HTML de estas secciones ya renderizado: un innerHTML y el
+  // carrito está al día, sin pedir /cart.js por segunda vez.
+  body: JSON.stringify({ updates, sections: 'cart-drawer,cart-icon-bubble' }),
+});
+
+const cart = await response.json();
+if (!response.ok) throw new Error(cart.description || cart.message);
+
+for (const [id, html] of Object.entries(cart.sections ?? {})) {
+  const section = document.getElementById(`shopify-section-${id}`);
+  if (section) section.innerHTML = html;
+}
+```
+
+Una petición por línea sería la alternativa obvia y es la que falla: cuarenta llamadas en paralelo hacen parpadear el carrito cuarenta veces y, peor, la última respuesta puede llegar antes que la primera, así que el total que ve el comprador no es el que tiene.
 
 ### Búsqueda por referencia, vistas y galerías por variante
 
