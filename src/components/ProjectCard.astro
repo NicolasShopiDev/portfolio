@@ -3,18 +3,20 @@ import type { CollectionEntry } from 'astro:content';
 import Picture from './Picture.astro';
 import BrowserBar from './BrowserBar.astro';
 import ProjectFacts from './ProjectFacts.astro';
-import { routes, type Lang } from '../i18n/routes';
+import { routes, casePath, type Lang } from '../i18n/routes';
 import { t } from '../i18n/ui';
 import { webpUrl, imageKey } from '../lib/images';
 
-interface Props { lang: Lang; project: CollectionEntry<'projects'> }
-const { lang, project } = Astro.props;
+interface Props { lang: Lang; project: CollectionEntry<'projects'>; hasCase?: boolean }
+const { lang, project, hasCase = false } = Astro.props;
 const p = project.data;
 const slug = project.id;
 const s = t(lang);
 const img = p.images;
 // The modal builds its images in JS, so it gets plain WebP URLs and the alt text here.
 const shots = img.highlights.map((h) => ({ src: webpUrl(imageKey(img.dir, h.file), 800), alt: h.alt[lang] }));
+// Projects with a case study link to it; the rest to their entry on the projects page.
+const href = hasCase ? casePath(slug, lang) : `${routes.projects[lang]}#${slug}`;
 ---
 <div
   class="project-card"
@@ -22,6 +24,7 @@ const shots = img.highlights.map((h) => ({ src: webpUrl(imageKey(img.dir, h.file
   data-url={p.url}
   data-banner={webpUrl(imageKey(img.dir, img.banner), 1200)}
   data-shots={JSON.stringify(shots)}
+  data-case={hasCase ? href : undefined}
 >
   <div class="card-mockup">
     <div class="browser-frame">
@@ -43,7 +46,7 @@ const shots = img.highlights.map((h) => ({ src: webpUrl(imageKey(img.dir, h.file
     <span class="card-link" aria-hidden="true">{s.viewProject}</span>
   </div>
   {/* The link sits outside the heading: text extractors drop headings that are links. */}
-  <a href={`${routes.projects[lang]}#${slug}`} class="card-hit" aria-label={`${s.viewProject}: ${p.name}`}></a>
+  <a href={href} class="card-hit" aria-label={`${s.viewProject}: ${p.name}`}></a>
   <div class="project-detail">
     <ProjectFacts lang={lang} project={project} />
   </div>

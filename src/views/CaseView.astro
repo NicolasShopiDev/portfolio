@@ -1,0 +1,217 @@
+---
+// Case study page (plan 2.3): /proyectos/<slug>/ and /en/projects/<slug>/. The text comes from
+// src/content/cases/<lang>/<slug>.md; client, year, URL and screenshots from the project entry.
+import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Picture from '../components/Picture.astro';
+import BrowserBar from '../components/BrowserBar.astro';
+import Pending from '../components/Pending.astro';
+import { routes, casePath, caseAlternates, absolute, type Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
+import { person, website, webPage, breadcrumbs, caseStudy, graph } from '../lib/schema';
+import { imageKey, webpUrl } from '../lib/images';
+
+interface Props { lang: Lang; entry: CollectionEntry<'cases'> }
+const { lang, entry } = Astro.props;
+const s = t(lang);
+const c = entry.data;
+const project = await getEntry(c.project);
+if (!project) throw new Error(`Case ${entry.id} points to a missing project`);
+const p = project.data;
+const slug = project.id;
+const { Content } = await render(entry);
+
+// Previous and next case in the same order as the projects page.
+const order = (await getCollection('projects')).reduce<Record<string, number>>((acc, x) => ({ ...acc, [x.id]: x.data.order }), {});
+const siblings = (await getCollection('cases', (x) => x.id.startsWith(`${lang}/`)))
+  .sort((a, b) => order[a.data.project.id] - order[b.data.project.id]);
+const index = siblings.findIndex((x) => x.id === entry.id);
+const prev = siblings[index - 1];
+const next = siblings[index + 1];
+const caseName = async (x: CollectionEntry<'cases'>) => (await getEntry(x.data.project))!.data.name;
+const prevName = prev && await caseName(prev);
+const nextName = next && await caseName(next);
+
+const L = {
+  es: {
+    label: 'Caso de estudio',
+    by: 'Por',
+    published: 'Publicado el',
+    updatedOn: 'actualizado el',
+    factsTitle: 'Ficha del proyecto',
+    client: 'Cliente', sector: 'Sector', country: 'País', year: 'Año', plan: 'Plan Shopify', theme: 'Tema base',
+    engagement: 'Mi papel', duration: 'Duración', team: 'Equipo', web: 'Web',
+    stackTitle: '¿Con qué está construido?',
+    shotsTitle: 'Capturas del proyecto',
+    resultsTitle: '¿Qué resultados ha dado?',
+    lessonsTitle: '¿Qué haría distinto?',
+    testimonialTitle: '¿Qué dice el cliente?',
+    moreTitle: 'Más portales B2B',
+    service: 'Este proyecto forma parte de mi trabajo de',
+    serviceLink: 'desarrollo Shopify B2B',
+    prev: 'Caso anterior', next: 'Caso siguiente',
+    ctaTitle: '¿Necesitas un portal mayorista así?',
+    cta: 'Escríbeme',
+    pendingFact: 'dato que falta confirmar',
+    pendingResults: 'métricas de negocio con fuente y periodo (dato del cliente o CrUX).',
+    pendingLessons: 'una frase sobre qué harías distinto.',
+    pendingTestimonial: 'testimonio con nombre, cargo, empresa, fecha y permiso escrito.',
+    dateFmt: 'es-ES',
+  },
+  en: {
+    label: 'Case study',
+    by: 'By',
+    published: 'Published',
+    updatedOn: 'updated',
+    factsTitle: 'Project facts',
+    client: 'Client', sector: 'Sector', country: 'Country', year: 'Year', plan: 'Shopify plan', theme: 'Base theme',
+    engagement: 'My role', duration: 'Duration', team: 'Team', web: 'Website',
+    stackTitle: 'What is it built with?',
+    shotsTitle: 'Screenshots',
+    resultsTitle: 'What were the results?',
+    lessonsTitle: 'What would I do differently?',
+    testimonialTitle: 'What does the client say?',
+    moreTitle: 'More B2B portals',
+    service: 'This project is part of my work as a',
+    serviceLink: 'Shopify B2B developer',
+    prev: 'Previous case', next: 'Next case',
+    ctaTitle: 'Need a wholesale portal like this?',
+    cta: 'Get in touch',
+    pendingFact: 'dato que falta confirmar',
+    pendingResults: 'métricas de negocio con fuente y periodo (dato del cliente o CrUX).',
+    pendingLessons: 'una frase sobre qué harías distinto.',
+    pendingTestimonial: 'testimonio con nombre, cargo, empresa, fecha y permiso escrito.',
+    dateFmt: 'en-GB',
+  },
+}[lang];
+
+const date = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString(L.dateFmt, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const host = p.url?.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+const path = casePath(slug, lang);
+const crumbs = [
+  { name: s.home, path: routes.home[lang] },
+  { name: s.navProjects, path: routes.projects[lang] },
+  { name: p.name, path },
+];
+const facts: [string, string | false | undefined][] = [
+  [L.client, p.client],
+  [L.sector, c.facts.sector],
+  [L.country, c.facts.country],
+  [L.year, p.year],
+  [L.plan, c.facts.plan],
+  [L.theme, c.facts.theme],
+  [L.engagement, c.facts.engagement],
+  [L.duration, c.facts.duration],
+  [L.team, c.facts.team],
+];
+const img = p.images;
+const schema = graph(
+  person(lang),
+  website(),
+  webPage({ type: 'WebPage', path, name: c.title, description: c.description, lang, dateModified: c.updated, mainEntity: `${absolute(path)}#case` }),
+  breadcrumbs(crumbs),
+  caseStudy({
+    path, lang, headline: c.h1, description: c.summary, client: p.client, clientUrl: p.url, year: p.year,
+    keywords: p.tags[lang], image: webpUrl(imageKey(img.dir, img.banner), 1200),
+    datePublished: c.published, dateModified: c.updated,
+  }),
+);
+---
+<Base lang={lang} route="projects" alternates={caseAlternates(slug)} title={c.title} description={c.description} schema={schema} ogType="article">
+  <article class="case">
+    <header class="page-head case-head">
+      <div class="container">
+        <Breadcrumbs lang={lang} items={crumbs} />{' '}
+        <p class="section-label">{L.label}</p>{' '}
+        <h1 class="case-title">{c.h1}</h1>{' '}
+        <p class="case-byline">
+          {L.by} <a href={routes.about[lang]}>Nicolás Mateos</a>.{' '}
+          {L.published} <time datetime={c.published}>{date(c.published)}</time>{c.updated !== c.published && <>, {L.updatedOn} <time datetime={c.updated}>{date(c.updated)}</time></>}.
+        </p>
+      </div>
+    </header>{' '}
+
+    <div class="container">
+      <div class="case-frame browser-frame">
+        <BrowserBar lang={lang} url={p.url} />
+        <div class="bf-screen">
+          <Picture
+            image={imageKey(img.dir, img.banner)}
+            alt={p.name}
+            sizes="(max-width: 1200px) 100vw, 1120px"
+            class="screen-img screen-img--banner"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </div>{' '}
+
+    {/* Summary and facts sit in the same column as the body so reader-view extractors keep them. */}
+    <div class="container"><div class="case-body">
+      <p class="case-summary">{c.summary}</p>{' '}
+      {c.pending.map((item) => <><Pending>{item}</Pending>{' '}</>)}
+
+      <h2 id="case-facts-title">{L.factsTitle}</h2>{' '}
+      <dl class="case-facts">
+        {facts.filter(([, value]) => value !== false).map(([term, value]) => (
+          <><div class="about-fact"><dt>{term}</dt>{' '}<dd>{value ?? <Pending>{L.pendingFact}</Pending>}</dd></div>{' '}</>
+        ))}
+        {p.url && <div class="about-fact"><dt>{L.web}</dt>{' '}<dd><a href={p.url} target="_blank" rel="noopener">{host}</a></dd></div>}
+      </dl>{' '}
+
+      <Content />{' '}
+
+      <h2>{L.stackTitle}</h2>{' '}
+      <ul>{c.stack.map((x) => <><li>{x}</li>{' '}</>)}</ul>{' '}
+
+      {img.highlights.length > 0 && (
+        <>
+          <h2>{L.shotsTitle}</h2>{' '}
+          <div class="highlights-grid case-shots">
+            {img.highlights.map((h) => (
+              <><figure class="highlight-item">
+                <Picture image={imageKey(img.dir, h.file)} alt={h.alt[lang]} sizes="(max-width: 768px) 100vw, 400px" />
+                <figcaption>{h.alt[lang]}</figcaption>
+              </figure>{' '}</>
+            ))}
+          </div>{' '}
+        </>
+      )}
+
+      {(c.results?.length || !c.resultsDone) && <><h2>{L.resultsTitle}</h2>{' '}</>}
+      {c.results && <><ul>{c.results.map((x) => <><li>{x}</li>{' '}</>)}</ul>{' '}</>}
+      {!c.resultsDone && <><Pending>{L.pendingResults}</Pending>{' '}</>}
+
+      {c.lessons !== false && <><h2>{L.lessonsTitle}</h2>{' '}</>}
+      {c.lessons ? <><p>{c.lessons}</p>{' '}</> : c.lessons === undefined && <><Pending>{L.pendingLessons}</Pending>{' '}</>}
+
+      {c.testimonial !== false && <><h2>{L.testimonialTitle}</h2>{' '}</>}
+      {c.testimonial
+        ? (
+          <figure class="case-quote">
+            <blockquote><p>{c.testimonial.quote}</p></blockquote>{' '}
+            <figcaption>{c.testimonial.name}, {c.testimonial.role}, {c.testimonial.company}.{' '}<time datetime={c.testimonial.date}>{date(c.testimonial.date)}</time></figcaption>
+          </figure>
+        )
+        : c.testimonial === undefined && <><Pending>{L.pendingTestimonial}</Pending>{' '}</>}
+
+      <p class="case-service">{L.service} <a href={routes.b2b[lang]}>{L.serviceLink}</a>.</p>
+    </div></div>{' '}
+
+    {(prev || next) && (
+      <nav class="container case-pager" aria-label={L.moreTitle}>
+        {prev && <a class="case-pager-link" href={casePath(prev.data.project.id, lang)} rel="prev"><span class="case-pager-label">{L.prev}</span>{' '}<span class="case-pager-name">{prevName}</span></a>}
+        {next && <a class="case-pager-link case-pager-link--next" href={casePath(next.data.project.id, lang)} rel="next"><span class="case-pager-label">{L.next}</span>{' '}<span class="case-pager-name">{nextName}</span></a>}
+      </nav>
+    )}
+  </article>
+
+  <section class="page-cta section">
+    <div class="container page-cta-inner">
+      <h2 class="contact-heading">{L.ctaTitle}</h2>
+      <a class="btn btn--dark" href={routes.contact[lang]}>{L.cta}</a>
+    </div>
+  </section>
+</Base>

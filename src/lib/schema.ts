@@ -1,4 +1,4 @@
-import { SITE, absolute, type Lang } from '../i18n/routes';
+import { SITE, absolute, routes, type Lang } from '../i18n/routes';
 
 const PERSON_ID = `${SITE}/#person`;
 const WEBSITE_ID = `${SITE}/#website`;
@@ -7,12 +7,12 @@ const personText = {
   es: {
     jobTitle: 'Desarrollador Shopify Plus y B2B freelance',
     description:
-      'Desarrollador front-end freelance especializado en Shopify Plus, español y con base en Madrid. Construye tiendas mayoristas B2B, Shopify Functions en JavaScript y Rust, extensiones de checkout y de cuenta de cliente, y apps embebidas a medida. Trabaja con Shopify desde 2021 y como freelance desde 2022.',
+      'Desarrollador Shopify Plus freelance en Madrid, España. Especialista en B2B, Shopify Functions y Checkout Extensibility. Trabaja con Shopify desde 2021 y como freelance desde 2022.',
   },
   en: {
     jobTitle: 'Freelance Shopify Plus & B2B Developer',
     description:
-      'Spanish freelance Shopify Plus front-end developer based in Madrid. Builds B2B wholesale storefronts, Shopify Functions in JavaScript and Rust, checkout and customer account extensions, and custom embedded apps. Working with Shopify since 2021 and freelancing since 2022.',
+      'Freelance Shopify Plus developer based in Madrid, Spain. Specialist in B2B, Shopify Functions and Checkout Extensibility. Working with Shopify since 2021 and freelancing since 2022.',
   },
 };
 
@@ -60,8 +60,12 @@ export const webPage = (opts: {
   description: string;
   lang: Lang;
   dateModified: string;
+  mainEntity?: string; // @id of the node the page is about (a service, a case study)
 }) => {
   const url = absolute(opts.path);
+  const subject = opts.mainEntity
+    ? { mainEntity: { '@id': opts.mainEntity } }
+    : opts.type === 'ProfilePage' ? { mainEntity: { '@id': PERSON_ID } } : { about: { '@id': PERSON_ID } };
   return {
     '@type': opts.type,
     '@id': `${url}#webpage`,
@@ -71,7 +75,69 @@ export const webPage = (opts: {
     inLanguage: opts.lang,
     isPartOf: { '@id': WEBSITE_ID },
     dateModified: opts.dateModified,
-    ...(opts.type === 'ProfilePage' ? { mainEntity: { '@id': PERSON_ID } } : { about: { '@id': PERSON_ID } }),
+    ...subject,
+  };
+};
+
+const AREA_SERVED = [
+  { '@type': 'Country', name: 'Spain' },
+  { '@type': 'Place', name: 'European Union' },
+];
+
+// A service page (plan 1.5). The Offer gets a priceSpecification once prices are published.
+export const service = (opts: { path: string; lang: Lang; name: string; serviceType: string; description: string }) => {
+  const url = absolute(opts.path);
+  const id = `${url}#service`;
+  return {
+    '@type': 'Service',
+    '@id': id,
+    url,
+    name: opts.name,
+    serviceType: opts.serviceType,
+    description: opts.description,
+    provider: { '@id': PERSON_ID },
+    areaServed: AREA_SERVED,
+    offers: {
+      '@type': 'Offer',
+      url: absolute(routes.contact[opts.lang]),
+      itemOffered: { '@id': id },
+      offeredBy: { '@id': PERSON_ID },
+      areaServed: AREA_SERVED,
+    },
+  };
+};
+
+// A case study page: the work itself, credited to the person and about the client.
+export const caseStudy = (opts: {
+  path: string;
+  lang: Lang;
+  headline: string;
+  description: string;
+  client: string;
+  clientUrl?: string;
+  year: string;
+  keywords: string[];
+  image?: string;
+  datePublished: string;
+  dateModified: string;
+}) => {
+  const url = absolute(opts.path);
+  return {
+    '@type': 'CreativeWork',
+    '@id': `${url}#case`,
+    url,
+    headline: opts.headline,
+    abstract: opts.description,
+    inLanguage: opts.lang,
+    dateCreated: opts.year.slice(0, 4),
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    keywords: opts.keywords.join(', '),
+    ...(opts.image ? { image: absolute(opts.image) } : {}),
+    author: { '@id': PERSON_ID },
+    creator: { '@id': PERSON_ID },
+    about: { '@type': 'Organization', name: opts.client, ...(opts.clientUrl ? { url: opts.clientUrl } : {}) },
+    isPartOf: { '@id': `${url}#webpage` },
   };
 };
 
@@ -87,7 +153,7 @@ export const breadcrumbs = (items: { name: string; path: string }[]) => ({
 
 export const creativeWorks = (
   pagePath: string,
-  projects: { slug: string; name: string; client: string; url?: string; year: string; description: string; keywords: string[] }[],
+  projects: { slug: string; name: string; client: string; url?: string; year: string; description: string; keywords: string[]; caseUrl?: string }[],
 ) => ({
   '@type': 'ItemList',
   itemListElement: projects.map((p, i) => ({
@@ -96,7 +162,7 @@ export const creativeWorks = (
     item: {
       '@type': 'CreativeWork',
       '@id': `${absolute(pagePath)}#${p.slug}`,
-      url: `${absolute(pagePath)}#${p.slug}`,
+      url: p.caseUrl ? absolute(p.caseUrl) : `${absolute(pagePath)}#${p.slug}`,
       name: p.name,
       description: p.description,
       dateCreated: p.year.slice(0, 4),

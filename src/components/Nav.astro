@@ -9,10 +9,24 @@ const other: Lang = lang === 'es' ? 'en' : 'es';
 const home = routes.home[lang];
 // On the home page the CTA scrolls to the contact section; elsewhere it opens the contact page.
 const ctaHref = route === 'home' ? '#contact' : routes.contact[lang];
+// Service pages that exist in this language (the English Shopify Plus page comes in batch 2).
+const services = [
+  { key: 'b2b', label: s.navB2b, href: routes.b2b[lang] },
+  { key: 'plus', label: s.navPlus, href: lang === 'es' ? routes.plus.es : undefined },
+].filter((x): x is { key: RouteKey; label: string; href: string } => Boolean(x.href));
+const inServices = services.some((x) => x.key === route);
 ---
 <header class="nav" id="nav">
   <div class="nav-inner">
     <nav class="nav-left" aria-label={lang === 'es' ? 'Principal' : 'Main'}>
+      <div class="nav-services">
+        <button type="button" class="nav-services-toggle" aria-expanded="false" aria-controls="nav-services-list" data-current={inServices ? 'true' : undefined}>
+          {s.navServices}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="nav-services-list" id="nav-services-list">
+          {services.map((x) => <li><a href={x.href} aria-current={route === x.key ? 'page' : undefined}>{x.label}</a></li>)}
+        </ul>
+      </div>
       <a href={routes.projects[lang]} aria-current={route === 'projects' ? 'page' : undefined}>{s.navProjects}</a>
       <a href={routes.code[lang]} aria-current={route === 'code' ? 'page' : undefined}>{s.navCode}</a>
       <a href={routes.about[lang]} aria-current={route === 'about' ? 'page' : undefined}>{s.navAbout}</a>
@@ -22,7 +36,7 @@ const ctaHref = route === 'home' ? '#contact' : routes.contact[lang];
       <img src="/assets/logo/logo-black.svg" alt="Nicolás Mateos" class="nav-logo-img" width="154" height="22" />
     </a>
     <div class="nav-right">
-      <a href={switchHref ?? routes[route][other]} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>
+      <a href={switchHref ?? routes.home[other]} class="nav-lang" hreflang={other} lang={other}><span aria-hidden="true">{other.toUpperCase()}</span><span class="visually-hidden">{s.switchLabel}</span></a>
       <a href={ctaHref} class="nav-cta">{s.cta}</a>
     </div>
   </div>

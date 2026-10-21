@@ -7,10 +7,19 @@
 /projects /en/projects/ 301
 # Page URLs without the trailing slash: permanent instead of the default 307.
 /proyectos /proyectos/ 301
+/proyectos/emolo-b2b /proyectos/emolo-b2b/ 301
+/proyectos/vidal-vidal-b2b /proyectos/vidal-vidal-b2b/ 301
+/proyectos/ivb-wellness-b2b /proyectos/ivb-wellness-b2b/ 301
+/shopify-b2b /shopify-b2b/ 301
+/shopify-plus /shopify-plus/ 301
 /sobre-mi /sobre-mi/ 301
 /contacto /contacto/ 301
 /en /en/ 301
 /en/projects /en/projects/ 301
+/en/projects/emolo-b2b /en/projects/emolo-b2b/ 301
+/en/projects/vidal-vidal-b2b /en/projects/vidal-vidal-b2b/ 301
+/en/projects/ivb-wellness-b2b /en/projects/ivb-wellness-b2b/ 301
+/en/shopify-b2b-developer /en/shopify-b2b-developer/ 301
 /en/about /en/about/ 301
 /en/contact /en/contact/ 301
 /projects/* /en/projects/ 301

@@ -1,11 +1,15 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { routes, absolute, updated } from '../i18n/routes';
+import { routes, absolute, updated, casePath } from '../i18n/routes';
 import { allPosts } from '../lib/posts';
 
 // Plain factual summary for tools that read /llms.txt. Generated from the same data as the pages.
 export const GET: APIRoute = async () => {
   const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+  const order = Object.fromEntries(projects.map((p) => [p.id, p.data.order]));
+  const cases = (await getCollection('cases', (c) => c.id.startsWith('en/')))
+    .sort((a, b) => order[a.data.project.id] - order[b.data.project.id]);
+  const lastCase = cases.map((c) => c.data.updated).sort().at(-1) ?? '';
   const posts = (await allPosts()).filter((post) => !post.entry.data.draft);
   const articles = (lang: 'es' | 'en') =>
     posts
@@ -14,23 +18,29 @@ export const GET: APIRoute = async () => {
   const lines = [
     '# Nicolás Mateos',
     '',
-    '> Spanish freelance Shopify Plus and B2B front-end developer based in Madrid, Spain, working remotely. On Shopify since 2021 and freelancing since 2022. Since October 2024 also the sole front-end developer at a B2B-focused Shopify Plus agency whose client storefronts add up to over €36M in annual GMV. Works in Spanish and English with brands and agencies in Spain and the rest of Europe.',
+    '> Freelance Shopify Plus developer based in Madrid, Spain. Specialist in B2B, Shopify Functions and Checkout Extensibility. On Shopify since 2021 and freelancing since 2022. Since October 2024 also the sole front-end developer at a B2B-focused Shopify Plus agency whose client storefronts add up to over €36M in annual GMV. Works remotely in Spanish and English with brands and agencies in Spain and the rest of Europe.',
     '',
     'Specialties: B2B wholesale storefronts (Companies, catalogs, price lists), Shopify Functions in JavaScript and Rust, Checkout Extensibility and customer account extensions, custom embedded apps (Node.js, Express, Shopify CLI), GraphQL integrations, Core Web Vitals.',
     '',
     'Contact: nicolasmhbusiness@gmail.com',
     '',
-    `Last updated: ${Object.values(updated).sort().at(-1)}`,
+    `Last updated: ${[...Object.values(updated), lastCase].sort().at(-1)}`,
     '',
     '## Pages',
     '',
     `- [Home (Spanish)](${absolute(routes.home.es)}): desarrollador Shopify freelance en España`,
     `- [Home (English)](${absolute(routes.home.en)}): freelance Shopify Plus and B2B developer in Spain`,
+    `- [Shopify B2B development](${absolute(routes.b2b.en)}): wholesale portals with or without Shopify Plus, B2B features by plan (Spanish: ${absolute(routes.b2b.es)})`,
+    `- [Shopify Plus development, Spanish](${absolute(routes.plus.es)}): Shopify Functions, Checkout Extensibility, Shopify Scripts migration FAQ`,
     `- [Projects](${absolute(routes.projects.en)}): every project with client, year, scope and stack (Spanish: ${absolute(routes.projects.es)})`,
     `- [Code](${absolute(routes.code.en)}): public repositories, three annotated B2B patterns and how this site is built (Spanish: ${absolute(routes.code.es)})`,
     `- [About](${absolute(routes.about.en)}): facts and work history (Spanish: ${absolute(routes.about.es)})`,
     `- [Blog](${absolute(routes.blog.en)}): articles on Shopify Plus, B2B, Functions and checkout (Spanish: ${absolute(routes.blog.es)})`,
     `- [Contact](${absolute(routes.contact.en)}) (Spanish: ${absolute(routes.contact.es)})`,
+    '',
+    '## Case studies',
+    '',
+    ...cases.map((c) => `- [${c.data.h1}](${absolute(casePath(c.data.project.id, 'en'))}): ${c.data.summary} (Spanish: ${absolute(casePath(c.data.project.id, 'es'))})`),
     '',
     '## Projects',
     '',

@@ -22,11 +22,12 @@ Portfolio of Nicolás Mateos, freelance Shopify Plus and B2B developer. Static s
 src/
   content/projects/*.json   one file per project (ES + EN text, images, year, URL); the order field sets the order
   content/posts/<lang>/*.md  one Markdown file per article; the folder sets the language, the file name the URL
+  content/cases/<lang>/*.md case studies, one file per language, named after the project
   content.config.ts          schema: the build fails if a field or a translation is missing
   i18n/routes.ts             URL of every page in each language, and its last-updated date
   i18n/ui.ts                 interface text, titles and meta descriptions in both languages
   views/                     page layouts shared by the ES and EN routes
-  pages/                     routes: index, proyectos, codigo, sobre-mi, blog, contacto and the same under en/
+  pages/                     routes: index, shopify-b2b, shopify-plus, proyectos (and proyectos/[slug]), codigo, sobre-mi, blog, contacto, and their en/ versions
   lib/posts.ts               reads the articles: language, URL, reading time, translation, related
   components/                hero, cards, project entries, Checkout Lab, nav, footer...
   snippets/                  the code shown on /codigo/, as real files (imported with ?raw)
@@ -67,7 +68,20 @@ the note disappears on its own once the score reaches 100, so stale excuses cann
 
 ## Add a page
 
-Add the route to `routes` in `src/i18n/routes.ts` (both languages), its title and description to `seo` in `src/i18n/ui.ts`, a view in `src/views/` and the two files in `src/pages/`. The sitemap, hreflang tags and language switch pick it up automatically.
+Add the route to `routes` in `src/i18n/routes.ts`, its title and description to `seo` in `src/i18n/ui.ts`, a view in `src/views/` and a file per language in `src/pages/`. A page can exist in Spanish only (leave out `en`, like `/shopify-plus/`): it then gets no hreflang tags and the language switch leads to the English home. The sitemap, hreflang tags and language switch pick it up automatically.
+
+Service pages (`/shopify-b2b/`, `/shopify-plus/`) share `src/views/ServiceView.astro`; their copy lives in `B2bView.astro` and `PlusView.astro`.
+
+## Add a case study
+
+1. The project must exist in `src/content/projects/`. Write `src/content/cases/es/<slug>.md` and `src/content/cases/en/<slug>.md` (copy an existing one). The build fails if one language is missing.
+2. The frontmatter holds the facts, stack, results, lessons and testimonial; the Markdown body holds the problem and the solution, with `##` headings phrased as questions.
+3. A fact left out of the frontmatter shows as pending. Set it to `false` when it is confirmed that there is nothing to say (the row or section disappears). Set `resultsDone: true` once the business metrics are in `results` or confirmed unavailable.
+4. The page appears at `/proyectos/<slug>/` and `/en/projects/<slug>/`, and the home cards, the projects page, the sitemap and `llms.txt` link to it.
+
+## Pending content
+
+`<Pending>` (`src/components/Pending.astro`) marks text that still needs real data: it shows as a yellow box on branch previews. The build fails on `master` while any page still has one (`src/integrations/pending-guard.mjs`, which reads `WORKERS_CI_BRANCH`), so a draft never reaches production. Run `PENDING_GUARD=strict npm run build` to check locally.
 
 ## Add an article
 
