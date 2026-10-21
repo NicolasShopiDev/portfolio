@@ -22,4 +22,14 @@
 /en/shopify-b2b-developer /en/shopify-b2b-developer/ 301
 /en/about /en/about/ 301
 /en/contact /en/contact/ 301
+# Hubs of the generated silos (SEO.md). The pages under them get the default redirect: there are
+# over a hundred and they are reached by link, not typed.
+/servicios /servicios/ 301
+/glosario /glosario/ 301
+/preguntas /preguntas/ 301
+/comparativas /comparativas/ 301
+/en/services /en/services/ 301
+/en/glossary /en/glossary/ 301
+/en/questions /en/questions/ 301
+/en/compare /en/compare/ 301
 /projects/* /en/projects/ 301

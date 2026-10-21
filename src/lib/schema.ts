@@ -270,3 +270,90 @@ export const faqPage = (path: string, items: { q: string; a: string }[]) => ({
     acceptedAnswer: { '@type': 'Answer', text: item.a },
   })),
 });
+
+// ---------------------------------------------------------------------------
+// The generated silos (SEO.md). The point of these nodes is extraction, not a
+// rich result: an assistant answering "what is a B2B catalog in Shopify" should
+// find one sentence, attributed to a named person, with a URL to cite.
+// ---------------------------------------------------------------------------
+
+const GLOSSARY_ID = (lang: Lang) => `${absolute(routes.glossary[lang])}#termset`;
+
+/** The glossary itself, so every term has a set to belong to. */
+export const definedTermSet = (opts: { lang: Lang; name: string; description: string }) => ({
+  '@type': 'DefinedTermSet',
+  '@id': GLOSSARY_ID(opts.lang),
+  url: absolute(routes.glossary[opts.lang]),
+  name: opts.name,
+  description: opts.description,
+  inLanguage: opts.lang,
+  isPartOf: { '@id': WEBSITE_ID },
+  author: { '@id': PERSON_ID },
+});
+
+/** One glossary entry. `description` is the definition, the sentence meant to be quoted. */
+export const definedTerm = (opts: {
+  path: string;
+  lang: Lang;
+  term: string;
+  aliases: string[];
+  description: string;
+}) => {
+  const url = absolute(opts.path);
+  return {
+    '@type': 'DefinedTerm',
+    '@id': `${url}#term`,
+    url,
+    name: opts.term,
+    ...(opts.aliases.length ? { alternateName: opts.aliases } : {}),
+    description: opts.description,
+    inLanguage: opts.lang,
+    inDefinedTermSet: { '@id': GLOSSARY_ID(opts.lang) },
+    isPartOf: { '@id': `${url}#webpage` },
+  };
+};
+
+/**
+ * A page that answers one question. Marked as the page's mainEntity rather than as a FAQPage:
+ * Google restricted that rich result to a handful of sectors, and what matters here is that the
+ * question and its answer are machine-readable and credited to a person.
+ */
+export const question = (opts: {
+  path: string;
+  lang: Lang;
+  question: string;
+  answer: string;
+  datePublished: string;
+  dateModified: string;
+}) => {
+  const url = absolute(opts.path);
+  return {
+    '@type': 'Question',
+    '@id': `${url}#question`,
+    url,
+    name: opts.question,
+    inLanguage: opts.lang,
+    author: { '@id': PERSON_ID },
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: opts.answer,
+      url,
+      author: { '@id': PERSON_ID },
+      dateCreated: opts.datePublished,
+      dateModified: opts.dateModified,
+    },
+  };
+};
+
+/** A generic list for a hub page: the children it links to, in the order it shows them. */
+export const itemList = (items: { path: string; name: string; description?: string }[]) => ({
+  '@type': 'ItemList',
+  numberOfItems: items.length,
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: absolute(item.path),
+    name: item.name,
+    ...(item.description ? { description: item.description } : {}),
+  })),
+});

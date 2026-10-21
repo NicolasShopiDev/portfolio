@@ -97,4 +97,88 @@ const cases = defineCollection({
   }),
 });
 
-export const collections = { projects, posts, cases };
+// The four generated silos (SEO.md). All four share the same shape: one Markdown file per
+// language under <collection>/<es|en>/<slug>.md, the folder sets the language, the file name sets
+// the URL, and `pair` is what ties the two languages together. Everything below is enforced at
+// build time: a missing translation, a title Google would truncate or a `related` pointing at
+// nothing all fail the build instead of shipping.
+const paired = {
+  // Same value in both languages: pairs them for hreflang, the language switch and `related`.
+  pair: z.string().min(1),
+  // Title tag (no suffix is added) and meta description, capped so Google cannot truncate them.
+  seoTitle: z.string().min(1).max(65),
+  description: z.string().min(70).max(165),
+  // Target search term. One intention per URL: if two files share it, one of them is redundant.
+  keyword: z.string().min(1),
+  // `pair` values of up to three siblings in the same collection, linked at the end of the page.
+  related: z.array(z.string()).max(3).default([]),
+  // `pair` values of glossary terms this page mentions, linked in a "see also" block.
+  terms: z.array(z.string()).max(6).default([]),
+  updated: isoDate,
+  // The day the platform facts on the page were last checked against Shopify's documentation.
+  verified: isoDate.optional(),
+  draft: z.boolean().default(false),
+};
+
+const pairedLoader = (base: string) => glob({ pattern: '{es,en}/*.md', base });
+
+// Glossary: one platform concept per URL. `answer` is the definition, in one or two sentences,
+// and it is what ends up in the DefinedTerm schema and in the first paragraph. It is the sentence
+// an assistant quotes, so it has to stand on its own without the rest of the page.
+const terms = defineCollection({
+  loader: pairedLoader('./src/content/terms'),
+  schema: z.object({
+    ...paired,
+    term: z.string().min(1),
+    // Other names the same thing goes by, including the English one on Spanish pages.
+    aliases: z.array(z.string()).max(6).default([]),
+    category: z.enum(['b2b', 'functions', 'checkout', 'theme', 'api', 'plan']),
+    answer: z.string().min(80).max(400),
+  }),
+});
+
+// Questions: a real question per URL, from BLOG-RADAR. `answer` is the two sentences that go
+// above everything else. If the answer needs more than ~600 words it is an article, not a question.
+const questions = defineCollection({
+  loader: pairedLoader('./src/content/questions'),
+  schema: z.object({
+    ...paired,
+    question: z.string().min(1),
+    category: z.enum(['b2b', 'functions', 'checkout', 'plan', 'cost', 'hiring', 'theme']),
+    answer: z.string().min(80).max(500),
+  }),
+});
+
+// Comparisons: two options, a table of real differences, and a recommendation that commits.
+const compare = defineCollection({
+  loader: pairedLoader('./src/content/compare'),
+  schema: z.object({
+    ...paired,
+    a: z.string().min(1),
+    b: z.string().min(1),
+    // The recommendation, in one or two sentences. "It depends on your needs" is not an answer.
+    verdict: z.string().min(80).max(500),
+    rows: z
+      .array(z.object({ criterion: z.string().min(1), a: z.string().min(1), b: z.string().min(1) }))
+      .min(3),
+  }),
+});
+
+// Service pages, long tail. The two flagship ones (/shopify-b2b/, /shopify-plus/) are hand-built
+// views instead, because they carry their own layout; these share ServiceDocView.
+const services = defineCollection({
+  loader: pairedLoader('./src/content/services'),
+  schema: z.object({
+    ...paired,
+    label: z.string().min(1),
+    h1: z.string().min(1),
+    lead: z.string().min(80).max(500),
+    serviceName: z.string().min(1),
+    serviceType: z.string().min(1),
+    // Project slugs with a case study, shown as cards. Validated against the projects collection.
+    cases: z.array(z.string()).max(3).default([]),
+    faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) })).min(2).max(6),
+  }),
+});
+
+export const collections = { projects, posts, cases, terms, questions, compare, services };

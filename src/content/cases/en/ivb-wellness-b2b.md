@@ -1,6 +1,6 @@
 ---
 project: ivb-wellness-b2b
-title: 'IVB Wellness Lab: Shopify B2B Portal for Pharmacies | Nicolás Mateos'
+title: 'IVB Wellness: Shopify B2B Portal for Pharmacies | Nicolás Mateos'
 description: 'B2B ordering portal for a supplements lab: volume tiers configured from a metafield, a multi-variant order table and purchase locked to company accounts.'
 h1: 'IVB Wellness Lab: a Shopify B2B portal for pharmacies with volume-tier pricing'
 summary: "IVB Wellness Lab is a Spanish supplements lab stocked in more than 3,000 pharmacies. Its B2B ordering portal was built in 2026 on the Enterprise theme from the brand's Figma designs: pharmacies buy on volume tiers, see their tier across the store, and the client changes the thresholds from the admin."

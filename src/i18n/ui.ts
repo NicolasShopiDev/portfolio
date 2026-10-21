@@ -89,6 +89,43 @@ export const ui = {
     identity: 'Desarrollador Shopify Plus freelance en Madrid, España. Especialista en B2B, Shopify Functions y Checkout Extensibility.',
     footerBio: 'Desarrollador Shopify Plus freelance en Madrid, España. Especialista en B2B, Shopify Functions y Checkout Extensibility. Trabajando con Shopify desde 2021.',
     footerRights: 'Todos los derechos reservados.',
+
+    // Los silos generados (SEO.md): servicios, glosario, preguntas y comparativas.
+    servicesHeading: 'Lo que hago',
+    servicesIntro: 'Cada cosa que me encargan, con lo que incluye, lo que tarda y en qué proyecto la he hecho antes. Si lo que buscas no está aquí, pregúntame: lo raro es que no lo haya tocado.',
+    glossaryHeading: 'Glosario de Shopify',
+    glossaryIntro: 'Los términos que aparecen en cualquier presupuesto de Shopify Plus o B2B, explicados en una frase y con el límite real de la plataforma. Cada ficha dice el día que se comprobó el dato, porque Shopify cambia los planes cada pocos meses.',
+    questionsHeading: 'Preguntas sobre Shopify',
+    questionsIntro: 'Preguntas que me hacen por email, en los foros o en la primera llamada, respondidas en las dos primeras frases. Las que dan para mil palabras están en el blog.',
+    compareHeading: 'Comparativas',
+    compareIntro: 'Las decisiones que hay que tomar antes de empezar un proyecto, con la tabla de diferencias y lo que elegiría yo. Sin "depende de tus necesidades".',
+    docRelated: 'Relacionado',
+    docTerms: 'En el glosario',
+    docVerified: 'Datos comprobados el',
+    docAnswerLabel: 'Respuesta corta',
+    compareVerdict: 'Qué elegiría yo',
+    compareTable: 'Las diferencias',
+    compareCriterion: 'Qué comparamos',
+    glossaryAll: 'Ver el glosario completo',
+    questionsAll: 'Ver todas las preguntas',
+    compareAll: 'Ver todas las comparativas',
+    servicesAll: 'Ver todos los servicios',
+    categories: {
+      b2b: 'B2B y mayorista',
+      functions: 'Shopify Functions',
+      checkout: 'Checkout y cuentas',
+      theme: 'Temas y front-end',
+      api: 'APIs e integraciones',
+      plan: 'Planes y límites',
+      cost: 'Precios y presupuestos',
+      hiring: 'Contratar a alguien',
+    },
+    taxonomyTopic: 'Artículos sobre',
+    taxonomySector: 'Proyectos del sector',
+    taxonomyType: 'Proyectos de tipo',
+    taxonomyProjectsHeading: 'Los proyectos',
+    taxonomyPostsHeading: 'Los artículos',
+    taxonomyEmpty: 'Todavía no hay nada aquí.',
   },
   en: {
     skip: 'Skip to main content',
@@ -178,6 +215,43 @@ export const ui = {
     identity: 'Freelance Shopify Plus developer based in Madrid, Spain. Specialist in B2B, Shopify Functions and Checkout Extensibility.',
     footerBio: 'Freelance Shopify Plus developer based in Madrid, Spain. Specialist in B2B, Shopify Functions and Checkout Extensibility. Building on Shopify since 2021.',
     footerRights: 'All rights reserved.',
+
+    // The generated silos (SEO.md): services, glossary, questions and comparisons.
+    servicesHeading: 'What I build',
+    servicesIntro: "Everything people hire me for, with what it includes, how long it takes and the project where I did it before. If what you need isn't listed, ask: odds are I've touched it.",
+    glossaryHeading: 'Shopify glossary',
+    glossaryIntro: 'The terms that turn up in any Shopify Plus or B2B quote, each explained in one sentence with the platform limit that actually applies. Every entry says the day the figure was checked, because Shopify changes plans every few months.',
+    questionsHeading: 'Shopify questions',
+    questionsIntro: 'Questions I get by email, in the forums or on a first call, answered in the first two sentences. The ones worth a thousand words live on the blog.',
+    compareHeading: 'Comparisons',
+    compareIntro: 'The decisions you have to make before a project starts, with a table of real differences and what I would pick. No "it depends on your needs".',
+    docRelated: 'Related',
+    docTerms: 'In the glossary',
+    docAnswerLabel: 'Short answer',
+    docVerified: 'Facts checked on',
+    compareVerdict: 'What I would pick',
+    compareTable: 'The differences',
+    compareCriterion: 'What we compare',
+    glossaryAll: 'See the full glossary',
+    questionsAll: 'See every question',
+    compareAll: 'See every comparison',
+    servicesAll: 'See every service',
+    categories: {
+      b2b: 'B2B and wholesale',
+      functions: 'Shopify Functions',
+      checkout: 'Checkout and accounts',
+      theme: 'Themes and front-end',
+      api: 'APIs and integrations',
+      plan: 'Plans and limits',
+      cost: 'Pricing and quotes',
+      hiring: 'Hiring a developer',
+    },
+    taxonomyTopic: 'Articles about',
+    taxonomySector: 'Projects in',
+    taxonomyType: 'Projects of type',
+    taxonomyProjectsHeading: 'The projects',
+    taxonomyPostsHeading: 'The articles',
+    taxonomyEmpty: 'Nothing here yet.',
   },
 } as const;
 
@@ -199,7 +273,7 @@ export const seo: { [K in RouteKey]: Record<keyof (typeof routes)[K] & Lang, Met
   b2b: {
     es: {
       title: 'Desarrollo Shopify B2B: portales mayoristas | Nicolás Mateos',
-      description: 'Portales mayoristas en Shopify, con o sin Plus: empresas, catálogos, listas de precios, precios por volumen y pedido rápido por variantes. Casos reales en joyería y farmacia.',
+      description: 'Portales mayoristas en Shopify, con Plus y sin Plus: empresas, catálogos, listas de precios, precios por volumen y pedido rápido por variantes.',
     },
     en: {
       title: 'Shopify B2B Developer for Wholesale Portals | Nicolás Mateos',
@@ -210,6 +284,46 @@ export const seo: { [K in RouteKey]: Record<keyof (typeof routes)[K] & Lang, Met
     es: {
       title: 'Desarrollador Shopify Plus: Functions y Checkout | Nicolás Mateos',
       description: 'Shopify Functions en JavaScript y Rust (precios por tramos, descuentos, validaciones), Checkout Extensibility y extensiones de cuenta de cliente para tiendas Plus.',
+    },
+  },
+  services: {
+    es: {
+      title: 'Servicios de desarrollo Shopify Plus y B2B | Nicolás Mateos',
+      description: 'Desarrollo Shopify a medida: portales B2B, Shopify Functions, Checkout Extensibility, apps embebidas, migraciones y rendimiento. Qué incluye cada cosa y qué tarda.',
+    },
+    en: {
+      title: 'Shopify Plus & B2B Development Services | Nicolás Mateos',
+      description: 'Custom Shopify development: B2B portals, Functions, Checkout Extensibility, embedded apps, migrations and Core Web Vitals. What each includes and how long it takes.',
+    },
+  },
+  glossary: {
+    es: {
+      title: 'Glosario de Shopify Plus y B2B | Nicolás Mateos',
+      description: 'Qué es cada término de Shopify Plus y B2B: catálogos, listas de precios, Functions, metacampos y Checkout Extensibility, con el límite real y su fecha.',
+    },
+    en: {
+      title: 'Shopify Plus & B2B Glossary | Nicolás Mateos',
+      description: 'What each Shopify Plus and B2B term means: catalogs, price lists, Functions, metafields and Checkout Extensibility, with the real limit and the date checked.',
+    },
+  },
+  questions: {
+    es: {
+      title: 'Preguntas frecuentes sobre Shopify | Nicolás Mateos',
+      description: 'Respuestas cortas a lo que más me preguntan de Shopify Plus y B2B: planes, límites, precios, qué necesita Plus y qué no, y cuánto cuesta cada cosa.',
+    },
+    en: {
+      title: 'Shopify Questions, Answered | Nicolás Mateos',
+      description: 'Short answers to what I get asked most about Shopify Plus and B2B: plans, limits, pricing, what needs Plus and what does not, and what the work costs.',
+    },
+  },
+  compare: {
+    es: {
+      title: 'Comparativas de Shopify: planes y alternativas | Nicolás Mateos',
+      description: 'Shopify Plus frente a Advanced, Functions frente a Scripts, B2B nativo frente a apps, Shopify frente a WooCommerce. Las diferencias y qué elegiría yo.',
+    },
+    en: {
+      title: 'Shopify Comparisons: Plans and Alternatives | Nicolás Mateos',
+      description: 'Shopify Plus vs Advanced, Functions vs Scripts, native B2B vs apps, Shopify vs WooCommerce. A table of real differences and the one I would pick.',
     },
   },
   projects: {

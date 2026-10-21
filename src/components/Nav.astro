@@ -25,6 +25,8 @@ const inServices = services.some((x) => x.key === route);
         </button>
         <ul class="nav-services-list" id="nav-services-list">
           {services.map((x) => <li><a href={x.href} aria-current={route === x.key ? 'page' : undefined}>{x.label}</a></li>)}
+          {/* The hub last: the two flagship pages are what people come for, the rest is the long tail. */}
+          <li><a href={routes.services[lang]} aria-current={route === 'services' ? 'page' : undefined}>{s.servicesAll}</a></li>
         </ul>
       </div>
       <a href={routes.projects[lang]} aria-current={route === 'projects' ? 'page' : undefined}>{s.navProjects}</a>

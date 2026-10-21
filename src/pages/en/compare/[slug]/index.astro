@@ -1,0 +1,14 @@
+---
+import ComparisonView from '../../../../views/ComparisonView.astro';
+import { allDocs } from '../../../../lib/docs';
+
+// Drafts get a page too (readable on a preview branch) but are noindex and left out of the hub,
+// the sitemap and llms.txt. The hub is what validates that both languages exist.
+export async function getStaticPaths() {
+  const docs = (await allDocs('compare')).filter((doc) => doc.lang === 'en');
+  return docs.map((doc) => ({ params: { slug: doc.slug }, props: { slug: doc.slug } }));
+}
+
+const { slug } = Astro.props;
+---
+<ComparisonView lang="en" slug={slug} />

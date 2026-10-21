@@ -1,0 +1,36 @@
+---
+// The two internal-link blocks every generated page ends with: the glossary terms it mentions and
+// its siblings in the same silo. Both lists come from the frontmatter and are validated at build
+// time (src/lib/docs.ts), so a link here is never a 404. The link text is the term or the title,
+// never "click here": it is the anchor text the target page gets credited for.
+import { t } from '../i18n/ui';
+import type { Lang } from '../i18n/routes';
+import type { Doc } from '../lib/docs';
+
+interface Props {
+  lang: Lang;
+  terms?: Doc<'terms'>[];
+  related?: { path: string; label: string }[];
+}
+const { lang, terms = [], related = [] } = Astro.props;
+const s = t(lang);
+---
+{terms.length > 0 && (
+  <nav class="doc-links" aria-labelledby="doc-terms-title">
+    <h2 class="doc-links-title" id="doc-terms-title">{s.docTerms}</h2>{' '}
+    <ul>
+      {terms.map((term) => (
+        <li><a href={term.path}>{term.entry.data.term}</a>{' — '}<span>{term.entry.data.answer}</span></li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+{related.length > 0 && (
+  <nav class="doc-links" aria-labelledby="doc-related-title">
+    <h2 class="doc-links-title" id="doc-related-title">{s.docRelated}</h2>{' '}
+    <ul>
+      {related.map((item) => <li><a href={item.path}>{item.label}</a></li>)}
+    </ul>
+  </nav>
+)}
