@@ -1300,6 +1300,81 @@
       "webp"
     ]
   },
+  "The One Percenters/TOP Banner.webp": {
+    "width": 2880,
+    "height": 1260,
+    "animated": false,
+    "base": "/img/the-one-percenters/top-banner",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The One Percenters/TOP conjunto.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/the-one-percenters/top-conjunto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The One Percenters/TOP drop.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/the-one-percenters/top-drop",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The One Percenters/TOP Grid.webp": {
+    "width": 2000,
+    "height": 1250,
+    "animated": false,
+    "base": "/img/the-one-percenters/top-grid",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
+  "The One Percenters/TOP producto.webp": {
+    "width": 2000,
+    "height": 1625,
+    "animated": false,
+    "base": "/img/the-one-percenters/top-producto",
+    "widths": [
+      400,
+      800,
+      1200
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ]
+  },
   "The villa concept/667022d7280fd18ab14a344b_TVC grid de colecciones.png": {
     "width": 2489,
     "height": 1383,

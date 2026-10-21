@@ -1,0 +1,64 @@
+{
+  "order": 4,
+  "name": "The One Percenters",
+  "client": "The One Percenters",
+  "year": "2026",
+  "url": "https://www.theonepercenters.co.uk/",
+  "platform": "shopify",
+  "badge": "Shopify",
+  "slogan": "The fear of being average",
+  "tags": {
+    "en": [
+      "Shopify",
+      "JavaScript",
+      "Klaviyo",
+      "Streetwear"
+    ],
+    "es": [
+      "Shopify",
+      "JavaScript",
+      "Klaviyo",
+      "Streetwear"
+    ]
+  },
+  "type": {
+    "en": "Brand Storefront",
+    "es": "Tienda de marca"
+  },
+  "role": {
+    "en": "Store for The One Percenters, a British streetwear label that sells in drops. It started from an off-the-shelf theme and ended up rewritten almost end to end, so the work was CSS, JavaScript and front-end performance rather than Liquid plumbing. For months before DROP 001 the storefront was closed, which made the password page the whole shop window: it was built from scratch, with its own layout, to turn traffic into a waiting list. Klaviyo was set up behind it, from the onsite embed to the pop-up and the lists the page fed.",
+    "es": "Tienda de The One Percenters, marca británica de streetwear que vende por drops. Salió de un tema de catálogo y acabó reescrita casi de punta a punta, así que el trabajo fue de CSS, JavaScript y rendimiento de front, no de fontanería en Liquid. Durante meses, antes del DROP 001, la tienda estuvo cerrada, y eso convirtió la página de contraseña en todo el escaparate: se hizo desde cero, con su propio layout, para convertir el tráfico en lista de espera. Detrás quedó Klaviyo montado entero, del embed en la tienda al pop-up y a las listas que alimentaba esa página."
+  },
+  "detail": {
+    "en": "The password page does not reuse the store's layout: it has its own, with four stylesheets, four deferred scripts and preconnects to the CDN and the font host, which is all a single screen needs. Over a full-bleed image it reads DROP 001, Private Members Only, and offers two doors: join the waiting list, or enter the password if you already have it. A small script gives it the two touches that sell the idea of a members' club: the blocks fade in one after another, 300 ms and then 150 ms apart, and the page answers with sound, a tick when you submit and a clack when you focus a field, each one cloned per event so fast typing never cuts the previous sound off. Once the drop opened, the same idea moved to the product page: Complete the Fit is a custom element that sells the outfit rather than the garment. It subscribes to the theme's variantChange event, so choosing a size on the hoodie mirrors that size onto the tee and the sweatpants, each with its own selector, and a single button sends the three to the cart with 10% off. The same block travels to the cart and the cart drawer. Underneath, every section loads only its own CSS through a render helper, and every script is deferred.",
+    "es": "La página de contraseña no reutiliza el layout de la tienda: tiene el suyo, con cuatro hojas de estilo, cuatro scripts diferidos y preconexiones al CDN y al host de las tipografías, que es todo lo que necesita una sola pantalla. Sobre una imagen a sangre se lee DROP 001, Private Members Only, y ofrece dos puertas: apuntarse a la lista de espera o entrar con la contraseña si ya la tienes. Un script pequeño le da los dos detalles que venden la idea de club: los bloques aparecen uno detrás de otro, a 300 ms y luego cada 150 ms, y la página responde con sonido, un tic al enviar y un clac al entrar en un campo, cada uno clonado por evento para que escribir rápido no corte el sonido anterior. Con el drop ya abierto, la misma idea se mudó a la ficha: «Complete the Fit» es un custom element que vende el conjunto en vez de la prenda. Se suscribe al evento variantChange del tema, así que elegir talla en la sudadera la refleja en la camiseta y en el pantalón, cada uno con su selector, y un único botón manda los tres al carrito con un 10 % de descuento. El mismo bloque viaja al carrito y al carrito lateral. Por debajo, cada sección carga solo su CSS mediante un snippet que lo resuelve, y todos los scripts van diferidos."
+  },
+  "images": {
+    "dir": "The One Percenters",
+    "grid": "TOP Grid.webp",
+    "banner": "TOP Banner.webp",
+    "highlights": [
+      {
+        "file": "TOP producto.webp",
+        "alt": {
+          "es": "Ficha de la sudadera 001 Members Club de The One Percenters, con tallas, pago y el bloque Complete the Fit",
+          "en": "The One Percenters 001 Members Club hoodie page, with sizes, checkout buttons and the Complete the Fit block"
+        }
+      },
+      {
+        "file": "TOP conjunto.webp",
+        "alt": {
+          "es": "Bloque Complete the Fit en detalle: camiseta y pantalón con su propia talla, total del conjunto y un 10 % de descuento",
+          "en": "Complete the Fit block in detail: tee and sweatpants each with their own size, outfit total and a 10% discount"
+        }
+      },
+      {
+        "file": "TOP drop.webp",
+        "alt": {
+          "es": "Portada de The One Percenters con la parrilla de la Founders Collection y el bloque partido del DROP 001",
+          "en": "The One Percenters home page with the Founders Collection grid and the split DROP 001 block"
+        }
+      }
+    ]
+  }
+}
