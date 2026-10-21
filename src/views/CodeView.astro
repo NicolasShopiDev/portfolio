@@ -63,7 +63,7 @@ const copy = {
         id: 'case-pack',
         title: 'Cajas completas en el checkout',
         problem: 'El mayorista pide 7 unidades de algo que sale del almacén en cajas de 6. O alguien abre una caja, o se arregla por teléfono dos días después. Una Function de validación lo corta en el checkout y dice exactamente qué cambiar.',
-        trap: 'El target también se ejecuta mientras se edita el carrito: sin la salida temprana, el comprador no puede teclear 7 de camino a 12. Y hay presupuesto —11 millones de instrucciones y 128 kB de entrada—, así que la consulta pide solo los cuatro campos que la función mira.',
+        trap: 'El target también se ejecuta mientras se edita el carrito: sin la salida temprana, el comprador no puede teclear 7 de camino a 12. Y hay presupuesto (11 millones de instrucciones y 128 kB de entrada), así que la consulta pide solo los cuatro campos que la función mira.',
         files: [
           { name: 'src/cart_validations_generate_run.js', code: casePack, lang: 'js' },
           { name: 'src/run.graphql', code: casePackInput, lang: 'graphql' },
@@ -96,7 +96,7 @@ const copy = {
     // Shown only while the note is still true, which is while the points are still missing.
     scoreNotes: {
       performance: '',
-      accessibility: 'El Checkout Lab se quedaba atenuado mientras esperaba a cargar, y el auditor leía ese gris como si fuera texto definitivo. Ahora espera en inert —ni foco de teclado ni lectura de pantalla hasta que responde—, así que la próxima medición debería marcar 100.',
+      accessibility: 'El Checkout Lab se quedaba atenuado mientras esperaba a cargar, y el auditor leía ese gris como si fuera texto definitivo. Ahora espera en inert (ni foco de teclado ni lectura de pantalla hasta que responde), así que la próxima medición debería marcar 100.',
       bestPractices: '',
       seo: '',
     },
@@ -142,7 +142,7 @@ const copy = {
         id: 'case-pack',
         title: 'Full boxes at checkout',
         problem: 'A wholesale buyer orders 7 units of something that leaves the warehouse in boxes of 6. Either somebody opens a box, or it gets sorted out on the phone two days later. A validation Function stops it at checkout and says exactly what to change.',
-        trap: 'The target also runs while the cart is being edited: without the early return, the buyer cannot type 7 on the way to 12. And there is a budget — 11 million instructions and a 128 kB input — so the query asks for the four fields the function actually reads.',
+        trap: 'The target also runs while the cart is being edited: without the early return, the buyer cannot type 7 on the way to 12. And there is a budget (11 million instructions and a 128 kB input), so the query asks for the four fields the function actually reads.',
         files: [
           { name: 'src/cart_validations_generate_run.js', code: casePack, lang: 'js' },
           { name: 'src/run.graphql', code: casePackInput, lang: 'graphql' },
@@ -152,7 +152,7 @@ const copy = {
         id: 'quick-order',
         title: 'Forty lines, one request',
         problem: 'A B2B order pad with 40 SKUs and a quantity box on every row. One request per line makes the cart flash forty times, and the last response can land before the first. The Cart API takes an array, and it hands back the HTML of the sections that need repainting.',
-        trap: 'AbortController: the second click cancels the first instead of racing it. And when a variant is sold out, the 422 carries a readable description — showing it is cheaper than answering the email.',
+        trap: 'AbortController: the second click cancels the first instead of racing it. And when a variant is sold out, the 422 carries a readable description. Showing it is cheaper than answering the email.',
         files: [{ name: 'assets/quick-order.js', code: quickOrder, lang: 'js' }],
       },
       {
@@ -175,7 +175,7 @@ const copy = {
     // Shown only while the note is still true, which is while the points are still missing.
     scoreNotes: {
       performance: '',
-      accessibility: 'The Checkout Lab used to dim itself while waiting to load, and the auditor read that grey as finished text. It now waits inert instead — no keyboard focus and no screen-reader output until it answers — so the next measurement should read 100.',
+      accessibility: 'The Checkout Lab used to dim itself while waiting to load, and the auditor read that grey as finished text. It now waits inert instead (no keyboard focus and no screen-reader output until it answers), so the next measurement should read 100.',
       bestPractices: '',
       seo: '',
     },

@@ -10,7 +10,7 @@ export const GET: APIRoute = async () => {
   const articles = (lang: 'es' | 'en') =>
     posts
       .filter((post) => post.lang === lang)
-      .map((post) => `- [${post.entry.data.title}](${absolute(post.path)}) — ${post.entry.data.date}: ${post.entry.data.description}`);
+      .map((post) => `- [${post.entry.data.title}](${absolute(post.path)}) (${post.entry.data.date}): ${post.entry.data.description}`);
   const lines = [
     '# Nicolás Mateos',
     '',
