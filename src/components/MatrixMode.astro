@@ -73,6 +73,7 @@ const copy = {
     let canvas = null;
     let rain = null;
     let audio = null;
+    let fading = null;   // the track on its way out, still audible until its fade ends
     let fadeTimer = 0;
     let settle = 0;
 
@@ -106,7 +107,9 @@ const copy = {
       requestAnimationFrame(() => canvas.classList.add('is-on'));
 
       // The click is the gesture that lets a browser play sound. A missing or blocked file
-      // only costs the music: the page still flips.
+      // only costs the music: the page still flips. A track still fading out from a quick
+      // off and on goes first, or the new fade would freeze it halfway, still playing.
+      hush();
       audio = new Audio(AUDIO);
       audio.loop = true;
       audio.volume = 0;
@@ -115,6 +118,21 @@ const copy = {
 
       updateSectionRain();
       label(true);
+    }
+
+    function stopTrack(track) {
+      track.pause();
+      // Not src = "": that would send the browser fetching the page itself.
+      track.removeAttribute('src');
+      track.load();
+      if (fading === track) fading = null;
+    }
+
+    // Cuts the music on the spot, fade or no fade. A hidden tab gets no animation frames, so a
+    // fade running there would never reach the end and the music would keep playing.
+    function hush() {
+      cancelAnimationFrame(fadeTimer);
+      if (fading) stopTrack(fading);
     }
 
     function off() {
@@ -134,12 +152,8 @@ const copy = {
 
       if (audio) {
         const track = audio;
-        volumeTo(track, 0, FADE_OUT, () => {
-          track.pause();
-          // Not src = "": that would send the browser fetching the page itself.
-          track.removeAttribute('src');
-          track.load();
-        });
+        fading = track;
+        volumeTo(track, 0, FADE_OUT, () => stopTrack(track));
         audio = null;
       }
 
@@ -156,6 +170,13 @@ const copy = {
     toggle.addEventListener('click', () => (root.classList.contains('matrix') ? off() : on()));
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && root.classList.contains('matrix')) off();
+    });
+    // Switching to another tab unplugs, and silences a fade-out still on its way down:
+    // nobody wants music from a tab they can't see.
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) return;
+      if (root.classList.contains('matrix')) off();
+      hush();
     });
   }
 </script>
