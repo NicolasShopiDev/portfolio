@@ -2,6 +2,8 @@
 pair: 'migration-to-shopify'
 label: 'Migración'
 h1: 'Migración a Shopify desde otra plataforma'
+pitch: 'Pasar a Shopify sin perder datos ni posiciones en Google'
+topic: 'other'
 lead: 'Migraciones a Shopify desde WooCommerce, PrestaShop, Magento o un desarrollo propio, con el front-end rehecho y, lo que más duele si se olvida, las URLs redirigidas una por una.'
 serviceName: 'Migración a Shopify'
 serviceType: 'Migración de plataforma de ecommerce'

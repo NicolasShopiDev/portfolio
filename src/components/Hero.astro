@@ -1,7 +1,7 @@
 ---
 import Picture from './Picture.astro';
 import BrowserBar from './BrowserBar.astro';
-import type { Lang } from '../i18n/routes';
+import { b2bPortalsPath, type Lang } from '../i18n/routes';
 import { t } from '../i18n/ui';
 
 interface Props { lang: Lang }
@@ -23,10 +23,11 @@ const mocks = [
         <span class="hero-name">Nicolás<br> Mateos</span>{' '}
         <span class="hero-role" set:html={s.heroRole} />
       </h1>
+      <p class="hero-pitch">{s.heroPitch}</p>
       <p class="hero-proof" set:html={s.heroProof} />
       <div class="hero-actions">
-        <a href="#projects" class="btn btn--dark">{s.heroProjects}</a>
-        <a href="#contact" class="btn btn--outline">{s.heroContact}</a>
+        <a href="#contact" class="btn btn--dark">{s.heroContact}</a>
+        <a href={b2bPortalsPath(lang)} class="btn btn--outline">{s.ctaB2bPortals}</a>
       </div>
     </div>
     <div class="hero-visual" id="hero-visual">

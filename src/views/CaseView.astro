@@ -7,10 +7,12 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Picture from '../components/Picture.astro';
 import BrowserBar from '../components/BrowserBar.astro';
 import Pending from '../components/Pending.astro';
+import PageCta from '../components/PageCta.astro';
 import { routes, casePath, caseAlternates, absolute, type Lang } from '../i18n/routes';
 import { t } from '../i18n/ui';
 import { person, website, webPage, breadcrumbs, caseStudy, graph } from '../lib/schema';
 import { imageKey, webpUrl } from '../lib/images';
+import { secondaryCta } from '../lib/cta';
 
 interface Props { lang: Lang; entry: CollectionEntry<'cases'> }
 const { lang, entry } = Astro.props;
@@ -52,7 +54,7 @@ const L = {
     serviceLink: 'desarrollo Shopify B2B',
     prev: 'Caso anterior', next: 'Caso siguiente',
     ctaTitle: '¿Necesitas un portal mayorista así?',
-    cta: 'Escríbeme',
+    cta: 'Hablemos de tu portal B2B',
     pendingFact: 'dato que falta confirmar',
     pendingResults: 'métricas de negocio con fuente y periodo (dato del cliente o CrUX).',
     pendingLessons: 'una frase sobre qué harías distinto.',
@@ -77,7 +79,7 @@ const L = {
     serviceLink: 'Shopify B2B developer',
     prev: 'Previous case', next: 'Next case',
     ctaTitle: 'Need a wholesale portal like this?',
-    cta: 'Get in touch',
+    cta: "Let's talk about your B2B portal",
     pendingFact: 'dato que falta confirmar',
     pendingResults: 'métricas de negocio con fuente y periodo (dato del cliente o CrUX).',
     pendingLessons: 'una frase sobre qué harías distinto.',
@@ -208,10 +210,5 @@ const schema = graph(
     )}
   </article>
 
-  <section class="page-cta section">
-    <div class="container page-cta-inner">
-      <h2 class="contact-heading">{L.ctaTitle}</h2>
-      <a class="btn btn--dark" href={routes.contact[lang]}>{L.cta}</a>
-    </div>
-  </section>
+  <PageCta lang={lang} heading={L.ctaTitle} label={L.cta} topic="b2b" secondary={secondaryCta('b2b', lang)} />
 </Base>

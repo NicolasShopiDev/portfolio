@@ -1,0 +1,24 @@
+---
+// The closing call to action of an inner page: the contact button, with the visitor's topic
+// preselected when the page knows it, and a lower-commitment link beside it for whoever isn't
+// ready to write yet (see the B2B portals, try the lab).
+import { contactPath, type Lang, type Topic } from '../i18n/routes';
+
+interface Props {
+  lang: Lang;
+  heading: string;
+  label: string;
+  topic?: Topic;
+  secondary?: { href: string; label: string };
+}
+const { lang, heading, label, topic, secondary } = Astro.props;
+---
+<section class="page-cta section">
+  <div class="container page-cta-inner">
+    <h2 class="contact-heading">{heading}</h2>{' '}
+    <div class="page-cta-actions">
+      <a class="btn btn--dark" href={contactPath(lang, topic)}>{label}</a>{' '}
+      {secondary && <a class="btn btn--outline" href={secondary.href}>{secondary.label}</a>}
+    </div>
+  </div>
+</section>

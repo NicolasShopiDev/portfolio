@@ -1,25 +1,30 @@
 ---
 // Home "Servicios" block: one card per service with a link to its page (plan 1.3, internal links).
+// The title says what the service does for the business; the kicker keeps the term people search for.
 // The English Shopify Plus page is batch 2, so on /en/ that card points to the Checkout Lab instead.
-import { routes, type Lang } from '../i18n/routes';
+import { b2bPortalsPath, docPath, routes, type Lang } from '../i18n/routes';
+import { t } from '../i18n/ui';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
+const s = t(lang);
 const copy = {
   es: {
     label: 'Servicios',
-    heading: 'Qué hago',
+    heading: 'Qué resuelvo',
     items: [
-      { title: 'Portales mayoristas en Shopify B2B', text: 'Empresas, catálogos, listas de precios, precios por tramos y tablas de pedido por variantes, con o sin Shopify Plus.', href: routes.b2b.es, link: 'Desarrollo Shopify B2B' },
-      { title: 'Shopify Plus: Functions y Checkout', text: 'Shopify Functions en JavaScript y Rust, extensiones de checkout y de cuenta de cliente, y apps embebidas a medida.', href: routes.plus.es, link: 'Desarrollo Shopify Plus' },
+      { kicker: 'Shopify B2B', title: 'Tus clientes mayoristas piden solos, con sus precios', text: 'Un portal en el que cada empresa ve su catálogo, sus precios por tramos y sus condiciones de pago, y pide todas las tallas o formatos desde una tabla. Con o sin Shopify Plus.', href: routes.b2b.es, link: 'Desarrollo Shopify B2B' },
+      { kicker: 'Shopify Plus', title: 'Reglas de negocio en el carrito y el checkout, sin apps de terceros', text: 'Pedidos mínimos, descuentos que ninguna app calcula, envíos y pagos condicionados y herramientas internas dentro del admin de Shopify. Con pruebas, y el código es tuyo.', href: routes.plus.es, link: 'Desarrollo Shopify Plus' },
+      { kicker: 'Cualquier plan de Shopify', title: 'Una tienda a medida, sin necesidad de Plus ni de B2B', text: 'Temas escritos desde cero o sobre uno de pago, con secciones que tu equipo edita sin tocar código, y mejoras de velocidad o migraciones. Para tiendas de cualquier tamaño.', href: docPath('services', 'temas-shopify-a-medida', 'es'), link: 'Temas Shopify a medida' },
     ],
   },
   en: {
     label: 'Services',
-    heading: 'What I do',
+    heading: 'What I solve',
     items: [
-      { title: 'Shopify B2B wholesale portals', text: 'Companies, catalogs, price lists, volume tiers and variant order tables, with or without Shopify Plus.', href: routes.b2b.en, link: 'Shopify B2B development' },
-      { title: 'Shopify Plus: Functions and Checkout', text: 'Shopify Functions in JavaScript and Rust, checkout and customer account extensions, and custom embedded apps.', href: '#lab', link: 'Try the Checkout Lab' },
+      { kicker: 'Shopify B2B', title: 'Your trade customers order on their own, at their prices', text: 'A portal where each company sees its own catalog, volume-tier prices and payment terms, and orders every size or format from one table. With or without Shopify Plus.', href: routes.b2b.en, link: 'Shopify B2B development' },
+      { kicker: 'Shopify Plus', title: 'Business rules in cart and checkout, without third-party apps', text: 'Order minimums, discounts no app can calculate, conditional shipping and payment methods, and internal tools inside the Shopify admin. Tested, and the code is yours.', href: '#lab', link: 'Try the Checkout Lab' },
+      { kicker: 'Any Shopify plan', title: 'A custom store, no Plus or B2B required', text: 'Themes written from scratch or on top of a paid one, with sections your team edits without touching code, plus speed work and migrations. For stores of any size.', href: docPath('services', 'custom-shopify-themes', 'en'), link: 'Custom Shopify themes' },
     ],
   },
 }[lang];
@@ -31,11 +36,17 @@ const copy = {
     <ul class="services-grid">
       {copy.items.map((item) => (
         <><li class="service-card">
+          <p class="service-card-kicker">{item.kicker}</p>{' '}
           <h3 class="service-card-title">{item.title}</h3>{' '}
           <p class="service-card-text">{item.text}</p>{' '}
           <a class="text-link" href={item.href}>{item.link}</a>
         </li>{' '}</>
       ))}
-    </ul>
+    </ul>{' '}
+    <div class="services-next">
+      <a class="btn btn--dark" href="#contact">{s.heroContact}</a>{' '}
+      <a class="btn btn--outline" href={b2bPortalsPath(lang)}>{s.ctaB2bPortals}</a>{' '}
+      <a class="text-link" href={routes.services[lang]}>{s.servicesAll}</a>
+    </div>
   </div>
 </section>

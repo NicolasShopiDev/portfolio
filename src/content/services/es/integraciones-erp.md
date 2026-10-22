@@ -2,6 +2,8 @@
 pair: 'erp-integrations'
 label: 'Integraciones'
 h1: 'Integraciones de Shopify con ERP y sistemas externos'
+pitch: 'Stock, precios y pedidos sincronizados con tu ERP, sin copiar a mano'
+topic: 'integration'
 lead: 'Conecto Shopify con el ERP, el almacén o el PIM que ya tienes: stock, precios, clientes, pedidos y facturas. Lo difícil nunca es GraphQL, es decidir quién gana cuando los dos lados cambian el mismo dato.'
 serviceName: 'Integración de Shopify con sistemas externos'
 serviceType: 'Integración de sistemas'

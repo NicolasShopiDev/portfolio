@@ -2,6 +2,8 @@
 pair: 'scripts-to-functions'
 label: 'Migración'
 h1: 'Migración de Shopify Scripts a Functions'
+pitch: 'Que tus descuentos y reglas sigan funcionando tras el fin de Scripts'
+topic: 'plus'
 lead: 'Shopify Scripts dejó de ejecutarse en junio de 2026. Si tu tienda tenía descuentos, portes o métodos de pago controlados por un Script, hoy esa regla no se está aplicando. Reviso qué hacía cada Script, qué sigue hacen falta y lo reescribo como Function.'
 serviceName: 'Migración de Shopify Scripts a Shopify Functions'
 serviceType: 'Migración de software para ecommerce'

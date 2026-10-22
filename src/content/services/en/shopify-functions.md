@@ -2,6 +2,8 @@
 pair: 'functions-development'
 label: 'Shopify Functions'
 h1: 'Shopify Functions development'
+pitch: 'Complex business rules in cart and checkout, without third-party apps'
+topic: 'plus'
 lead: 'I write discount, cart validation, line transformation, shipping and payment Functions in JavaScript or Rust, with a tight input query and tests. If your business rule does not fit an App Store app, it fits here.'
 serviceName: 'Shopify Functions development'
 serviceType: 'Ecommerce software development'

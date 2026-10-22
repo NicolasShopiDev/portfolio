@@ -2,6 +2,8 @@
 pair: 'custom-apps'
 label: 'Apps'
 h1: 'Apps de Shopify a medida'
+pitch: 'Herramientas internas a medida dentro del admin de Shopify'
+topic: 'plus'
 lead: 'Apps embebidas en el admin de Shopify con Node.js, Express y el CLI, para lo que ninguna app del App Store hace: configuradores, paneles internos, lógica de catálogo o el contenedor de tus Shopify Functions.'
 serviceName: 'Desarrollo de apps de Shopify a medida'
 serviceType: 'Desarrollo de software'

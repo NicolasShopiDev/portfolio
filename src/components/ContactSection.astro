@@ -1,11 +1,18 @@
 ---
-import type { Lang } from '../i18n/routes';
+import type { Lang, Topic } from '../i18n/routes';
 import { t } from '../i18n/ui';
 
 interface Props { lang: Lang; asPage?: boolean }
 const { lang, asPage = false } = Astro.props;
 const s = t(lang);
 const Heading = asPage ? 'h1' : 'h2';
+const INTEREST: Record<Topic, string> = {
+  b2b: 'B2B wholesale portal',
+  plus: 'Shopify Plus: checkout, Functions or apps',
+  theme: 'Custom theme or store improvements (any plan)',
+  integration: 'ERP or system integration',
+  other: 'Something else',
+};
 ---
 <section class="contact section" id="contact">
   <div class="container contact-grid">
@@ -16,6 +23,16 @@ const Heading = asPage ? 'h1' : 'h2';
       <p class="contact-desc">{s.contactDesc}</p>
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/myklpqna" method="POST" novalidate>
         <input type="hidden" name="lang" value={lang} />
+        {/* The values go to the inbox in English, whatever the page language, like `source`. */}
+        <fieldset class="form-field form-choices">
+          <legend>{s.formInterest}</legend>
+          {Object.entries(s.formInterests).map(([topic, text]) => (
+            <label class="form-choice">
+              <input type="radio" name="interest" value={INTEREST[topic as Topic]} data-topic={topic} />
+              <span>{text}</span>
+            </label>
+          ))}
+        </fieldset>
         <div class="form-row">
           <div class="form-field">
             <label for="f-name">{s.formName}</label>
@@ -28,7 +45,7 @@ const Heading = asPage ? 'h1' : 'h2';
         </div>
         <div class="form-field">
           <label for="f-msg">{s.formMessage}</label>
-          <textarea id="f-msg" name="message" rows="6"></textarea>
+          <textarea id="f-msg" name="message" rows="4" placeholder={s.formMessageHint}></textarea>
         </div>
         <div class="form-field">
           <label for="f-source">{s.formSource}</label>
@@ -60,3 +77,10 @@ const Heading = asPage ? 'h1' : 'h2';
     </div>
   </div>
 </section>
+
+<script>
+  // A CTA that knows what the visitor is after links here as /contacto/#b2b: that answer comes ticked.
+  const topic = location.hash.slice(1);
+  const choice = topic && document.querySelector(`#contact-form input[data-topic="${CSS.escape(topic)}"]`);
+  if (choice) choice.checked = true;
+</script>

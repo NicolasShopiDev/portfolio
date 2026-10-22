@@ -2,6 +2,8 @@
 pair: 'custom-apps'
 label: 'Apps'
 h1: 'Custom Shopify apps'
+pitch: 'Custom internal tools inside your Shopify admin'
+topic: 'plus'
 lead: 'Apps embedded in the Shopify admin with Node.js, Express and the CLI, for what no App Store app does: configurators, internal dashboards, catalog logic, or the container for your Shopify Functions.'
 serviceName: 'Custom Shopify app development'
 serviceType: 'Software development'

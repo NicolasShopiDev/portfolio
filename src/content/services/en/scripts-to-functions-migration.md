@@ -2,6 +2,8 @@
 pair: 'scripts-to-functions'
 label: 'Migration'
 h1: 'Shopify Scripts to Functions migration'
+pitch: 'Keep your discounts and rules working now that Scripts is gone'
+topic: 'plus'
 lead: 'Shopify Scripts stopped executing in June 2026. If your store had discounts, shipping or payment methods driven by a Script, that rule is not being applied today. I audit what each Script did, what is still needed, and rewrite it as a Function.'
 serviceName: 'Shopify Scripts to Shopify Functions migration'
 serviceType: 'Ecommerce software migration'

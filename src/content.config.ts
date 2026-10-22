@@ -172,6 +172,11 @@ const services = defineCollection({
     ...paired,
     label: z.string().min(1),
     h1: z.string().min(1),
+    // What the service does for the business, in the buyer's words. The hub and the home lead
+    // with it; the h1 keeps the term people search for.
+    pitch: z.string().min(20).max(90),
+    // What the contact form preselects when the reader comes from this page.
+    topic: z.enum(['b2b', 'plus', 'theme', 'integration', 'other']),
     lead: z.string().min(80).max(500),
     serviceName: z.string().min(1),
     serviceType: z.string().min(1),

@@ -2,6 +2,8 @@
 pair: 'customer-accounts'
 label: 'Cuentas de cliente'
 h1: 'Área de cliente y extensiones de cuenta en Shopify'
+pitch: 'Que tus clientes repitan pedidos y gestionen su cuenta sin llamarte'
+topic: 'b2b'
 lead: 'El área de cliente es donde vive un comprador mayorista: su histórico, sus pedidos pendientes, su tarifa, su sede. Monto esa zona con extensiones de cuenta y el front-end que la hace útil en lugar de decorativa.'
 serviceName: 'Desarrollo del área de cliente en Shopify'
 serviceType: 'Desarrollo front-end para ecommerce'

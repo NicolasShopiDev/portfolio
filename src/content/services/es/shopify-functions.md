@@ -2,6 +2,8 @@
 pair: 'functions-development'
 label: 'Shopify Functions'
 h1: 'Desarrollo de Shopify Functions'
+pitch: 'Reglas de negocio complejas en el carrito y el checkout, sin apps de terceros'
+topic: 'plus'
 lead: 'Escribo Functions de descuento, validación de carrito, transformación de líneas y métodos de envío y de pago, en JavaScript o Rust, con su input query ajustada y sus pruebas. Si tu regla de negocio no cabe en una app del App Store, cabe aquí.'
 serviceName: 'Desarrollo de Shopify Functions'
 serviceType: 'Desarrollo de software para ecommerce'

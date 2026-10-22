@@ -2,6 +2,8 @@
 pair: 'performance'
 label: 'Performance'
 h1: 'Shopify speed and Core Web Vitals optimisation'
+pitch: 'A store that loads fast on your customers'' phones'
+topic: 'other'
 lead: 'I measure the store with real-user data, not just Lighthouse, and fix what actually costs seconds: app scripts nobody uses any more, unsized images, and theme JavaScript that blocks interaction.'
 serviceName: 'Shopify performance optimisation'
 serviceType: 'Web performance optimisation'

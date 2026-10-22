@@ -2,6 +2,8 @@
 pair: 'custom-themes'
 label: 'Themes'
 h1: 'Custom Shopify themes'
+pitch: 'A custom store your team edits without touching code'
+topic: 'theme'
 lead: 'Themes written from scratch or rewritten on top of a paid one, with sections and blocks your team uses without calling me. The real deliverable is not the design: it is that you can build a new page next Tuesday.'
 serviceName: 'Custom Shopify theme development'
 serviceType: 'Ecommerce front-end development'

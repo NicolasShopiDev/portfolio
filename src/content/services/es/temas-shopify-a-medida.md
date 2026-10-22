@@ -2,6 +2,8 @@
 pair: 'custom-themes'
 label: 'Temas'
 h1: 'Temas Shopify a medida'
+pitch: 'Una tienda a medida que tu equipo edita sin tocar código'
+topic: 'theme'
 lead: 'Temas escritos desde cero o reescritos sobre uno de pago, con secciones y bloques que tu equipo usa sin llamarme. El entregable real no es el diseño: es que puedas montar una página nueva el martes siguiente.'
 serviceName: 'Desarrollo de temas Shopify a medida'
 serviceType: 'Desarrollo front-end para ecommerce'

@@ -2,6 +2,8 @@
 pair: 'performance'
 label: 'Rendimiento'
 h1: 'Optimización de velocidad y Core Web Vitals en Shopify'
+pitch: 'Una tienda que carga rápido en el móvil de tus clientes'
+topic: 'other'
 lead: 'Mido la tienda con datos de usuarios reales, no solo con Lighthouse, y arreglo lo que de verdad cuesta segundos: scripts de apps que ya nadie usa, imágenes sin dimensionar y JavaScript del tema que bloquea la interacción.'
 serviceName: 'Optimización de rendimiento en Shopify'
 serviceType: 'Optimización web'

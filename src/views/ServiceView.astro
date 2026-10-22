@@ -4,6 +4,8 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CaseCards from '../components/CaseCards.astro';
 import Faq from '../components/Faq.astro';
+import InlineCta from '../components/InlineCta.astro';
+import PageCta from '../components/PageCta.astro';
 import Pending from '../components/Pending.astro';
 import { routes, updated, absolute, type Lang, type RouteKey } from '../i18n/routes';
 import { t } from '../i18n/ui';
@@ -38,12 +40,13 @@ const schema = graph(
   </section>{' '}
 
   <div class="container service-body"><div class="longform">
-    {copy.sections.map((section) => (
+    {copy.sections.map((section, i) => (
       <><section>
         <h2>{section.h2}</h2>{' '}
         {section.html && <Fragment set:html={section.html} />}
         {section.pending && <Pending>{section.pending}</Pending>}
-      </section>{' '}</>
+      </section>{' '}
+      {i === copy.midCta.after && <><InlineCta lang={lang} text={copy.midCta.text} label={copy.midCta.label} topic={copy.topic} />{' '}</>}</>
     ))}
   </div></div>{' '}
 
@@ -57,10 +60,5 @@ const schema = graph(
 
   <Faq title={copy.faqTitle} items={copy.faq} />{' '}
 
-  <section class="page-cta section">
-    <div class="container page-cta-inner">
-      <h2 class="contact-heading">{copy.ctaTitle}</h2>
-      <a class="btn btn--dark" href={routes.contact[lang]}>{copy.cta}</a>
-    </div>
-  </section>
+  <PageCta lang={lang} heading={copy.ctaTitle} label={copy.cta} topic={copy.topic} secondary={copy.secondary} />
 </Base>

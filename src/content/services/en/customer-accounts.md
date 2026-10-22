@@ -2,6 +2,8 @@
 pair: 'customer-accounts'
 label: 'Customer accounts'
 h1: 'Customer account area and extensions in Shopify'
+pitch: 'Customers who reorder and manage their account without calling you'
+topic: 'b2b'
 lead: 'The account area is where a wholesale buyer lives: their history, their outstanding orders, their price tier, their location. I build that area with customer account extensions and the front-end that makes it useful instead of decorative.'
 serviceName: 'Shopify customer account development'
 serviceType: 'Ecommerce front-end development'

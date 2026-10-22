@@ -69,5 +69,13 @@ export const taxonomyAlternates = (kind: TaxonomyKind, slug: Record<Lang, string
   en: taxonomyPath(kind, slug.en, 'en'),
 });
 
+// What a visitor is after. A CTA that knows it sends it as the hash (/contacto/#b2b) and the
+// contact form preselects the answer: a hash, not a query, so no crawlable copy of the page.
+export type Topic = 'b2b' | 'plus' | 'theme' | 'integration' | 'other';
+export const contactPath = (lang: Lang, topic?: Topic) => `${routes.contact[lang]}${topic ? `#${topic}` : ''}`;
+// The B2B portals among the projects: the low-commitment step next to a contact button.
+// Same slugs as the "type" taxonomy in src/data/taxonomies.ts.
+export const b2bPortalsPath = (lang: Lang) => taxonomyPath('type', lang === 'es' ? 'portales-b2b' : 'b2b-portals', lang);
+
 export const alternatesOf = (key: RouteKey): Alternates => routes[key];
 export const absolute = (p: string) => new URL(p, SITE).href;

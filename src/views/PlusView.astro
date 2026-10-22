@@ -5,6 +5,7 @@
 import ServiceView from './ServiceView.astro';
 import { routes, casePath } from '../i18n/routes';
 import { seo } from '../i18n/ui';
+import { secondaryCta } from '../lib/cta';
 import type { ServiceCopy } from '../lib/service';
 
 const FUNCTIONS = 'https://shopify.dev/docs/api/functions';
@@ -84,7 +85,14 @@ const copy: ServiceCopy = {
     },
   ],
   ctaTitle: '¿Tienes una regla de checkout que ninguna app resuelve?',
-  cta: 'Escríbeme',
+  cta: 'Cuéntame tu regla',
+  topic: 'plus',
+  secondary: secondaryCta('plus', 'es'),
+  midCta: {
+    after: 2,
+    text: '¿No sabes si tu regla cabe en una Function o necesita algo más? Descríbemela en dos líneas y te digo si se puede y cómo.',
+    label: 'Cuéntame la regla',
+  },
 };
 ---
 <ServiceView lang="es" route="plus" path={routes.plus.es} meta={seo.plus.es} copy={copy} />

@@ -2,6 +2,8 @@
 pair: 'erp-integrations'
 label: 'Integrations'
 h1: 'Shopify integrations with ERPs and external systems'
+pitch: 'Inventory, prices and orders in sync with your ERP, no copy and paste'
+topic: 'integration'
 lead: 'I connect Shopify to the ERP, warehouse or PIM you already run: inventory, prices, customers, orders and invoices. The hard part is never GraphQL, it is deciding who wins when both sides change the same field.'
 serviceName: 'Shopify integration with external systems'
 serviceType: 'Systems integration'

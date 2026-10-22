@@ -3,6 +3,7 @@
 // documentation; recheck them, and the "a octubre de 2026" dates, whenever this page is updated.
 import ServiceView from './ServiceView.astro';
 import { docPath, routes, type Lang } from '../i18n/routes';
+import { secondaryCta } from '../lib/cta';
 import { seo } from '../i18n/ui';
 import { postPath } from '../lib/posts';
 import type { ServiceCopy } from '../lib/service';
@@ -112,7 +113,14 @@ const copy: Record<Lang, ServiceCopy> = {
       },
     ],
     ctaTitle: '¿Quieres vender al por mayor desde tu tienda Shopify?',
-    cta: 'Escríbeme',
+    cta: 'Hablemos de tu portal B2B',
+    topic: 'b2b',
+    secondary: secondaryCta('b2b', 'es'),
+    midCta: {
+      after: 2,
+      text: '¿Te ves en este caso? Cuéntame cómo te hacen hoy los pedidos tus clientes mayoristas y te digo por dónde empezaría.',
+      label: 'Cuéntame tu caso',
+    },
   },
   en: {
     crumb: 'Shopify B2B',
@@ -208,7 +216,14 @@ const copy: Record<Lang, ServiceCopy> = {
       },
     ],
     ctaTitle: 'Want to sell wholesale from your Shopify store?',
-    cta: 'Get in touch',
+    cta: "Let's talk about your B2B portal",
+    topic: 'b2b',
+    secondary: secondaryCta('b2b', 'en'),
+    midCta: {
+      after: 2,
+      text: "Sound like you? Tell me how your trade customers place orders today and I'll tell you where I'd start.",
+      label: 'Tell me about your case',
+    },
   },
 };
 ---

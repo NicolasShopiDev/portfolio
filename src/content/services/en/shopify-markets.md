@@ -2,6 +2,8 @@
 pair: 'markets'
 label: 'International'
 h1: 'Shopify Markets and international selling'
+pitch: 'Sell in several countries, currencies and languages from one store'
+topic: 'other'
 lead: 'Selling in several countries from one store: markets with their currency, language and taxes, a picker that does not break the cart, and hreflang set up so your versions stop competing with each other.'
 serviceName: 'Shopify Markets setup and development'
 serviceType: 'International ecommerce development'

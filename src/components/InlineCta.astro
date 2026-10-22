@@ -1,0 +1,12 @@
+---
+// A call to action halfway down a long page, for the reader who has already seen enough and
+// shouldn't have to scroll to the end to say so.
+import { contactPath, type Lang, type Topic } from '../i18n/routes';
+
+interface Props { lang: Lang; text: string; label: string; topic?: Topic }
+const { lang, text, label, topic } = Astro.props;
+---
+<aside class="inline-cta">
+  <p class="inline-cta-text">{text}</p>{' '}
+  <a class="btn btn--dark" href={contactPath(lang, topic)}>{label}</a>
+</aside>

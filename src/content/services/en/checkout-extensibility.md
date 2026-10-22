@@ -2,6 +2,8 @@
 pair: 'checkout-development'
 label: 'Checkout'
 h1: 'Shopify checkout customisation'
+pitch: 'A checkout that asks for the data you need and enforces your rules'
+topic: 'plus'
 lead: 'UI extensions, validations that block payment, custom fields and shipping and payment rules, inside Checkout Extensibility. What can be done, I do; what cannot, I tell you before quoting.'
 serviceName: 'Shopify checkout customisation'
 serviceType: 'Ecommerce software development'

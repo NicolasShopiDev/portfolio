@@ -2,6 +2,8 @@
 pair: 'checkout-development'
 label: 'Checkout'
 h1: 'Personalización del checkout de Shopify'
+pitch: 'Un checkout que pide los datos que necesitas y aplica tus reglas'
+topic: 'plus'
 lead: 'Extensiones de interfaz, validaciones que bloquean el pago, campos propios y reglas de envío y de pago, dentro de Checkout Extensibility. Lo que se puede hacer, lo hago; lo que no, te lo digo antes de presupuestar.'
 serviceName: 'Personalización del checkout de Shopify'
 serviceType: 'Desarrollo de software para ecommerce'

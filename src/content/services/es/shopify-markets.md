@@ -2,6 +2,8 @@
 pair: 'markets'
 label: 'Internacional'
 h1: 'Shopify multimercado e internacional'
+pitch: 'Vender en varios países, monedas e idiomas desde una sola tienda'
+topic: 'other'
 lead: 'Vender en varios países desde una sola tienda: mercados con su moneda, idioma e impuestos, el selector que no rompe el carrito y el hreflang bien puesto para que tus versiones no compitan entre ellas.'
 serviceName: 'Configuración y desarrollo de Shopify Markets'
 serviceType: 'Desarrollo de ecommerce internacional'

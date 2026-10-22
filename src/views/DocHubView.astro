@@ -5,9 +5,11 @@
 // list as an ItemList so a crawler gets the whole silo from one page.
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageCta from '../components/PageCta.astro';
 import { routes, type DocHub, type Lang } from '../i18n/routes';
 import { seo, t } from '../i18n/ui';
 import { person, website, webPage, breadcrumbs, definedTermSet, itemList, graph } from '../lib/schema';
+import { secondaryCta } from '../lib/cta';
 import { newestDate, publishedDocs, type Doc, type DocCollection } from '../lib/docs';
 import { updated } from '../i18n/routes';
 
@@ -33,27 +35,42 @@ const COPY = {
   compare: { heading: s.compareHeading, intro: s.compareIntro },
 }[hub];
 
-/** Title, summary and category of one child, whichever collection it comes from. */
-const card = (doc: Doc) => {
+/**
+ * Title, summary and category of one child, whichever collection it comes from. A service shows
+ * its business pitch as the title and the searched-for term above it; `name` stays the term,
+ * because that is what the ItemList declares.
+ */
+type Card = { path: string; name: string; text: string; group: string; title?: string; kicker?: string };
+const card = (doc: Doc): Card => {
   const d = doc.entry.data as Record<string, any>;
   if (hub === 'glossary') return { path: doc.path, name: d.term as string, text: d.answer as string, group: d.category as string };
   if (hub === 'questions') return { path: doc.path, name: d.question as string, text: d.answer as string, group: d.category as string };
   if (hub === 'compare') return { path: doc.path, name: `${d.a} / ${d.b}`, text: d.verdict as string, group: '' };
-  return { path: doc.path, name: d.h1 as string, text: d.lead as string, group: '' };
+  return { path: doc.path, name: d.h1 as string, text: d.lead as string, group: '', title: d.pitch as string, kicker: d.h1 as string };
 };
 
 const docs = await publishedDocs(COLLECTION[hub], lang);
-const cards = docs.map(card).sort((a, b) => a.name.localeCompare(b.name, lang));
+const cards = docs.map(card).sort((a, b) => (a.title ?? a.name).localeCompare(b.title ?? b.name, lang));
 const groups = (GROUPS[hub] ?? [])
   .map((group) => ({ group, items: cards.filter((c) => c.group === group) }))
   .filter((g) => g.items.length > 0);
 
 // The two flagship service pages are hand-built views, so the hub links them explicitly.
-const pinned: { path: string; name: string; text: string }[] =
+const PITCH = {
+  es: {
+    b2b: 'Portales mayoristas en los que tus clientes piden solos, con sus precios',
+    plus: 'Checkout, descuentos y validaciones a medida que ninguna app resuelve',
+  },
+  en: {
+    b2b: 'Wholesale portals where your trade customers order on their own, at their prices',
+    plus: '',
+  },
+}[lang];
+const pinned: Omit<Card, 'group'>[] =
   hub === 'services'
     ? [
-        { path: routes.b2b[lang]!, name: s.navB2b, text: seo.b2b[lang as 'es'].description },
-        ...(lang === 'es' ? [{ path: routes.plus.es, name: s.navPlus, text: seo.plus.es.description }] : []),
+        { path: routes.b2b[lang]!, name: s.navB2b, text: seo.b2b[lang as 'es'].description, title: PITCH.b2b, kicker: s.navB2b },
+        ...(lang === 'es' ? [{ path: routes.plus.es, name: s.navPlus, text: seo.plus.es.description, title: PITCH.plus, kicker: s.navPlus }] : []),
       ]
     : [];
 
@@ -94,7 +111,8 @@ const schema = graph(
       <ul class="hub-list hub-list--pinned">
         {pinned.map((item) => (
           <><li class="hub-item">
-            <h2 class="hub-item-name"><a href={item.path}>{item.name}</a></h2>{' '}
+            {item.kicker && <><p class="hub-item-kicker">{item.kicker}</p>{' '}</>}
+            <h2 class="hub-item-name"><a href={item.path}>{item.title ?? item.name}</a></h2>{' '}
             <p class="hub-item-text">{item.text}</p>
           </li>{' '}</>
         ))}
@@ -119,7 +137,8 @@ const schema = graph(
         <ul class="hub-list">
           {cards.map((item) => (
             <><li class="hub-item">
-              <h2 class="hub-item-name"><a href={item.path}>{item.name}</a></h2>{' '}
+              {item.kicker && <><p class="hub-item-kicker">{item.kicker}</p>{' '}</>}
+              <h2 class="hub-item-name"><a href={item.path}>{item.title ?? item.name}</a></h2>{' '}
               <p class="hub-item-text">{item.text}</p>
             </li>{' '}</>
           ))}
@@ -129,10 +148,10 @@ const schema = graph(
     {cards.length === 0 && pinned.length === 0 && <p class="hub-empty">{s.taxonomyEmpty}</p>}
   </div>{' '}
 
-  <section class="page-cta section">
-    <div class="container page-cta-inner">
-      <h2 class="contact-heading">{s.blogCtaHeading}</h2>{' '}
-      <a class="btn btn--dark" href={routes.contact[lang]}>{s.blogCtaLabel}</a>
-    </div>
-  </section>
+  <PageCta
+    lang={lang}
+    heading={s.blogCtaHeading}
+    label={s.blogCtaLabel}
+    secondary={hub === 'services' ? secondaryCta('b2b', lang) : undefined}
+  />
 </Base>
