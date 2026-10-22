@@ -4,6 +4,12 @@ title: 'IVB Wellness: Shopify B2B Portal for Pharmacies | Nicolás Mateos'
 description: 'B2B ordering portal for a supplements lab: volume tiers configured from a metafield, a multi-variant order table and purchase locked to company accounts.'
 h1: 'IVB Wellness Lab: a Shopify B2B portal for pharmacies with volume-tier pricing'
 summary: "IVB Wellness Lab is a Spanish supplements lab stocked in more than 3,000 pharmacies. Its B2B ordering portal was built in 2026 on the Enterprise theme from the brand's Figma designs: pharmacies buy on volume tiers, see their tier across the store, and the client changes the thresholds from the admin."
+glance:
+  problem: 'Letting over 3,000 pharmacies buy by volume tier and see their tier across the whole store, not just in the cart.'
+  forWho: 'You sell to the trade with volume pricing and want to change the thresholds yourself.'
+  notFor: 'Your prices are fixed per customer, with no tiers: the Émolo case is closer to yours.'
+  outcome: 'The client changes thresholds, badges and colours from the admin, without publishing a new theme version.'
+  effort: '6 weeks, a designer and me, on the Enterprise theme from designs in Figma.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:

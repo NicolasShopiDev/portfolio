@@ -4,6 +4,12 @@ title: 'Émolo: portal B2B en Shopify para joyería | Nicolás Mateos'
 description: 'Portal mayorista sobre el tema Prestige: precios solo para empresas, tabla de pedido por tallas sincronizada con el carrito y búsqueda por referencia.'
 h1: 'Émolo: portal mayorista B2B en Shopify para una marca de joyería'
 summary: 'Émolo es una marca de joyería hecha a mano de Murcia. Su portal mayorista se construyó en 2026 como una tienda aparte, sobre el mismo tema Prestige de su tienda B2C: solo los compradores de una empresa ven precios y pueden comprar, y piden todas las tallas de una pieza desde una tabla sincronizada con el carrito.'
+glance:
+  problem: 'Vender al por mayor desde Shopify sin rehacer el front-end y sin enseñar precios a quien no es cliente.'
+  forWho: 'Vendes piezas con muchas tallas o variantes a tiendas y ya tienes un tema que te gusta.'
+  notFor: 'Necesitas precios por tramos de volumen: Émolo no los usa, el caso de IVB sí.'
+  outcome: 'Solo las empresas ven precios, que ni llegan al HTML de los demás, y piden todas las tallas de una pieza de una vez.'
+  effort: '4 semanas de front-end, solo yo, sobre el tema Prestige y a través de una agencia.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:

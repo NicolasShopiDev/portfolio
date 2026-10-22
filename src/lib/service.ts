@@ -1,3 +1,4 @@
+import type { Glance } from '../components/AtAGlance.astro';
 import type { Topic } from '../i18n/routes';
 
 // Copy of a service page (plan 2.4): definition, who it is for, deliverables, timing, cases, FAQ, CTA.
@@ -7,6 +8,7 @@ export interface ServiceCopy {
   label: string;
   h1: string;
   lead: string;
+  glance: Glance; // the "En resumen" block under the lead
   proof?: boolean; // show the shared proof line (ui.ts heroProof, the anonymous €36M aggregate) under the lead
   updatedLabel: string;
   serviceName: string;

@@ -4,6 +4,7 @@
 // What this one guarantees: the Service node in the graph, the cases that prove it, and an FAQ.
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import AtAGlance from '../components/AtAGlance.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CaseCards from '../components/CaseCards.astro';
 import DocLinks from '../components/DocLinks.astro';
@@ -74,6 +75,7 @@ const schema = graph(
       {d.verified && (
         <p class="page-updated"><time datetime={d.verified}>{s.docVerified} {formatDate(d.verified, lang)}</time></p>
       )}
+      <AtAGlance lang={lang} glance={d.glance} />
     </div>
   </section>{' '}
 

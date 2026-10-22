@@ -4,6 +4,12 @@ title: 'Vidal & Vidal: Shopify Plus Wholesale Store | Nicolás Mateos'
 description: 'B2B store on Shopify Plus for a Menorcan jewelry house: cleaning up a theme exported from the consumer store (29 templates, −75%) and a quick-order table on Sleek.'
 h1: 'Vidal & Vidal: from an exported consumer theme to a Shopify Plus wholesale store'
 summary: "Vidal & Vidal is a jewelry house from Menorca, Spain. Its Shopify Plus wholesale store started as an export of the consumer store's Sleek theme with no B2B logic in it: first 29 orphaned templates were removed, 75% of the templates folder, and then Émolo's order table was ported to the theme."
+glance:
+  problem: 'Turning an exported B2C theme, with no B2B logic and 29 templates that broke local development, into a wholesale store.'
+  forWho: 'Your B2B store starts as a copy of the consumer store''s theme and you want to keep what already works.'
+  notFor: 'You want a wholesale portal with its own design, different from your consumer store.'
+  outcome: 'A theme with 75% fewer templates and Émolo''s order table reused instead of written again.'
+  effort: '4 weeks of front-end, just me, on Shopify Plus and through an agency.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:

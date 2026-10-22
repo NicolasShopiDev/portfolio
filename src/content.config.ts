@@ -61,6 +61,17 @@ const posts = defineCollection({
 });
 
 
+// "At a glance": the scannable block at the top of a service page or a case study, business first
+// (problem, who it is for and not for, outcome, time and complexity) before the technical body.
+// Each answer is one short sentence; the caps keep the block to a few lines.
+const glance = z.object({
+  problem: z.string().min(20).max(170),
+  forWho: z.string().min(20).max(150),
+  notFor: z.string().min(20).max(150),
+  outcome: z.string().min(20).max(170),
+  effort: z.string().min(10).max(170),
+});
+
 // Case studies (plan 2.3), one Markdown file per language: src/content/cases/<es|en>/<project slug>.md.
 // The body holds the problem and the solution; the facts and the parts that need data from the
 // client are in the frontmatter. A field left out shows as pending on previews (and blocks master);
@@ -74,6 +85,7 @@ const cases = defineCollection({
     description: z.string().max(170),
     h1: z.string(),
     summary: z.string(),
+    glance,
     published: isoDate,
     updated: isoDate,
     facts: z.object({
@@ -177,6 +189,7 @@ const services = defineCollection({
     pitch: z.string().min(20).max(90),
     // What the contact form preselects when the reader comes from this page.
     topic: z.enum(['b2b', 'plus', 'theme', 'integration', 'other']),
+    glance,
     lead: z.string().min(80).max(500),
     serviceName: z.string().min(1),
     serviceType: z.string().min(1),

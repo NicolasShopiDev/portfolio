@@ -4,6 +4,12 @@ title: 'Vidal & Vidal: tienda mayorista en Shopify Plus | Nicolás Mateos'
 description: 'Tienda B2B en Shopify Plus para una casa joyera de Menorca: limpieza del tema exportado de la tienda B2C (29 plantillas, −75 %) y tabla de pedido sobre Sleek.'
 h1: 'Vidal & Vidal: de un tema B2C exportado a una tienda mayorista en Shopify Plus'
 summary: 'Vidal & Vidal es una casa joyera de Menorca. Su tienda mayorista en Shopify Plus partió de una exportación del tema Sleek de la tienda B2C, sin ninguna lógica B2B: primero se eliminaron 29 plantillas huérfanas, un 75 % de la carpeta templates, y después se llevó al tema la tabla de pedido de Émolo.'
+glance:
+  problem: 'Convertir en tienda mayorista un tema B2C exportado, sin lógica B2B y con 29 plantillas que impedían trabajar en local.'
+  forWho: 'Tu tienda B2B nace de copiar el tema de la B2C y quieres aprovechar lo que ya funciona.'
+  notFor: 'Quieres un portal mayorista con un diseño propio, distinto del de tu tienda B2C.'
+  outcome: 'Un tema con un 75 % menos de plantillas y la tabla de pedido de Émolo reutilizada, en lugar de escrita otra vez.'
+  effort: '4 semanas de front-end, solo yo, en Shopify Plus y a través de una agencia.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:

@@ -1,0 +1,32 @@
+---
+// "En resumen": the top of a service page or a case study in five short lines, business first,
+// so the reader knows whether it is for them before the technical part starts.
+import type { Lang } from '../i18n/routes';
+
+export interface Glance { problem: string; forWho: string; notFor: string; outcome: string; effort: string }
+interface Props { lang: Lang; glance: Glance; kind?: 'service' | 'case' }
+const { lang, glance, kind = 'service' } = Astro.props;
+
+const LABELS = {
+  es: {
+    title: 'En resumen',
+    service: { problem: 'Qué resuelve', forWho: 'Para quién es', notFor: 'Para quién no', outcome: 'Qué ganas', effort: 'Tiempo y complejidad' },
+    case: { problem: 'Qué necesitaba', forWho: 'Te sirve si', notFor: 'No te sirve si', outcome: 'Resultado', effort: 'Tiempo y equipo' },
+  },
+  en: {
+    title: 'At a glance',
+    service: { problem: 'What it solves', forWho: "Who it's for", notFor: "Who it's not for", outcome: 'What you get', effort: 'Time and complexity' },
+    case: { problem: 'What they needed', forWho: 'Useful if', notFor: 'Not for you if', outcome: 'Outcome', effort: 'Time and team' },
+  },
+}[lang];
+const L = LABELS[kind];
+const rows = (['problem', 'forWho', 'notFor', 'outcome', 'effort'] as const).map((key) => [L[key], glance[key]]);
+---
+<aside class="glance" aria-labelledby="glance-title">
+  <p class="glance-title" id="glance-title">{LABELS.title}</p>{' '}
+  <dl class="glance-list">
+    {rows.map(([term, value]) => (
+      <><div class="glance-row"><dt>{term}</dt>{' '}<dd>{value}</dd></div>{' '}</>
+    ))}
+  </dl>
+</aside>

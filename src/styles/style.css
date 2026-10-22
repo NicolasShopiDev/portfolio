@@ -1489,6 +1489,37 @@ picture { display: contents; }
 .page-cta .contact-heading { position: static; }
 .page-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
+/* "En resumen": five short lines at the top of a service page or a case study */
+.glance {
+  max-width: 820px;
+  margin-top: 32px;
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.glance .glance-title {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+.glance-list { margin: 0; }
+.glance-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 4px 24px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.glance-row dt { font-size: 14px; font-weight: 600; line-height: 1.6; color: var(--fg); }
+.glance-row dd { margin: 0; font-size: 15px; line-height: 1.6; color: var(--fg-2); }
+@media (max-width: 640px) {
+  .glance { padding: 20px; }
+  .glance-row { grid-template-columns: 1fr; }
+}
+
 /* Call to action in the middle of a long page */
 .inline-cta {
   display: flex;

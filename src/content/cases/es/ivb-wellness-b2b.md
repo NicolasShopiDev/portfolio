@@ -4,6 +4,12 @@ title: 'IVB Wellness Lab: portal B2B para farmacias | Nicolás Mateos'
 description: 'Portal B2B en Shopify para farmacias: precios por tramos de volumen editables desde el admin, tabla de pedido multivariante y compra solo para cuentas de empresa.'
 h1: 'IVB Wellness Lab: portal B2B en Shopify para farmacias, con precios por tramos de volumen'
 summary: 'IVB Wellness Lab es un laboratorio español de suplementos presente en más de 3000 farmacias. Su portal de pedidos B2B se construyó en 2026 sobre el tema Enterprise, a partir de los diseños de la marca en Figma: las farmacias compran por tramos de volumen, ven su tramo en toda la tienda y el cliente cambia los umbrales desde el admin.'
+glance:
+  problem: 'Que más de 3000 farmacias compren por tramos de volumen y vean su tramo en toda la tienda, no solo en el carrito.'
+  forWho: 'Vendes al canal profesional con precios por volumen y quieres cambiar los umbrales tú mismo.'
+  notFor: 'Tus precios son fijos por cliente, sin tramos: el caso de Émolo se parece más a lo tuyo.'
+  outcome: 'El cliente cambia los umbrales, los badges y los colores desde el admin, sin publicar una versión nueva del tema.'
+  effort: '6 semanas, una diseñadora y yo, sobre el tema Enterprise a partir de diseños en Figma.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:

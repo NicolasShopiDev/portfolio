@@ -3,6 +3,7 @@
 // src/content/cases/<lang>/<slug>.md; client, year, URL and screenshots from the project entry.
 import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import AtAGlance from '../components/AtAGlance.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Picture from '../components/Picture.astro';
 import BrowserBar from '../components/BrowserBar.astro';
@@ -153,6 +154,7 @@ const schema = graph(
     {/* Summary and facts sit in the same column as the body so reader-view extractors keep them. */}
     <div class="container"><div class="case-body">
       <p class="case-summary">{c.summary}</p>{' '}
+      <AtAGlance lang={lang} glance={c.glance} kind="case" />{' '}
       {c.pending.map((item) => <><Pending>{item}</Pending>{' '}</>)}
 
       <h2 id="case-facts-title">{L.factsTitle}</h2>{' '}

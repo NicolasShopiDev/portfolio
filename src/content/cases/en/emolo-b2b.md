@@ -4,6 +4,12 @@ title: 'Émolo: Shopify B2B Wholesale Portal for Jewelry | Nicolás Mateos'
 description: 'Wholesale portal on the Prestige theme: prices for company buyers only, a size-by-size order table kept in sync with the cart, and SKU search.'
 h1: 'Émolo: a Shopify B2B wholesale portal for a jewelry brand'
 summary: 'Émolo is a handmade jewelry brand from Murcia, Spain. Its wholesale portal was built in 2026 as a separate store, on the same Prestige theme as its B2C storefront: only company buyers see prices and can buy, and they order every size of a piece from one table that stays in sync with the cart.'
+glance:
+  problem: 'Selling wholesale from Shopify without rebuilding the front-end, and without showing prices to anyone who isn''t a customer.'
+  forWho: 'You sell pieces with many sizes or variants to shops and already have a theme you like.'
+  notFor: 'You need volume-tier pricing: Émolo doesn''t use it, the IVB case does.'
+  outcome: 'Only companies see prices, which never reach anyone else''s HTML, and they order every size of a piece at once.'
+  effort: '4 weeks of front-end, just me, on the Prestige theme and through an agency.'
 published: '2026-10-20'
 updated: '2026-10-20'
 facts:

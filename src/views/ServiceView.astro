@@ -1,6 +1,7 @@
 ---
 // Shared layout of the service pages. Each page passes its copy (src/views/B2bView.astro, PlusView.astro).
 import Base from '../layouts/Base.astro';
+import AtAGlance from '../components/AtAGlance.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CaseCards from '../components/CaseCards.astro';
 import Faq from '../components/Faq.astro';
@@ -36,6 +37,7 @@ const schema = graph(
       <p class="case-summary">{copy.lead}</p>{' '}
       {copy.proof && <><p class="service-proof" set:html={s.heroProof} />{' '}</>}
       <p class="page-updated"><time datetime={updated[route]}>{copy.updatedLabel}</time></p>
+      <AtAGlance lang={lang} glance={copy.glance} />
     </div>
   </section>{' '}
 
