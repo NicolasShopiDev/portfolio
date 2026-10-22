@@ -57,6 +57,12 @@ const ogAlt = lang === 'es'
   ? 'Nicolás Mateos, desarrollador Shopify Plus y B2B freelance en Madrid, España'
   : 'Nicolás Mateos, freelance Shopify Plus and B2B developer in Madrid, Spain';
 const s = t(lang);
+// Cloudflare Web Analytics: cookieless, so it needs no consent banner. The token is public (it ships
+// in every page). Empty means no beacon; dev builds never send one.
+const CF_ANALYTICS_TOKEN = 'af4b419e023e434e8a7689ecf73c1553';
+const cfBeacon = import.meta.env.PROD && CF_ANALYTICS_TOKEN
+  ? JSON.stringify({ token: CF_ANALYTICS_TOKEN })
+  : null;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -134,5 +140,8 @@ const s = t(lang);
   </main>
   <Footer lang={lang} route={route} switchHref={switchTo} />
   <script src="../scripts/main.js"></script>
+  {cfBeacon && (
+    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={cfBeacon}></script>
+  )}
 </body>
 </html>
