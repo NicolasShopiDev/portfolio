@@ -22,17 +22,20 @@ const money = new Intl.NumberFormat(lang === 'es' ? 'es-ES' : 'en', {
 
 const COPY = {
   en: {
-    desc: 'A real merchant request, solved with a Shopify Function. Reproduce the problem, deploy the fix and follow the code as it runs. It\'s the same file that ships to a store, tested on GitHub.',
+    desc: 'Real merchant requests, solved with Shopify Functions. Reproduce the problem, deploy the fix and follow the code as it runs. They\'re the same files that ship to a store, tested on GitHub.',
     tickets: 'Tickets',
     ticket1: 'Payment rules',
     ticket2: 'B2B case packs',
     ticket3: 'Wholesale tiers',
-    soon: 'Soon',
     kicker: 'Ticket #01 · Skincare brand, Barcelona',
     quote: '“Cash on delivery is hurting us: big orders get refused at the door and we pay the return shipping. Keep COD for orders up to €300, and only within Spain.”',
+    kicker2: 'Ticket #02 · Olive oil mill, Jaén',
+    quote2: '“Our warehouse ships wholesale in full cases: six bottles, or four 5-litre tins. Company buyers keep ordering 7 or 10 bottles and we split cases by hand, and small B2B orders don’t cover the handling. Company accounts must order full cases and spend at least €500. Retail customers shouldn’t notice a thing.”',
+    kicker3: 'Ticket #03 · Coffee roaster, Valencia',
+    quote3: '“Our wholesale customers buy by the box but see retail prices, so they email us for quotes and we rebuild each order by hand. Customers tagged wholesale should get 10% off any coffee they order 20 or more of, and 20% from 50. Everyone else pays the regular price.”',
     verify: 'Verify the fix',
     done: 'Ticket closed. One Function, settings in a metafield, unit-tested in CI.',
-    doneLink: 'See the repo',
+    doneLink: 'See the code',
     notDeployed: 'Not deployed',
     loading: 'Loading the function…',
     deploy: 'Deploy function',
@@ -43,25 +46,54 @@ const COPY = {
     product: 'Hydra Serum',
     removeOne: 'Remove one',
     addOne: 'Add one',
+    quantity: 'Quantity',
     shipTo: 'Ship to',
     countries: { ES: 'Spain', PT: 'Portugal', FR: 'France' },
     subtotal: 'Subtotal',
     free: 'Free',
     total: 'Total',
     configLabel: 'Function settings as JSON',
+    packs: {
+      buyer: 'Buyer',
+      retail: 'Retail customer',
+      company: 'Company account',
+      order: 'Order',
+      bottle: 'Arbequina olive oil 500 ml',
+      tin: 'Arbequina olive oil 5 L tin',
+      caseOf: 'case of',
+      storeDefault: 'store default',
+      variantMetafield: 'variant metafield',
+      journey: 'Buyer journey step',
+      steps: { CART_INTERACTION: 'Cart', CHECKOUT_INTERACTION: 'Checkout', CHECKOUT_COMPLETION: 'Pay now' },
+      errors: 'Checkout errors',
+      pay: 'Pay now',
+    },
+    tiers: {
+      customer: 'Customer',
+      guest: 'Guest',
+      signedIn: 'Signed in',
+      tags: 'Customer tags',
+      espresso: 'Espresso blend 1 kg',
+      decaf: 'Swiss water decaf 1 kg',
+      bag: 'per bag',
+      discounts: 'Discounts',
+    },
   },
   es: {
-    desc: 'Una petición real de un comercio, resuelta con una Shopify Function. Reproduce el problema, despliega la solución y sigue el código mientras se ejecuta. Es el mismo archivo que se publica en una tienda, con sus tests en GitHub.',
+    desc: 'Peticiones reales de comercios, resueltas con Shopify Functions. Reproduce el problema, despliega la solución y sigue el código mientras se ejecuta. Son los mismos archivos que se publican en una tienda, con sus tests en GitHub.',
     tickets: 'Tickets',
     ticket1: 'Reglas de pago',
     ticket2: 'Packs B2B',
     ticket3: 'Tramos mayoristas',
-    soon: 'Próximamente',
     kicker: 'Ticket #01 · Marca de cosmética, Barcelona',
-    quote: '«El contra reembolso nos está saliendo caro: los pedidos grandes se rechazan en la puerta y el envío de vuelta lo pagamos nosotros. Déjalo solo para pedidos de hasta 300 € y envíos dentro de España».',
+    quote: '«El contra reembolso nos está saliendo caro: los pedidos grandes se rechazan en la puerta y el envío de vuelta lo pagamos nosotros. Déjalo solo para pedidos de hasta 300 € y envíos dentro de España».',
+    kicker2: 'Ticket #02 · Almazara, Jaén',
+    quote2: '«El almacén sirve a mayoristas en cajas completas: seis botellas, o cuatro latas de 5 litros. Las empresas nos piden 7 o 10 botellas y acabamos abriendo cajas a mano, y los pedidos B2B pequeños no cubren la preparación. Las cuentas de empresa tienen que pedir cajas completas y gastar al menos 500 €. El cliente particular no debe notar nada».',
+    kicker3: 'Ticket #03 · Tostador de café, Valencia',
+    quote3: '«Nuestros clientes mayoristas compran por cajas pero ven el precio de tienda, así que nos piden presupuesto por email y rehacemos cada pedido a mano. Los clientes con la etiqueta wholesale deben tener un 10 % de descuento en cada café del que pidan 20 o más, y un 20 % desde 50. Los demás pagan el precio normal».',
     verify: 'Comprueba la solución',
     done: 'Ticket cerrado. Una sola Function, la configuración en un metafield y tests unitarios en CI.',
-    doneLink: 'Ver el repositorio',
+    doneLink: 'Ver el código',
     notDeployed: 'Sin desplegar',
     loading: 'Cargando la función…',
     deploy: 'Desplegar función',
@@ -72,18 +104,61 @@ const COPY = {
     product: 'Hydra Serum',
     removeOne: 'Quitar uno',
     addOne: 'Añadir uno',
+    quantity: 'Cantidad',
     shipTo: 'Envío a',
     countries: { ES: 'España', PT: 'Portugal', FR: 'Francia' },
     subtotal: 'Subtotal',
     free: 'Gratis',
     total: 'Total',
     configLabel: 'Configuración de la función en JSON',
+    packs: {
+      buyer: 'Comprador',
+      retail: 'Particular',
+      company: 'Cuenta de empresa',
+      order: 'Pedido',
+      bottle: 'AOVE arbequina 500 ml',
+      tin: 'AOVE arbequina lata 5 L',
+      caseOf: 'caja de',
+      storeDefault: 'valor de la tienda',
+      variantMetafield: 'metafield de la variante',
+      journey: 'Paso del comprador',
+      steps: { CART_INTERACTION: 'Carrito', CHECKOUT_INTERACTION: 'Checkout', CHECKOUT_COMPLETION: 'Pagar' },
+      errors: 'Errores del checkout',
+      pay: 'Pagar ahora',
+    },
+    tiers: {
+      customer: 'Cliente',
+      guest: 'Invitado',
+      signedIn: 'Con cuenta',
+      tags: 'Etiquetas del cliente',
+      espresso: 'Mezcla espresso 1 kg',
+      decaf: 'Descafeinado al agua 1 kg',
+      bag: 'la bolsa',
+      discounts: 'Descuentos',
+    },
   },
 };
 
 const t = COPY[lang] ?? COPY.es;
 const unitPrice = money.format(PRICE);
 const subtotal = money.format(PRICE * QTY);
+
+// Tickets 02 and 03. lab.js reads each line's price, title and case size from these data attributes,
+// so the products are defined only here. A case size marks a variant with a custom.case_size metafield.
+const PACKS = [
+  { title: t.packs.bottle, price: 6.25, qty: 7, caseSize: null, defaultCase: 6, thumb: 'bottle' },
+  { title: t.packs.tin, price: 31.25, qty: 4, caseSize: 4, defaultCase: null, thumb: 'tin' },
+];
+const COFFEES = [
+  { title: t.tiers.espresso, price: 16, qty: 24, thumb: 'coffee' },
+  { title: t.tiers.decaf, price: 19, qty: 10, thumb: 'decaf' },
+];
+const sum = (lines: { price: number; qty: number }[]) => money.format(lines.reduce((s, l) => s + l.price * l.qty, 0));
+const packsSubtotal = sum(PACKS);
+const coffeesSubtotal = sum(COFFEES);
+const STEPS = ['CART_INTERACTION', 'CHECKOUT_INTERACTION', 'CHECKOUT_COMPLETION'] as const;
+const TAGS = ['wholesale', 'horeca', 'newsletter'];
+const START_TAGS = ['newsletter'];
 ---
 
 <section class="lab-section section" id="lab">
@@ -94,33 +169,41 @@ const subtotal = money.format(PRICE * QTY);
     </div>
 
     <div class="lab-app" id="lab-app" data-ready="false">
-      <div class="lab-tickets" aria-label={t.tickets}>
-        <button type="button" class="lab-ticket-tab is-active" aria-current="true"><span class="lab-ticket-num">01</span>{t.ticket1}<span class="lab-ticket-tick" aria-hidden="true"></span></button>
-        <button type="button" class="lab-ticket-tab" disabled><span class="lab-ticket-num">02</span>{t.ticket2}<span class="lab-soon">{t.soon}</span></button>
-        <button type="button" class="lab-ticket-tab" disabled><span class="lab-ticket-num">03</span>{t.ticket3}<span class="lab-soon">{t.soon}</span></button>
+      <div class="lab-tickets" role="group" aria-label={t.tickets}>
+        <button type="button" class="lab-ticket-tab is-active" data-ticket="01" aria-pressed="true"><span class="lab-ticket-num">01</span>{' '}{t.ticket1}<span class="lab-ticket-tick" aria-hidden="true"></span></button>{' '}
+        <button type="button" class="lab-ticket-tab" data-ticket="02" aria-pressed="false"><span class="lab-ticket-num">02</span>{' '}{t.ticket2}<span class="lab-ticket-tick" aria-hidden="true"></span></button>{' '}
+        <button type="button" class="lab-ticket-tab" data-ticket="03" aria-pressed="false"><span class="lab-ticket-num">03</span>{' '}{t.ticket3}<span class="lab-ticket-tick" aria-hidden="true"></span></button>
       </div>
 
       <div class="lab-brief">
-        <div class="lab-brief-main">
+        <div class="lab-brief-main" data-brief="01">
           <p class="lab-kicker">{t.kicker}</p>
           <blockquote class="lab-quote">{t.quote}</blockquote>
         </div>
+        <div class="lab-brief-main" data-brief="02" hidden>
+          <p class="lab-kicker">{t.kicker2}</p>
+          <blockquote class="lab-quote">{t.quote2}</blockquote>
+        </div>
+        <div class="lab-brief-main" data-brief="03" hidden>
+          <p class="lab-kicker">{t.kicker3}</p>
+          <blockquote class="lab-quote">{t.quote3}</blockquote>
+        </div>
         <div class="lab-checks">
-          <p class="lab-checks-head"><span>{t.verify}</span><span id="lab-progress">0/3</span></p>
+          <p class="lab-checks-head"><span>{t.verify}</span>{' '}<span id="lab-progress">0/3</span></p>
           <ul class="lab-check-list" id="lab-checks"></ul>
-          <p class="lab-done" id="lab-done" hidden>{t.done} <a href={REPO} target="_blank" rel="noopener noreferrer">{t.doneLink}</a></p>
+          <p class="lab-done" id="lab-done" hidden>{t.done} <a id="lab-done-link" href={`${REPO}/tree/main/extensions/cod-guard`} target="_blank" rel="noopener noreferrer">{t.doneLink}</a></p>
         </div>
       </div>
 
       <div class="lab-bar">
-        <p class="lab-fn" id="lab-fn"><span class="lab-dot"></span><span class="lab-fn-name">cod-guard</span> <span class="lab-fn-state" id="lab-fn-state">{t.notDeployed}</span></p>
+        <p class="lab-fn" id="lab-fn"><span class="lab-dot"></span><span class="lab-fn-name" id="lab-fn-name">cod-guard</span> <span class="lab-fn-state" id="lab-fn-state">{t.notDeployed}</span></p>
         <p class="lab-hint" id="lab-hint" aria-live="polite">{t.loading}</p>
         <button type="button" class="btn btn--dark lab-deploy" id="lab-deploy" disabled>{t.deploy}</button>
       </div>
 
       {/* inert until lab.js is ready: no keyboard focus and no screen-reader output for a widget that cannot answer yet. */}
       <div class="lab-stage" inert>
-        <div class="lab-checkout" aria-label={t.checkout}>
+        <div class="lab-checkout" data-panel="01" aria-label={t.checkout}>
           <div class="lc-head">
             <span class="lc-store">LUMEN</span>{' '}
             <span class="lc-steps">{t.cart} <i>›</i> {t.shipping} <i>›</i> <b>{t.payment}</b></span>
@@ -130,7 +213,7 @@ const subtotal = money.format(PRICE * QTY);
             <div class="lc-thumb" aria-hidden="true"></div>
             <div class="lc-item-info">
               <p class="lc-item-name">{t.product}</p>
-              <p class="lc-item-meta">50 ml · {unitPrice}</p>
+              <p class="lc-item-sub">50 ml · {unitPrice}</p>
             </div>
             <div class="lc-stepper">
               <button type="button" data-qty="-1" aria-label={t.removeOne}>−</button>
@@ -158,6 +241,105 @@ const subtotal = money.format(PRICE * QTY);
             <p><span>{t.subtotal}</span> <span id="lc-subtotal">{subtotal}</span></p>
             <p><span>{t.shipping}</span> <span>{t.free}</span></p>
             <p class="lc-total"><span>{t.total}</span> <span><small>EUR</small> <b id="lc-total">{subtotal}</b></span></p>
+          </div>
+        </div>
+
+        <div class="lab-checkout" data-panel="02" aria-label={t.checkout} hidden>
+          <div class="lc-head">
+            <span class="lc-store">OLIVAR</span>{' '}
+            <span class="lc-steps">{t.cart} <i>›</i> {t.shipping} <i>›</i> <b>{t.payment}</b></span>
+          </div>
+
+          <div class="lc-alert" data-el="alert" aria-label={t.packs.errors} aria-live="polite" hidden><ul></ul></div>
+
+          <div class="lc-block">
+            <p class="lc-label">{t.packs.buyer}</p>
+            <div class="lc-seg" role="group" aria-label={t.packs.buyer}>
+              <button type="button" data-buyer="retail" aria-pressed="true">{t.packs.retail}</button>{' '}
+              <button type="button" data-buyer="company" aria-pressed="false">{t.packs.company}</button>
+            </div>
+          </div>
+
+          <div class="lc-block lc-lines">
+            <p class="lc-label">{t.packs.order}</p>
+            {PACKS.map(p => (
+              <div class="lc-item" data-line data-price={p.price} data-case-size={p.caseSize ?? undefined}>
+                <div class={`lc-thumb lc-thumb--${p.thumb}`} aria-hidden="true"></div>
+                <div class="lc-item-info">
+                  <p class="lc-item-name">{p.title}</p>
+                  <p class="lc-item-sub">{money.format(p.price)} · {t.packs.caseOf}{' '}<span data-el="case">{p.caseSize ?? p.defaultCase}</span>, {p.caseSize ? t.packs.variantMetafield : t.packs.storeDefault}</p>
+                </div>
+                <div class="lc-stepper">
+                  <button type="button" data-line-step="-1" aria-label={`${t.removeOne}: ${p.title}`}>−</button>
+                  <input type="number" inputmode="numeric" min="1" max="999" value={p.qty} data-line-qty aria-label={`${t.quantity}: ${p.title}`} />
+                  <button type="button" data-line-step="1" aria-label={`${t.addOne}: ${p.title}`}>+</button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="lc-block">
+            <p class="lc-label">{t.packs.journey}</p>
+            <div class="lc-seg" role="group" aria-label={t.packs.journey}>
+              {STEPS.map(step => (
+                <>{' '}<button type="button" data-journey={step} aria-pressed={step === 'CHECKOUT_INTERACTION' ? 'true' : 'false'}>{t.packs.steps[step]}</button></>
+              ))}
+            </div>
+            <p class="lc-note" data-el="note" aria-live="polite"></p>
+          </div>
+
+          <div class="lc-totals">
+            <p><span>{t.subtotal}</span> <span data-el="subtotal">{packsSubtotal}</span></p>
+            <p><span>{t.shipping}</span> <span>{t.free}</span></p>
+            <p class="lc-total"><span>{t.total}</span> <span><small>EUR</small> <b data-el="total">{packsSubtotal}</b></span></p>
+          </div>
+          <div class="lc-pay" data-el="pay" aria-hidden="true">{t.packs.pay}</div>
+        </div>
+
+        <div class="lab-checkout" data-panel="03" aria-label={t.checkout} hidden>
+          <div class="lc-head">
+            <span class="lc-store">TUESTE</span>{' '}
+            <span class="lc-steps">{t.cart} <i>›</i> {t.shipping} <i>›</i> <b>{t.payment}</b></span>
+          </div>
+
+          <div class="lc-block">
+            <p class="lc-label">{t.tiers.customer}</p>
+            <div class="lc-seg" role="group" aria-label={t.tiers.customer}>
+              <button type="button" data-customer="guest" aria-pressed="false">{t.tiers.guest}</button>{' '}
+              <button type="button" data-customer="signed-in" aria-pressed="true">{t.tiers.signedIn}</button>
+            </div>
+            <p class="lc-label lc-label--sub">{t.tiers.tags}</p>
+            <div class="lc-chips" role="group" aria-label={t.tiers.tags}>
+              {TAGS.map(tag => (
+                <>{' '}<button type="button" class="lc-chip" data-tag={tag} aria-pressed={START_TAGS.includes(tag) ? 'true' : 'false'}>{tag}</button></>
+              ))}
+            </div>
+          </div>
+
+          <div class="lc-block lc-lines">
+            {COFFEES.map(c => (
+              <div class="lc-item" data-line data-price={c.price}>
+                <div class={`lc-thumb lc-thumb--${c.thumb}`} aria-hidden="true"></div>
+                <div class="lc-item-info">
+                  <p class="lc-item-name">{c.title}</p>
+                  <p class="lc-item-sub">{money.format(c.price)} {t.tiers.bag}</p>
+                  <p class="lc-line-off" data-el="off" hidden></p>
+                </div>
+                <div class="lc-stepper">
+                  <button type="button" data-line-step="-1" aria-label={`${t.removeOne}: ${c.title}`}>−</button>
+                  <input type="number" inputmode="numeric" min="1" max="999" value={c.qty} data-line-qty aria-label={`${t.quantity}: ${c.title}`} />
+                  <button type="button" data-line-step="1" aria-label={`${t.addOne}: ${c.title}`}>+</button>
+                </div>
+              </div>
+            ))}
+            <p class="lc-note" data-el="note" aria-live="polite"></p>
+          </div>
+
+          <div class="lc-totals">
+            <p><span>{t.subtotal}</span> <span data-el="subtotal">{coffeesSubtotal}</span></p>
+            <p><span>{t.tiers.discounts}</span> <span data-el="discounts">{money.format(0)}</span></p>
+            <p><span>{t.shipping}</span> <span>{t.free}</span></p>
+            <p class="lc-total"><span>{t.total}</span> <span><small>EUR</small> <b data-el="total">{coffeesSubtotal}</b></span></p>
           </div>
         </div>
 

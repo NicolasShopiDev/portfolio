@@ -5,7 +5,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$functions = @('cod-guard')
+$functions = @('cod-guard', 'b2b-case-packs', 'wholesale-tiers')
 
 foreach ($name in $functions) {
   $src = Join-Path $LabRepo "extensions\$name\src"

@@ -111,7 +111,7 @@ To roll back, open Deployments in the Cloudflare dashboard and promote the previ
 
 ## Checkout Lab
 
-The lab runs the real Shopify Function from the `shopify-checkout-lab` repo. After changing the Function there, run `./scripts/sync-lab.ps1` to copy it into `public/assets/lab/`. Interface text for both languages is in `public/assets/js/lab.js` and `src/components/Lab.astro`.
+The lab runs the real Shopify Functions from the `shopify-checkout-lab` repo, one per ticket: `cod-guard` (01), `b2b-case-packs` (02) and `wholesale-tiers` (03). After changing a Function there, run `./scripts/sync-lab.ps1` to copy them into `public/assets/lab/<handle>/`. Interface text for both languages is in `public/assets/js/lab.js` and `src/components/Lab.astro`; the products of tickets 02 and 03 (price, title, case size) live only in `Lab.astro`, as data attributes the script reads.
 
 ## License
 

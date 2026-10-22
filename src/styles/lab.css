@@ -44,9 +44,11 @@
   border-bottom: none;
   border-radius: 10px 10px 0 0;
   white-space: nowrap;
-  cursor: default;
+  cursor: pointer;
   margin-bottom: -1px;
+  transition: color var(--dur-fast), background var(--dur-fast);
 }
+.lab-ticket-tab:hover { color: var(--fg); }
 .lab-ticket-tab.is-active {
   color: var(--fg);
   background: var(--bg);
@@ -57,16 +59,6 @@
   font-size: 11px;
   font-weight: 400;
   color: var(--fg-3);
-}
-.lab-soon {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--fg-3);
-  background: var(--gray-200);
-  padding: 2px 7px;
-  border-radius: 4px;
 }
 .lab-ticket-tick {
   display: none;
@@ -84,7 +76,7 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.lab-app.is-done .lab-ticket-tick { display: inline-block; }
+.lab-ticket-tab.is-done .lab-ticket-tick { display: inline-block; }
 
 /* Brief */
 .lab-brief {
@@ -262,7 +254,33 @@
 }
 .lc-item-info { flex: 1; min-width: 0; }
 .lc-item-name { font-weight: 600; line-height: 1.3; }
-.lc-item-meta { font-size: 12px; color: var(--fg-3); }
+.lc-item-sub { font-size: 12px; color: var(--fg-3); }
+
+.lc-lines .lc-item + .lc-item { margin-top: 14px; }
+
+/* Ticket 02 and 03 products */
+.lc-thumb--bottle {
+  background:
+    linear-gradient(90deg, transparent 0 40%, #3f4a1c 40% 60%, transparent 60%) center 6px / 100% 8px no-repeat,
+    radial-gradient(ellipse 30% 42% at 50% 62%, #7b8a2e 0 98%, transparent 100%),
+    linear-gradient(160deg, #f1f0dc, #dfe0b8);
+}
+.lc-thumb--tin {
+  background:
+    linear-gradient(#6f7f2a, #6f7f2a) center 22px / 56% 8px no-repeat,
+    linear-gradient(#c9ccd1, #c9ccd1) center 14px / 56% 26px no-repeat,
+    linear-gradient(160deg, #eef0f2, #d6dade);
+}
+.lc-thumb--coffee {
+  background:
+    radial-gradient(ellipse 28% 38% at 50% 56%, #6b4128 0 96%, transparent 100%),
+    linear-gradient(160deg, #efe3d6, #d9c3ad);
+}
+.lc-thumb--decaf {
+  background:
+    radial-gradient(ellipse 28% 38% at 50% 56%, #2f5a4c 0 96%, transparent 100%),
+    linear-gradient(160deg, #e3ece6, #c5d6cc);
+}
 
 .lc-stepper {
   display: inline-flex;
@@ -288,6 +306,23 @@
   font-family: var(--font-mono);
   font-size: 13px;
 }
+/* B2B quantities are typed as well as stepped */
+.lc-stepper input {
+  width: 44px;
+  padding: 4px 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--fg);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.lc-stepper input::-webkit-inner-spin-button,
+.lc-stepper input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.lc-stepper input:focus-visible { outline: 2px solid var(--fg); outline-offset: 0; }
 
 .lc-label {
   font-size: 10px;
@@ -300,7 +335,8 @@
 
 .lc-seg {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
   gap: 4px;
   padding: 4px;
   background: var(--gray-200);
@@ -382,6 +418,88 @@
 }
 .lc-note.is-bug { color: var(--bug); }
 .lc-note.is-ok { color: var(--accent-success); }
+.lc-lines .lc-note:empty { display: none; }
+.lc-lines .lc-note { margin-top: 12px; }
+
+.lc-label--sub { margin: 14px 0 8px; }
+
+/* Ticket 03: customer tags */
+.lc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.lc-chip {
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-2);
+  cursor: pointer;
+  transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+}
+.lc-chip:hover:not(:disabled) { border-color: var(--fg-3); }
+.lc-chip[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: #fff; }
+.lc-chip:disabled { opacity: 0.45; cursor: default; }
+
+/* Ticket 03: a discounted line */
+.lc-line-off {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--accent-success);
+}
+.lc-line-off[hidden] { display: none; }
+.lc-off-tag {
+  padding: 1px 7px;
+  border-radius: var(--radius-sm);
+  background: #eef8f1;
+  border: 1px solid #cdebd7;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Ticket 02: validation errors show at the top of checkout, as Shopify shows cart-level errors */
+.lc-alert {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 1px solid #f3c4c6;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #9b1c22;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.lc-alert[hidden] { display: none; }
+.lc-alert li { padding: 3px 0 3px 18px; position: relative; }
+.lc-alert li::before {
+  content: '!';
+  position: absolute;
+  left: 0; top: 5px;
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  background: var(--bug);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 13px;
+  text-align: center;
+}
+
+.lc-pay {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--fg);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: background var(--dur-base), color var(--dur-base);
+}
+.lc-pay.is-blocked { background: var(--gray-200); color: var(--fg-3); }
 
 .lc-totals { padding-top: 14px; }
 .lc-totals p {
@@ -588,6 +706,9 @@
 .lab-term .is-err { color: #ff8a8f; }
 .lab-term .is-run { color: var(--t-fn); }
 
+.lab-checkout[hidden],
+.lab-brief-main[hidden] { display: none; }
+
 .lab-app[data-ready="false"] .lab-stage { opacity: 0.6; pointer-events: none; }
 
 /* ── Responsive ─────────────────────────────────────────────── */
@@ -613,6 +734,14 @@
   .lab-stage { padding: 12px; gap: 12px; }
   .lab-checkout { padding: 2px 14px 16px; }
   .lc-steps { display: none; }
+  /* Product names get the full width; the stepper moves under them. */
+  .lc-lines .lc-item {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 14px;
+    row-gap: 8px;
+  }
+  .lc-lines .lc-stepper { grid-column: 2; justify-self: start; }
   .lab-code { height: 440px; }
   .lab-code-body { font-size: 11px; }
   .cl { grid-template-columns: 34px auto; }
