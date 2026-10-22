@@ -2,11 +2,17 @@
 // Checkout Lab: static markup for the playable section. /assets/js/lab.js fills it in at runtime and
 // picks its own copy from <html lang>, so this component and the script must agree on the language.
 // Styles live in src/styles/lab.css and are imported by the layout, not here.
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
 interface Props {
   lang: 'es' | 'en';
 }
 
 const { lang } = Astro.props;
+
+// public/_headers caches /assets/* for a day; the content hash makes browsers fetch lab.js again when it changes.
+const LAB_JS = `/assets/js/lab.js?v=${createHash('sha256').update(readFileSync('public/assets/js/lab.js')).digest('hex').slice(0, 8)}`;
 
 const REPO = 'https://github.com/NicolasShopiDev/shopify-checkout-lab';
 const PRICE = 45;
@@ -366,4 +372,4 @@ const START_TAGS = ['newsletter'];
   </div>
 </section>
 
-<script is:inline type="module" src="/assets/js/lab.js"></script>
+<script is:inline type="module" src={LAB_JS}></script>
