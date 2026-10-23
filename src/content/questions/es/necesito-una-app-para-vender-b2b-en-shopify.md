@@ -8,8 +8,8 @@ keyword: 'app b2b shopify'
 answer: 'No. Las funciones B2B son nativas en los planes Basic, Grow, Advanced y Shopify Plus: empresas, sedes, catálogos con sus precios, reglas de cantidad y precios por volumen vienen de serie. Una app solo hace falta para lo que el modelo nativo no cubre, y lo primero es saber qué parte es.'
 related: ['price-per-customer', 'functions-without-plus']
 terms: ['shopify-b2b', 'b2b-catalog', 'quick-order']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## Lo que ya viene de serie
@@ -29,7 +29,7 @@ Esta es la parte donde más presupuesto se tira: se paga una app mensual que res
 Tres casos concretos:
 
 1. **Descuentos por cuenta sin Shopify Plus.** Los [catálogos](/glosario/catalogo-b2b/) se asignan por mercado, así que para una lista por cuenta hace falta Plus o una app pública.
-2. **Reglas de carrito que miran el pedido entero.** Mínimo por importe, no mezclar tarifas. Eso es una Function, y una Function a medida necesita Plus.
+2. **Reglas de carrito que miran el pedido entero.** Un mínimo por importe distinto para cada empresa, no mezclar tarifas. Eso es una Function, y una Function a medida necesita Plus. Un [pedido mínimo](/blog/pedido-minimo-shopify/) único para todo el B2B ya no lo necesita: desde abril de 2026 se pone con Checkout Blocks en cualquier plan.
 3. **Un dato que vive en tu ERP.** Límite de crédito, descuento negociado fuera de Shopify. Eso es una integración, no una app de catálogo.
 
 Si no estás en ninguno de los tres, la respuesta honesta es que no necesitas una app: necesitas que alguien te monte bien el flujo de pedido.

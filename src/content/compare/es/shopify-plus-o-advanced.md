@@ -27,8 +27,8 @@ rows:
     b: 'Igual que en Plus'
 related: ['native-b2b-vs-app', 'paid-vs-custom-theme']
 terms: ['shopify-plus', 'b2b-catalog', 'shopify-functions']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## La fila que decide, y no es la que la gente mira
@@ -53,4 +53,4 @@ El ejemplo que sale en casi todas las reuniones: si tus tres niveles son "mayori
 
 Las [Functions](/glosario/shopify-functions/) propias. Solo las tiendas con Plus pueden instalar apps personalizadas que las contengan. Y esa es la diferencia que más presupuestos rompe a mitad de proyecto: con una app pública te adaptas a su modelo de datos, con una Function propia el modelo lo pones tú.
 
-Si tu regla de carrito mira el pedido entero —un mínimo por importe, no mezclar tarifas, un producto que exige otro— no hay forma de hacerlo sin Plus.
+Si tu regla de carrito mira el pedido entero (un mínimo distinto por empresa, no mezclar tarifas, un producto que exige otro), no hay forma de hacerlo sin Plus. La excepción es un [pedido mínimo](/blog/pedido-minimo-shopify/) igual para todo el B2B: desde abril de 2026, Checkout Blocks lo valida también en Advanced.

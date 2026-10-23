@@ -27,8 +27,8 @@ rows:
     b: 'Same as Plus'
 related: ['native-b2b-vs-app', 'paid-vs-custom-theme']
 terms: ['shopify-plus', 'b2b-catalog', 'shopify-functions']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## The row that decides it, and it is not the one people look at
@@ -53,4 +53,4 @@ The example that comes up in almost every meeting: if your three tiers are "whol
 
 Your own [Functions](/en/glossary/shopify-functions/). Only stores on Plus can install custom apps that contain them. And that is the difference that breaks the most quotes mid-project: with a public app you adapt to its data model, with your own Function you set the model.
 
-If your cart rule looks at the whole order — a minimum order value, not mixing tiers, a product that requires another — there is no way to do it without Plus.
+If your cart rule looks at the whole order (a different minimum per company, not mixing tiers, a product that requires another), there is no way to do it without Plus. The exception is one order value minimum for every B2B buyer: since April 2026, Checkout Blocks enforces it on Advanced too.

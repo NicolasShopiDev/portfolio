@@ -20,15 +20,15 @@ faq:
     a: 'The custom app with the Function, its input query, its unit tests, the admin configuration and a short document saying what it does, what data it needs and how to change it. The code is yours and it is reviewable.'
 related: ['scripts-to-functions', 'checkout-development']
 terms: ['shopify-functions', 'input-query', 'shopify-plus']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## When a Function is the answer
 
 When the rule is yours. The three cases that reach me most:
 
-- **Validations that block checkout.** Full cases, order minimums, not mixing price tiers, a product that requires another. The platform ships per-variant minimums, but nothing that looks at the whole cart.
+- **Validations that block checkout.** Full cases, a minimum per company, not mixing price tiers, a product that requires another. The platform ships per-variant minimums and, since April 2026, a single order value minimum in Checkout Blocks; nothing that changes with the company or with what is in the cart.
 - **Discounts no app calculates the same way.** Tiered by product family, by company location, mutually exclusive combinations.
 - **Conditional shipping and payments.** Hiding cash on delivery above a value, reordering methods by weight, hiding a carrier for one zone.
 

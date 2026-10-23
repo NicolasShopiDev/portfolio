@@ -8,8 +8,8 @@ keyword: 'shopify b2b app'
 answer: 'No. B2B features are native on the Basic, Grow, Advanced and Shopify Plus plans: companies, locations, catalogs with their own prices, quantity rules and volume pricing all ship with the platform. An app is only needed for what the native model does not cover, and the first job is working out which part that is.'
 related: ['price-per-customer', 'functions-without-plus']
 terms: ['shopify-b2b', 'b2b-catalog', 'quick-order']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## What already ships with the platform
@@ -29,7 +29,7 @@ This is where most budget gets wasted: a monthly app that solves 20% of the prob
 Three specific cases:
 
 1. **Per-account discounts without Shopify Plus.** [Catalogs](/en/glossary/b2b-catalog/) are assigned per market, so a per-account list needs Plus or a public app.
-2. **Cart rules that look at the whole order.** A minimum order value, not mixing price tiers. That is a Function, and a custom Function needs Plus.
+2. **Cart rules that look at the whole order.** A different order minimum per company, not mixing price tiers. That is a Function, and a custom Function needs Plus. A single order minimum for every B2B buyer no longer does: since April 2026 it is a Checkout Blocks setting on every plan.
 3. **Data that lives in your ERP.** A credit limit, a discount negotiated outside Shopify. That is an integration, not a catalog app.
 
 If you are in none of those three, the honest answer is that you do not need an app: you need somebody to build the order flow properly.

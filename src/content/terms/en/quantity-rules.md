@@ -8,8 +8,8 @@ description: 'Quantity rules set a minimum, maximum and increment per variant in
 keyword: 'shopify b2b quantity rules'
 answer: 'Quantity rules are the minimum, maximum and increment a variant can be ordered in inside a B2B catalog. They are the native way to force full-case ordering or a minimum order, and they work on every plan that supports B2B.'
 related: ['volume-pricing', 'b2b-catalog', 'shopify-functions']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 Three numbers per variant: minimum, maximum, increment. That covers most of what gets described in a meeting as "they can't order loose units".
@@ -18,7 +18,7 @@ Three numbers per variant: minimum, maximum, increment. That covers most of what
 
 The rules live in the catalog, so the same product can have different minimums for the wholesaler and for the distributor. The theme receives them and should use them on the `input` itself: `min`, `max` and `step` on the quantity field. That is the difference between telling the buyer before they type and telling them once they have already tried to pay.
 
-What they do not do: validate combinations across lines. "€300 minimum per order" or "tier A and tier B cannot be mixed in one order" are not quantity rules. That is a validation [Shopify Function](/en/glossary/shopify-functions/), and a custom-written Function needs Plus.
+What they do not do: validate combinations across lines. "€300 minimum per order" or "tier A and tier B cannot be mixed in one order" are not quantity rules. Since April 2026, a single order value minimum for everyone, or for every B2B buyer, is a no-code [order limit validation in Checkout Blocks](https://help.shopify.com/en/manual/checkout-settings/checkout-blocks/order-value-limits) on every plan that has B2B. Anything that changes with the company or with what is in the cart is a validation [Shopify Function](/en/glossary/shopify-functions/), and a custom-written Function needs Plus.
 
 ## The full-case case
 

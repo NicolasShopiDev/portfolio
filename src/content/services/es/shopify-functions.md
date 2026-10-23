@@ -20,15 +20,15 @@ faq:
     a: 'La app personalizada con la Function, su input query, sus pruebas unitarias, la configuración en el admin y un documento corto con qué hace, qué datos necesita y cómo se cambia. El código es tuyo y es revisable.'
 related: ['scripts-to-functions', 'checkout-development']
 terms: ['shopify-functions', 'input-query', 'shopify-plus']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## Cuándo hace falta una Function
 
 Cuando la regla es tuya. Los tres casos que más me llegan:
 
-- **Validaciones que bloquean el checkout.** Cajas completas, mínimo por pedido, no mezclar tarifas, un producto que exige otro. La plataforma trae mínimos por variante, pero nada que mire el carrito entero.
+- **Validaciones que bloquean el checkout.** Cajas completas, mínimo por empresa, no mezclar tarifas, un producto que exige otro. La plataforma trae mínimos por variante y, desde abril de 2026, un [pedido mínimo](/blog/pedido-minimo-shopify/) único con Checkout Blocks; nada que cambie según la empresa o lo que lleva el carrito.
 - **Descuentos que ninguna app calcula igual.** Escalados por familia de producto, por sede de la empresa, combinaciones excluyentes.
 - **Envíos y pagos condicionados.** Ocultar contra reembolso por encima de un importe, reordenar métodos según el peso, esconder una transportadora para una zona.
 

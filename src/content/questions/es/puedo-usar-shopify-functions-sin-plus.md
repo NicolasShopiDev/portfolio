@@ -8,8 +8,8 @@ keyword: 'shopify functions sin plus'
 answer: 'Solo las que vengan dentro de una app pública del App Store. Una Function escrita a medida para tu tienda va dentro de una app personalizada, y únicamente las tiendas con Shopify Plus pueden instalar apps personalizadas que contengan Shopify Functions.'
 related: ['need-app-for-b2b', 'customise-checkout']
 terms: ['shopify-functions', 'shopify-plus', 'quantity-rules']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## La diferencia que importa al presupuestar
@@ -31,6 +31,6 @@ En los proyectos B2B que me llegan pidiendo una Function, un buen número se res
 
 ## Cuándo no hay alternativa
 
-Cuando la regla mira el **carrito entero**. Las reglas de cantidad son por variante: no saben si el pedido llega a 300 €, ni si estás mezclando dos tarifas, ni si un producto exige otro. Para eso hace falta una validación, es decir una Function, y por tanto Plus.
+Cuando la regla mira el **carrito entero** y cambia según quién compra o qué lleva. Las reglas de cantidad son por variante: no saben si estás mezclando dos tarifas, ni si un producto exige otro, ni si esta empresa en concreto llega a su mínimo. Un [pedido mínimo](/blog/pedido-minimo-shopify/) igual para todo el B2B sí se resuelve sin Plus desde abril de 2026, con Checkout Blocks. Para el resto hace falta una validación propia, es decir una Function, y por tanto Plus.
 
 Si quieres ver cómo es una de esas validaciones por dentro antes de decidir, hay una publicada con sus pruebas en [shopify-checkout-lab](https://github.com/NicolasShopiDev/shopify-checkout-lab) y se puede tocar en [la portada](/).

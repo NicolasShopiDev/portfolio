@@ -8,8 +8,8 @@ keyword: 'shopify functions without plus'
 answer: 'Only the ones that ship inside a public App Store app. A Function written specifically for your store lives inside a custom app, and only stores on Shopify Plus can install custom apps containing Shopify Functions.'
 related: ['need-app-for-b2b', 'customise-checkout']
 terms: ['shopify-functions', 'shopify-plus', 'quantity-rules']
-updated: '2026-10-21'
-verified: '2026-10-21'
+updated: '2026-10-23'
+verified: '2026-10-23'
 ---
 
 ## The difference that matters when quoting
@@ -31,6 +31,6 @@ Of the B2B projects that reach me asking for a Function, a good number are solve
 
 ## When there is no alternative
 
-When the rule looks at the **whole cart**. Quantity rules are per variant: they do not know whether the order reaches €300, whether you are mixing two price tiers, or whether one product requires another. That needs a validation, which means a Function, which means Plus.
+When the rule looks at the **whole cart** and changes with who is buying or what is in it. Quantity rules are per variant: they do not know whether you are mixing two price tiers, whether one product requires another, or whether this particular company reaches its own minimum. A single order value minimum for every B2B buyer has been a no-code setting in Checkout Blocks on every plan since April 2026. Everything else needs your own validation, which means a Function, which means Plus.
 
 If you want to see what one of those validations looks like from the inside before deciding, there is one published with its tests in [shopify-checkout-lab](https://github.com/NicolasShopiDev/shopify-checkout-lab) and you can poke at it on [the home page](/en/).
