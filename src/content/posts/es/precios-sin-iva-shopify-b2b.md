@@ -7,7 +7,6 @@ keyword: 'precios sin iva shopify b2b'
 date: '2026-10-27'
 tags: ['Shopify B2B', 'Impuestos', 'Catálogos']
 related: ['shopify-b2b-sin-plus', 'pedido-minimo-shopify']
-draft: true
 faq:
   - q: '¿Se puede mostrar precios sin IVA solo a los clientes B2B en Shopify?'
     a: 'No con un interruptor por cliente. Shopify decide si el precio se muestra con IVA o sin IVA por mercado, no por quién ha iniciado sesión, y el ajuste fiscal de la ubicación de la empresa solo actúa en el pago. La forma nativa de que un mayorista vea el precio neto es un catálogo B2B con precios fijos netos.'
