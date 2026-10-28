@@ -6,7 +6,6 @@ description: 'El JavaScript del checkout falso de octubre no estaba en el tema: 
 keyword: 'checkout falso shopify'
 date: '2026-10-28'
 tags: ['Seguridad', 'Apps', 'Temas', 'Checkout']
-draft: true
 faq:
   - q: '¿Han hackeado el checkout de Shopify?'
     a: 'No hay nada publicado que apunte al checkout de Shopify. Lo que describen los análisis del incidente de octubre de 2026 es código inyectado desde apps de terceros que interceptaba el clic en el botón de pagar y llevaba al comprador a una página de pago falsa en otro dominio antes de entrar en el checkout real.'
