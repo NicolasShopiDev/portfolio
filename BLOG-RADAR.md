@@ -55,3 +55,17 @@ Formato de cada bloque:
 - B2B y B2C en la misma tienda: sigue siendo buen candidato, pero este artículo le come la mitad del contenido fiscal. Mejor escribirlo después y enlazarlo.
 - Precios distintos por cliente con etiquetas de cliente: ya hay una página en `/preguntas/` con esa intención y la canibalizaría.
 - Separar inventario de mayorista y tienda por ubicaciones: tema real y sin buena respuesta, pero no está dentro de lo que puedo demostrar con código propio.
+
+## 2026-10-28
+
+**Elegida:** el checkout falso de octubre, ¿me ha pasado a mí?, y ¿cómo veo el JavaScript que meten las apps si no está en el tema?
+- Dónde: foro de desarrolladores de Shopify, [The October Shopify checkout-hijack made affected orders look completely normal](https://community.shopify.dev/t/the-october-shopify-checkout-hijack-made-affected-orders-look-completely-normal-worth-a-quick-check/39038) (26 de octubre de 2026, cuatro respuestas que añaden tres puntos de inyección distintos), más el análisis técnico de [c/side](https://cside.com/blog/hulkapps-shopify-checkout-hijack). Tema pedido en vivo: hoy no querías B2B, para atraer también a tiendas B2C.
+- Hueco: en inglés hay veinte listas de comprobación escritas en una semana, casi todas iguales y sin explicar el mecanismo. En español no hay nada propio: las búsquedas en castellano devuelven esos mismos blogs en inglés. Y ninguna de las listas dice las dos cosas que ordenan la auditoría: que el código llegaba como dato de configuración de la app (ni un diff del tema ni SRI lo veían), y que un píxel no puede secuestrar un botón porque corre en un iframe o en un worker, así que las puertas que importan son el tema y las incrustaciones de app.
+- Artículo: `auditar-javascript-apps-shopify` (rama `borrador-2026-10-28-auditar-javascript-apps-shopify`, solo en español: el inglés está saturado de esta noticia)
+- Comprobado el 28-10: los script tags no se pueden crear ni modificar desde el 1 de octubre de 2026 y dejan de inyectarse el 1 de marzo de 2027; la consulta `scriptTags` solo devuelve los de tu propia app; los píxeles se gestionan en Configuración > Eventos de cliente (iframe con `sandbox` los personalizados, web worker los de app, sin DOM ni interfaz); las extensiones de checkout corren en un web worker sin acceso a `window` ni al HTML del checkout; y el aviso oficial de que desinstalar una app no siempre borra su código del tema.
+
+**Descartadas:**
+- B2B y B2C en la misma tienda: descartada hoy por petición expresa (nada de B2B). Sigue siendo el siguiente candidato bueno.
+- [Product descriptions are untrusted, but Dawn and Horizon render them raw](https://community.shopify.dev/t/product-descriptions-are-untrusted-but-dawn-and-horizon-render-them-raw-and-liquid-cant-sanitize-them/39103) (28-10): tema real y del mismo terreno, pero la duda es de quien desarrolla apps, no de quien tiene la tienda, y apenas tiene búsquedas.
+- [Prefilling shipping address in native checkout for guest customers on non-Plus plans](https://community.shopify.dev/t/prefilling-shipping-address-in-shopify-native-checkout-via-storefront-api-for-guest-customers-on-non-plus-plans/38972) (23-10): caso demasiado concreto de un desarrollo headless; nadie busca eso en español.
+- [Sudden LCP spike since October 27 across two Shopify apps](https://community.shopify.dev/t/sudden-lcp-spike-since-october-27-across-two-shopify-apps/39135) (28-10): son métricas del panel de partners, no de tiendas, y el dato está en movimiento sin confirmar.
