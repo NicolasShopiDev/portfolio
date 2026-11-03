@@ -26,7 +26,7 @@ Si un mayorista ve un precio incorrecto en Shopify, revisa primero su sesión y 
 
 La pregunta útil es concreta: **qué variante, para qué ubicación, en qué cantidad y en qué pantalla muestra un importe distinto al esperado**. Con esos cuatro datos puedes empezar a aislar el problema.
 
-> Documentación oficial revisada el 3 de noviembre de 2026. Los importes y el procedimiento de esta guía son ejemplos de diagnóstico, no resultados de una auditoría de una tienda concreta. La guía se centra en B2B nativo de la tienda online.
+> Documentación oficial revisada en noviembre de 2026. Los importes y el procedimiento de esta guía son ejemplos de diagnóstico, no resultados de una auditoría de una tienda concreta. La guía se centra en B2B nativo de la tienda online.
 
 ## Antes de tocar nada, escribe el precio esperado
 

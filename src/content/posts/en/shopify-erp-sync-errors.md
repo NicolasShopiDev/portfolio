@@ -15,7 +15,7 @@ If Shopify and your ERP disagree, start with one SKU or order and trace it betwe
 
 Ten available pieces and ten physical pieces are not necessarily the same measure. An order with a delivery error is not necessarily absent from the destination.
 
-> Proposed diagnostic method dated 3 November 2026. Logs and quantities are illustrative, not records of a client incident.
+> Proposed diagnostic method dated November 2026. Logs and quantities are illustrative, not records of a client incident.
 
 ## Choose one failure and preserve its sequence
 

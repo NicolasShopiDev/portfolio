@@ -26,7 +26,7 @@ If your store also sells wholesale with Shopify B2B, a discount created for *All
 
 This year the question matters more than ever, because of two dates: B2B reached Basic, Grow and Advanced in April 2026, and on 23 June Shopify turned on B2B discounts automatically for new stores and many existing ones. For quite a few stores, this will be the first Black Friday with both at once.
 
-> The facts in this article were checked against Shopify's help center and changelog on 3 November 2026. Admin paths come from Shopify's help center, not from walking through a live admin: if a label does not match what you see, trust what you see.
+> The facts in this article were checked against Shopify's help center and changelog in November 2026. Admin paths come from Shopify's help center, not from walking through a live admin: if a label does not match what you see, trust what you see.
 
 ## What happens, in numbers
 

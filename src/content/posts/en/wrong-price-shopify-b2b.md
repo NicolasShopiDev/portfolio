@@ -26,7 +26,7 @@ If a wholesale customer sees the wrong Shopify price, check their login and comp
 
 Make the question specific: **which variant, for which company location, at what quantity, and on which screen shows an unexpected amount**. Those four details give you a starting point for isolating the problem.
 
-> Official documentation reviewed on 3 November 2026. The amounts and procedure below are diagnostic examples, not findings from an audit of a particular store. This guide focuses on native B2B in the online store.
+> Official documentation reviewed in November 2026. The amounts and procedure below are diagnostic examples, not findings from an audit of a particular store. This guide focuses on native B2B in the online store.
 
 ## Write down the expected price before changing anything
 

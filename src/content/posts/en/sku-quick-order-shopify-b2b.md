@@ -15,7 +15,7 @@ A B2B quick order flow should accept references and quantities while preserving 
 
 Start by observing the task: discovering a range, replenishing familiar SKUs or repeating an earlier purchase. Each may require a different entry point.
 
-> Functional design proposed on 3 November 2026. Scenarios and quantities are illustrative. This guide does not present a new demo as already implemented.
+> Functional design proposed in November 2026. Scenarios and quantities are illustrative. This guide does not present a new demo as already implemented.
 
 ## Separate three tools often given the same name
 

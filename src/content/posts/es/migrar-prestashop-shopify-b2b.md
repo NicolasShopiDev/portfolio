@@ -15,7 +15,7 @@ Para migrar de PrestaShop a Shopify con venta mayorista, inventaría primero las
 
 La pregunta importante es qué seguirá pudiendo hacer cada comprador al día siguiente del cambio. Una portada terminada no responde a si un distribuidor puede repetir su pedido con las condiciones acordadas.
 
-> Plan de aceptación propuesto con documentación revisada el 3 de noviembre de 2026. No se afirma haber ejecutado una migración de ejemplo ni se promete conservar posiciones de búsqueda.
+> Plan de aceptación propuesto con documentación revisada en noviembre de 2026. No se afirma haber ejecutado una migración de ejemplo ni se promete conservar posiciones de búsqueda.
 
 ## Lista las reglas que hoy viven en módulos
 

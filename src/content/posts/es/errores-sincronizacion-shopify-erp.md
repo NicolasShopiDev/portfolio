@@ -15,7 +15,7 @@ Si Shopify y tu ERP no cuadran, empieza por una referencia o un pedido concreto 
 
 Un stock de diez piezas disponibles y otro de diez piezas físicas no son necesariamente la misma magnitud. Un pedido con error de entrega tampoco es necesariamente un pedido que no existe en el destino.
 
-> Método de diagnóstico propuesto el 3 de noviembre de 2026. Los registros y cantidades son ilustrativos; no describen una incidencia de un cliente.
+> Método de diagnóstico propuesto en noviembre de 2026. Los registros y cantidades son ilustrativos; no describen una incidencia de un cliente.
 
 ## Elige un fallo y conserva la secuencia
 

@@ -30,7 +30,7 @@ If you looked this up last year and the answer was "only with Plus or a third-pa
 
 It has one limit: Checkout Blocks gives you one minimum for everyone or one for B2B companies, and that's where the options end. If your minimum changes by distributor, by country or by what's in the cart, you need something else, and what that is depends on your plan.
 
-> The facts in this article were checked against Shopify's documentation and changelog on 23 October 2026. Shopify changes its plans every few months: if you're going to make a decision based on this, check again.
+> The facts in this article were checked against Shopify's documentation and changelog in October 2026. Shopify changes its plans every few months: if you're going to make a decision based on this, check again.
 
 ## The four ways to set a minimum in Shopify
 

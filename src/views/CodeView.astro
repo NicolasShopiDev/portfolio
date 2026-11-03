@@ -33,7 +33,7 @@ const seconds = (ms: number) => `${nf.format(ms / 1000)} s`;
 const kib = (bytes: number) => `${nf.format(Math.round(bytes / 1024))} KiB`;
 const measured = new Date(`${metrics.measured}T00:00:00Z`).toLocaleDateString(
   lang === 'es' ? 'es-ES' : 'en-GB',
-  { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' },
+  { month: 'long', year: 'numeric', timeZone: 'UTC' },
 );
 
 const copy = {
@@ -103,7 +103,7 @@ const copy = {
       bestPractices: '',
       seo: '',
     },
-    method: `${metrics.tool}, móvil emulado con 4G, medido el ${measured} sobre ${metrics.url}.`,
+    method: `${metrics.tool}, móvil emulado con 4G, medido en ${measured} sobre ${metrics.url}.`,
     verify: 'Compruébalo tú mismo en PageSpeed Insights',
     howTitle: 'Las decisiones',
     how: [
@@ -182,7 +182,7 @@ const copy = {
       bestPractices: '',
       seo: '',
     },
-    method: `${metrics.tool}, emulated mobile on 4G, measured on ${measured} against ${metrics.url}.`,
+    method: `${metrics.tool}, emulated mobile on 4G, measured in ${measured} against ${metrics.url}.`,
     verify: 'Check it yourself on PageSpeed Insights',
     howTitle: 'The decisions',
     how: [

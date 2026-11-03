@@ -30,7 +30,7 @@ Si lo buscaste el año pasado y la respuesta era "solo con Plus o con una app de
 
 Tiene un límite: Checkout Blocks te deja un mínimo para todo el mundo o uno para las empresas B2B, y ahí se acaban las opciones. Si tu mínimo cambia según el distribuidor, el país o lo que lleva el carrito, necesitas otra cosa, y esa otra cosa depende de tu plan.
 
-> Los datos de este artículo están comprobados en la documentación y el registro de cambios de Shopify el 23 de octubre de 2026. Shopify mueve sus planes cada pocos meses: si vas a decidir algo con esto, vuelve a mirarlo.
+> Los datos de este artículo están comprobados en la documentación y el registro de cambios de Shopify en octubre de 2026. Shopify mueve sus planes cada pocos meses: si vas a decidir algo con esto, vuelve a mirarlo.
 
 ## Las cuatro formas de poner un mínimo en Shopify
 

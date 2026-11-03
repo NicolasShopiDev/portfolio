@@ -77,6 +77,5 @@ export const formatDate = (iso: string, lang: Lang) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-GB', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric',
     timeZone: 'UTC',
   });

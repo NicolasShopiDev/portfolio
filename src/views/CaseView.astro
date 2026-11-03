@@ -37,8 +37,8 @@ const L = {
   es: {
     label: 'Caso de estudio',
     by: 'Por',
-    published: 'Publicado el',
-    updatedOn: 'actualizado el',
+    published: 'Publicado en',
+    updatedOn: 'actualizado en',
     factsTitle: 'Ficha del proyecto',
     client: 'Cliente', sector: 'Sector', country: 'País', year: 'Año', plan: 'Plan Shopify', theme: 'Tema base',
     engagement: 'Mi papel', duration: 'Duración', team: 'Equipo', web: 'Web',
@@ -86,7 +86,7 @@ const L = {
   },
 }[lang];
 
-const date = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString(L.dateFmt, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const date = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString(L.dateFmt, { month: 'long', year: 'numeric', timeZone: 'UTC' });
 const host = p.url?.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 const path = casePath(slug, lang);
 const crumbs = [

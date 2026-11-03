@@ -28,7 +28,7 @@ Porque desde el 26 de agosto de 2026 las tiendas sin Shopify Plus tienen la nuev
 
 Se arregla script por script: lo que medía compras pasa a un píxel, de app o personalizado, y lo que pintaba algo en la página pasa a un bloque del editor de checkout. Y conviene saber desde el principio que, aunque lo hagas bien, en España vas a ver menos compras que antes. Es lo esperable, y abajo está por qué.
 
-> Los datos de este artículo están comprobados en el centro de ayuda y la documentación para desarrolladores de Shopify el 3 de noviembre de 2026. Las rutas del panel salen de la ayuda de Shopify en español, no de un recorrido por un panel real: si alguna etiqueta no coincide con lo que ves, manda lo que ves.
+> Los datos de este artículo están comprobados en el centro de ayuda y la documentación para desarrolladores de Shopify en noviembre de 2026. Las rutas del panel salen de la ayuda de Shopify en español, no de un recorrido por un panel real: si alguna etiqueta no coincide con lo que ves, manda lo que ves.
 
 ## Qué cambió y cuándo
 

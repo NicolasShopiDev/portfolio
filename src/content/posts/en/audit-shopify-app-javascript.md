@@ -27,7 +27,7 @@ Start with the app embeds in your theme, before the theme files. The JavaScript 
 
 If you're here to find out whether it happened to you, the check is in the next section and takes 5 minutes. The rest is what you only need to learn once: how many ways third-party JavaScript gets into a Shopify store, and which of them can touch the checkout button.
 
-> The platform facts in this article were checked against Shopify's documentation on 28 October 2026. What I say about the incident comes from the technical analysis by [c/side](https://cside.com/blog/hulkapps-shopify-checkout-hijack) and a [developer forum thread](https://community.shopify.dev/t/the-october-shopify-checkout-hijack-made-affected-orders-look-completely-normal-worth-a-quick-check/39038) from 26 October, not from a Shopify statement.
+> The platform facts in this article were checked against Shopify's documentation in October 2026. What I say about the incident comes from the technical analysis by [c/side](https://cside.com/blog/hulkapps-shopify-checkout-hijack) and a [developer forum thread](https://community.shopify.dev/t/the-october-shopify-checkout-hijack-made-affected-orders-look-completely-normal-worth-a-quick-check/39038) from 26 October, not from a Shopify statement.
 
 ## Check your store in 5 minutes
 

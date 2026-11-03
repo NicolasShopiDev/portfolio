@@ -27,7 +27,7 @@ Empieza por las incrustaciones de app del tema, no por los archivos. El JavaScri
 
 Si has llegado aquí para saber si te ha pasado a ti, la comprobación es el apartado siguiente y son cinco minutos. El resto es lo que hace falta saber una vez: por cuántas puertas entra JavaScript de terceros en una tienda Shopify, y cuáles de esas puertas pueden tocar el botón de pagar.
 
-> Los datos de plataforma de este artículo están comprobados en la documentación de Shopify el 28 de octubre de 2026. Lo que cuento del incidente sale del análisis técnico de [c/side](https://cside.com/blog/hulkapps-shopify-checkout-hijack) y de un [hilo del foro de desarrolladores](https://community.shopify.dev/t/the-october-shopify-checkout-hijack-made-affected-orders-look-completely-normal-worth-a-quick-check/39038) del 26 de octubre, no de un comunicado de Shopify.
+> Los datos de plataforma de este artículo están comprobados en la documentación de Shopify en octubre de 2026. Lo que cuento del incidente sale del análisis técnico de [c/side](https://cside.com/blog/hulkapps-shopify-checkout-hijack) y de un [hilo del foro de desarrolladores](https://community.shopify.dev/t/the-october-shopify-checkout-hijack-made-affected-orders-look-completely-normal-worth-a-quick-check/39038) del 26 de octubre, no de un comunicado de Shopify.
 
 ## Cómo compruebas tu tienda en cinco minutos
 

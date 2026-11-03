@@ -26,7 +26,7 @@ Sí, puedes vender a particulares y mayoristas en la misma tienda Shopify, tambi
 
 Si ya vendes al público, abrir otra tienda no debería ser el primer paso automático. Antes conviene dibujar cómo compra cada cliente y comprobar qué puede convivir en la configuración actual.
 
-> Funciones y límites contrastados con la documentación oficial de Shopify el 3 de noviembre de 2026. Los ejemplos y la matriz de pruebas de esta guía son propuestas de trabajo, no resultados de una implantación concreta.
+> Funciones y límites contrastados con la documentación oficial de Shopify en noviembre de 2026. Los ejemplos y la matriz de pruebas de esta guía son propuestas de trabajo, no resultados de una implantación concreta.
 
 ## ¿Qué significa tener una tienda mixta?
 

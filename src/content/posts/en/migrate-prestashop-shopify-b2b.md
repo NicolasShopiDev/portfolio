@@ -15,7 +15,7 @@ For a wholesale migration from PrestaShop to Shopify, inventory commercial rules
 
 The key question is what every buyer can still do the day after cutover. A finished home page does not establish whether a distributor can repeat an order on agreed terms.
 
-> Proposed acceptance plan based on documentation reviewed on 3 November 2026. No example migration has been executed, and no search-ranking retention is promised.
+> Proposed acceptance plan based on documentation reviewed in November 2026. No example migration has been executed, and no search-ranking retention is promised.
 
 ## Inventory rules currently hidden in modules
 

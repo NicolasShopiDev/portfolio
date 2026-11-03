@@ -15,7 +15,7 @@ Para importar tarifas mayoristas a Shopify, parte de una exportación actual del
 
 Una tarifa combina identidad de producto, importe, moneda y destinatario. Si solo revisas que la columna de precios tenga números, puedes cargar perfectamente el precio equivocado en una variante válida.
 
-> Procedimiento propuesto con documentación revisada el 3 de noviembre de 2026. Las tablas son ejemplos de preparación; no se presentan como archivos importados en una tienda real.
+> Procedimiento propuesto con documentación revisada en noviembre de 2026. Las tablas son ejemplos de preparación; no se presentan como archivos importados en una tienda real.
 
 ## Separa tu hoja de trabajo del archivo de importación
 

@@ -15,7 +15,7 @@ Para vender a 30 o 60 días en Shopify B2B, configura las condiciones de pago y 
 
 Antes de activar el plazo para todos los mayoristas, recorre un pedido desde su creación hasta la conciliación. La pantalla de compra es solo una parte: el trabajo termina cuando administración sabe qué se debe, qué se ha cobrado y qué puede volver a comprar ese cliente.
 
-> Documentación revisada el 3 de noviembre de 2026. Los escenarios son propuestas de aceptación, no una prueba ejecutada en tu tienda ni una recomendación sobre cuánto crédito conceder.
+> Documentación revisada en noviembre de 2026. Los escenarios son propuestas de aceptación, no una prueba ejecutada en tu tienda ni una recomendación sobre cuánto crédito conceder.
 
 ## Define qué acuerdo comercial quieres representar
 

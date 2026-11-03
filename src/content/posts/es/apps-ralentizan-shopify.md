@@ -15,7 +15,7 @@ Para saber qué apps ralentizan tu Shopify, mide su carga en páginas representa
 
 Empieza con una pregunta concreta: ¿qué tarda en aparecer o responder y en qué recorrido? Una ficha lenta, un filtro que se bloquea y un carrito que tarda en actualizarse pueden tener causas distintas.
 
-> Método de auditoría basado en documentación revisada el 3 de noviembre de 2026. Las tablas son plantillas propuestas; no contienen mediciones de una tienda real ni promesas de ganancia.
+> Método de auditoría basado en documentación revisada en noviembre de 2026. Las tablas son plantillas propuestas; no contienen mediciones de una tienda real ni promesas de ganancia.
 
 ## Define el problema antes de ordenar apps por tamaño
 

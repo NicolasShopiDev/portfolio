@@ -15,7 +15,7 @@ To import wholesale prices into Shopify, start with a current catalog export or 
 
 A price list combines product identity, amount, currency and recipient. Checking only that the price column contains numbers can leave a perfectly valid import assigning the wrong amount to a real variant.
 
-> Proposed procedure based on documentation reviewed on 3 November 2026. The tables illustrate preparation; they are not records of an import performed on a live store.
+> Proposed procedure based on documentation reviewed in November 2026. The tables illustrate preparation; they are not records of an import performed on a live store.
 
 ## Separate the working sheet from the import file
 

@@ -15,7 +15,7 @@ To sell on Net 30 or Net 60 through Shopify B2B, configure payment terms and sep
 
 Before enabling terms for every wholesale customer, trace an order from creation to reconciliation. Checkout is only one part. The work ends when finance knows what is owed, what has been collected and whether the buyer may order again.
 
-> Documentation reviewed on 3 November 2026. The scenarios are proposed acceptance checks, not tests performed in your store or advice about how much credit to grant.
+> Documentation reviewed in November 2026. The scenarios are proposed acceptance checks, not tests performed in your store or advice about how much credit to grant.
 
 ## Define the agreement you need to represent
 

@@ -26,7 +26,7 @@ Yes, you can sell to retail and wholesale customers in the same Shopify store, i
 
 If you already sell to consumers, opening a second store should not be an automatic first step. Map how each customer buys and check what can coexist in your current setup.
 
-> Features and limits checked against Shopify's official documentation on 3 November 2026. The examples and test matrix in this guide are proposed working tools, not results from a specific implementation.
+> Features and limits checked against Shopify's official documentation in November 2026. The examples and test matrix in this guide are proposed working tools, not results from a specific implementation.
 
 ## What is a blended Shopify store?
 

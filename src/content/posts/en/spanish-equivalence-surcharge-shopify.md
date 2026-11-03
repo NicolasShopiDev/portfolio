@@ -15,7 +15,7 @@ Handling Spain's equivalence surcharge in Shopify B2B requires buyer classificat
 
 The first technical decision is which system owns tax treatment and how it is preserved through collection and accounting. Gather an approved example order and invoice for your business before automating anything.
 
-> Documentation consulted on 3 November 2026. This guide defines an integration and its acceptance, not a surcharge workflow tested in a store. Your tax professional should validate the treatment of specific transactions. The topic concerns Spain, even though this version is in English.
+> Documentation consulted in November 2026. This guide defines an integration and its acceptance, not a surcharge workflow tested in a store. Your tax professional should validate the treatment of specific transactions. The topic concerns Spain, even though this version is in English.
 
 ## What needs checking on the invoice
 

@@ -28,7 +28,7 @@ Because in Shopify a company's tax setting acts at checkout, not on the storefro
 
 The native, reliable way to show a wholesale buyer net prices is to put the net price in a B2B catalog as a fixed price. Everything else (metafields, theme conditions, dual-price apps) changes the number on screen without changing what gets charged, and the cart gives it away.
 
-> The platform facts in this article were checked against Shopify's documentation on 27 October 2026. Plans and tax settings change every few months: if you're going to decide anything based on this, check again.
+> The platform facts in this article were checked against Shopify's documentation in October 2026. Plans and tax settings change every few months: if you're going to decide anything based on this, check again.
 
 ## Why "Don't collect tax" doesn't change the price on screen
 

@@ -15,7 +15,7 @@ Puedes pasar de pedidos por Excel y correo a un portal Shopify B2B, pero el trab
 
 El objetivo operativo es que un cliente envíe un pedido que puedas tramitar sin volver a escribir sus líneas. Antes de pedir una tienda nueva, identifica qué correcciones haces hoy y cuáles deben desaparecer con el portal.
 
-> Propuesta de implantación basada en documentación revisada el 3 de noviembre de 2026. El pedido de ejemplo es ficticio; no se atribuyen ahorros ni resultados a un cliente.
+> Propuesta de implantación basada en documentación revisada en noviembre de 2026. El pedido de ejemplo es ficticio; no se atribuyen ahorros ni resultados a un cliente.
 
 ## Empieza por tres pedidos, no por la portada
 

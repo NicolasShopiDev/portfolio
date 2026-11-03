@@ -15,7 +15,7 @@ Un pedido rápido B2B debe permitir introducir referencias y cantidades sin perd
 
 El punto de partida es observar cómo compra el mayorista: descubrir colección, reponer referencias conocidas o repetir un pedido. Cada tarea puede necesitar una entrada distinta.
 
-> Diseño funcional propuesto el 3 de noviembre de 2026. Los escenarios y cifras son ilustrativos. La guía no presenta una demo nueva como si estuviera implementada.
+> Diseño funcional propuesto en noviembre de 2026. Los escenarios y cifras son ilustrativos. La guía no presenta una demo nueva como si estuviera implementada.
 
 ## Diferencia tres herramientas que suelen llamarse igual
 

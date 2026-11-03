@@ -28,7 +28,7 @@ Porque el ajuste fiscal de una empresa en Shopify actúa en el pago, no en el es
 
 La forma nativa y fiable de que un mayorista vea precios netos es meter el precio neto en un catálogo B2B como precio fijo. Todo lo demás (metacampos, condiciones en el tema, apps de doble precio) cambia el número en pantalla sin cambiar lo que se cobra, y eso se nota en el carrito.
 
-> Los datos de plataforma de este artículo están comprobados en la documentación de Shopify el 27 de octubre de 2026. Los planes y los ajustes de impuestos se mueven cada pocos meses: si vas a decidir algo con esto, vuelve a mirarlo.
+> Los datos de plataforma de este artículo están comprobados en la documentación de Shopify en octubre de 2026. Los planes y los ajustes de impuestos se mueven cada pocos meses: si vas a decidir algo con esto, vuelve a mirarlo.
 
 ## Por qué "No cobrar impuestos" no cambia el precio que se ve
 

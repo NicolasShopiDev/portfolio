@@ -15,7 +15,7 @@ You can move Excel and email orders into a Shopify B2B portal, but the work star
 
 The operational goal is an order you can process without typing its lines again. Before commissioning a new store, identify today's corrections and decide which ones the portal should remove.
 
-> Implementation proposal based on documentation reviewed on 3 November 2026. The example order is fictional; no savings or results are attributed to a client.
+> Implementation proposal based on documentation reviewed in November 2026. The example order is fictional; no savings or results are attributed to a client.
 
 ## Start with three orders, not the home page
 

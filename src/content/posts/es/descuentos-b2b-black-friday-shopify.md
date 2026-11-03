@@ -26,7 +26,7 @@ Si tu tienda vende también a mayoristas con Shopify B2B, un descuento creado pa
 
 Este año la pregunta importa más que nunca, por dos fechas: B2B llegó a Basic, Grow y Advanced en abril de 2026, y el 23 de junio Shopify activó solos los descuentos B2B en las tiendas nuevas y en muchas de las existentes. Para bastantes tiendas, este será el primer Black Friday con las dos cosas a la vez.
 
-> Los datos de este artículo están comprobados en el centro de ayuda y el registro de cambios de Shopify el 3 de noviembre de 2026. Las rutas del panel salen de la ayuda de Shopify, no de un recorrido por un panel real: si alguna etiqueta no coincide con lo que ves, manda lo que ves.
+> Los datos de este artículo están comprobados en el centro de ayuda y el registro de cambios de Shopify en noviembre de 2026. Las rutas del panel salen de la ayuda de Shopify, no de un recorrido por un panel real: si alguna etiqueta no coincide con lo que ves, manda lo que ves.
 
 ## Qué pasa, con números
 

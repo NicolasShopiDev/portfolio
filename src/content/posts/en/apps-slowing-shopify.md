@@ -15,7 +15,7 @@ To identify apps slowing Shopify, measure what they load on representative pages
 
 Start with a precise question: what appears or responds late, and during which journey? A slow product page, frozen filter and delayed cart update may have different causes.
 
-> Audit method based on documentation reviewed on 3 November 2026. Tables are proposed templates, not measurements of a real store or promises of improvement.
+> Audit method based on documentation reviewed in November 2026. Tables are proposed templates, not measurements of a real store or promises of improvement.
 
 ## Define the problem before sorting apps by file size
 

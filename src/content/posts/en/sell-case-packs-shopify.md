@@ -26,7 +26,7 @@ To sell full cases of the same variant on Shopify B2B, configure catalog quantit
 
 The starting question is not which app to install. It is **what one unit means in your store and what your warehouse considers a full case**. Different answers produce orders that look right on screen but cannot be fulfilled as promised.
 
-> Features checked against official documentation on 3 November 2026. The examples and acceptance matrix are design proposals. They do not represent tests performed on a client's store.
+> Features checked against official documentation in November 2026. The examples and acceptance matrix are design proposals. They do not represent tests performed on a client's store.
 
 ## A case can mean three different things
 

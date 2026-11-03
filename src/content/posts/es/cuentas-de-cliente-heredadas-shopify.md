@@ -30,7 +30,7 @@ Lo que se rompe al actualizar es todo lo que estaba construido sobre las plantil
 
 Y hay una forma de actualizar sin querer, que conviene conocer antes de cambiar de tema.
 
-> Los datos de este artículo están comprobados en el centro de ayuda y el registro de cambios de Shopify el 3 de noviembre de 2026. Las rutas del panel salen de la ayuda de Shopify en español, no de un recorrido por un panel real: si alguna etiqueta no coincide con lo que ves, manda lo que ves.
+> Los datos de este artículo están comprobados en el centro de ayuda y el registro de cambios de Shopify en noviembre de 2026. Las rutas del panel salen de la ayuda de Shopify en español, no de un recorrido por un panel real: si alguna etiqueta no coincide con lo que ves, manda lo que ves.
 
 ## Cómo sabes si estás en las heredadas
 

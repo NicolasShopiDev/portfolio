@@ -26,7 +26,7 @@ Para vender cajas completas de una misma variante en Shopify B2B, configura regl
 
 La pregunta de partida no es qué app instalar. Es **qué significa una unidad en tu tienda y qué considera una caja completa tu almacén**. Si cada equipo responde algo diferente, aparecerán pedidos que parecen correctos en pantalla y no se pueden preparar como se prometieron.
 
-> Funciones contrastadas con documentación oficial el 3 de noviembre de 2026. Los ejemplos y la matriz de aceptación son propuestas de diseño. No representan pruebas ejecutadas en una tienda de cliente.
+> Funciones contrastadas con documentación oficial en noviembre de 2026. Los ejemplos y la matriz de aceptación son propuestas de diseño. No representan pruebas ejecutadas en una tienda de cliente.
 
 ## Una caja puede significar tres cosas distintas
 

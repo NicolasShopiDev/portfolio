@@ -1,5 +1,7 @@
 # Blog
 
+Las fechas visibles de publicación, actualización y revisión editorial se muestran solo con mes y año, en ambos idiomas, incluidas las notas de comprobación de los artículos. Conservar las fechas completas en frontmatter, metadatos SEO, RSS, sitemap y atributos datetime. Las fechas de hechos o plazos técnicos dentro del contenido conservan su precisión cuando es necesaria para explicar esos hechos.
+
 Por instrucción expresa de Nicolás del 3 de noviembre de 2026, cada post del blog debe escribirse y publicarse en español e inglés. Preparar ambas versiones con el mismo `pair`, incluyendo metadatos SEO, FAQ y CTA traducidos. Revisar enlaces internos del idioma correspondiente, selector de idioma y hreflang recíprocos antes de publicar. No dar un artículo por terminado si falta una de las versiones. La regla vale también para los artículos antiguos: todos los publicados tienen las dos versiones, y `npm run build` falla si un artículo publicado no tiene su pareja publicada. Seguir BLOG.md para el flujo editorial y de publicación.
 
 Nicolás ha autorizado además la publicación automática de dos temas nuevos cada mañana, a las 08:00 Europe/Berlin, con las dos versiones de cada tema. Esta autorización sustituye el antiguo flujo de un borrador diario sin publicación. Pasar las comprobaciones de BLOG.md y verificar el despliegue. No enviar mensajes ni publicar en servicios externos al portfolio. Preservar cambios ajenos y no hacer force push.

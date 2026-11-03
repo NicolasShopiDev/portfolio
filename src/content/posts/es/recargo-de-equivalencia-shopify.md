@@ -15,7 +15,7 @@ Para gestionar recargo de equivalencia con Shopify B2B, hay que alinear la ident
 
 La primera decisión técnica es qué sistema controla el tratamiento fiscal y cómo se conserva hasta el cobro y la contabilidad. Antes de automatizar, reúne un pedido y una factura de ejemplo aprobados para tu operación.
 
-> Documentación consultada el 3 de noviembre de 2026. Esta guía define una integración y su aceptación; no afirma que un flujo de recargo se haya probado en una tienda. La aplicación fiscal concreta debe validarse con quien lleva tus impuestos.
+> Documentación consultada en noviembre de 2026. Esta guía define una integración y su aceptación; no afirma que un flujo de recargo se haya probado en una tienda. La aplicación fiscal concreta debe validarse con quien lleva tus impuestos.
 
 ## Qué exige comprobar la factura
 

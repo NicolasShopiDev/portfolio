@@ -30,7 +30,7 @@ What breaks on upgrade is everything built on the account's Liquid templates: a 
 
 And there is a way to upgrade without meaning to, which is worth knowing before you change themes.
 
-> The facts in this article were checked against Shopify's help center and changelog on 3 November 2026. Admin paths come from Shopify's help center, not from walking through a live admin: if a label does not match what you see, trust what you see.
+> The facts in this article were checked against Shopify's help center and changelog in November 2026. Admin paths come from Shopify's help center, not from walking through a live admin: if a label does not match what you see, trust what you see.
 
 ## How to tell if you are on legacy accounts
 

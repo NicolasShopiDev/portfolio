@@ -28,7 +28,7 @@ Because since 26 August 2026, stores without Shopify Plus run the new Thank you 
 
 The fix is script by script: whatever measured purchases moves to a pixel, from an app or custom, and whatever displayed something on the page moves to a block in the checkout editor. And you should know from the start that, even if you do it right, a store selling in Europe will see fewer purchases than before. That is expected, and the reason is below.
 
-> The facts in this article were checked against Shopify's help center and developer documentation on 3 November 2026. Admin paths come from Shopify's help center, not from walking through a live admin: if a label does not match what you see, trust what you see.
+> The facts in this article were checked against Shopify's help center and developer documentation in November 2026. Admin paths come from Shopify's help center, not from walking through a live admin: if a label does not match what you see, trust what you see.
 
 ## What changed and when
 

@@ -29,7 +29,7 @@ Eso cambia la pregunta. Ya no es "¿puedo hacer B2B sin Plus?", porque sí puede
 
 Esto es lo que entra, lo que no, y cómo lo resuelvo cuando no entra.
 
-> Los límites de este artículo están comprobados en la documentación oficial de Shopify el 21 de octubre de 2026. Shopify los mueve: antes de tomar una decisión de plan, vuelve a mirarlos.
+> Los límites de este artículo están comprobados en la documentación oficial de Shopify en octubre de 2026. Shopify los mueve: antes de tomar una decisión de plan, vuelve a mirarlos.
 
 ## Qué significa "B2B nativo" en Shopify
 

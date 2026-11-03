@@ -29,7 +29,7 @@ That changes the question. It is no longer "can I do B2B without Plus?", because
 
 Here is what you get, what you don't, and what I do when it doesn't fit.
 
-> The limits in this article were checked against Shopify's own documentation on 21 October 2026. Shopify moves them: check again before you commit to a plan.
+> The limits in this article were checked against Shopify's own documentation in October 2026. Shopify moves them: check again before you commit to a plan.
 
 ## What "native B2B" actually means
 
