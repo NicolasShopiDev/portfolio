@@ -1,5 +1,16 @@
 # Radar de preguntas
 
+## 2026-11-03
+
+**Elegida:** ¿puedo vender a particulares y mayoristas en la misma tienda Shopify?
+- Dónde: primer tema del plan editorial solicitado por Nicolás; pregunta pública en https://www.reddit.com/r/shopify/comments/1lvhh2f/anyone_successfully_running_wholesale_retail_on/ . Tema ya pendiente en las entradas anteriores del radar.
+- Enfoque: decidir entre tienda mixta y dedicada, separar tarifas sin afectar a particulares y definir pruebas de aceptación. No se atribuyen volúmenes de búsqueda ni un hueco competitivo medido.
+- Artículo: `shopify-b2b-b2c-misma-tienda`, en español, preparado para publicación el 03-11-2026.
+- Verificado: documentación oficial de Shopify sobre tipos de tienda, checklist de tienda mixta, disponibilidad de B2B y catálogos con Markets. Atención al límite de tres asignaciones activas, no tres catálogos únicos, y a la condición Company locations para no incluir D2C en la tarifa B2B.
+- Validación: build con PENDING_GUARD=strict y revisión en pantalla estrecha. Ejemplos y matriz de aceptación identificados como propuestas, sin atribuir pruebas a una tienda real.
+
+**Descartadas:** ninguna búsqueda competitiva nueva; se ejecuta el tema aprobado expresamente por Nicolás.
+
 Qué se pregunta la gente y qué responde mal Google. La tarea de cada mañana añade aquí un bloque con la pregunta que ha elegido, dónde la vio y qué descartó. Sirve para tres cosas: no repetir tema, ver qué se repite de un mes a otro, y tener a mano el enlace al hilo original para ir a contestar allí cuando el artículo esté publicado.
 
 Formato de cada bloque:
