@@ -6,7 +6,7 @@ description: 'Since 26 August 2026, additional scripts no longer run on the Shop
 keyword: 'shopify additional scripts'
 date: '2026-11-03'
 tags: ['Checkout', 'Pixels', 'Analytics']
-related: ['cuentas-de-cliente-heredadas-shopify']
+related: ['auditar-javascript-apps-shopify', 'cuentas-de-cliente-heredadas-shopify']
 faq:
   - q: 'Why does Shopify no longer run my additional scripts?'
     a: 'Because the Thank you and Order status pages have been replaced by a new version that does not support them. The deadline for non-Plus stores was 26 August 2026, and the additional scripts section has been view-only since 28 August 2025. Tracking moves to pixels and visible content moves to blocks in the checkout editor.'
@@ -103,7 +103,7 @@ Three things in that code are easy to miss and decide whether the numbers match:
 
 ## What the sandbox does not allow
 
-Custom pixels run isolated, in an iframe Shopify calls the *Lax sandbox*. That is why a pixel cannot hijack a button, as I explained in an article on [auditing the JavaScript apps inject](/blog/auditar-javascript-apps-shopify/) (in Spanish). For conversion tracking it has three consequences:
+Custom pixels run isolated, in an iframe Shopify calls the *Lax sandbox*. That is why a pixel cannot hijack a button, as I explained in [how to audit the JavaScript apps inject](/en/blog/audit-shopify-app-javascript/). For conversion tracking it has three consequences:
 
 - **It cannot see the page.** It cannot read the DOM, so anything the old script took from the page has to come from `event.data`.
 - **It cannot render anything.** No banners, surveys or buttons. That goes in blocks.
