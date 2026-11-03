@@ -3,14 +3,15 @@
 
 :root {
   /* ── Colour ─────────────────────────────────────────────────── */
-  --bg: #ffffff;
+  /* Fondo hueso en vez de blanco: cansa menos la vista. Grises y bordes van en el mismo tono cálido. */
+  --bg: #f0ede8;
   --fg: #0a0a0a;
   --fg-2: #444444;
-  --fg-3: #6e6e6e;
-  --border: #e5e5e5;
-  --card-bg: #f5f5f5;
-  --gray-100: #fafafa;
-  --gray-200: #f2f2f2;
+  --fg-3: #626262;  /* ≥4.6:1 sobre --bg, --card-bg y --gray-200 */
+  --border: #dcd7cf;
+  --card-bg: #e8e4dd;
+  --gray-100: #ebe8e2;
+  --gray-200: #e4e0d9;
   --gray-300: #e2e2e2;
   --gray-400: #d8d8d8;
   --gray-muted: rgba(0,0,0,0.48);
@@ -23,7 +24,7 @@
   --accent-yellow: #febc2e;
   --accent-green:  #28c840;
   --accent-success: #2a9d5c;
-  --nav-bg: rgba(255,255,255,0.92);
+  --nav-bg: rgba(240,237,232,0.92);
 
   /* Code panels: the Checkout Lab and the snippets on the code page. */
   --code-bg: #111113;
@@ -156,7 +157,7 @@ ul, ol { list-style: none; }
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
   z-index: 100;
-  background: rgba(255,255,255,0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   /* La línea de abajo va en box-shadow, no en border: un borde resta 1 px al área de contenido
@@ -227,9 +228,9 @@ ul, ol { list-style: none; }
 .nav-lang:hover { color: var(--fg); }
 
 .nav-cta {
-  background: #ededf3;
+  background: var(--card-bg);
   color: var(--fg);
-  border: 1px solid #dddde8;
+  border: 1px solid var(--border);
   padding: 9px 22px;
   border-radius: 100px;
   font-size: 14px;
@@ -713,7 +714,7 @@ picture { display: contents; }
 .project-card:hover .card-link { color: var(--fg); }
 
 /* ── About ──────────────────────────────────────────────────── */
-.about { background: #fafafa; }
+.about { background: var(--gray-100); }
 
 .about-grid {
   display: grid;
@@ -1387,7 +1388,7 @@ picture { display: contents; }
   line-height: 1.85;
   color: var(--fg-2);
 }
-.about-page { background: #fafafa; }
+.about-page { background: var(--gray-100); }
 .about-page-grid {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -1623,7 +1624,7 @@ dd .pending { margin: 0; padding: 6px 10px; font-size: 13px; }
 /* The body's own padding opens the gap under the head, so the first heading starts flush. */
 .service-body .longform > :first-child h2,
 .service-body .longform > h2:first-child { margin-top: 0; }
-.service-cases { background: #fafafa; }
+.service-cases { background: var(--gray-100); }
 .service-more { margin-top: 32px; font-size: 15px; line-height: 1.7; color: var(--fg-2); }
 
 .case-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: var(--sp-block); }

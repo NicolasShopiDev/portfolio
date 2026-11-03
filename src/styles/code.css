@@ -99,7 +99,7 @@
 .snippet pre.astro-code .line { padding: 0 20px; }
 
 /* ── Character rain ────────────────────────────────────────── */
-/* Decoration behind the patterns: letters and numbers falling down the white
+/* Decoration behind the patterns: letters and numbers falling down the page
    background. src/components/CodeRain.astro paints the canvas; this only places it,
    dims it and fades it out at the edges of the section. */
 .code-rain {
@@ -124,7 +124,7 @@
 
 .patterns > .container { position: relative; z-index: 1; }
 
-/* The rain runs behind the words, so every block of text sits on its own white veil.
+/* The rain runs behind the words, so every block of text sits on its own veil of the page colour (--bg).
    The veil is a pseudo-element with a soft edge: a plain box would read as a card. */
 .patterns .section-intro,
 .pattern-text { position: relative; }
@@ -136,8 +136,8 @@
   inset: -18px -22px;
   z-index: -1;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 0 26px 18px rgba(255, 255, 255, 0.82);
+  background: rgba(240, 237, 232, 0.82);
+  box-shadow: 0 0 26px 18px rgba(240, 237, 232, 0.82);
 }
 
 /* ── Colophon ───────────────────────────────────────────────── */
