@@ -17,7 +17,7 @@ La versión en inglés del mismo artículo se enlaza con `--pair`, usando la cla
 npm run post -- en shopify-volume-pricing "Volume pricing in Shopify B2B" --pair shopify-precios-por-volumen
 ```
 
-El `pair` es lo que une los dos idiomas: hreflang, el selector de idioma y los artículos relacionados salen de ahí. Si un artículo solo existe en español, no pasa nada: se publica solo con su hreflang.
+El `pair` es lo que une los dos idiomas: hreflang, el selector de idioma y los artículos relacionados salen de ahí. Por instrucción de Nicolás del 3 de noviembre de 2026, cada nuevo artículo debe escribirse y publicarse en español e inglés, con el mismo `pair`. No publicar una versión sin su pareja. Revisar metadatos, FAQ, CTA y enlaces en ambos idiomas.
 
 Qué pasa solo: la URL, el sitemap con sus alternates, el RSS, el JSON-LD (`BlogPosting`, `FAQPage`, breadcrumbs), el índice de contenidos (desde cuatro `##`), el tiempo de lectura, la ficha de autor, el CTA y los enlaces a otros artículos.
 
@@ -32,7 +32,7 @@ Una tarea programada (`blog-borrador-diario`, a las 8:00) deja el borrador del d
 1. Busca preguntas reales de los últimos 60 días en el foro de Shopify, en Reddit, en Stack Overflow y en foros en español, dentro de lo que tú dominas.
 2. Busca cada candidata en Google y se queda con la que tenga peor respuesta: hilos sin resolver, artículos viejos, páginas de agencia sin sustancia, nada en español.
 3. Comprueba los datos de plataforma en la documentación de Shopify ese mismo día.
-4. Escribe el artículo con `draft: true` en una rama `borrador-<fecha>-<slug>`, pasa `npm run build` y la sube.
+4. Escribe las versiones española e inglesa con `draft: true` y el mismo `pair` en una rama `borrador-<fecha>-<slug>`, pasa `npm run build` y la sube.
 5. Anota en [BLOG-RADAR.md](BLOG-RADAR.md) la pregunta elegida, el enlace al hilo y lo que descartó.
 
 Tú lo lees, lo corriges y decides. Mientras tenga `draft: true` no está en el índice, ni en el sitemap, ni en el RSS, y lleva `noindex`.
@@ -48,6 +48,7 @@ Para publicarlo, cuando te convenza:
 
 ```bash
 npm run publish -- mi-slug    # quita el draft y le pone la fecha de hoy
+npm run publish -- my-english-slug    # publicar también la pareja inglesa
 npm run build
 git add -A && git commit -m "blog: mi-slug"
 git checkout master && git merge --no-ff borrador-2026-10-22-mi-slug && git push origin master
@@ -72,9 +73,9 @@ No es un blog de volumen, es la prueba de que sabes de lo que hablas. Un artícu
 9. **Sin guiones largos** (quitaste uno a mano del texto de "Sobre mí") y sin "en el mundo actual", "descubre", "sumérgete". El tono del sitio es seco y directo.
 10. **Nada de datos de clientes que no estén ya publicados** en la ficha del proyecto.
 
-## Qué traducir al inglés
+## Publicación siempre bilingüe
 
-El español es el idioma por defecto: es donde compites menos y donde está tu mercado más cercano. Traduce al inglés solo los artículos que (a) hablen de un límite o una técnica de plataforma, no de España, y (b) te servirían para Upwork o para una agencia holandesa. Una traducción buena cada tres artículos rinde más que traducirlo todo deprisa.
+Todos los artículos nuevos se escriben y publican en español e inglés. Mantener el mismo contenido sustancial, ejemplos, fuentes y fecha; adaptar título SEO, consulta objetivo y redacción a cada idioma. Si un tema trata de España, explicar ese contexto también en inglés. Usar enlaces internos del idioma correspondiente; cuando no exista una traducción antigua, explicar el punto en el propio artículo o identificar expresamente el enlace como contenido en español. Antes de publicar, comprobar las dos URLs, el selector de idioma y los hreflang recíprocos. Esta regla sustituye la selección anterior de traducciones parciales; no obliga a traducir el archivo histórico en cada nueva publicación.
 
 ## Calendario de temas
 
