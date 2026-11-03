@@ -1,5 +1,15 @@
 # Radar de preguntas
 
+## 2026-11-03 · Precio incorrecto B2B
+
+**Elegida:** mi mayorista ve un precio incorrecto en Shopify, ¿qué reviso?
+- Dónde: segundo tema del plan editorial aprobado; antecedente público sobre presentación incorrecta de precios: https://community.shopify.com/t/price-lists-incorrectly-applies-discount-to-compare-at-price/168306 . Es un hilo histórico, no prueba de un fallo actual ni de volumen de búsquedas.
+- Enfoque: diagnóstico de un precio inesperado, distinto de la página de preguntas sobre configurar precios por cliente. Ficha reproducible, asignaciones, prioridades, precio fijo, volumen, promociones y recorrido del tema. Sin afirmar un hueco competitivo medido.
+- Artículos: ES `precio-incorrecto-shopify-b2b`; EN `wrong-price-shopify-b2b`. Mismo `pair`, FAQ y CTA en ambos idiomas.
+- Verificado el 03-11-2026: documentación oficial de Markets/catálogos, ajustes de precio, descuentos B2B, cantidades y presentación de precios por volumen en el tema. Ejemplos identificados como hipotéticos; no se afirma haber auditado una tienda real.
+
+**Descartadas:** no se abre una selección nueva; se ejecuta el siguiente tema del plan por petición de Nicolás.
+
 ## 2026-11-03
 
 **Elegida:** ¿puedo vender a particulares y mayoristas en la misma tienda Shopify?
