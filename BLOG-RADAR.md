@@ -1,5 +1,16 @@
 # Radar de preguntas
 
+## 2026-11-03 · Cajas y múltiplos
+
+**Elegida:** ¿cómo vendo cajas completas y qué pasa si el cliente mezcla tallas o colores?
+- Dónde: tercer tema del plan, solicitado por Nicolás. Antecedentes públicos: https://community.shopify.com/t/how-do-i-set-up-case-pack-quantities/304201 y https://community.shopify.com/t/quantity-rules-that-reach-retail-customers-not-just-b2b-catalogs/700917 . Los hilos aportan preguntas, no verifican capacidades actuales ni volumen de búsqueda.
+- Enfoque: unidad de venta, cajas por variante, cajas mezcladas y packs de composición fija. Se diferencia del post de pedido mínimo por importe y del diagnóstico de precios.
+- Artículos: ES `vender-por-cajas-shopify`; EN `sell-case-packs-shopify`, mismo `pair`.
+- Comprobado el 03-11-2026: reglas nativas, campos Liquid quantity_rule, actualización del tema, disponibilidad de Functions y alcance de la API de validación. Demo y snippet propios revisados: no se atribuye al ejemplo por línea una agrupación de variantes.
+- Aportación: ejemplos de modelado de piezas/cajas y matriz de aceptación; no se presentan como pruebas de una tienda de cliente.
+
+**Descartadas:** sin nueva selección competitiva; se ejecuta el siguiente tema del plan.
+
 ## 2026-11-03 · Precio incorrecto B2B
 
 **Elegida:** mi mayorista ve un precio incorrecto en Shopify, ¿qué reviso?
