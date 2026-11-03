@@ -25,17 +25,19 @@ Qué hay que escribir a mano: el artículo, `seoTitle`, `description`, `keyword`
 
 `draft: true` deja el artículo fuera del índice, del sitemap y del RSS, y lo marca `noindex`, pero sigue teniendo URL. Sirve para enseñarlo en una rama de preview antes de publicarlo.
 
-## El borrador de cada mañana
+## Publicación de cada mañana
 
-Una tarea programada (`blog-borrador-diario`, a las 8:00) deja el borrador del día listo y **no publica nada**. Lo que hace:
+Por autorización expresa de Nicolás del 3 de noviembre de 2026, la tarea recurrente publica **dos temas nuevos cada mañana a las 08:00, Europe/Berlin**, cada tema en español e inglés: cuatro páginas por ejecución. Sustituye la instrucción anterior de preparar un único borrador sin publicar. El horario de inicio no garantiza que el despliegue haya terminado a las 08:00.
 
-1. Busca preguntas reales de los últimos 60 días en el foro de Shopify, en Reddit, en Stack Overflow y en foros en español, dentro de lo que tú dominas.
-2. Busca cada candidata en Google y se queda con la que tenga peor respuesta: hilos sin resolver, artículos viejos, páginas de agencia sin sustancia, nada en español.
-3. Comprueba los datos de plataforma en la documentación de Shopify ese mismo día.
-4. Escribe las versiones española e inglesa con `draft: true` y el mismo `pair` en una rama `borrador-<fecha>-<slug>`, pasa `npm run build` y la sube.
-5. Anota en [BLOG-RADAR.md](BLOG-RADAR.md) la pregunta elegida, el enlace al hilo y lo que descartó.
+1. Lee AGENTS.md, este archivo, BLOG-PLAN-90-DIAS.md, BLOG-RADAR.md y los posts de la última versión de origin/master. No vuelvas a escribir temas ya publicados ni dupliques la intención de preguntas, servicios o comparativas existentes.
+2. Busca preguntas reales sobre Shopify, B2B, checkout, temas, rendimiento e integraciones que encajen con los servicios de Nicolás. Comprueba resultados actuales y registra fuentes; no inventes volúmenes, huecos SEO ni experiencias de clientes.
+3. Selecciona dos preguntas distintas y verifica datos de plataforma en documentación oficial ese día. Los ejemplos deben ser propios o hipotéticos identificados. No presentes una implementación como probada si no la ejecutaste.
+4. Escribe ambos idiomas con el mismo `pair`, fecha local de Berlín, SEO, FAQ, CTA y enlaces adaptados. Revisa las afirmaciones fiscales, jurídicas o de seguridad con fuentes primarias; si falta evidencia, cambia el enfoque a lo verificable o elige otro tema.
+5. Trabaja en una rama o worktree aislado de origin/master; conserva cambios ajenos. Actualiza el radar, pasa build con `PENDING_GUARD=strict`, revisa móvil y ambos idiomas, enlaces internos, alternates, RSS y sitemap.
+6. Publica únicamente los archivos del lote mediante commit y push a master, sin force push. Si hay cambios concurrentes, intégralos y repite las comprobaciones necesarias. Espera el despliegue y verifica las cuatro URLs públicas, indexables y con enlaces de idioma recíprocos.
+7. Comunica títulos y URLs, o un bloqueo concreto. No rellenes la cuota con artículos sin verificar. Esta autorización cubre publicación en el portfolio, no mensajes o enlaces promocionales en foros o redes.
 
-Tú lo lees, lo corriges y decides. Mientras tenga `draft: true` no está en el índice, ni en el sitemap, ni en el RSS, y lleva `noindex`.
+Los borradores siguen siendo útiles para trabajo no validado: `draft: true` los excluye del índice, sitemap y RSS. No cuentan como publicaciones terminadas.
 
 Para revisarlo:
 
@@ -65,7 +67,7 @@ No es un blog de volumen, es la prueba de que sabes de lo que hablas. Un artícu
 1. **Una pregunta real, respondida en las dos primeras frases.** Quien llega de Google quiere la respuesta, no una introducción. Google y los asistentes de IA citan ese primer párrafo.
 2. **Datos comprobados hoy.** Todo límite, precio o nombre de función se comprueba en la documentación de Shopify el día que escribes, y se enlaza. Shopify cambia los planes cada pocos meses: un dato viejo es peor que no tenerlo. Si el artículo depende de datos que caducan, pon la fecha de comprobación dentro, como en el primero.
 3. **Algo que solo puedes decir tú.** El código que escribirías, el error que te encontraste, el número que has visto. Lo que se puede copiar de la documentación no vale la pena publicarlo.
-4. **Entre 1.200 y 1.800 palabras.** Menos se queda corto para una consulta técnica; más se lee en diagonal.
+4. **Extensión según la respuesta.** Como fija el plan editorial, no alargar para alcanzar una cifra: una guía técnica suele necesitar alrededor de 1.200–1.800 palabras, pero el criterio es resolver la pregunta con ejemplos, límites y comprobaciones útiles en cada idioma.
 5. **`##` que respondan a subconsultas.** Cada apartado empieza respondiendo. Párrafos de dos o tres frases.
 6. **Dos o tres enlaces internos** con texto descriptivo: a un proyecto (`/proyectos/#slug`), a otro artículo, a `/sobre-mi/`. El CTA ya enlaza a contacto.
 7. **Un CTA, al final, específico del artículo.** El genérico está en `i18n/ui.ts`; el bueno se escribe para cada tema ("¿Te has quedado sin catálogos?" convierte más que "¿Hablamos?").

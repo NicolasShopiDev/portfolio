@@ -1,5 +1,20 @@
 # Radar de preguntas
 
+## 2026-11-03 · Cierre del plan principal y reserva
+
+Nicolás solicita publicar todo el plan pendiente, incluida la reserva, y autoriza dos temas nuevos diarios en ambos idiomas. Se redactan ocho temas con sus dieciséis páginas ES/EN; los títulos y slugs están en `BLOG-PUBLICACIONES.json`.
+
+- Portal desde Excel/correo: ejemplo ficticio de transformación del pedido y criterios de aceptación. Fuentes oficiales: borradores B2B e integraciones externas.
+- Importar tarifas: tabla propia de correspondencias, diferenciada del formato CSV oficial; comprobar el archivo con la muestra actual de Shopify antes de importarlo.
+- Pago aplazado: separar vencimiento, captura y exposición. Documentación oficial confirma que el vencimiento no captura automáticamente y que los depósitos requieren Plus.
+- Errores de ERP: ficha ficticia de incidente y arquitectura recomendada de identidad, reintentos y conciliación; no se atribuyen incidencias a clientes.
+- Migración PrestaShop: plan propuesto de aceptación y mapeo de reglas; sin promesas de posiciones SEO ni credenciales migradas sin validación.
+- Pedido rápido: alcance entre tabla de variantes, búsqueda SKU y carga; referencia al caso público Émolo, sin inventar métricas.
+- Rendimiento de apps: método de comparación y tablas de trabajo; sin mediciones antes/después inventadas. Documentación oficial de Shopify sobre scripts y costes de JavaScript.
+- Recargo de equivalencia: se sustituye la propuesta no probada por una guía de diseño y aceptación con documentación de AEAT y Shopify. No afirma cálculo nativo inexistente, tipos universales ni automatización desplegada.
+
+El tema de descuentos B2B de la reserva ya está cubierto por `descuentos-b2b-black-friday-shopify` y su pareja inglesa; no se duplica. Investigación guiada por el plan aprobado, sin afirmar demanda o competencia medida. Fuentes enlazadas en cada artículo y consultadas el 03-11-2026.
+
 ## 2026-11-03 · Cajas y múltiplos
 
 **Elegida:** ¿cómo vendo cajas completas y qué pasa si el cliente mezcla tallas o colores?

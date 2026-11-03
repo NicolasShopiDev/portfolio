@@ -1,0 +1,98 @@
+[
+  {
+    "pair": "pedidos-excel-portal-shopify",
+    "lang": "es",
+    "slug": "pedidos-excel-portal-shopify",
+    "title": "De pedidos por Excel y correo a un portal mayorista en Shopify"
+  },
+  {
+    "pair": "pedidos-excel-portal-shopify",
+    "lang": "en",
+    "slug": "email-excel-orders-shopify-b2b",
+    "title": "From Excel and email orders to a Shopify wholesale portal"
+  },
+  {
+    "pair": "importar-tarifas-shopify-b2b",
+    "lang": "es",
+    "slug": "importar-tarifas-shopify-b2b",
+    "title": "Importar tarifas mayoristas a Shopify: preparar el CSV y comprobarlo"
+  },
+  {
+    "pair": "importar-tarifas-shopify-b2b",
+    "lang": "en",
+    "slug": "import-wholesale-prices-shopify",
+    "title": "Import wholesale prices into Shopify: prepare and verify the CSV"
+  },
+  {
+    "pair": "pago-aplazado-shopify-b2b",
+    "lang": "es",
+    "slug": "pago-aplazado-shopify-b2b",
+    "title": "Cobrar a 30 o 60 días en Shopify B2B: vencimiento, cobro y riesgo"
+  },
+  {
+    "pair": "pago-aplazado-shopify-b2b",
+    "lang": "en",
+    "slug": "payment-terms-shopify-b2b",
+    "title": "Net 30 or Net 60 on Shopify B2B: due dates, collection and risk"
+  },
+  {
+    "pair": "errores-sincronizacion-shopify-erp",
+    "lang": "es",
+    "slug": "errores-sincronizacion-shopify-erp",
+    "title": "Shopify y ERP no cuadran: cómo localizar errores de stock y pedidos"
+  },
+  {
+    "pair": "errores-sincronizacion-shopify-erp",
+    "lang": "en",
+    "slug": "shopify-erp-sync-errors",
+    "title": "Shopify and ERP disagree: diagnosing stock and order sync errors"
+  },
+  {
+    "pair": "migrar-prestashop-shopify-b2b",
+    "lang": "es",
+    "slug": "migrar-prestashop-shopify-b2b",
+    "title": "Migrar de PrestaShop a Shopify si vendes al por mayor: qué comprobar"
+  },
+  {
+    "pair": "migrar-prestashop-shopify-b2b",
+    "lang": "en",
+    "slug": "migrate-prestashop-shopify-b2b",
+    "title": "Migrating PrestaShop wholesale to Shopify: what to verify"
+  },
+  {
+    "pair": "pedido-rapido-referencia-shopify",
+    "lang": "es",
+    "slug": "pedido-rapido-referencia-shopify",
+    "title": "Pedido rápido por referencia en Shopify B2B: qué debe resolver"
+  },
+  {
+    "pair": "pedido-rapido-referencia-shopify",
+    "lang": "en",
+    "slug": "sku-quick-order-shopify-b2b",
+    "title": "SKU quick ordering on Shopify B2B: what it needs to handle"
+  },
+  {
+    "pair": "apps-ralentizan-shopify",
+    "lang": "es",
+    "slug": "apps-ralentizan-shopify",
+    "title": "Qué apps ralentizan tu Shopify: cómo medirlo antes de quitar nada"
+  },
+  {
+    "pair": "apps-ralentizan-shopify",
+    "lang": "en",
+    "slug": "apps-slowing-shopify",
+    "title": "Which apps slow down your Shopify store? Measure before removing"
+  },
+  {
+    "pair": "recargo-de-equivalencia-shopify",
+    "lang": "es",
+    "slug": "recargo-de-equivalencia-shopify",
+    "title": "Recargo de equivalencia en Shopify B2B: diseñar pedido, cobro y factura"
+  },
+  {
+    "pair": "recargo-de-equivalencia-shopify",
+    "lang": "en",
+    "slug": "spanish-equivalence-surcharge-shopify",
+    "title": "Spanish equivalence surcharge on Shopify B2B: order, payment and invoice"
+  }
+]
