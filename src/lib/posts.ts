@@ -39,8 +39,18 @@ const describe = (entry: PostEntry): Post => {
 
 const byNewest = (a: Post, b: Post) => (a.entry.data.date < b.entry.data.date ? 1 : -1);
 
-/** Every post in both languages, drafts included. */
-export const allPosts = async (): Promise<Post[]> => (await getCollection('posts')).map(describe).sort(byNewest);
+/** Every post in both languages, drafts included. Fails the build if a published post has no published translation. */
+export const allPosts = async (): Promise<Post[]> => {
+  const posts = (await getCollection('posts')).map(describe).sort(byNewest);
+  const published = posts.filter((p) => !p.entry.data.draft);
+  const missing = published.filter(
+    (p) => !published.some((q) => q.entry.data.pair === p.entry.data.pair && q.lang !== p.lang),
+  );
+  if (missing.length > 0) {
+    throw new Error(`Published posts need their version in the other language, with the same pair: ${missing.map((p) => p.entry.id).join(', ')}`);
+  }
+  return posts;
+};
 
 /** Published posts of one language, newest first. What the listing, the feed and the sitemap use. */
 export const publishedPosts = async (lang: Lang): Promise<Post[]> =>

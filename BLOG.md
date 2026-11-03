@@ -75,7 +75,7 @@ No es un blog de volumen, es la prueba de que sabes de lo que hablas. Un artícu
 
 ## Publicación siempre bilingüe
 
-Todos los artículos nuevos se escriben y publican en español e inglés. Mantener el mismo contenido sustancial, ejemplos, fuentes y fecha; adaptar título SEO, consulta objetivo y redacción a cada idioma. Si un tema trata de España, explicar ese contexto también en inglés. Usar enlaces internos del idioma correspondiente; cuando no exista una traducción antigua, explicar el punto en el propio artículo o identificar expresamente el enlace como contenido en español. Antes de publicar, comprobar las dos URLs, el selector de idioma y los hreflang recíprocos. Esta regla sustituye la selección anterior de traducciones parciales; no obliga a traducir el archivo histórico en cada nueva publicación.
+Todos los artículos nuevos se escriben y publican en español e inglés. Mantener el mismo contenido sustancial, ejemplos, fuentes y fecha; adaptar título SEO, consulta objetivo y redacción a cada idioma. Si un tema trata de España, explicar ese contexto también en inglés. Usar enlaces internos del idioma correspondiente; cuando no exista una traducción antigua, explicar el punto en el propio artículo o identificar expresamente el enlace como contenido en español. Antes de publicar, comprobar las dos URLs, el selector de idioma y los hreflang recíprocos. Esta regla sustituye la selección anterior de traducciones parciales y vale también para el archivo: por instrucción de Nicolás del mismo día, todos los artículos publicados tienen versión en los dos idiomas. `npm run build` falla si un artículo publicado no tiene su pareja publicada, así que un borrador se publica con su traducción o no se publica.
 
 ## Calendario de temas
 
