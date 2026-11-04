@@ -94,5 +94,33 @@
     "lang": "en",
     "slug": "spanish-equivalence-surcharge-shopify",
     "title": "Spanish equivalence surcharge on Shopify B2B: order, payment and invoice"
+  },
+  {
+    "lang": "es",
+    "slug": "solicitud-alta-mayorista-shopify",
+    "pair": "solicitud-alta-mayorista-shopify",
+    "title": "Solicitudes de alta mayorista en Shopify: formulario, aprobación y primera compra",
+    "date": "2026-11-04"
+  },
+  {
+    "lang": "en",
+    "slug": "wholesale-account-requests-shopify",
+    "pair": "solicitud-alta-mayorista-shopify",
+    "title": "Shopify wholesale account requests: application, approval and first order",
+    "date": "2026-11-04"
+  },
+  {
+    "lang": "es",
+    "slug": "numero-pedido-compra-obligatorio-shopify-b2b",
+    "pair": "numero-pedido-compra-obligatorio-shopify-b2b",
+    "title": "Número de pedido de compra obligatorio en Shopify B2B: cómo validarlo",
+    "date": "2026-11-04"
+  },
+  {
+    "lang": "en",
+    "slug": "require-po-number-shopify-b2b",
+    "pair": "numero-pedido-compra-obligatorio-shopify-b2b",
+    "title": "Require a purchase order number in Shopify B2B: validation and limits",
+    "date": "2026-11-04"
   }
 ]

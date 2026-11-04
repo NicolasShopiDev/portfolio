@@ -1,5 +1,23 @@
 # Radar de preguntas
 
+## 2026-11-04 · Solicitudes mayoristas y referencia de compra
+
+**Elegida 1:** ¿cómo solicita acceso un mayorista y quién lo aprueba antes de comprar?
+- Pregunta real: https://community.shopify.com/t/merchants-selling-wholesale-how-do-new-b2b-buyers-apply-for-an-account-on-your-store/646242 . Otra señal reciente: https://community.shopify.com/t/foxrate-wholesale-approvals-just-launched-storefront-application-form-one-click-company-creation/705492 (anuncio de app del 27 de octubre; solo evidencia de la necesidad, no fuente de capacidades).
+- Revisión de resultados: conviven respuestas antiguas que lo describen como manual y anuncios de apps. No se atribuyen volúmenes ni dificultad. La ayuda vigente documenta solicitudes mediante Forms, autorización, límites con tiendas cerradas y alta de empresas nuevas.
+- Aportación: tabla propia de datos/decisiones, estados organizativos, recorrido de empleados existentes y matriz de aceptación. Ejemplos identificados como propuestas, sin resultados de clientes.
+- Fuentes primarias comprobadas el 04-11-2026: https://help.shopify.com/en/manual/b2b/companies-and-customers/company-account-requests y https://help.shopify.com/en/manual/b2b/reports-and-automations/automations .
+- Artículos: ES `solicitud-alta-mayorista-shopify`; EN `wholesale-account-requests-shopify`; mismo pair. Intención distinta del artículo sobre migrar cuentas heredadas y del servicio de área de cliente.
+
+**Elegida 2:** ¿puedo exigir y validar el campo nativo de número de pedido de compra B2B?
+- Preguntas reales: https://community.shopify.com/t/validate-po-number-upon-checkout-b2b/318581 y https://community.shopify.com/t/how-we-can-make-the-po-number-field-required-on-checkout-page-for-the-b2b-store/342321 . Son hilos históricos, no prueba de las capacidades actuales.
+- Revisión de resultados: una respuesta del foro todavía afirma que Functions no puede leer el campo; el changelog oficial de abril de 2026 documenta poNumber y el target de error nativo. No se convierte una coincidencia de formato en prueba de autorización de compra.
+- Fuentes comprobadas el 04-11-2026: https://shopify.dev/changelog/posts/cart-and-checkout-validation-adds-billing-address-and-po-number-error-targets ; https://shopify.dev/docs/api/functions/latest/cart-and-checkout-validation ; https://shopify.dev/docs/apps/build/functions .
+- Aportación: separación PO/pedido/factura/referencia ERP, alcance comercial, matriz propia de valores vacíos, espacios, formatos y perfiles. No se publica una Function no ejecutada como si estuviera desplegada.
+- Artículos: ES `numero-pedido-compra-obligatorio-shopify-b2b`; EN `require-po-number-shopify-b2b`; mismo pair. Intención específica frente a la página general de personalizar checkout.
+
+**Descartadas:** ocultar precios hasta aprobación ya tiene página específica; recordatorios de pago se solapan con el artículo de plazos; cajas mezcladas ya están tratadas. Ningún envío a foros o terceros.
+
 ## 2026-11-03 · Cierre del plan principal y reserva
 
 Nicolás solicita publicar todo el plan pendiente, incluida la reserva, y autoriza dos temas nuevos diarios en ambos idiomas. Se redactan ocho temas con sus dieciséis páginas ES/EN; los títulos y slugs están en `BLOG-PUBLICACIONES.json`.
