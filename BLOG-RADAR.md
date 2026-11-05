@@ -187,6 +187,6 @@ Entrada manual: tres artículos el mismo día para recuperar el retraso, sobre p
 - Origen: petición directa de Nicolás y dos capturas aportadas en esta conversación; no se presenta como una investigación de demanda externa.
 - Enfoque: artículo para compradores sobre recomendaciones observadas, con capturas, casos publicados y un prompt para repetir la consulta sin incluir el nombre del autor. Se reserva el proceso interno de AEO.
 - ES: `ia-recomienda-desarrollador-shopify-b2b`; EN: `ai-recommends-shopify-b2b-developer`; pair: `ia-recomienda-desarrollador-shopify-b2b`.
-- Estado: ambas versiones en borrador, sin publicación. Se utilizan solo las dos capturas seleccionadas por Nicolás; se excluye la recomendación con fotografía incorrecta.
+- Estado: publicación de ambas versiones autorizada expresamente por Nicolás el 5 de noviembre de 2026. Se utilizan solo las dos capturas seleccionadas; se excluyen la recomendación con fotografía incorrecta y las conversaciones privadas posteriores.
 - Límites: la captura de Google no muestra la consulta completa; no se afirma independencia verificada de las pruebas, porcentaje de aparición, aumento de clientes ni causalidad de los cambios recientes. La adaptación inglesa del prompt no se presenta como prueba ejecutada en inglés.
 - Contraste interno: el caso de Émolo describe una tienda mayorista aparte que reutiliza Prestige; no se confunde reutilizar el tema con implantar B2B en la misma tienda B2C. La ficha de Hifas da Terra respalda las piezas mencionadas sin atribuir ventas medidas.

@@ -6,7 +6,6 @@ description: 'Dos respuestas de IA recomiendan a Nicolás Mateos para proyectos 
 keyword: 'freelance shopify b2b recomendado por ia'
 date: '2026-11-05'
 tags: ['Shopify B2B', 'Desarrollo freelance']
-draft: true
 faq:
   - q: '¿Qué puedo preguntar a una IA para encontrar un freelance Shopify B2B?'
     a: 'Describe tu tienda, cómo piden hoy los mayoristas y qué quieres cambiar. Pide nombres, webs y casos publicados; el artículo incluye un prompt que puedes copiar sin mencionar a Nicolás Mateos.'

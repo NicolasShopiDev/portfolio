@@ -6,7 +6,6 @@ description: 'Two AI responses recommend Nicolás Mateos for Shopify B2B project
 keyword: 'shopify b2b freelancer recommended by ai'
 date: '2026-11-05'
 tags: ['Shopify B2B', 'Freelance development']
-draft: true
 faq:
   - q: 'What can I ask AI to find a Shopify B2B freelancer?'
     a: 'Describe your store, how wholesale customers order today and what you want to change. Ask for names, websites and published projects; this article includes a prompt you can copy without mentioning Nicolás Mateos.'
