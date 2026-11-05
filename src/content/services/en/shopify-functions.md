@@ -20,7 +20,7 @@ faq:
     a: 'The custom app with the Function, its input query, its unit tests, the admin configuration and a short document saying what it does, what data it needs and how to change it. The code is yours and it is reviewable.'
 related: ['scripts-to-functions', 'checkout-development']
 terms: ['shopify-functions', 'input-query', 'shopify-plus']
-updated: '2026-10-23'
+updated: '2026-11-05'
 verified: '2026-10-23'
 ---
 
@@ -49,3 +49,13 @@ A complete validation Function, with its input query and its tests, is published
 ## How we work
 
 First you describe the rule in words, with a real case and an edge case. If the rule can be solved without code (a [catalog](/en/glossary/b2b-catalog/), some [quantity rules](/en/glossary/quantity-rules/)), I say so and you save the development. If not, I write the Function with its tests, we deploy it to a development store and we try it against your ugliest cart before touching production.
+
+## What we need to quote your rule
+
+Prepare your current plan, the rule in one sentence and three anonymised examples: a valid order, one that should be rejected or changed, and an exception. For each example, explain the expected result and where the data comes from. This lets us define what belongs in the Function and which integration work would be quoted separately.
+
+## What we review before accepting delivery
+
+The proposal should identify the included rule, exceptions, required data and agreed test cases. At handover, we review those results in the development store and the documentation for locating the code, changing configuration and understanding limitations.
+
+The [Checkout Lab](/en/#lab) is a technical demonstration with examples, not a client case study with attributed business results. To scope your own rule, [tell me about those three cases](/en/contact/) before choosing the implementation.

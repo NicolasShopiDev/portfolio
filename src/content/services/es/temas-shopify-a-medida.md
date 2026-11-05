@@ -2,11 +2,11 @@
 pair: 'custom-themes'
 label: 'Temas'
 h1: 'Temas Shopify a medida'
-lead: 'Temas escritos desde cero o reescritos sobre uno de pago, con secciones y bloques que tu equipo usa sin llamarme. El entregable real no es el diseño: es que puedas montar una página nueva el martes siguiente.'
+lead: 'Implemento tu diseño o el de tu agencia en Shopify, desde cero o sobre un tema de pago, con secciones y bloques que tu equipo puede editar. Antes de presupuestar, reviso las plantillas, las funciones y las apps que deben seguir funcionando.'
 serviceName: 'Desarrollo de temas Shopify a medida'
 serviceType: 'Desarrollo front-end para ecommerce'
 seoTitle: 'Temas Shopify a medida | Nicolás Mateos'
-description: 'Desarrollo de temas Shopify a medida: secciones y bloques editables, rendimiento, accesibilidad y un front-end que tu equipo mantiene sin tocar código.'
+description: 'Implemento tu diseño en un tema Shopify a medida o de pago. Secciones editables, proyectos reales y un alcance definido antes de presupuestar.'
 keyword: 'tema shopify a medida'
 cases: []
 faq:
@@ -18,7 +18,7 @@ faq:
     a: 'No diseño. Trabajo con tu diseño, con el de tu agencia o con el del tema. Lo que hago es el front-end, y donde el diseño choca con cómo funciona Shopify, lo digo antes de maquetarlo.'
 related: ['performance', 'migration-to-shopify']
 terms: ['liquid', 'sections-and-blocks', 'metaobjects']
-updated: '2026-10-21'
+updated: '2026-11-05'
 verified: '2026-10-21'
 ---
 
@@ -40,4 +40,20 @@ Mi criterio: una sección por intención de página, no por fila del diseño. Tr
 
 Un tema rápido no se consigue optimizando al final. Se consigue no metiendo el problema: no cargar la imagen principal dentro de un carrusel que arranca con JavaScript, no recorrer colecciones enteras en [Liquid](/glosario/liquid/) para calcular algo que cabe en un metacampo, y no repintar el carrito a mano cuando se puede pedir la sección ya renderizada.
 
-En [proyectos](/proyectos/tipo/temas-a-medida/) tienes tres temas hechos así, y en [la página de código](/codigo/) están los números de esta web medidos sobre el sitio desplegado.
+## Proyectos que puedes revisar antes de contratar
+
+En [Qurado](/proyectos/#qurado) implementé una tienda a partir de un sistema de diseño ya definido, con filtros personalizados y un flujo de producto y carrito pensado para móvil. Es un ejemplo pertinente si ya tienes diseño y buscas a quien lo lleve a Shopify.
+
+En [Fernando de Cárcer](/proyectos/#fernando-de-carcer) desarrollé el tema desde la arquitectura hasta el lanzamiento, con filtrado de colecciones, guías de tallas e integración de lista de deseos. Las fichas describen mi contribución; no atribuyen al desarrollo un aumento de ventas que no se haya medido.
+
+## Qué necesito para valorar tu diseño
+
+Envíame el diseño disponible, la URL de la tienda y del tema actual, las plantillas necesarias y las apps que afectan a producto, carrito o búsqueda. Indica también qué cambios debe poder hacer tu equipo desde el editor y quién valida el trabajo.
+
+Con eso podemos separar adaptar el tema actual, crear secciones nuevas o desarrollar un tema completo. El diseño gráfico, la redacción, la carga de catálogo y las integraciones externas deben figurar como partidas aparte si forman parte del encargo.
+
+## Cómo comprobamos la entrega
+
+Antes de empezar, acordamos una lista de pantallas y recorridos: editar una sección, buscar un producto, elegir una variante, añadir al carrito y continuar al checkout. La revisión incluye móvil y escritorio, las apps del alcance y el traspaso del código con instrucciones de edición.
+
+[Cuéntame qué diseño quieres implementar](/contacto/) y qué debe poder gestionar tu equipo para valorar el alcance.

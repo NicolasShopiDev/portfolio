@@ -2,11 +2,11 @@
 pair: 'custom-themes'
 label: 'Themes'
 h1: 'Custom Shopify themes'
-lead: 'Themes written from scratch or rewritten on top of a paid one, with sections and blocks your team uses without calling me. The real deliverable is not the design: it is that you can build a new page next Tuesday.'
+lead: 'I implement your design or your agency’s in Shopify, from scratch or on a paid theme, with sections and blocks your team can edit. Before quoting, I review the templates, features and apps that must keep working.'
 serviceName: 'Custom Shopify theme development'
 serviceType: 'Ecommerce front-end development'
 seoTitle: 'Custom Shopify Theme Development | Nicolás Mateos'
-description: 'Custom Shopify theme development: editable sections and blocks, performance, accessibility and a front-end your team maintains without touching code.'
+description: 'I build your design into a custom or paid Shopify theme. Editable sections, real projects and a defined scope before quoting.'
 keyword: 'custom shopify theme developer'
 cases: []
 faq:
@@ -18,7 +18,7 @@ faq:
     a: 'I do not design. I work with your design, your agency’s, or the theme’s. What I do is the front-end, and where the design clashes with how Shopify actually works, I say so before building it.'
 related: ['performance', 'migration-to-shopify']
 terms: ['liquid', 'sections-and-blocks', 'metaobjects']
-updated: '2026-10-21'
+updated: '2026-11-05'
 verified: '2026-10-21'
 ---
 
@@ -40,4 +40,20 @@ My rule: one section per page intention, not per row of the design. Three text-a
 
 A fast theme is not achieved by optimising at the end. It is achieved by not introducing the problem: not loading the main image inside a carousel that boots with JavaScript, not walking entire collections in [Liquid](/en/glossary/liquid/) to calculate something that fits in a metafield, and not repainting the cart by hand when you can ask for the rendered section.
 
-In [projects](/en/projects/type/custom-themes/) there are three themes built this way, and on [the code page](/en/code/) are this site's own numbers, measured against the deployed site.
+## Projects to review before hiring
+
+For [Qurado](/en/projects/#qurado), I implemented a store from an existing design system, with custom filtering and a product and cart flow built for mobile. It is a relevant example if you already have a design and need someone to implement it in Shopify.
+
+For [Fernando de Cárcer](/en/projects/#fernando-de-carcer), I developed the theme from architecture to launch, with collection filtering, size guides and wishlist integration. The project entries describe my contribution; they do not attribute an unmeasured sales increase to the development work.
+
+## What I need to scope your design
+
+Send the available design, your store URL and current theme, the required templates and the apps that affect products, cart or search. Also explain which changes your team should be able to make in the editor and who will approve the work.
+
+We can then distinguish adapting the current theme, creating new sections and building a complete theme. Graphic design, copywriting, catalog entry and external integrations should be separate items if they are part of the brief.
+
+## How we check the delivery
+
+Before starting, we agree on screens and journeys: editing a section, finding a product, choosing a variant, adding to cart and continuing to checkout. The review covers mobile and desktop, the apps in scope and code handover with editing instructions.
+
+[Tell me about the design you want to implement](/en/contact/) and what your team needs to manage so we can scope the work.

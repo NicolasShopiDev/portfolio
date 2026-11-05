@@ -20,7 +20,7 @@ faq:
     a: 'La app personalizada con la Function, su input query, sus pruebas unitarias, la configuración en el admin y un documento corto con qué hace, qué datos necesita y cómo se cambia. El código es tuyo y es revisable.'
 related: ['scripts-to-functions', 'checkout-development']
 terms: ['shopify-functions', 'input-query', 'shopify-plus']
-updated: '2026-10-23'
+updated: '2026-11-05'
 verified: '2026-10-23'
 ---
 
@@ -49,3 +49,13 @@ Una Function de validación completa, con su input query y sus pruebas, está pu
 ## Cómo trabajamos
 
 Primero me cuentas la regla en palabras, con un caso real y un caso límite. Si la regla se puede resolver sin código (un [catálogo](/glosario/catalogo-b2b/), unas [reglas de cantidad](/glosario/reglas-de-cantidad/)), te lo digo y te ahorras el desarrollo. Si no, escribo la Function con sus pruebas, la desplegamos en una tienda de desarrollo y la probamos con tu carrito más feo antes de tocar producción.
+
+## Qué necesitamos para presupuestar la regla
+
+Prepara tu plan actual, la regla en una frase y tres ejemplos anonimizados: un pedido válido, uno que deba rechazarse o cambiar y una excepción. En cada ejemplo, indica el resultado esperado y de dónde salen los datos. Así podemos delimitar qué parte corresponde a la Function y qué trabajo de integración se presupuestaría aparte.
+
+## Qué revisamos antes de aceptar la entrega
+
+La propuesta debe identificar la regla incluida, las excepciones, los datos necesarios y los casos de prueba acordados. Al entregar, revisamos esos resultados en la tienda de desarrollo y la documentación que permite localizar el código, cambiar la configuración y entender las limitaciones.
+
+El [Checkout Lab](/#lab) es una demostración técnica con ejemplos, no un caso de cliente al que atribuir resultados comerciales. Si quieres valorar una regla propia, [cuéntame los tres casos](/contacto/) antes de decidir la implementación.

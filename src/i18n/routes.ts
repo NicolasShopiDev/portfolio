@@ -29,7 +29,7 @@ export type RouteKey = keyof typeof routes;
 // Date of the last real content change per page (sitemap lastmod, dateModified). Update by hand.
 // The hubs that list generated pages move on their own: the newest child's date wins, see lib/docs.ts.
 export const updated: Record<RouteKey, string> = {
-  home: '2026-10-21',
+  home: '2026-11-05',
   services: '2026-10-21',
   b2b: '2026-10-21',
   plus: '2026-10-21',
