@@ -19,8 +19,8 @@ const crumbs = [
 // The portrait shows up as soon as assets/Img/Perfil/nicolas.jpg exists and
 // npm run images has run. Without it the page falls back to a single column.
 //
-// Out for now, waiting on a new photo: set SHOW_PORTRAIT back to true and it returns, with
-// the two-column layout and the image in the page schema. The files stay where they are.
+// The portrait stays out of the visible layout until a replacement is chosen.
+// The shared Person schema identifies the current public photo independently of this flag.
 const SHOW_PORTRAIT = false;
 const PORTRAIT = 'Perfil/nicolas.jpg';
 const portrait = SHOW_PORTRAIT && PORTRAIT in manifest ? PORTRAIT : null;

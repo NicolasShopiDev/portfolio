@@ -16,7 +16,9 @@ const personText = {
   },
 };
 
-export const person = (lang: Lang, image?: string) => ({
+// Keep the public identity photo available to crawlers independently of whether the
+// About page displays a portrait. All references to #person use the same photo.
+export const person = (lang: Lang, image = '/img/perfil/nicolas-800.webp') => ({
   '@type': 'Person',
   '@id': PERSON_ID,
   name: 'Nicolás Mateos',
