@@ -4,6 +4,7 @@
 // What this one guarantees: the Service node in the graph, the cases that prove it, and an FAQ.
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import AtAGlance from '../components/AtAGlance.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CaseCards from '../components/CaseCards.astro';
 import DocLinks from '../components/DocLinks.astro';
@@ -68,7 +69,8 @@ const schema = graph(
       <Breadcrumbs lang={lang} items={crumbs} />{' '}
       <p class="section-label">{d.label}</p>{' '}
       <h1 class="case-title">{d.h1}</h1>{' '}
-      <p class="case-summary">{d.lead}</p>{' '}
+      <p class="case-summary">{d.lead}</p>
+      {d.glance && <AtAGlance lang={lang} glance={d.glance} />}{' '}
       {d.verified && (
         <p class="page-updated"><time datetime={d.verified}>{s.docVerified} {formatDate(d.verified, lang)}</time></p>
       )}
@@ -98,7 +100,7 @@ const schema = graph(
   <section class="page-cta section">
     <div class="container page-cta-inner">
       <h2 class="contact-heading">{s.blogCtaHeading}</h2>{' '}
-      <a class="btn btn--dark" href={routes.contact[lang]}>{s.blogCtaLabel}</a>
+      <a class="btn btn--dark" href={routes.contact[lang] + (d.topic === 'geo' ? '#geo' : '')}>{s.blogCtaLabel}</a>
     </div>
   </section>
 </Base>

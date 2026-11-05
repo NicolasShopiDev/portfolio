@@ -57,3 +57,8 @@ Con eso podemos separar adaptar el tema actual, crear secciones nuevas o desarro
 Antes de empezar, acordamos una lista de pantallas y recorridos: editar una sección, buscar un producto, elegir una variante, añadir al carrito y continuar al checkout. La revisión incluye móvil y escritorio, las apps del alcance y el traspaso del código con instrucciones de edición.
 
 [Cuéntame qué diseño quieres implementar](/contacto/) y qué debe poder gestionar tu equipo para valorar el alcance.
+
+
+## SEO y visibilidad en asistentes de IA
+
+Si el objetivo es que buscadores y asistentes comprendan mejor tus productos, la [consultoría GEO para Shopify](/servicios/geo-shopify/) conecta el trabajo técnico con contenido, datos estructurados y medición de citas. El rendimiento y el tema son parte de la revisión; por sí solos no demuestran visibilidad en IA.

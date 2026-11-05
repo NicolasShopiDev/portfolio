@@ -18,7 +18,7 @@ faq:
     a: 'Casi nunca. En las auditorías que he hecho, la mayor parte del tiempo perdido no está en el tema: está en lo que se le ha ido añadiendo encima.'
 related: ['custom-themes', 'migration-to-shopify']
 terms: ['core-web-vitals', 'liquid']
-updated: '2026-10-21'
+updated: '2026-11-05'
 verified: '2026-10-21'
 ---
 
@@ -38,3 +38,8 @@ Así que la auditoría empieza por los datos reales y por saber de dónde vienen
 ## Lo que entrego
 
 El antes y el después medidos con el mismo método, la lista de lo que se tocó y por qué, y lo que no he tocado porque el riesgo no compensaba. En [la página de código](/codigo/) puedes ver los números de esta web, medidos sobre el sitio desplegado y no en local.
+
+
+## SEO y visibilidad en asistentes de IA
+
+Si el objetivo es que buscadores y asistentes comprendan mejor tus productos, la [consultoría GEO para Shopify](/servicios/geo-shopify/) conecta el trabajo técnico con contenido, datos estructurados y medición de citas. El rendimiento y el tema son parte de la revisión; por sí solos no demuestran visibilidad en IA.

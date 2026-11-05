@@ -36,6 +36,7 @@ export const person = (lang: Lang, image?: string) => ({
     'JavaScript', 'TypeScript', 'Checkout Extensibility', 'Customer account extensions',
     'Metafields', 'Metaobjects', 'App Bridge', 'Node.js', 'React',
     'GraphQL Admin API', 'Storefront API', 'Core Web Vitals',
+    'Generative Engine Optimization', 'Answer Engine Optimization', 'Shopify SEO',
   ],
   sameAs: [
     'https://www.linkedin.com/in/nicolas-mateos-shopify/',

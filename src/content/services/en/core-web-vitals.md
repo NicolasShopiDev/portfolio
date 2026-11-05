@@ -18,7 +18,7 @@ faq:
     a: 'Almost never. In the audits I have run, most of the lost time is not in the theme: it is in what has been added on top of it.'
 related: ['custom-themes', 'migration-to-shopify']
 terms: ['core-web-vitals', 'liquid']
-updated: '2026-10-21'
+updated: '2026-11-05'
 verified: '2026-10-21'
 ---
 
@@ -38,3 +38,8 @@ So the audit starts with the real data and with knowing where your visits come f
 ## What I deliver
 
 The before and after measured with the same method, the list of what was changed and why, and what I did not touch because the risk was not worth it. On [the code page](/en/code/) you can see this site's own numbers, measured against the deployed site rather than locally.
+
+
+## SEO and visibility in AI assistants
+
+If the goal is to help search engines and assistants understand your products, [Shopify GEO consulting](/en/services/geo-shopify/) connects technical work with content, structured data and citation tracking. Performance and the theme are part of the review; alone they do not demonstrate AI visibility.

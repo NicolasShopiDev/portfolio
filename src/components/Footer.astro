@@ -1,5 +1,5 @@
 ---
-import { routes, type Lang, type RouteKey } from '../i18n/routes';
+import { docPath, routes, type Lang, type RouteKey } from '../i18n/routes';
 import { t } from '../i18n/ui';
 
 interface Props { lang: Lang; route: RouteKey; switchHref?: string }
@@ -16,6 +16,7 @@ const other: Lang = lang === 'es' ? 'en' : 'es';
     <nav class="footer-nav" aria-label={lang === 'es' ? 'Pie de página' : 'Footer'}>
       <a href={routes.home[lang]}>{s.home}</a>
       <a href={routes.services[lang]}>{s.navServices}</a>
+      <a href={docPath('services', 'geo-shopify', lang)}>{lang === 'es' ? 'GEO para Shopify' : 'Shopify GEO'}</a>
       <a href={routes.b2b[lang]}>{s.navB2b}</a>
       {lang === 'es' && <a href={routes.plus.es}>{s.navPlus}</a>}
       <a href={routes.projects[lang]}>{s.navProjects}</a>

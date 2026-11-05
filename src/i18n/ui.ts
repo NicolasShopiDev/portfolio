@@ -111,6 +111,7 @@ export const ui = {
     compareAll: 'Ver todas las comparativas',
     servicesAll: 'Ver todos los servicios',
     categories: {
+      geo: 'SEO y GEO',
       b2b: 'B2B y mayorista',
       functions: 'Shopify Functions',
       checkout: 'Checkout y cuentas',
@@ -237,6 +238,7 @@ export const ui = {
     compareAll: 'See every comparison',
     servicesAll: 'See every service',
     categories: {
+      geo: 'SEO and GEO',
       b2b: 'B2B and wholesale',
       functions: 'Shopify Functions',
       checkout: 'Checkout and accounts',

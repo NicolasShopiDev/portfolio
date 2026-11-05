@@ -38,9 +38,9 @@ export const updated: Record<RouteKey, string> = {
   questions: '2026-10-21',
   compare: '2026-10-21',
   code: '2026-10-21',
-  about: '2026-10-21',
+  about: '2026-11-05',
   blog: '2026-10-21',
-  contact: '2026-10-19',
+  contact: '2026-11-05',
 };
 
 // Case studies live under the projects page, with the same slug in both languages.

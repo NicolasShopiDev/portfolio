@@ -16,6 +16,14 @@ const Heading = asPage ? 'h1' : 'h2';
       <p class="contact-desc">{s.contactDesc}</p>
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/myklpqna" method="POST" novalidate>
         <input type="hidden" name="lang" value={lang} />
+        <div class="form-field">
+          <label for="f-interest">{lang === 'es' ? '¿Qué servicio necesitas?' : 'Which service do you need?'}</label>
+          <select id="f-interest" name="interest">
+            <option value="">{lang === 'es' ? 'Selecciona un servicio' : 'Choose a service'}</option>
+            <option value="Shopify GEO and SEO consulting">{lang === 'es' ? 'GEO y SEO para Shopify' : 'Shopify GEO and SEO'}</option>
+            <option value="Shopify development">{lang === 'es' ? 'Desarrollo Shopify' : 'Shopify development'}</option>
+          </select>
+        </div>
         <div class="form-row">
           <div class="form-field">
             <label for="f-name">{s.formName}</label>
@@ -60,3 +68,10 @@ const Heading = asPage ? 'h1' : 'h2';
     </div>
   </div>
 </section>
+
+<script>
+  if (location.hash === '#geo') {
+    const interest = document.querySelector<HTMLSelectElement>('#f-interest');
+    if (interest) interest.value = 'Shopify GEO and SEO consulting';
+  }
+</script>

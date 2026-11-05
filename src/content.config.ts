@@ -132,7 +132,7 @@ const terms = defineCollection({
     term: z.string().min(1),
     // Other names the same thing goes by, including the English one on Spanish pages.
     aliases: z.array(z.string()).max(6).default([]),
-    category: z.enum(['b2b', 'functions', 'checkout', 'theme', 'api', 'plan']),
+    category: z.enum(['b2b', 'functions', 'checkout', 'theme', 'api', 'plan', 'geo']),
     answer: z.string().min(80).max(400),
   }),
 });
@@ -144,7 +144,7 @@ const questions = defineCollection({
   schema: z.object({
     ...paired,
     question: z.string().min(1),
-    category: z.enum(['b2b', 'functions', 'checkout', 'plan', 'cost', 'hiring', 'theme']),
+    category: z.enum(['b2b', 'functions', 'checkout', 'plan', 'cost', 'hiring', 'theme', 'geo']),
     answer: z.string().min(80).max(500),
   }),
 });
@@ -170,6 +170,9 @@ const services = defineCollection({
   loader: pairedLoader('./src/content/services'),
   schema: z.object({
     ...paired,
+    pitch: z.string().min(20).max(90).optional(),
+    topic: z.enum(['geo', 'other']).optional(),
+    glance: z.object({ problem: z.string(), forWho: z.string(), notFor: z.string(), outcome: z.string(), effort: z.string() }).optional(),
     label: z.string().min(1),
     h1: z.string().min(1),
     lead: z.string().min(80).max(500),

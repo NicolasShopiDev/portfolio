@@ -57,3 +57,8 @@ We can then distinguish adapting the current theme, creating new sections and bu
 Before starting, we agree on screens and journeys: editing a section, finding a product, choosing a variant, adding to cart and continuing to checkout. The review covers mobile and desktop, the apps in scope and code handover with editing instructions.
 
 [Tell me about the design you want to implement](/en/contact/) and what your team needs to manage so we can scope the work.
+
+
+## SEO and visibility in AI assistants
+
+If the goal is to help search engines and assistants understand your products, [Shopify GEO consulting](/en/services/geo-shopify/) connects technical work with content, structured data and citation tracking. Performance and the theme are part of the review; alone they do not demonstrate AI visibility.
