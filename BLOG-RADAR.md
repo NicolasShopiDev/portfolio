@@ -181,3 +181,12 @@ Entrada manual: tres artículos el mismo día para recuperar el retraso, sobre p
 - Verifactu: blogs de asesorías dicen que Hacienda anunció el 5-10-2026 un aplazamiento a octubre de 2028, pero no he encontrado la norma publicada; hasta que salga, la fecha legal sigue siendo el 1-1-2027 para sociedades. Escribirlo ahora es escribirlo dos veces.
 - Colecciones con varias fuentes (API 2026-07): las apps sin actualizar no verían esas colecciones, pero solo lo he encontrado en blogs de terceros.
 - Fall '26 Edition (28-10): comercio con agentes, mucho anuncio y poco dato comprobable todavía; la recepción entre desarrolladores de temas es mala.
+
+## Noviembre de 2026: prueba de recomendación de freelance Shopify B2B
+
+- Origen: petición directa de Nicolás y dos capturas aportadas en esta conversación; no se presenta como una investigación de demanda externa.
+- Enfoque: artículo para compradores sobre recomendaciones observadas, con capturas, casos publicados y un prompt para repetir la consulta sin incluir el nombre del autor. Se reserva el proceso interno de AEO.
+- ES: `ia-recomienda-desarrollador-shopify-b2b`; EN: `ai-recommends-shopify-b2b-developer`; pair: `ia-recomienda-desarrollador-shopify-b2b`.
+- Estado: ambas versiones en borrador, sin publicación. Se utilizan solo las dos capturas seleccionadas por Nicolás; se excluye la recomendación con fotografía incorrecta.
+- Límites: la captura de Google no muestra la consulta completa; no se afirma independencia verificada de las pruebas, porcentaje de aparición, aumento de clientes ni causalidad de los cambios recientes. La adaptación inglesa del prompt no se presenta como prueba ejecutada en inglés.
+- Contraste interno: el caso de Émolo describe una tienda mayorista aparte que reutiliza Prestige; no se confunde reutilizar el tema con implantar B2B en la misma tienda B2C. La ficha de Hifas da Terra respalda las piezas mencionadas sin atribuir ventas medidas.
