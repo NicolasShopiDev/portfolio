@@ -1,5 +1,24 @@
 # Radar de preguntas
 
+## 2026-11-05 · Pagos por perfil y destinos B2B
+
+**Elegida 1:** ¿puedo dejar la transferencia solo a mayoristas y tarjeta a particulares?
+- Pregunta real: https://community.shopify.com/t/different-payment-methods-for-different-clients/92417 . Otro hilo con la misma necesidad y problemas de compatibilidad de apps: https://community.shopify.com/t/how-to-block-a-payment-method-for-specific-customer/14151?page=4 . Son antecedentes históricos, no confirmación de capacidades actuales ni demanda medida.
+- Revisión de resultados: abundan recomendaciones de apps y etiquetas. La ayuda específica de Checkout Blocks exige Plus para personalizar métodos; no extrapolar desde otras funciones de la app disponibles en planes inferiores.
+- Fuentes primarias contrastadas el 05-11-2026: https://help.shopify.com/en/manual/checkout-settings/checkout-blocks/customizations/payment-methods ; https://help.shopify.com/en/manual/checkout-settings/checkout-customization ; https://help.shopify.com/en/manual/payments/manual-payments ; https://shopify.dev/docs/apps/build/functions .
+- Aportación: política ficticia por perfil, separación de método/plazo/crédito, requisitos concretos y matriz propia de aceptación. No se afirma configurar ni probar pagos en una tienda.
+- Artículos: ES `transferencia-solo-mayoristas-shopify`; EN `bank-transfer-wholesale-only-shopify`, mismo pair. Intención específica distinta de la página general de checkout y del post sobre pago aplazado.
+
+**Elegida 2:** ¿cómo permito otra dirección de entrega B2B y se guarda para el siguiente pedido?
+- Pregunta real: https://community.shopify.com/t/saving-a-customers-ship-to-address-on-checkout/325219 . Necesidad de entregas a terceros: https://community.shopify.com/t/offer-my-catalogue-for-dropshipping-to-other-shopify-stores-be-dropshipping-supplier/264753 . Los hilos son históricos; se verifican las capacidades en la ayuda actual.
+- Fuentes contrastadas el 05-11-2026: https://help.shopify.com/en/manual/b2b/checkout-and-orders/checkout-settings y https://help.shopify.com/en/manual/b2b/checkout-and-orders/shipping-methods .
+- Aportación: distinguir destino puntual, sede y cliente facturado; ejemplo ficticio Madrid/Valencia y matriz de transporte, permisos y datos ERP. No afirmar que la dirección puntual se convierte en agenda persistente.
+- Artículos: ES `direccion-envio-puntual-shopify-b2b`; EN `one-time-shipping-address-shopify-b2b`, mismo pair. No duplica el diagnóstico general de integración ERP.
+
+**Descartadas:** solicitudes de acceso y PO obligatoria se publicaron el 04-11; repetir pedido se solapa con pedido rápido; reglas de caja y descuentos B2B ya cubiertos. No se atribuyen volúmenes ni poca competencia sin datos. Investigación complementada con búsqueda del toolkit Shopify; sus resultados generales se contrastan con páginas oficiales específicas. Ningún mensaje a terceros.
+
+**Validación del lote:** build estricto y comprobación de las cuatro páginas generadas, enlaces internos, canonical, hreflang, indexabilidad, RSS, sitemap y fechas mes/año. En esta ejecución no hay navegadores disponibles en CUA (inventario vacío); la revisión móvil se limita al contenido, estructura y CSS responsive existente, con tablas desplazables a 768 px y sin cambios en plantillas. No se afirma una revisión visual nueva en móvil.
+
 ## 2026-11-04 · Solicitudes mayoristas y referencia de compra
 
 **Elegida 1:** ¿cómo solicita acceso un mayorista y quién lo aprueba antes de comprar?

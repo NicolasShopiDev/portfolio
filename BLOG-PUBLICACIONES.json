@@ -122,5 +122,33 @@
     "pair": "numero-pedido-compra-obligatorio-shopify-b2b",
     "title": "Require a purchase order number in Shopify B2B: validation and limits",
     "date": "2026-11-04"
+  },
+  {
+    "lang": "es",
+    "slug": "transferencia-solo-mayoristas-shopify",
+    "pair": "transferencia-solo-mayoristas-shopify",
+    "title": "Transferencia solo para mayoristas en Shopify: separar los métodos de pago",
+    "date": "2026-11-05"
+  },
+  {
+    "lang": "en",
+    "slug": "bank-transfer-wholesale-only-shopify",
+    "pair": "transferencia-solo-mayoristas-shopify",
+    "title": "Bank transfer for wholesale buyers only in Shopify: separating payment methods",
+    "date": "2026-11-05"
+  },
+  {
+    "lang": "es",
+    "slug": "direccion-envio-puntual-shopify-b2b",
+    "pair": "direccion-envio-puntual-shopify-b2b",
+    "title": "Enviar a otra dirección en Shopify B2B: entrega puntual o nueva sede",
+    "date": "2026-11-05"
+  },
+  {
+    "lang": "en",
+    "slug": "one-time-shipping-address-shopify-b2b",
+    "pair": "direccion-envio-puntual-shopify-b2b",
+    "title": "Another shipping address in Shopify B2B: one-time delivery or new location",
+    "date": "2026-11-05"
   }
 ]
