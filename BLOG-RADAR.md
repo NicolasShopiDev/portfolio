@@ -1,5 +1,23 @@
 # Radar de preguntas
 
+## 2026-11-06 · Recuperación de checkout y recogida B2B
+
+**Elegida 1:** ¿por qué no aparece la recuperación de un checkout mayorista?
+- Pregunta reciente sobre pruebas y experiencias de recuperación: https://community.shopify.com/t/abandoned-checkout-emails-how-do-you-test-them/691633/3 . Los resultados mezclan marketing general, instrucciones heredadas y automatizaciones nuevas; no prueban disponibilidad B2B.
+- Fuentes primarias comprobadas el 06-11-2026: https://help.shopify.com/en/manual/b2b/checkout-and-orders ; https://help.shopify.com/en/manual/promoting-marketing/create-marketing/abandoned-checkouts ; https://help.shopify.com/en/manual/promoting-marketing/create-marketing/migrate-abandoned-checkout . La ayuda específica limita los checkouts abandonados B2B a Plus y exige solicitar activación; la transición de experiencia no permite volver a la anterior.
+- Aportación: separar compra incompleta, revisión comercial y pedido pendiente de pago; ficha y protocolo propios para distinguir registro, elegibilidad, envío y pedido. No se atribuyen ventas recuperadas sin criterio ni se afirma una prueba en una tienda.
+- Artículos: ES `checkout-abandonado-shopify-b2b`; EN `abandoned-checkouts-shopify-b2b`, mismo pair. Intención distinta de métodos de pago y plazos.
+
+**Elegida 2:** ¿por qué un comprador B2B no ve recogida aunque un particular sí?
+- Pregunta reciente: https://community.shopify.com/t/on-the-grow-plan-why-does-b2b-checkout-hide-local-pickup-when-a-third-party-carrier-calculated-rate-is-in-the-shipping-zone/700879 . Antecedente y solución provisional antigua: https://community.shopify.com/t/how-can-b2b-customers-choose-local-pickup-on-my-online-store/209062/1 . La coincidencia con una tarifa de transportista no demuestra su causalidad; no se publica un supuesto bug como hecho.
+- Fuentes primarias comprobadas el 06-11-2026: https://help.shopify.com/en/manual/b2b/checkout-and-orders/shipping-methods ; https://help.shopify.com/en/manual/fulfillment/setup/delivery-methods/pickup-in-store . Se distingue activación B2B, ubicación, cesta y segmentación; una tarifa gratuita con otro nombre no prueba recogida nativa.
+- Aportación: comparación controlada B2B/B2C, ficha de diagnóstico y matriz de aceptación hasta almacén y ERP, identificadas como propuestas no ejecutadas.
+- Artículos: ES `recogida-tienda-shopify-b2b`; EN `pickup-in-store-shopify-b2b`, mismo pair. No repite la dirección puntual ni el diagnóstico general ERP.
+
+**Descartadas:** aprobación mayorista, PO, segmentación de pagos y dirección puntual ya publicados. No se repiten temas iniciales ni reserva. Sin volúmenes o dificultad inventados. La búsqueda del toolkit aporta contexto general; las capacidades se contrastan con ayuda oficial específica. No se contacta a terceros.
+
+**Validación del lote:** build con guard estricto; cuatro páginas, canonical, hreflang recíprocos, selector, enlaces internos, indexabilidad, RSS, sitemap y fechas visibles mes/año. CUA devuelve inventario de navegadores vacío: revisión móvil limitada al contenido, estructura y CSS responsive existente, con tablas desplazables; no se afirma revisión visual nueva ni prueba comercial en una tienda.
+
 ## 2026-11-05 · Pagos por perfil y destinos B2B
 
 **Elegida 1:** ¿puedo dejar la transferencia solo a mayoristas y tarjeta a particulares?

@@ -150,5 +150,33 @@
     "pair": "direccion-envio-puntual-shopify-b2b",
     "title": "Another shipping address in Shopify B2B: one-time delivery or new location",
     "date": "2026-11-05"
+  },
+  {
+    "lang": "es",
+    "slug": "checkout-abandonado-shopify-b2b",
+    "pair": "checkout-abandonado-shopify-b2b",
+    "title": "Checkouts abandonados en Shopify B2B: por qué no aparece la recuperación",
+    "date": "2026-11-06"
+  },
+  {
+    "lang": "en",
+    "slug": "abandoned-checkouts-shopify-b2b",
+    "pair": "checkout-abandonado-shopify-b2b",
+    "title": "Shopify B2B abandoned checkouts: why recovery may be missing",
+    "date": "2026-11-06"
+  },
+  {
+    "lang": "es",
+    "slug": "recogida-tienda-shopify-b2b",
+    "pair": "recogida-tienda-shopify-b2b",
+    "title": "La recogida en tienda no aparece en Shopify B2B: qué comprobar",
+    "date": "2026-11-06"
+  },
+  {
+    "lang": "en",
+    "slug": "pickup-in-store-shopify-b2b",
+    "pair": "recogida-tienda-shopify-b2b",
+    "title": "Pickup missing in Shopify B2B checkout: what to check",
+    "date": "2026-11-06"
   }
 ]
