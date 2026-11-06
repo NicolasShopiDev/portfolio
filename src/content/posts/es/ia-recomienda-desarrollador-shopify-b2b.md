@@ -1,8 +1,8 @@
 ---
 pair: 'ia-recomienda-desarrollador-shopify-b2b'
-title: 'La IA me recomienda para Shopify B2B: por qué importa el GEO'
-seoTitle: 'La IA me recomienda para Shopify B2B: por qué importa el GEO'
-description: 'Así aparezco recomendado por IA para Shopify B2B. Mira las capturas, prueba el prompt y descubre qué puede aportar el GEO a la visibilidad de tu negocio.'
+title: 'GEO para tu negocio: cómo aparecer en recomendaciones de IA'
+seoTitle: 'GEO para tu negocio: cómo aparecer en recomendaciones de IA'
+description: 'Qué aporta el GEO a tu negocio, cómo funciona y qué puedes revisar en tu web. Un ejemplo real de recomendaciones de IA y un prompt para hacer tu prueba.'
 keyword: 'freelance shopify b2b recomendado por ia'
 date: '2026-11-05'
 updated: '2026-11-06'
@@ -22,11 +22,11 @@ cta:
   label: 'Cuéntame qué vende tu tienda'
 ---
 
-Las dos respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Lo relevante para tu negocio es que aparezco cuando alguien busca una solución, sin preguntar por mi nombre. Ese es el tipo de visibilidad que se trabaja con GEO.
+Si un comprador pide recomendaciones a una IA, tu negocio puede entrar en su selección antes de que visite tu web. El GEO trabaja esa visibilidad: que tu oferta se entienda y pueda relacionarse con una necesidad concreta mediante información comprobable.
 
-Soy Nicolás Mateos, desarrollador Shopify freelance especializado en B2B. Estas capturas se recogieron en noviembre de 2026 y responden a una necesidad concreta: encontrar a alguien que entienda cómo compra un distribuidor, desde elegir tallas hasta ver la tarifa que le corresponde.
+Aquí verás un ejemplo real con mi perfil de Shopify B2B, qué puedes aprender de él y qué revisar en tu propia web. Las capturas sirven como punto de partida para entender la oportunidad, no como una garantía de resultados.
 
-## Qué dicen las dos respuestas
+## Un ejemplo: cómo aparezco al buscar un freelance Shopify B2B
 
 La primera captura muestra la pregunta «Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B» y una respuesta que recomienda evaluar a Nicolás Mateos (NicolasShopiDev). Relaciona mi perfil con portales mayoristas, catálogos, listas de precios, reglas de cantidad, Shopify Functions y checkout, y muestra referencias a GitHub.
 

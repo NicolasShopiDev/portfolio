@@ -2,6 +2,14 @@
 
 Cómo se publica y qué se publica en `/blog/` y `/en/blog/`. Este archivo no se despliega: Cloudflare solo sirve `dist/`.
 
+## Premisa editorial: utilidad para el lector
+
+Por instrucción de Nicolás del 6 de noviembre de 2026, esta es la prioridad de todos los posts, también en revisiones: aportar conocimiento y valor gratuito para resolver un problema real del lector. La experiencia de Nicolás respalda la respuesta; no es el tema principal ni una excusa para hablar de él.
+
+Cada artículo debe dejar una respuesta clara y algo que el lector pueda aplicar: criterios para decidir, preguntas de diagnóstico, errores que evitar, ejemplos o primeros pasos. Explicar por qué importa para su negocio. Mostrar suficiente conocimiento para ayudar y generar confianza sin revelar todo el método propio ni volcar una implementación completa. Reservar la ejecución detallada, la configuración específica y el acompañamiento para el servicio, sin omitir datos esenciales ni hacer una respuesta deliberadamente incompleta para forzar un contacto.
+
+Las capturas y casos personales se usan cuando enseñan algo transferible. El título, el arranque y el desarrollo deben centrarse en lo que aprende o resuelve el lector. El CTA llega después del valor aportado y propone ayuda sobre su caso concreto. Antes de publicar, comprobar: ¿qué sabe decidir o hacer ahora el lector aunque no contacte?
+
 ## Publicar un artículo
 
 ```bash
