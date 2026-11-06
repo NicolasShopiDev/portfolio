@@ -5,7 +5,7 @@ seoTitle: 'Filtros y SEO: qué merece una página en tu tienda online'
 description: 'Más URLs no significan más ventas. Aprende a distinguir un filtro útil de una categoría que merece posicionarse, con un ejemplo y una revisión práctica.'
 keyword: seo filtros tienda online
 date: '2026-11-06'
-draft: true
+draft: false
 tags: ['SEO', 'Catálogo', 'GEO']
 faq:
   - q: '¿Cada filtro de mi tienda debería tener una página para Google?'

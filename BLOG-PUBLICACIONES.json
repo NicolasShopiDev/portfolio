@@ -178,5 +178,19 @@
     "pair": "recogida-tienda-shopify-b2b",
     "title": "Pickup missing in Shopify B2B checkout: what to check",
     "date": "2026-11-06"
+  },
+  {
+    "lang": "es",
+    "slug": "seo-filtros-tienda-online",
+    "pair": "seo-filtros-tienda-online",
+    "title": "¿Una página para cada filtro de tu tienda? No tan rápido",
+    "date": "2026-11-06"
+  },
+  {
+    "lang": "en",
+    "slug": "online-store-filter-seo",
+    "pair": "seo-filtros-tienda-online",
+    "title": "A page for every store filter? Not so fast",
+    "date": "2026-11-06"
   }
 ]

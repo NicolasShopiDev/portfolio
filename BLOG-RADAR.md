@@ -1,5 +1,13 @@
 # Radar de preguntas
 
+## 2026-11-06 · Publicación adicional aprobada: filtros y SEO
+
+Post escrito a petición de Nicolás para revisar su voz y aprobado expresamente antes de publicar. Pregunta: ¿cada filtro necesita una página para posicionar? Intención distinta del artículo introductorio sobre GEO: decidir entre filtros, categorías y guías antes de crear URLs.
+
+Fuentes primarias revisadas en noviembre de 2026: https://developers.google.com/crawling/docs/faceted-navigation y https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure . Investigación de resultados: combinaciones de filtros y decisión de indexación; no se atribuyen volúmenes ni una necesidad técnica a una tienda no auditada.
+
+Aportación: ejemplo hipotético de calzado, prueba de propósito de página, tabla de decisión y ejercicio de cinco preguntas. Sin reglas de bloqueo universales ni resultados inventados. ES `seo-filtros-tienda-online`, EN `online-store-filter-seo`, mismo pair. Publicación adicional, no sustitución de los dos temas diarios. Build estricto y comprobaciones de las dos páginas, enlaces, SEO, idiomas, RSS y sitemap antes del despliegue.
+
 ## 2026-11-06 · Recuperación de checkout y recogida B2B
 
 **Elegida 1:** ¿por qué no aparece la recuperación de un checkout mayorista?

@@ -5,7 +5,7 @@ seoTitle: 'Filter SEO: What Deserves a Page in Your Online Store?'
 description: 'More URLs do not mean more sales. Learn when a filter deserves a search landing page, with a practical example and a review you can start today.'
 keyword: online store filter seo
 date: '2026-11-06'
-draft: true
+draft: false
 tags: ['SEO', 'Catalog', 'GEO']
 faq:
   - q: 'Should every store filter become a page for Google?'
