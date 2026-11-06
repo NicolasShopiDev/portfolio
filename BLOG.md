@@ -14,6 +14,8 @@ Las capturas y casos personales se usan cuando enseñan algo transferible. El t�
 
 ### Voz y ritmo de Nicolás
 
+**Referencia aprobada:** Nicolás validó expresamente el tono de «¿Una página para cada filtro de tu tienda? No tan rápido» el 6 de noviembre de 2026 y pidió mantenerlo en todos los posts. Consultar `src/content/posts/es/seo-filtros-tienda-online.md` y su versión `src/content/posts/en/online-store-filter-seo.md`. Es la referencia principal para equilibrar conocimiento útil, ejemplos, criterio propio, humor y lenguaje coloquial con una explicación técnica completa. Mantener esa voz adaptándola al tema; no repetir frases ni imponer la misma estructura.
+
 Priorizar una lectura natural y clara. Usar frases cortas y saltos de línea para una invitación, una pausa o un remate cuando encajen, sin imponerlos a todo el artículo. En pasajes técnicos, desarrollar las ideas con toda la información necesaria y párrafos conectados de longitud adecuada. No recortar explicaciones ni separar cada frase por sistema. Hablarle al lector con cercanía y un punto juguetón cuando el contexto lo permita. Este es un ejemplo de entrada conversacional, no un formato obligatorio:
 
 ```text
