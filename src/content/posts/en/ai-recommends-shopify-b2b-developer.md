@@ -57,6 +57,12 @@ In my example, the response associates a name with a specialism and public work.
 
 ## What you can apply to your website
 
+And for fuck’s sake, before installing another app promising to get you into ChatGPT, learn about long-tail SEO, URLs and indexing. Turn your website into a useful reference... the kind that answers questions, rather than collecting definitions nobody needs.
+
+What does that mean in practice? Find specific customer questions, give each topic that deserves a page a clear URL, and link to it where it helps readers explore further. A sizing guide, compatibility explanation or comparison with honest limitations can do more for a reader than ten generic posts. You do not need a separate page for every keyword variation.
+
+Then check that pages you intend to make public can be crawled and indexed. Publishing, getting indexed and being cited are different steps... the last one is not bundled with the publish button.
+
 Start with a buying question relevant to your business. As a hypothetical example, a footwear brand could address “which shoes should I choose for walking all day”, using real information about fit, materials, intended use and limitations. Repeating “we are the best” does little to help that decision.
 
 I would review four things:

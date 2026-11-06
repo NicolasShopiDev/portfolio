@@ -12,6 +12,14 @@ Las capturas y casos personales se usan cuando enseñan algo transferible. El t�
 
 ## Publicar un artículo
 
+### Voz y ritmo de Nicolás
+
+Escribir como alguien que conoce el problema y lo cuenta con ganas: cercano, directo, entretenido y con opinión. Usar puntos suspensivos para una pausa o un giro cuando queden bien... sin llenar cada párrafo de ellos. Alternar explicación, ejemplos concretos y alguna frase breve con fuerza.
+
+Nicolás autoriza expresamente lenguaje algo soez cuando aporte humor o énfasis: «por amor de Dios», «joder», «for fuck’s sake». No añadir tacos por cumplir una cuota, atacar al lector ni convertir el texto en una caricatura. Adaptar cada versión al idioma y al contexto. El humor acompaña al conocimiento: las afirmaciones técnicas y los límites deben seguir siendo precisos.
+
+Ejemplo del tono: «Y, por amor de Dios, antes de instalar otra app que promete meterte en ChatGPT, investiga sobre long tail SEO, URLs e indexación. Haz de tu web un glosario útil». La idea siguiente debe explicar cómo llevar ese consejo a la práctica; una frase vistosa no sustituye una respuesta útil.
+
 ```bash
 npm run post -- es shopify-precios-por-volumen "Precios por volumen en Shopify B2B"
 npm run build     # falla si el title, la meta o una fecha no cumplen

@@ -64,6 +64,12 @@ En mi ejemplo, las respuestas relacionan un nombre con una especialidad y con tr
 
 ## Qué puedes aplicar a tu web
 
+Y, por amor de Dios, antes de instalar otra app que promete meterte en ChatGPT, investiga sobre long tail SEO, URLs e indexación. Haz de tu web un glosario útil... de los que resuelven dudas, no de los que acumulan definiciones que nadie necesita.
+
+¿Cómo se traduce eso? Busca preguntas específicas de tus clientes, dedica una URL clara a cada tema que merezca una página y enlázala desde donde ayude a seguir aprendiendo. Una guía de tallas, una explicación de compatibilidades o una comparativa con límites reales pueden ayudar más que diez artículos genéricos. No necesitas crear una página por cada variación de una palabra.
+
+Después comprueba que las páginas que quieres hacer públicas se puedan rastrear e indexar. Publicar, dejar que se indexen y conseguir que alguien las cite son pasos distintos... el último no viene incluido por darle a «publicar».
+
 Empieza por una pregunta de compra que tenga sentido para tu negocio. Como ejemplo hipotético, una marca de calzado podría responder «qué zapatilla elegir para caminar muchas horas», aportando información real sobre ajuste, materiales, uso y límites. Repetir «somos los mejores» aporta poco a esa decisión.
 
 Revisaría estas cuatro piezas:
