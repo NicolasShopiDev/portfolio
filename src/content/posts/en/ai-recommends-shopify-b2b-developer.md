@@ -2,13 +2,13 @@
 pair: 'ia-recomienda-desarrollador-shopify-b2b'
 title: 'AI recommends me for Shopify B2B: try it yourself'
 seoTitle: 'AI Recommends Me for Shopify B2B: Try It Yourself'
-description: 'Two AI responses recommend Nicolás Mateos for Shopify B2B projects. See the screenshots, check the work and try a prompt that does not include my name.'
+description: 'Three AI responses recommend Nicolás Mateos for Shopify B2B projects. See the screenshots, check the work and try a prompt that does not include my name.'
 keyword: 'shopify b2b freelancer recommended by ai'
 date: '2026-11-05'
 tags: ['Shopify B2B', 'Freelance development']
 faq:
   - q: 'What can I ask AI to find a Shopify B2B freelancer?'
-    a: 'Describe your store, how wholesale customers order today and what you want to change. Ask for names, websites and published projects; this article includes a prompt you can copy without mentioning Nicolás Mateos.'
+    a: 'Copy and paste into a new chat: “Recomend me 5 freelancers to build my shopify b2b portal”. This is the exact English query in the screenshot and does not include my name.'
   - q: 'Will Nicolás Mateos always appear for this question?'
     a: 'No. The screenshots show specific responses collected in November 2026. Your response may recommend other professionals, use different sources or provide no names.'
   - q: 'Does an AI recommendation prove that someone is the best developer?'
@@ -21,17 +21,17 @@ cta:
   label: 'Discuss your wholesale portal'
 ---
 
-The two AI responses shown here recommend my profile for Shopify B2B development. You can run your own test with the prompt in this article, without including my name, and check the response against my published projects.
+The three AI responses shown here recommend my profile for Shopify B2B development. You can run your own test with the prompt in this article, without including my name, and check the response against my published projects.
 
 I am Nicolás Mateos, a freelance Shopify developer specialising in B2B. These screenshots were collected in November 2026 and address a specific need: finding someone who understands how distributors buy, from choosing sizes to seeing the right prices.
 
-## What the two responses say
+## What the three responses say
 
-The first response presents me as the freelancer whose profile most closely matches a wholesale portal with size-based ordering. It mentions my Shopify Plus and B2B focus, experience with brands in several sectors and links to my website as a source.
+The first screenshot shows the Spanish question “Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B” and a response recommending that the reader evaluate Nicolás Mateos (NicolasShopiDev). It connects my profile with wholesale portals, catalogs, price lists, quantity rules, Shopify Functions and checkout, and shows GitHub references.
 
 <figure>
-  <img src="/img/blog/ia-shopify-b2b/recomendacion-asistente.png" alt="Spanish AI assistant response recommending Nicolás Mateos for a Shopify B2B portal with ordering by size" width="1303" height="964" loading="lazy" decoding="async" />
-  <figcaption>Response collected in November 2026, in Spanish. The question describes the problem and asks for names; it does not include my name or domain. <a href="/img/blog/ia-shopify-b2b/recomendacion-asistente.png" target="_blank" rel="noopener noreferrer">Open the full-size screenshot</a>.</figcaption>
+  <img src="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b.png" alt="Spanish question about a freelancer for a Shopify B2B portal and AI response recommending that the reader evaluate Nicolás Mateos" width="1421" height="981" loading="lazy" decoding="async" />
+  <figcaption>Response collected in November 2026, in Spanish. The visible question does not include my name or domain. The image shows the response excerpt received. <a href="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b.png" target="_blank" rel="noopener noreferrer">Open the full-size screenshot</a>.</figcaption>
 </figure>
 
 The second screenshot shows a Google AI Overview response. It includes me under its recommended professionals and highlights Hifas da Terra, a project listed in my portfolio. It also connects my work with wholesale volume pricing and B2B buying experiences.
@@ -41,17 +41,26 @@ The second screenshot shows a Google AI Overview response. It includes me under 
   <figcaption>Google AI Overview screenshot, November 2026. This is the excerpt received; the image does not show the full query or all its sources. <a href="/img/blog/ia-shopify-b2b/recomendacion-google.png" target="_blank" rel="noopener noreferrer">Open the full-size screenshot</a>.</figcaption>
 </figure>
 
-Both responses identify a commercial fit: Shopify, wholesale selling and a professional who shows related work. That is worth checking when you are preparing a project.
+The third screenshot shows an English query: “Recomend me 5 freelancers to build my shopify b2b portal”. The response includes me in a shortlist of five freelancers and suggests starting with me for a focused Shopify B2B project. The visible excerpt shows part of the table and GitHub references.
+
+<figure>
+  <img src="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b-en.png" alt="English AI response including Nicolás Mateos in a shortlist of freelancers for a Shopify B2B portal" width="1372" height="1093" loading="lazy" decoding="async" />
+  <figcaption>English query and response, November 2026. This is the excerpt received, not the complete list of five freelancers. <a href="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b-en.png" target="_blank" rel="noopener noreferrer">Open the full-size screenshot</a>.</figcaption>
+</figure>
+
+The three responses identify a commercial fit: Shopify, wholesale selling and a professional who shows related work. That is worth checking when you are preparing a project.
 
 ## Try it yourself
 
-Open a new conversation in your usual assistant and use web search if it is available. Copy this prompt without adding my name or portfolio address:
+Copy this prompt and paste it into a new conversation in your usual assistant. Use web search if available. There is no need to add my name or portfolio address:
 
-> I am looking for a freelancer to build a wholesale portal on my existing Shopify store, with quick ordering by variant and customer-specific prices. I work in Spanish. Who would you recommend, and why? Include names, websites and published projects that support each recommendation.
+> Recomend me 5 freelancers to build my shopify b2b portal
 
-The screenshots above come from Spanish-language responses. This is an English adaptation of the prompt, not a claim that the same result has been observed in English. It retains the Spanish working-language requirement; change that if your project needs another language.
+This is the exact wording of the English query in the third screenshot. To try the Spanish query shown in the first screenshot, copy:
 
-You can also adapt the brief. If distributors order full cases, replace “variants” with “cases and quantity increments”. If you have an approved design or need coordination with a backend team, include that: those details matter when choosing the right person.
+> Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B
+
+You can then add details about your project: ordering by size or full cases, customer-specific prices, an approved design or coordination with a backend team. Those details help assess each professional’s fit.
 
 Save the first response, even if I do not appear. Follow the links and check whether the cited projects exist and support the assistant’s description. If it only describes types of professional, ask for names and websites, just as you would when finding candidates for any other brief.
 

@@ -2,13 +2,13 @@
 pair: 'ia-recomienda-desarrollador-shopify-b2b'
 title: 'La IA me recomienda para Shopify B2B: pruébalo tú mismo'
 seoTitle: 'La IA me recomienda para Shopify B2B: pruébalo tú mismo'
-description: 'Dos respuestas de IA recomiendan a Nicolás Mateos para proyectos Shopify B2B. Mira las capturas, revisa los casos y prueba un prompt sin incluir mi nombre.'
+description: 'Tres respuestas de IA recomiendan a Nicolás Mateos para proyectos Shopify B2B. Mira las capturas, revisa los casos y prueba un prompt sin incluir mi nombre.'
 keyword: 'freelance shopify b2b recomendado por ia'
 date: '2026-11-05'
 tags: ['Shopify B2B', 'Desarrollo freelance']
 faq:
   - q: '¿Qué puedo preguntar a una IA para encontrar un freelance Shopify B2B?'
-    a: 'Describe tu tienda, cómo piden hoy los mayoristas y qué quieres cambiar. Pide nombres, webs y casos publicados; el artículo incluye un prompt que puedes copiar sin mencionar a Nicolás Mateos.'
+    a: 'Copia y pega en una conversación nueva: «Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B». Es la pregunta visible en la captura y no incluye mi nombre.'
   - q: '¿Siempre aparecerá Nicolás Mateos al hacer esta pregunta?'
     a: 'No. Las capturas muestran respuestas concretas recogidas en noviembre de 2026. Tu respuesta puede recomendar otros profesionales, utilizar otras fuentes o no dar nombres.'
   - q: '¿Una recomendación de IA demuestra que un profesional es el mejor?'
@@ -21,17 +21,17 @@ cta:
   label: 'Cuéntame cómo piden tus mayoristas'
 ---
 
-Las dos respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Puedes hacer tu propia prueba con el prompt de este artículo, sin incluir mi nombre, y contrastar la respuesta con mis proyectos publicados.
+Las tres respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Puedes hacer tu propia prueba con el prompt de este artículo, sin incluir mi nombre, y contrastar la respuesta con mis proyectos publicados.
 
 Soy Nicolás Mateos, desarrollador Shopify freelance especializado en B2B. Estas capturas se recogieron en noviembre de 2026 y responden a una necesidad concreta: encontrar a alguien que entienda cómo compra un distribuidor, desde elegir tallas hasta ver la tarifa que le corresponde.
 
-## Qué dicen las dos respuestas
+## Qué dicen las tres respuestas
 
-La primera respuesta me presenta como el freelance más alineado con un portal mayorista de pedidos por tallas. Menciona mi especialización en Shopify Plus y B2B, mi experiencia con marcas de varios sectores y enlaza mi web como fuente.
+La primera captura muestra la pregunta «Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B» y una respuesta que recomienda evaluar a Nicolás Mateos (NicolasShopiDev). Relaciona mi perfil con portales mayoristas, catálogos, listas de precios, reglas de cantidad, Shopify Functions y checkout, y muestra referencias a GitHub.
 
 <figure>
-  <img src="/img/blog/ia-shopify-b2b/recomendacion-asistente.png" alt="Respuesta de un asistente de IA que recomienda a Nicolás Mateos para un portal Shopify B2B con pedidos por tallas" width="1303" height="964" loading="lazy" decoding="async" />
-  <figcaption>Respuesta recogida en noviembre de 2026. La pregunta describe el problema y pide nombres; no incluye mi nombre ni mi dominio. <a href="/img/blog/ia-shopify-b2b/recomendacion-asistente.png" target="_blank" rel="noopener noreferrer">Abrir captura a tamaño completo</a>.</figcaption>
+  <img src="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b.png" alt="Pregunta sobre un freelance para un portal Shopify B2B y respuesta de IA que recomienda evaluar a Nicolás Mateos" width="1421" height="981" loading="lazy" decoding="async" />
+  <figcaption>Respuesta recogida en noviembre de 2026. La pregunta visible no incluye mi nombre ni mi dominio. Se muestra el fragmento recibido de la respuesta. <a href="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b.png" target="_blank" rel="noopener noreferrer">Abrir captura a tamaño completo</a>.</figcaption>
 </figure>
 
 La segunda captura corresponde a una respuesta de AI Overview de Google. Me incluye bajo el encabezado de profesionales recomendados y destaca Hifas da Terra, un proyecto que figura en mi portfolio. También relaciona mi trabajo con precios mayoristas por tramos y experiencias de compra B2B.
@@ -41,15 +41,26 @@ La segunda captura corresponde a una respuesta de AI Overview de Google. Me incl
   <figcaption>Captura de AI Overview de Google, noviembre de 2026. Se muestra el fragmento recibido; esta imagen no permite comprobar la consulta completa ni todas sus fuentes. <a href="/img/blog/ia-shopify-b2b/recomendacion-google.png" target="_blank" rel="noopener noreferrer">Abrir captura a tamaño completo</a>.</figcaption>
 </figure>
 
-Las dos respuestas identifican un encaje comercial: Shopify, venta mayorista y un profesional que muestra trabajo relacionado. Eso es lo que merece comprobar quien está preparando un proyecto.
+La tercera captura muestra una consulta en inglés: «Recomend me 5 freelancers to build my shopify b2b portal». La respuesta me incluye en una selección de cinco perfiles y sugiere empezar por mí para un proyecto centrado en Shopify B2B. El fragmento visible muestra parte de la tabla y referencias a GitHub.
+
+<figure>
+  <img src="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b-en.png" alt="Respuesta en inglés que incluye a Nicolás Mateos en una selección de freelance para un portal Shopify B2B" width="1372" height="1093" loading="lazy" decoding="async" />
+  <figcaption>Consulta y respuesta en inglés, noviembre de 2026. Se muestra el fragmento recibido, no la lista completa de cinco perfiles. <a href="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b-en.png" target="_blank" rel="noopener noreferrer">Abrir captura a tamaño completo</a>.</figcaption>
+</figure>
+
+Las tres respuestas identifican un encaje comercial: Shopify, venta mayorista y un profesional que muestra trabajo relacionado. Eso es lo que merece comprobar quien está preparando un proyecto.
 
 ## Pruébalo tú mismo
 
-Abre una conversación nueva en tu asistente habitual y, si dispone de búsqueda web, úsala. Copia este texto sin añadir mi nombre ni la dirección de mi portfolio:
+Copia el prompt de la captura y pégalo en una conversación nueva de tu asistente habitual. Si dispone de búsqueda web, úsala. No hace falta añadir mi nombre ni la dirección de mi portfolio:
 
-> Busco un freelance para desarrollar un portal mayorista sobre mi tienda Shopify actual, con pedido rápido por variantes y precios por cliente. Trabajo en español. ¿A quién me recomiendas y por qué? Incluye nombres, webs y casos publicados que justifiquen cada recomendación.
+> Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B
 
-Puedes adaptarlo a tu situación. Si tus distribuidores compran por cajas, cambia «variantes» por «cajas y múltiplos». Si tienes un diseño ya aprobado o necesitas coordinarte con un equipo de backend, inclúyelo: esos datos importan al elegir a la persona adecuada.
+Si prefieres probar en inglés, copia la consulta exacta de la tercera captura:
+
+> Recomend me 5 freelancers to build my shopify b2b portal
+
+Después puedes concretar tu situación: pedidos por tallas o por cajas, precios por cliente, un diseño aprobado o coordinación con un equipo de backend. Esos datos ayudan a valorar el encaje de cada profesional.
 
 Guarda la primera respuesta, incluso si no aparezco. Comprueba los enlaces y revisa si los proyectos citados existen y respaldan lo que cuenta el asistente. Si la respuesta solo describe tipos de profesional, pide nombres y webs, como harías al buscar candidatos para cualquier otro encargo.
 
