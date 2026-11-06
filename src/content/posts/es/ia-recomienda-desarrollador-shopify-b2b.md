@@ -1,10 +1,11 @@
 ---
 pair: 'ia-recomienda-desarrollador-shopify-b2b'
-title: 'La IA me recomienda para Shopify B2B: pruébalo tú mismo'
-seoTitle: 'La IA me recomienda para Shopify B2B: pruébalo tú mismo'
-description: 'Dos respuestas de IA recomiendan a Nicolás Mateos para proyectos Shopify B2B. Mira las capturas, revisa los casos y prueba un prompt sin incluir mi nombre.'
+title: 'La IA me recomienda para Shopify B2B: por qué importa el GEO'
+seoTitle: 'La IA me recomienda para Shopify B2B: por qué importa el GEO'
+description: 'Así aparezco recomendado por IA para Shopify B2B. Mira las capturas, prueba el prompt y descubre qué puede aportar el GEO a la visibilidad de tu negocio.'
 keyword: 'freelance shopify b2b recomendado por ia'
 date: '2026-11-05'
+updated: '2026-11-06'
 tags: ['Shopify B2B', 'Desarrollo freelance']
 faq:
   - q: '¿Qué puedo preguntar a una IA para encontrar un freelance Shopify B2B?'
@@ -13,15 +14,15 @@ faq:
     a: 'No. Las capturas muestran respuestas concretas recogidas en noviembre de 2026. Tu respuesta puede recomendar otros profesionales, utilizar otras fuentes o no dar nombres.'
   - q: '¿Una recomendación de IA demuestra que un profesional es el mejor?'
     a: 'No. Sirve para encontrar candidatos. Antes de contratar, comprueba los proyectos publicados, qué hizo esa persona, el alcance propuesto y quién se encargará del mantenimiento.'
-  - q: '¿El portal de Émolo se hizo sobre una tienda existente?'
-    a: 'El portal mayorista se construyó en una tienda aparte y reutilizó el tema Prestige que empleaba su tienda B2C. El caso publicado explica esa distinción y mi trabajo de front-end.'
+  - q: '¿Qué es GEO y cómo se relaciona con el SEO?'
+    a: 'GEO trabaja la visibilidad de un negocio en respuestas generadas por IA. Comparte fundamentos con el SEO: contenido útil, acceso técnico e información verificable; no garantiza recomendaciones.'
 cta:
-  heading: '¿Tus distribuidores todavía te mandan el pedido en Excel?'
-  text: 'Cuéntame cómo compran hoy, qué tallas o variantes piden y cómo asignas sus tarifas. Con ese punto de partida podemos valorar el alcance de tu portal mayorista en Shopify.'
-  label: 'Cuéntame cómo piden tus mayoristas'
+  heading: '¿Tu negocio aparece cuando un comprador pide recomendaciones a la IA?'
+  text: 'Envíame tu tienda, mercados y categorías prioritarias. Podemos valorar qué preguntas conviene responder y el alcance de una auditoría GEO para tu Shopify.'
+  label: 'Cuéntame qué vende tu tienda'
 ---
 
-Las dos respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Puedes hacer tu propia prueba con el prompt de este artículo, sin incluir mi nombre, y contrastar la respuesta con mis proyectos publicados.
+Las dos respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Lo relevante para tu negocio es que aparezco cuando alguien busca una solución, sin preguntar por mi nombre. Ese es el tipo de visibilidad que se trabaja con GEO.
 
 Soy Nicolás Mateos, desarrollador Shopify freelance especializado en B2B. Estas capturas se recogieron en noviembre de 2026 y responden a una necesidad concreta: encontrar a alguien que entienda cómo compra un distribuidor, desde elegir tallas hasta ver la tarifa que le corresponde.
 
@@ -43,43 +44,61 @@ La segunda captura corresponde a una respuesta de AI Overview de Google. Me incl
 
 Las dos respuestas identifican un encaje comercial: Shopify, venta mayorista y un profesional que muestra trabajo relacionado. Eso es lo que merece comprobar quien está preparando un proyecto.
 
+## Por qué esto importa si tienes un negocio
+
+En estas consultas, la persona ya está buscando a quién contratar. La respuesta propone candidatos y explica por qué encajan. Aparecer ahí puede hacer que alguien te considere antes de haber visitado tu web.
+
+Esa es la oportunidad comercial del GEO. Si vendes productos o servicios, interesa que tu marca se relacione con necesidades concretas: para quién sirve, qué resuelve y qué pruebas públicas respaldan esa relación. El objetivo es entrar en una conversación de compra con información que el lector pueda comprobar.
+
+Las capturas muestran recomendaciones observadas, no contactos ni ventas generados. No permiten saber qué cambio de mi web produjo las respuestas. Sí permiten ver cómo se presenta mi especialización y qué fuentes aparecen junto a ella.
+
+## Qué es GEO y cómo funciona, por encima
+
+GEO significa *Generative Engine Optimization*: trabajar la información y la presencia pública de un negocio para que pueda ser encontrado, entendido y citado en respuestas generadas por IA. Comparte gran parte de sus fundamentos con el SEO.
+
+Como explicación simplificada, una herramienta con búsqueda web puede interpretar una pregunta, recuperar información relevante y redactar una respuesta apoyada en las fuentes elegidas. Cada herramienta lo hace de forma distinta. Una mención no significa que el asistente haya aprendido tu web de forma permanente.
+
+Google explica en su [guía de búsqueda generativa](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) que sus funciones de IA pueden recuperar páginas de su índice y ampliar una consulta con búsquedas relacionadas. Es una explicación de Google, no una descripción universal de todos los asistentes.
+
+En mi ejemplo, las respuestas relacionan un nombre con una especialidad y con trabajo público. Las capturas muestran esa asociación; no revelan el mecanismo exacto de selección ni el peso de cada fuente.
+
+## Qué puedes aplicar a tu web
+
+Empieza por una pregunta de compra que tenga sentido para tu negocio. Como ejemplo hipotético, una marca de calzado podría responder «qué zapatilla elegir para caminar muchas horas», aportando información real sobre ajuste, materiales, uso y límites. Repetir «somos los mejores» aporta poco a esa decisión.
+
+Revisaría estas cuatro piezas:
+
+| Pieza | Pregunta para revisar tu web |
+| --- | --- |
+| Oferta clara | ¿Se entiende qué vendes y para quién sirve? |
+| Respuesta útil | ¿Resuelves las dudas que aparecen antes de comprar? |
+| Evidencia | ¿Hay especificaciones, ejemplos o casos que respalden tus afirmaciones? |
+| Coherencia | ¿Tu web y tus perfiles públicos describen el mismo negocio? |
+
+En mi portfolio puedes contrastar [Émolo](/proyectos/emolo-b2b/), donde desarrollé el front-end de un portal separado que reutilizaba Prestige, y la ficha de [Hifas da Terra](/proyectos/#hifas-da-terra), que menciona la captura de Google. Son pruebas del trabajo descrito, no de que publicarlas causara las recomendaciones.
+
+También importa que la información sea accesible. La [documentación de Google sobre funciones de IA](https://developers.google.com/search/docs/appearance/ai-features) mantiene los requisitos SEO habituales y no exige un marcado especial para aparecer. Un archivo o una app por sí solos no aseguran una recomendación.
+
 ## Pruébalo tú mismo
 
-Copia el prompt de la captura y pégalo en una conversación nueva de tu asistente habitual. Si dispone de búsqueda web, úsala. No hace falta añadir mi nombre ni la dirección de mi portfolio:
+Copia el prompt de la primera captura y pégalo en una conversación nueva de tu asistente habitual. Si dispone de búsqueda web, úsala. No añadas mi nombre ni mi dominio:
 
 > Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B
 
-Después puedes concretar tu situación: pedidos por tallas o por cajas, precios por cliente, un diseño aprobado o coordinación con un equipo de backend. Esos datos ayudan a valorar el encaje de cada profesional.
+Guarda la respuesta aunque no aparezca. Después haz una prueba sobre tu sector, sin incluir tu marca. Anota la pregunta exacta, el idioma, la herramienta, el mes y las fuentes citadas. Comprueba si describe bien a los candidatos y abre los enlaces antes de confiar en el resumen.
 
-Guarda la primera respuesta, incluso si no aparezco. Comprueba los enlaces y revisa si los proyectos citados existen y respaldan lo que cuenta el asistente. Si la respuesta solo describe tipos de profesional, pide nombres y webs, como harías al buscar candidatos para cualquier otro encargo.
+La prueba sirve para descubrir qué información recibe un posible comprador. Una sola respuesta no mide tu visibilidad habitual: conviene repetir un conjunto definido de consultas y conservar las mismas condiciones en lo posible.
 
-## Qué proyectos respaldan el encaje
+## Cómo saber si el GEO aporta algo
 
-Mi trabajo en [el portal B2B de Émolo](/proyectos/emolo-b2b/) es un ejemplo concreto de pedido por tallas y adaptación de un tema. El portal se construyó en una tienda aparte, reutilizando Prestige, el mismo tema que empleaba la tienda B2C. Mi contribución fue el front-end, a través de una agencia.
+Separa cuatro resultados: que se mencione tu marca, que se enlace tu web, que lleguen visitas y que se generen contactos o compras. No son equivalentes. Una captura solo acredita lo que aparece en esa respuesta.
 
-El caso explica la tabla de pedido por variantes, su sincronización con el carrito y la presentación de precios para compradores de empresa. Esa descripción permite valorar una pieza de trabajo específica, en lugar de quedarse con el logotipo de una marca.
+Para empezar, elige unas pocas preguntas de compra, guarda una línea base y revisa qué páginas las responden. Después registra las mejoras y compara resultados sin atribuir automáticamente cada cambio al trabajo realizado. La guía de [medición GEO](/preguntas/medir-geo-shopify/) desarrolla ese seguimiento.
 
-En [Hifas da Terra](/proyectos/#hifas-da-terra), mi ficha describe el desarrollo de una plataforma B2B con precios mayoristas por tramos, un portal para profesionales y filtrado de producto adaptado a profesionales sanitarios. Es el proyecto que identifica la segunda captura. La ficha permite comprobar qué trabajo declaro haber realizado.
+## Cómo lo trabajaría en tu Shopify
 
-Si tu problema se parece a esos ejemplos, puedes revisar el alcance del [servicio de desarrollo Shopify B2B](/shopify-b2b/). La estructura de tu tienda, las tarifas y los sistemas conectados se valoran con tu caso delante.
+Primero revisaría las preguntas de tus compradores, las páginas que deberían responderlas y los obstáculos técnicos. Después priorizaría contenido, información de producto, enlaces y coherencia de marca. En B2B, los precios negociados y los datos privados deben seguir protegidos.
 
-## Cómo usar una recomendación antes de contratar
+Puedes ver el alcance de mi [servicio de GEO para Shopify](/servicios/geo-shopify/). El punto de partida es tu tienda y lo que necesitas vender: identificar qué falta para entender tu oferta, implementar mejoras comprobables y medir si llegan oportunidades relevantes.
 
-Una respuesta de IA puede darte una lista inicial. La conversación con cada candidato debe concretar el trabajo que necesitas y cómo se comprobará su entrega.
-
-Yo empezaría por estas cuatro preguntas:
-
-1. **¿Qué hiciste exactamente en ese proyecto?** Separa desarrollo, diseño, configuración e integración, y pregunta si trabajó solo o dentro de un equipo.
-2. **¿Qué parte de mi pedido mayorista vas a resolver?** Describe un pedido real: referencias, tallas, cantidades, tarifa y resultado esperado.
-3. **¿Qué queda fuera del presupuesto?** Aclara la carga de datos, las conexiones con otros sistemas, el soporte y las modificaciones posteriores.
-4. **¿Cómo validamos que funciona?** Acordad ejemplos de clientes y pedidos para revisar precios, cantidades y el recorrido de compra antes de aceptar la entrega.
-
-Son preguntas útiles aunque otro profesional aparezca antes que yo. Lo que importa al contratar es que la experiencia publicada y la propuesta respondan a tu operativa.
-
-## Qué permiten concluir estas capturas
-
-Podemos concluir que mi perfil fue recomendado en las respuestas mostradas. No tenemos una medición representativa de todas las consultas ni sabemos cuántos compradores han visto respuestas parecidas. Tampoco hay aquí datos de nuevos clientes atribuibles a ellas.
-
-El resultado puede variar entre herramientas, conversaciones y momentos. Incluso cuando una respuesta acierta con el nombre, conviene verificar su descripción: el asistente puede resumir un proyecto con más amplitud de la que demuestra la ficha original.
-
-Por eso dejo las capturas y el prompt juntos. Puedes ver el resultado observado, hacer tu propia prueba y revisar el trabajo publicado antes de decidir con quién hablar de tu portal mayorista.
+Documentación consultada en noviembre de 2026. Las capturas muestran resultados concretos; las respuestas pueden cambiar entre herramientas, consultas y momentos.

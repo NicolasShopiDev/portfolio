@@ -1,10 +1,11 @@
 ---
 pair: 'ia-recomienda-desarrollador-shopify-b2b'
-title: 'AI recommends me for Shopify B2B: try it yourself'
-seoTitle: 'AI Recommends Me for Shopify B2B: Try It Yourself'
-description: 'An AI response recommends Nicolás Mateos for Shopify B2B projects. See the screenshot, check the work and try a prompt that does not include my name.'
+title: 'AI recommends me for Shopify B2B: why GEO matters'
+seoTitle: 'AI Recommends Me for Shopify B2B: Why GEO Matters'
+description: 'See how AI recommends me for Shopify B2B, try the prompt and learn why GEO matters, how it works and what your business can take from this example.'
 keyword: 'shopify b2b freelancer recommended by ai'
 date: '2026-11-05'
+updated: '2026-11-06'
 tags: ['Shopify B2B', 'Freelance development']
 faq:
   - q: 'What can I ask AI to find a Shopify B2B freelancer?'
@@ -13,17 +14,17 @@ faq:
     a: 'No. The screenshot shows a specific response collected in November 2026. Your response may recommend other professionals, use different sources or provide no names.'
   - q: 'Does an AI recommendation prove that someone is the best developer?'
     a: 'No. It helps you find candidates. Before hiring, check the published projects, the person’s contribution, the proposed scope and who will handle maintenance.'
-  - q: 'Was the Émolo portal built on an existing store?'
-    a: 'The wholesale portal was built as a separate store and reused the Prestige theme used by its B2C store. The published case explains that distinction and my front-end contribution.'
+  - q: 'What is GEO and how does it relate to SEO?'
+    a: 'GEO addresses business visibility in AI-generated answers. It shares SEO foundations: useful content, technical accessibility and verifiable information; it cannot guarantee recommendations.'
 cta:
-  heading: 'Are your distributors still sending orders in spreadsheets?'
-  text: 'Tell me how they order today, which sizes or variants they buy and how you assign their price lists. That gives us a starting point for scoping your Shopify wholesale portal.'
-  label: 'Discuss your wholesale portal'
+  heading: 'Does your business appear when a buyer asks AI for recommendations?'
+  text: 'Send me your store, markets and priority categories. We can assess the questions worth answering and scope a GEO audit for your Shopify store.'
+  label: 'Tell me what your store sells'
 ---
 
-The AI response shown here recommends my profile for Shopify B2B development. You can run your own test with the prompt in this article, without including my name, and check the response against my published projects.
+The AI response shown here recommends my profile for Shopify B2B development. The business significance is that I appear when someone asks for a solution without asking for me by name. This is the kind of visibility GEO addresses.
 
-I am Nicolás Mateos, a freelance Shopify developer specialising in B2B. This screenshot was collected in November 2026 and address a specific need: finding someone who understands how distributors buy, from choosing sizes to seeing the right prices.
+I am Nicolás Mateos, a freelance Shopify developer specialising in B2B. This screenshot was collected in November 2026 and addresses a specific need: finding someone who understands how distributors buy, from choosing sizes to seeing the right prices.
 
 ## What the response says
 
@@ -36,45 +37,61 @@ The screenshot shows an English query: “Recomend me 5 freelancers to build my 
 
 The response identifies a commercial fit: Shopify, wholesale selling and a professional who shows related work. That is worth checking when you are preparing a project.
 
+## Why this matters for your business
+
+The person asking this question is already looking for someone to hire. The response proposes candidates and explains their fit. Appearing there can put you under consideration before someone has visited your website.
+
+That is the commercial opportunity behind GEO. If you sell products or services, you want your brand associated with specific needs: who it serves, what it solves and what public evidence supports that connection. The aim is to enter a buying conversation with information readers can verify.
+
+The screenshot records a recommendation, not leads or sales. It cannot tell us which website change produced the response. It does show how my specialism is presented and which references appear alongside it.
+
+## What GEO means and roughly how it works
+
+GEO stands for *Generative Engine Optimization*: working on a business’s information and public presence so it can be found, understood and cited in AI-generated responses. It shares many foundations with SEO.
+
+As a simplified explanation, a tool using web search may interpret a question, retrieve relevant information and compose a response supported by selected sources. Implementations differ. A mention does not mean an assistant has permanently learned your website.
+
+Google’s [generative search guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) explains that its AI features can retrieve indexed pages and expand a question into related searches. This describes Google, rather than every assistant.
+
+In my example, the response associates a name with a specialism and public work. The screenshot shows that association; it does not reveal the exact selection mechanism or each source’s influence.
+
+## What you can apply to your website
+
+Start with a buying question relevant to your business. As a hypothetical example, a footwear brand could address “which shoes should I choose for walking all day”, using real information about fit, materials, intended use and limitations. Repeating “we are the best” does little to help that decision.
+
+I would review four things:
+
+| Area | Question for your website |
+| --- | --- |
+| Clear offer | Is it obvious what you sell and whom it serves? |
+| Useful answer | Do you resolve questions buyers ask before purchasing? |
+| Evidence | Do specifications, examples or case studies support your claims? |
+| Consistency | Do your website and public profiles describe the same business? |
+
+In my portfolio, you can check [Émolo](/en/projects/emolo-b2b/), where I developed the front end of a separate portal reusing Prestige, and the [Hifas da Terra entry](/en/projects/#hifas-da-terra). These help assess my work; they do not prove publishing those projects caused the recommendation.
+
+Information also needs to be accessible. Google’s [AI features documentation](https://developers.google.com/search/docs/appearance/ai-features) retains standard SEO requirements and requires no special markup for inclusion. A file or app alone cannot ensure a recommendation.
+
 ## Try it yourself
 
-Copy this prompt and paste it into a new conversation in your usual assistant. Use web search if available. There is no need to add my name or portfolio address:
+Copy the exact query from the screenshot into a new conversation in your usual assistant. Use web search if available. Do not add my name or domain:
 
 > Recomend me 5 freelancers to build my shopify b2b portal
 
-This is the exact wording of the query in the screenshot.
+Keep the response even if I do not appear. Then try a question about your sector without naming your brand. Record the exact query, language, tool, month and cited sources. Check whether it describes candidates accurately and open the links before trusting the summary.
 
-You can then add details about your project: ordering by size or full cases, customer-specific prices, an approved design or coordination with a backend team. Those details help assess each professional’s fit.
+This helps reveal what a potential buyer sees. One answer cannot measure your typical visibility: repeat a defined set of questions and keep conditions consistent where possible.
 
-Save the first response, even if I do not appear. Follow the links and check whether the cited projects exist and support the assistant’s description. If it only describes types of professional, ask for names and websites, just as you would when finding candidates for any other brief.
+## How to tell whether GEO is helping
 
-## Which projects support the recommendation
+Separate four outcomes: a brand mention, a link to your website, a visit and an enquiry or purchase. They are different results. A screenshot only establishes what appears in that answer.
 
-My work on [Émolo’s B2B portal](/en/projects/emolo-b2b/) is a specific example of ordering by size and adapting a theme. The portal was built as a separate store, reusing Prestige, the theme already used by the B2C storefront. My contribution was front-end development through an agency.
+Start with a few buying questions, save a baseline and identify which pages answer them. Then record improvements and compare outcomes without automatically attributing every change to your work. The [GEO measurement guide](/en/questions/measure-shopify-geo/) explains that process.
 
-The case explains the variant order table, its cart synchronisation and price presentation for company buyers. That lets you assess a specific piece of work rather than relying on a brand’s logo.
+## How I would approach your Shopify store
 
-For [Hifas da Terra](/en/projects/#hifas-da-terra), my project entry describes a B2B platform with tiered wholesale pricing, a professional portal and product filtering tailored to healthcare practitioners. The entry lets you check the work I describe having done.
+I would first review buyer questions, the pages meant to answer them and technical obstacles. Then I would prioritise content, product information, links and brand consistency. Negotiated B2B prices and private data must remain protected.
 
-If your problem resembles these examples, you can review the scope of my [Shopify B2B development service](/en/shopify-b2b-developer/). Your store structure, pricing and connected systems need to be assessed against your actual brief.
+See the scope of my [Shopify GEO service](/en/services/geo-shopify/). Your store and sales priorities are the starting point: identify what is missing from the explanation of your offer, implement verifiable improvements and measure whether relevant opportunities follow.
 
-## How to use a recommendation before hiring
-
-An AI response can give you an initial shortlist. The conversation with each candidate should establish the work you need and how delivery will be checked.
-
-I would start with four questions:
-
-1. **What exactly did you do on that project?** Separate development, design, configuration and integration, and ask whether they worked alone or within a team.
-2. **Which part of my wholesale order will you handle?** Describe a real order: SKUs, sizes, quantities, price list and expected outcome.
-3. **What is outside the quote?** Clarify data entry, connections to other systems, support and later changes.
-4. **How will we check that it works?** Agree on sample customers and orders to review prices, quantities and the buying journey before accepting delivery.
-
-These questions remain useful if another professional appears before me. What matters when hiring is whether the published experience and proposal address your operation.
-
-## What this screenshot establishes
-
-It establishes that my profile was recommended in the response shown. We do not have a representative measurement of all queries or know how many buyers have seen similar responses. There are no figures here for new clients attributed to them.
-
-Results can differ between tools, conversations and dates. Even when a response gets the name right, check its description: an assistant may summarise a project more broadly than the original entry supports.
-
-That is why the screenshot and prompt are presented together. You can see the observed result, run your own test and review the published work before deciding whom to contact about your wholesale portal.
+Documentation checked in November 2026. The screenshot records a specific result; responses can change across tools, queries and dates.
