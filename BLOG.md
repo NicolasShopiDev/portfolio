@@ -14,7 +14,7 @@ Las capturas y casos personales se usan cuando enseñan algo transferible. El t�
 
 ### Voz y ritmo de Nicolás
 
-Priorizar frases cortas, párrafos breves y saltos de línea que separen la invitación, la pausa y el remate. Hablarle al lector con cercanía y un punto juguetón. Este es el ejemplo de tono y espaciado que Nicolás ha elegido:
+Priorizar una lectura natural y clara. Usar frases cortas y saltos de línea para una invitación, una pausa o un remate cuando encajen, sin imponerlos a todo el artículo. En pasajes técnicos, desarrollar las ideas con toda la información necesaria y párrafos conectados de longitud adecuada. No recortar explicaciones ni separar cada frase por sistema. Hablarle al lector con cercanía y un punto juguetón cuando el contexto lo permita. Este es un ejemplo de entrada conversacional, no un formato obligatorio:
 
 ```text
 Así que quieres aprender sobre GEO, eh...
@@ -23,7 +23,7 @@ Estoy orgulloso de ti.
 Empecemos.
 ```
 
-Conservar ese aire en la maquetación: comprobar que el Markdown no fusione las líneas cuando deban verse separadas (usar párrafos o saltos explícitos según corresponda). No reutilizar la misma entrada como plantilla en todos los artículos. En inglés, adaptar la voz y las pausas en lugar de traducir palabra por palabra.
+Cuando se elija deliberadamente una pausa visual, comprobar que el Markdown la respete. No forzar ese espaciado en el resto del texto ni reutilizar la misma entrada como plantilla. En inglés, adaptar la voz y las pausas en lugar de traducir palabra por palabra. La claridad, la precisión y la utilidad tienen prioridad sobre cualquier efecto de estilo.
 
 Escribir como alguien que conoce el problema y lo cuenta con ganas: cercano, directo, entretenido y con opinión. Usar puntos suspensivos para una pausa o un giro cuando queden bien... sin llenar cada párrafo de ellos. Alternar explicación, ejemplos concretos y alguna frase breve con fuerza.
 
