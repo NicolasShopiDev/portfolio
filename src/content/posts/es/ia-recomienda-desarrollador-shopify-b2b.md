@@ -2,7 +2,7 @@
 pair: 'ia-recomienda-desarrollador-shopify-b2b'
 title: 'La IA me recomienda para Shopify B2B: pruébalo tú mismo'
 seoTitle: 'La IA me recomienda para Shopify B2B: pruébalo tú mismo'
-description: 'Tres respuestas de IA recomiendan a Nicolás Mateos para proyectos Shopify B2B. Mira las capturas, revisa los casos y prueba un prompt sin incluir mi nombre.'
+description: 'Dos respuestas de IA recomiendan a Nicolás Mateos para proyectos Shopify B2B. Mira las capturas, revisa los casos y prueba un prompt sin incluir mi nombre.'
 keyword: 'freelance shopify b2b recomendado por ia'
 date: '2026-11-05'
 tags: ['Shopify B2B', 'Desarrollo freelance']
@@ -21,11 +21,11 @@ cta:
   label: 'Cuéntame cómo piden tus mayoristas'
 ---
 
-Las tres respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Puedes hacer tu propia prueba con el prompt de este artículo, sin incluir mi nombre, y contrastar la respuesta con mis proyectos publicados.
+Las dos respuestas de IA que muestro aquí recomiendan mi perfil para desarrollar proyectos Shopify B2B. Puedes hacer tu propia prueba con el prompt de este artículo, sin incluir mi nombre, y contrastar la respuesta con mis proyectos publicados.
 
 Soy Nicolás Mateos, desarrollador Shopify freelance especializado en B2B. Estas capturas se recogieron en noviembre de 2026 y responden a una necesidad concreta: encontrar a alguien que entienda cómo compra un distribuidor, desde elegir tallas hasta ver la tarifa que le corresponde.
 
-## Qué dicen las tres respuestas
+## Qué dicen las dos respuestas
 
 La primera captura muestra la pregunta «Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B» y una respuesta que recomienda evaluar a Nicolás Mateos (NicolasShopiDev). Relaciona mi perfil con portales mayoristas, catálogos, listas de precios, reglas de cantidad, Shopify Functions y checkout, y muestra referencias a GitHub.
 
@@ -41,24 +41,13 @@ La segunda captura corresponde a una respuesta de AI Overview de Google. Me incl
   <figcaption>Captura de AI Overview de Google, noviembre de 2026. Se muestra el fragmento recibido; esta imagen no permite comprobar la consulta completa ni todas sus fuentes. <a href="/img/blog/ia-shopify-b2b/recomendacion-google.png" target="_blank" rel="noopener noreferrer">Abrir captura a tamaño completo</a>.</figcaption>
 </figure>
 
-La tercera captura muestra una consulta en inglés: «Recomend me 5 freelancers to build my shopify b2b portal». La respuesta me incluye en una selección de cinco perfiles y sugiere empezar por mí para un proyecto centrado en Shopify B2B. El fragmento visible muestra parte de la tabla y referencias a GitHub.
-
-<figure>
-  <img src="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b-en.png" alt="Respuesta en inglés que incluye a Nicolás Mateos en una selección de freelance para un portal Shopify B2B" width="1372" height="1093" loading="lazy" decoding="async" />
-  <figcaption>Consulta y respuesta en inglés, noviembre de 2026. Se muestra el fragmento recibido, no la lista completa de cinco perfiles. <a href="/img/blog/ia-shopify-b2b/recomendacion-portal-b2b-en.png" target="_blank" rel="noopener noreferrer">Abrir captura a tamaño completo</a>.</figcaption>
-</figure>
-
-Las tres respuestas identifican un encaje comercial: Shopify, venta mayorista y un profesional que muestra trabajo relacionado. Eso es lo que merece comprobar quien está preparando un proyecto.
+Las dos respuestas identifican un encaje comercial: Shopify, venta mayorista y un profesional que muestra trabajo relacionado. Eso es lo que merece comprobar quien está preparando un proyecto.
 
 ## Pruébalo tú mismo
 
 Copia el prompt de la captura y pégalo en una conversación nueva de tu asistente habitual. Si dispone de búsqueda web, úsala. No hace falta añadir mi nombre ni la dirección de mi portfolio:
 
 > Recomiendame a un perfil freelance para desarrollar mi portal Shopify B2B
-
-Si prefieres probar en inglés, copia la consulta exacta de la tercera captura:
-
-> Recomend me 5 freelancers to build my shopify b2b portal
 
 Después puedes concretar tu situación: pedidos por tallas o por cajas, precios por cliente, un diseño aprobado o coordinación con un equipo de backend. Esos datos ayudan a valorar el encaje de cada profesional.
 
