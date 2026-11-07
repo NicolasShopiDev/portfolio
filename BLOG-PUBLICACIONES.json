@@ -192,5 +192,33 @@
     "pair": "seo-filtros-tienda-online",
     "title": "A page for every store filter? Not so fast",
     "date": "2026-11-06"
+  },
+  {
+    "lang": "es",
+    "slug": "redireccion-no-funciona-shopify",
+    "pair": "redireccion-no-funciona-shopify",
+    "title": "Tu redirección en Shopify no funciona... ¿la URL sigue viva?",
+    "date": "2026-11-07"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-redirect-not-working",
+    "pair": "redireccion-no-funciona-shopify",
+    "title": "Shopify redirect not working... is the old URL still live?",
+    "date": "2026-11-07"
+  },
+  {
+    "lang": "es",
+    "slug": "buscador-shopify-no-encuentra-sku",
+    "pair": "buscador-shopify-no-encuentra-sku",
+    "title": "Tu cliente busca un SKU y Shopify no lo encuentra: por dónde empezar",
+    "date": "2026-11-07"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-search-not-finding-sku",
+    "pair": "buscador-shopify-no-encuentra-sku",
+    "title": "Shopify search cannot find a SKU: where to start",
+    "date": "2026-11-07"
   }
 ]

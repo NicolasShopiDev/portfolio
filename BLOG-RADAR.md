@@ -1,5 +1,25 @@
 # Radar de preguntas
 
+## 2026-11-07 · Redirecciones y búsqueda por SKU
+
+**Elegida 1:** ¿por qué la redirección se guarda pero no actúa, y dónde envío los productos retirados?
+- Pregunta reciente sobre gestión de bajas y renombrados: https://www.reddit.com/r/shopifyDev/comments/1xbin95/how_do_you_manage_url_redirects_when_you_delete/ . Hilo específico de rutas que siguen activas: https://community.shopify.com/t/how-to-properly-301-redirect-collections-products-to-products-in-shopify/581291 . Evidencia de la duda; no se asumen correctas las soluciones de los comentarios.
+- Resultados mezclan apps, reglas globales y recomendaciones genéricas de enviar a portada. Se evita diagnosticar una penalización o prometer conservar posiciones.
+- Fuentes primarias comprobadas el 07-11-2026: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect y https://developers.google.com/crawling/docs/troubleshooting/http-status-codes . La ayuda de Shopify presenta matices sobre subcarpetas de mercados: el artículo pide probar las rutas reales y no afirma propagación universal.
+- Aportación: separar origen activo, baja permanente y falta de stock; decisión de destino desde la intención de compra y ficha de prueba propia. Ejemplo hipotético de calzado; sin redirecciones ejecutadas en una tienda.
+- ES `redireccion-no-funciona-shopify`; EN `shopify-redirect-not-working`, mismo pair. No duplica migración general ni selección de páginas para filtros.
+
+**Elegida 2:** ¿por qué un código existe y el comprador no lo encuentra en el buscador?
+- Pregunta concreta: https://community.shopify.com/t/shopify-search-returning-no-results/631356 . Señal adicional de compradores y responsables: https://www.reddit.com/r/shopify/comments/1ua5z9u/shopify_search_results_changed_for_anyone_else/ . Son de junio de 2026. No se transforma la sospecha de un cambio del motor en un hecho ni se copia código de un comentario.
+- Resultados ofrecen parches para temas y apps sin separar sugerencias de búsqueda enviada. El diagnóstico parte del código completo, del sistema responsable y del resultado comprable.
+- Fuentes comprobadas el 07-11-2026: https://help.shopify.com/en/manual/online-store/storefront-search/search-behavior y https://help.shopify.com/en/manual/online-store/storefront-search/predictive-search . Capacidades nativas no extrapoladas a apps externas. Sin promesas sobre un plan ni código de tema no probado.
+- Aportación: ficha de consulta reproducible, separación producto/variante/carrito y matriz de aceptación propuesta para códigos completos, abreviados, antiguos y móvil. Sin afirmar incidencia o prueba comercial real.
+- ES `buscador-shopify-no-encuentra-sku`; EN `shopify-search-not-finding-sku`, mismo pair. Diagnóstico del buscador de la tienda; no repite el alcance de un pedido rápido ni la conciliación general ERP.
+
+**Descartadas:** repetir aprobación mayorista, pago aplazado o recogida, ya cubiertos. Indexación de filtros se publicó ayer como pieza adicional. Sin volúmenes, dificultad o resultados de clientes inventados. No se contacta ni publica en servicios externos.
+
+**Validación:** build estricto; cuatro páginas y enlaces internos, canonical, hreflang recíprocos, selector, indexabilidad, RSS y sitemap. Revisión visual de las cuatro cabeceras en navegador a 390 × 844, sin desbordamiento horizontal de página; tablas con desplazamiento horizontal propio comprobado en DOM. Fechas visibles mes/año. Los protocolos de tienda siguen siendo propuestas, no pruebas realizadas en un comercio.
+
 ## 2026-11-06 · Publicación adicional aprobada: filtros y SEO
 
 Post escrito a petición de Nicolás para revisar su voz y aprobado expresamente antes de publicar. Pregunta: ¿cada filtro necesita una página para posicionar? Intención distinta del artículo introductorio sobre GEO: decidir entre filtros, categorías y guías antes de crear URLs.
