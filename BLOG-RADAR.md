@@ -1,5 +1,24 @@
 # Radar de preguntas
 
+## 2026-11-08 · Transporte B2B y comparación de temas
+
+**Elegida 1:** ¿por qué el checkout B2B muestra envío no disponible si otro pedido funciona?
+- Pregunta de septiembre con respuesta de octubre: https://community.shopify.dev/t/b2b-company-checkout-shows-shipping-not-available-for-customers/38184 . Se consulta el caso original, no solo su respuesta. No se presenta la causa del hilo como resuelta ni se da por comprobado que haya fallado una app.
+- Revisión de resultados: se mezclan anuncios de apps y listas de ajustes. El post aporta un caso repetible, escala de cesta y separación de contexto empresarial; no repite recogida o dirección puntual.
+- Fuentes primarias comprobadas el 08-11-2026: https://help.shopify.com/en/manual/fulfillment/setup/shipping-rates/troubleshooting y https://help.shopify.com/en/manual/b2b/checkout-and-orders/shipping-methods . Se contempla la transición gradual a opciones por mercado; no se promete idéntico panel en todas las tiendas ni compatibilidad de una app sin probar.
+- Aportación: ficha y matriz propias de diferencias entre una referencia, cantidad habitual, cesta mixta y destino. Ejemplos hipotéticos y protocolo propuesto; no pruebas de checkout ejecutadas en una tienda.
+- ES `envio-no-disponible-shopify-b2b`; EN `shipping-not-available-shopify-b2b`, mismo pair.
+
+**Elegida 2:** ¿por qué una preview de tema y la tienda publicada muestran cosas distintas?
+- Pregunta real: https://community.shopify.com/t/theme-preview-not-displayed/588458 . Es de febrero de 2026 y sigue describiendo una necesidad de diagnóstico, no prueba de un bug general vigente. Señal reciente de confusión entre tipos de copia: https://community.shopify.dev/t/urgent-duplicating-theme-in-canvas-disables-theme-app-extensions/39026 . No se extrapolan sus límites de Canvas a toda duplicación.
+- Fuentes comprobadas el 08-11-2026: https://help.shopify.com/en/manual/online-store/themes/adding-themes ; https://help.shopify.com/en/manual/online-store/themes/managing-themes/duplicating-themes ; https://www.shopify.com/blog/staging-site .
+- Aportación: distinguir versión, página, contexto e información compartida; ficha de comparación y matriz de aceptación del recorrido. No duplica la pregunta sobre conservar cambios al actualizar un tema. Sin código de foro ni instrucciones de infraestructura no probadas.
+- ES `preview-tema-shopify-distinta-publicada`; EN `shopify-theme-preview-live-difference`, mismo pair.
+
+**Descartadas:** SKU, redirecciones y filtros ya publicados. Plan inicial y reserva cubiertos. Sin volúmenes, competencia, métricas o experiencias inventados. La búsqueda general del toolkit Shopify falló por conexión; se contrastan las capacidades con páginas oficiales obtenidas mediante web. No hay código Shopify generado ni validación de API aplicable. Ningún contacto con terceros.
+
+**Validación del lote:** build con guard estricto; cuatro páginas, canonical, hreflang, selector, enlaces internos, RSS, sitemap y mes/año visible. Inventario CUA del día sin navegadores disponibles: revisión móvil limitada a estructura, contenido y CSS responsive existente con tablas desplazables a 768 px; no se declara revisión visual móvil nueva. Sin cambios de plantilla.
+
 ## 2026-11-07 · Redirecciones y búsqueda por SKU
 
 **Elegida 1:** ¿por qué la redirección se guarda pero no actúa, y dónde envío los productos retirados?

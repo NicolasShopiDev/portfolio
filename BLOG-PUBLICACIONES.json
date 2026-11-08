@@ -220,5 +220,33 @@
     "pair": "buscador-shopify-no-encuentra-sku",
     "title": "Shopify search cannot find a SKU: where to start",
     "date": "2026-11-07"
+  },
+  {
+    "lang": "es",
+    "slug": "envio-no-disponible-shopify-b2b",
+    "pair": "envio-no-disponible-shopify-b2b",
+    "title": "Envío no disponible en Shopify B2B: no cambies la dirección a ciegas",
+    "date": "2026-11-08"
+  },
+  {
+    "lang": "en",
+    "slug": "shipping-not-available-shopify-b2b",
+    "pair": "envio-no-disponible-shopify-b2b",
+    "title": "Shipping not available in Shopify B2B: stop guessing at addresses",
+    "date": "2026-11-08"
+  },
+  {
+    "lang": "es",
+    "slug": "preview-tema-shopify-distinta-publicada",
+    "pair": "preview-tema-shopify-distinta-publicada",
+    "title": "En la preview se ve bien y en tu Shopify no: compara esto primero",
+    "date": "2026-11-08"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-theme-preview-live-difference",
+    "pair": "preview-tema-shopify-distinta-publicada",
+    "title": "Your Shopify preview looks right but the live store does not",
+    "date": "2026-11-08"
   }
 ]
