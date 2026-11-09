@@ -1,5 +1,25 @@
 # Radar de preguntas
 
+## 2026-11-09 · Acceso de compradores y stock no comprable
+
+**Elegida 1:** ¿por qué compradores de la misma empresa tienen distinto alcance de historial y tareas?
+- Pregunta relacionada real: https://community.shopify.com/t/b2b-hide-staff-and-permissions-sections-for-customers/565921 . Es de septiembre de 2025: antecedente sobre diferencia entre interfaz y permisos, no señal de demanda reciente medida ni prueba de una limitación actual. No se promete ocultar esa sección ni se copia su propuesta de extensión.
+- Investigación actual ES/EN: resultados mezclan compradores con empleados del administrador y apps de gestión de usuarios. El artículo separa funciones documentadas, sede y necesidad del cliente; no repite alta mayorista, precios ni migración de cuentas.
+- Fuentes oficiales contrastadas el 09-11-2026: https://help.shopify.com/en/manual/b2b/companies-and-customers/adding-customers ; https://help.shopify.com/en/manual/b2b/customer-login-and-accounts ; https://help.shopify.com/en/manual/b2b/getting-started/plan-features . Contraste de etiquetas ES: https://help.shopify.com/es/manual/b2b/companies-and-customers/adding-customers .
+- Aportación: ejemplo ficticio de dos delegaciones, matriz de requisitos por persona y sede, pruebas de tareas permitidas y no previstas. Sin certificar seguridad, permisos personalizados o implementación no ejecutada; sin confundir revisar con aprobar antes de comprar.
+- ES `permisos-compradores-shopify-b2b`; EN `shopify-b2b-buyer-permissions`, mismo pair.
+
+**Elegida 2:** ¿por qué la ficha dice agotado aunque veo unidades en el administrador?
+- Pregunta reciente: https://www.reddit.com/r/shopify/comments/1xg0suz/issue_adding_new_item_and_it_showing_sold_outnew/ . Se abre el original: el autor propone una explicación relacionada con proveedor; no se toma esa coincidencia como diagnóstico general. Otro caso: https://community.shopify.com/t/products-are-showing-as-sold-out/587486 .
+- Resultados en español ofrecen comprobaciones de ubicación y apps, pero no deben convertirse en un ajuste universal. El post parte de variante, nombre de cantidad, ubicación y contexto; no repite la integración ERP ni las tarifas ausentes del checkout.
+- Fuentes primarias comprobadas el 09-11-2026: https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states ; https://help.shopify.com/en/manual/inventory-and-locations/setup/selling-when-out-of-stock ; https://help.shopify.com/en/manual/inventory-and-locations/setup/fulfillable-inventory . El ajuste de visualización heredado depende de la antigüedad de tienda; no se promete el mismo control a todas.
+- Aportación: ejemplo hipotético talla M/L y ficha propia de diagnóstico con estado, ubicación, preparación y contexto. Separa aceptar ventas bajo pedido de ocultar una causa desconocida. Sin alterar cantidades, código o configuración de una tienda.
+- ES `shopify-agotado-con-stock`; EN `shopify-sold-out-with-stock`, mismo pair.
+
+**Descartadas:** volver a publicar envíos, preview, SKU o redirecciones; ya cubiertos. Aprobaciones complejas de compras exigirían verificar otro flujo y no se prometen con un rol nativo. Sin volúmenes, métricas ni resultados inventados. Ningún mensaje a terceros.
+
+**Validación:** build estricto y revisión de cuatro páginas, enlaces internos, canonical, hreflang recíprocos, selector, indexabilidad, RSS, sitemap y fechas mes/año. Inventario CUA vacío de navegadores: revisión móvil limitada a contenido, estructura y CSS responsive con tablas desplazables; no se afirma nueva revisión visual. Sin cambios en plantillas ni pruebas de tienda comercial.
+
 ## 2026-11-08 · Transporte B2B y comparación de temas
 
 **Elegida 1:** ¿por qué el checkout B2B muestra envío no disponible si otro pedido funciona?

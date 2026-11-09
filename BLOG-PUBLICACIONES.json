@@ -248,5 +248,33 @@
     "pair": "preview-tema-shopify-distinta-publicada",
     "title": "Your Shopify preview looks right but the live store does not",
     "date": "2026-11-08"
+  },
+  {
+    "lang": "es",
+    "slug": "permisos-compradores-shopify-b2b",
+    "pair": "permisos-compradores-shopify-b2b",
+    "title": "Dos compradores de la misma empresa no tienen por qué ver lo mismo",
+    "date": "2026-11-09"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-b2b-buyer-permissions",
+    "pair": "permisos-compradores-shopify-b2b",
+    "title": "Two buyers at the same company need not see the same orders",
+    "date": "2026-11-09"
+  },
+  {
+    "lang": "es",
+    "slug": "shopify-agotado-con-stock",
+    "pair": "shopify-agotado-con-stock",
+    "title": "Shopify dice agotado, pero tienes stock: ¿dónde está ese stock?",
+    "date": "2026-11-09"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-sold-out-with-stock",
+    "pair": "shopify-agotado-con-stock",
+    "title": "Shopify says sold out, but you have stock: where is that stock?",
+    "date": "2026-11-09"
   }
 ]
