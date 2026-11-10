@@ -1,5 +1,25 @@
 # Radar de preguntas
 
+## 2026-11-10 · Reserva comercial y traducción incompleta
+
+**Elegida 1:** ¿preparar o enviar un presupuesto aparta el stock mientras el cliente decide?
+- Duda real: https://community.shopify.com/t/draft-order-inventory-reservation-unacceptable-gap-for-wholesale-b2b-workflows/622988 . Se abre el hilo completo: el autor corrige parcialmente su observación después; no se repite su primera afirmación como fallo confirmado. Otra señal de operativa: https://community.shopify.com/t/draft-order-ux-feature-request-feedback/668304 .
+- Resultados ES/EN mezclan API, reservas, cobro y solicitudes de nuevas funciones. El artículo aporta una decisión comercial y un protocolo, sin publicar código ni prometer que enviar una oferta reserva automáticamente mercancía.
+- Fuentes primarias verificadas el 10-11-2026: https://help.shopify.com/en/manual/fulfillment/managing-orders/create-orders/create-draft ; https://help.shopify.com/es/manual/fulfillment/managing-orders/create-orders/create-draft ; https://help.shopify.com/en/manual/inventory-and-locations/fundamentals/inventory-states . La ayuda actual documenta reserva explícita con fecha/hora y seguimiento de inventario. No se reutiliza terminología antigua de estados del hilo como descripción vigente.
+- Aportación: separar vigencia de precio y reserva; plantilla de responsable, mercancía y comunicación; comprobación propuesta antes/durante/después y requisitos para un ERP. No se ha ejecutado una reserva ni se declara un flujo probado.
+- ES `reservar-stock-presupuesto-shopify`; EN `reserve-stock-shopify-draft-order`, mismo pair. Intención de gestionar presupuestos abiertos, distinta del producto marcado agotado, del pago aplazado y de la conciliación ERP.
+
+**Elegida 2:** ¿por qué una página mezcla idiomas aunque se haya traducido la tienda?
+- Pregunta real: https://community.shopify.com/t/translate-adapt-app-is-not-working/621811 (mayo de 2026). Antecedente de texto en acordeón distinto de la descripción: https://community.shopify.com/t/auto-translate-not-working-in-drop-down-description/317641 (abril de 2024). Se usan para definir el síntoma, no para afirmar un bug actual ni copiar parches.
+- Revisión ES/EN: abundan instrucciones generales de añadir idiomas y respuestas sobre opciones concretas. Se propone localizar una frase, su recurso, estado y recorrido visible, sin suponer que todo texto está en el mismo campo.
+- Fuentes revisadas el 10-11-2026: https://help.shopify.com/en/manual/international/languages ; https://help.shopify.com/en/manual/international/languages/manage-languages ; https://help.shopify.com/en/manual/international/languages/translate-adapt-app/manual-translation ; https://help.shopify.com/en/manual/international/languages/translate-adapt-app/automatic-translation . Cambio reciente contrastado con https://changelog.shopify.com/posts/translate-adapt-us-can-update-auto-sync-translations-for-up-to-8-languages . No se repite la antigua regla de dos idiomas para todas las tiendas ni se promete disponibilidad universal o sincronización inmediata.
+- Aportación: ejemplo ficticio de descripción/acordeón, prioridad por impacto de compra y matriz propia de revisión por recorrido e idioma. No se afirma una traducción ni implementación probadas.
+- ES `shopify-traduccion-mezcla-idiomas`; EN `shopify-mixed-language-translation`, mismo pair. Contenido lingüístico, no comparación general preview/publicado ni expansión internacional completa.
+
+**Descartadas:** repetir stock agotado, permisos, transporte o preview, ya publicados; los artículos nuevos enlazan esos siguientes pasos cuando corresponde. Sin volúmenes, dificultad o resultados inventados. Ningún contacto ni publicación en servicios externos.
+
+**Validación:** build estricto; cuatro páginas, enlaces internos, indexabilidad, canonical, hreflang recíprocos, selector, RSS, sitemap y fechas mes/año. CUA sin navegadores disponibles hoy; revisión móvil limitada a contenido, estructura y CSS responsive con tablas desplazables, sin nueva revisión visual ni cambios de plantilla.
+
 ## 2026-11-09 · Acceso de compradores y stock no comprable
 
 **Elegida 1:** ¿por qué compradores de la misma empresa tienen distinto alcance de historial y tareas?

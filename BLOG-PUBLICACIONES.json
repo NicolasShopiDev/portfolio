@@ -276,5 +276,33 @@
     "pair": "shopify-agotado-con-stock",
     "title": "Shopify says sold out, but you have stock: where is that stock?",
     "date": "2026-11-09"
+  },
+  {
+    "lang": "es",
+    "slug": "reservar-stock-presupuesto-shopify",
+    "pair": "reservar-stock-presupuesto-shopify",
+    "title": "Un presupuesto en Shopify no es una reserva de stock",
+    "date": "2026-11-10"
+  },
+  {
+    "lang": "en",
+    "slug": "reserve-stock-shopify-draft-order",
+    "pair": "reservar-stock-presupuesto-shopify",
+    "title": "A Shopify quote is not an inventory reservation",
+    "date": "2026-11-10"
+  },
+  {
+    "lang": "es",
+    "slug": "shopify-traduccion-mezcla-idiomas",
+    "pair": "shopify-traduccion-mezcla-idiomas",
+    "title": "Tu Shopify está traducido... salvo ese trozo que sigue en español",
+    "date": "2026-11-10"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-mixed-language-translation",
+    "pair": "shopify-traduccion-mezcla-idiomas",
+    "title": "Your Shopify store is translated... except for that one section",
+    "date": "2026-11-10"
   }
 ]
