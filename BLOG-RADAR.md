@@ -1,5 +1,22 @@
 # Radar de preguntas
 
+## 2026-11-23 · Solicitudes B2B y sobrescritura de catálogo
+
+**Elegida 1:** el mayorista termina checkout pero el pedido llega como borrador: ¿qué debe hacer el equipo?
+- Pregunta real revisada: https://www.reddit.com/r/shopify/comments/1xtpn7p/first_shopify_b2bwholesale_order_what_am_i/ . El comprador pregunta por su primer pedido mayorista y los siguientes pasos. Las fechas relativas del hilo y del buscador difieren; no se atribuye una fecha de publicación precisa ni se toma una respuesta comunitaria como documentación.
+- Resultados ES/EN mezclan cobro, aprobación y preparación. Aportación: separar solicitud, aceptación, pago y autorización de preparación, con responsable y comunicación por estado. Ejemplo de campaña y matriz hipotéticos, sin pedidos ni cobros ejecutados.
+- Fuentes primarias comprobadas el 23-11-2026: https://help.shopify.com/en/manual/b2b/checkout-and-orders/checkout-settings ; https://help.shopify.com/en/manual/b2b/checkout-and-orders/draft-orders ; https://help.shopify.com/en/manual/b2b/getting-started/plan-features . Se verifica envío a revisión por sede, ausencia de cobro inicial y disponibilidad del checkout a borrador en la tabla actual; no se promete cualquier aprobación personalizada.
+- ES `pedido-b2b-pendiente-revision-shopify`; EN `shopify-b2b-order-awaiting-review`, mismo pair. Distinto del alta de empresa, pago aplazado y reserva de inventario ya publicados.
+
+**Elegida 2:** ¿cómo actualizar datos por CSV sin modificar otros campos o variantes?
+- Pregunta real: https://www.reddit.com/r/shopify/comments/1xoxbi5/who_has_a_suggestion_for_backfilling_products/ . Completar referencias de productos existentes; se revisa el original y no se repite como receta universal el consejo de reimportar. Antecedente: https://community.shopify.com/t/importing-specific-columns-into-product-catalog/1895 , histórico, no prueba de comportamiento vigente.
+- Fuentes primarias comprobadas el 23-11-2026: https://help.shopify.com/en/manual/products/import-export/using-csv ; https://help.shopify.com/en/manual/products/import-export/import-products ; https://help.shopify.com/en/manual/products/import-export/export-products . Se contrastan sobrescritura, celdas vacías, columnas ausentes y dependencias de opciones. No se afirma que omitir columnas preserve siempre sus valores ni que una exportación restaure toda la tienda.
+- Aportación: alcance del cambio, copia de referencia y matriz antes/después por variante. Ejemplos ficticios, sin CSV ejecutado ni recuperación probada. ES `actualizar-productos-csv-shopify`; EN `update-shopify-products-csv`, mismo pair. Distinto del CSV de tarifas mayoristas y de la sincronización ERP general.
+
+**Descartadas:** repetir permisos, stock, traducciones, reserva, tarifas B2B o integración ERP general. Sin volúmenes, mediciones, experiencias ni resultados inventados. No se contacta con autores ni se publica en servicios externos.
+
+**Validación:** build con PENDING_GUARD=strict; comprobación de cuatro páginas, canonical, hreflang recíprocos, selector, indexabilidad, enlaces internos, RSS, sitemap y fechas visibles mes/año. CUA no ofrece navegadores hoy: revisión móvil limitada a contenido, estructura y CSS responsive existente con tablas desplazables; sin nueva inspección visual ni cambios de plantilla.
+
 ## 2026-11-10 · Reserva comercial y traducción incompleta
 
 **Elegida 1:** ¿preparar o enviar un presupuesto aparta el stock mientras el cliente decide?

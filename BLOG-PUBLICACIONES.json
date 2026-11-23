@@ -304,5 +304,33 @@
     "pair": "shopify-traduccion-mezcla-idiomas",
     "title": "Your Shopify store is translated... except for that one section",
     "date": "2026-11-10"
+  },
+  {
+    "lang": "es",
+    "slug": "pedido-b2b-pendiente-revision-shopify",
+    "pair": "pedido-b2b-pendiente-revision-shopify",
+    "title": "Tu mayorista ha enviado el pedido... ¿por qué sigue como borrador?",
+    "date": "2026-11-23"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-b2b-order-awaiting-review",
+    "pair": "pedido-b2b-pendiente-revision-shopify",
+    "title": "Your wholesale buyer submitted an order... why is it still a draft?",
+    "date": "2026-11-23"
+  },
+  {
+    "lang": "es",
+    "slug": "actualizar-productos-csv-shopify",
+    "pair": "actualizar-productos-csv-shopify",
+    "title": "Solo ibas a cambiar un dato... y el CSV cambió más de la cuenta",
+    "date": "2026-11-23"
+  },
+  {
+    "lang": "en",
+    "slug": "update-shopify-products-csv",
+    "pair": "actualizar-productos-csv-shopify",
+    "title": "You only meant to change one field... but the CSV changed more",
+    "date": "2026-11-23"
   }
 ]
