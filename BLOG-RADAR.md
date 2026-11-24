@@ -1,5 +1,23 @@
 # Radar de preguntas
 
+## 2026-11-24 · Retirada de productos y entregas divididas
+
+**Elegida 1:** ¿qué debería encontrar un comprador en la URL de un producto descatalogado?
+- Pregunta real: https://community.shopify.com/t/discontinued-products-and-variants-seo/574861 (noviembre de 2025), revisada completa. Es un antecedente vigente como pregunta, no una señal reciente de volumen. Las respuestas y el resumen automático no se toman como garantía de conservar posiciones. Resultados actuales ES/EN mezclan archivar, ocultar y redirigir; no son operaciones equivalentes.
+- Fuentes primarias comprobadas el 24-11-2026: https://help.shopify.com/en/manual/products/product-status ; versión ES https://help.shopify.com/es/manual/products/product-status ; https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect ; https://developers.google.com/crawling/docs/troubleshooting/http-status-codes . Se comprueban ocultación del archivado, noindex/sitemap de Unlisted y tratamiento HTTP. No se promete indexación, conservación de rankings ni restauración.
+- Aportación: decidir según la necesidad de la visita, compatibilidad del sustituto y utilidad informativa; ejemplo ficticio de lámpara y ficha propia de decisión. No es una auditoría ejecutada. Distinto del diagnóstico técnico de una redirección que falla, los filtros SEO y el stock no comprable, ya publicados.
+- ES `producto-descatalogado-shopify-seo`; EN `discontinued-shopify-product-seo`, mismo pair.
+
+**Elegida 2:** ¿cómo explicar una compra con dos envíos y revisar su coste y preparación?
+- Pregunta real revisada: https://www.reddit.com/r/shopify/comments/1ty3r6l/change_checkout_page/ , sobre el detalle de transporte contraído y comunicación de preventas (el original muestra unos cinco meses). Antecedente de integración: https://community.shopify.com/t/new-split-shipments-feature-and-printful-can-it-work/334303 . No se copia el consejo comunitario sobre personalización ni se presenta compatibilidad confirmada.
+- Fuentes oficiales comprobadas el 24-11-2026: https://help.shopify.com/en/manual/checkout-settings/split-shipping ; https://help.shopify.com/es/manual/checkout-settings/split-shipping ; https://help.shopify.com/en/manual/fulfillment/setup/shipping-profiles ; https://shopify.dev/docs/apps/build/orders-fulfillment/split-carts . Se verifica la transición a opciones por mercado, diferencias de configuración, exclusión de B2B a borrador y límites; se evita la receta de activar un interruptor para todas las tiendas o multiplicar coste por paquetes. No se promete un rediseño de checkout ni se requieren operaciones de API para aplicar el diagnóstico del artículo.
+- Aportación: separar compra, grupos y cajas, frase de claridad comercial, muestra de cesta dividida/no dividida y criterios de recepción por logística. Ejemplo y protocolo hipotéticos, sin tarifas, pedidos ni integración probados. Distinto de envío no disponible y recogida en tienda.
+- ES `envios-divididos-shopify`; EN `shopify-split-shipping`, mismo pair.
+
+**Descartadas:** repetir el plan inicial o reserva, SEO de filtros, solución de redirecciones, stock agotado, tarifas ausentes, aprobaciones B2B o CSV publicados. No se atribuyen volúmenes, resultados ni experiencia personal. No hay mensajes o enlaces promocionales en servicios ajenos.
+
+**Validación:** build con PENDING_GUARD=strict y comprobación de canonical, indexabilidad, hreflang recíprocos, selector, enlaces internos, RSS, sitemap y fechas mes/año. Inventario CUA sin navegadores: revisión móvil limitada a lectura, estructura y CSS responsive existente con tablas desplazables; no se afirma inspección visual nueva. No se modifica la plantilla.
+
 ## 2026-11-23 · Solicitudes B2B y sobrescritura de catálogo
 
 **Elegida 1:** el mayorista termina checkout pero el pedido llega como borrador: ¿qué debe hacer el equipo?

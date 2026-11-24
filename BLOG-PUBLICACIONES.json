@@ -332,5 +332,33 @@
     "pair": "actualizar-productos-csv-shopify",
     "title": "You only meant to change one field... but the CSV changed more",
     "date": "2026-11-23"
+  },
+  {
+    "lang": "es",
+    "slug": "producto-descatalogado-shopify-seo",
+    "pair": "producto-descatalogado-shopify-seo",
+    "title": "El producto ya no se vende... ¿y ahora qué haces con su página?",
+    "date": "2026-11-24"
+  },
+  {
+    "lang": "en",
+    "slug": "discontinued-shopify-product-seo",
+    "pair": "producto-descatalogado-shopify-seo",
+    "title": "The product is discontinued... what happens to its page?",
+    "date": "2026-11-24"
+  },
+  {
+    "lang": "es",
+    "slug": "envios-divididos-shopify",
+    "pair": "envios-divididos-shopify",
+    "title": "Un pedido, dos envíos... y un cliente que no entiende el transporte",
+    "date": "2026-11-24"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-split-shipping",
+    "pair": "envios-divididos-shopify",
+    "title": "One order, two shipments... and a customer puzzling over delivery",
+    "date": "2026-11-24"
   }
 ]
