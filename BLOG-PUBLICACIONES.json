@@ -360,5 +360,33 @@
     "pair": "envios-divididos-shopify",
     "title": "One order, two shipments... and a customer puzzling over delivery",
     "date": "2026-11-24"
+  },
+  {
+    "lang": "es",
+    "slug": "cambiar-ficha-cambia-todos-productos-shopify",
+    "pair": "cambiar-ficha-cambia-todos-productos-shopify",
+    "title": "Cambias una ficha... y cambia medio catálogo de Shopify",
+    "date": "2026-11-25"
+  },
+  {
+    "lang": "en",
+    "slug": "edit-product-changes-all-shopify",
+    "pair": "cambiar-ficha-cambia-todos-productos-shopify",
+    "title": "Edit one product page... and half your Shopify catalog changes",
+    "date": "2026-11-25"
+  },
+  {
+    "lang": "es",
+    "slug": "orden-productos-coleccion-shopify",
+    "pair": "orden-productos-coleccion-shopify",
+    "title": "Has ordenado la colección... pero tu cliente ve otra cosa",
+    "date": "2026-11-25"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-collection-product-order",
+    "pair": "orden-productos-coleccion-shopify",
+    "title": "You arranged the collection... but your customer sees another order",
+    "date": "2026-11-25"
   }
 ]

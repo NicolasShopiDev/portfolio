@@ -1,5 +1,23 @@
 # Radar de preguntas
 
+## 2026-11-25 · Contenido compartido y orden del catálogo
+
+**Elegida 1:** ¿por qué cambiar el contenido de una ficha modifica otros productos?
+- Pregunta real de septiembre de 2026, revisada completa: https://community.shopify.com/t/custom-product-page/676798 . Se utiliza el problema descrito, no se copia la receta de la respuesta. Resultados actuales ES/EN mezclan datos de producto, ajustes compartidos y creación indiscriminada de plantillas.
+- Fuentes primarias contrastadas el 25-11-2026: https://help.shopify.com/en/manual/online-store/themes/theme-structure/templates ; https://help.shopify.com/en/manual/online-store/themes/theme-structure/sections-and-blocks ; https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/add-and-edit-store-resources . Se comprueba alcance compartido, compatibilidad de conexiones dinámicas y despliegue gradual de edición de recursos; no se promete disponibilidad universal ni se confunde preview con aislamiento.
+- Aportación: distinguir propiedad del contenido y estructura, ejemplo ficticio mesa/silla, matriz de alcance y casos vacío/distinto/completo. Sin código, cambios de tienda ni validación de una implementación. Distinto de discrepancia preview/publicado, traducciones y actualización de tema ya cubiertos.
+- ES `cambiar-ficha-cambia-todos-productos-shopify`; EN `edit-product-changes-all-shopify`, mismo pair.
+
+**Elegida 2:** ¿por qué el orden de una colección no coincide con lo esperado por el comprador?
+- Pregunta de abril de 2026 sobre movimiento entre páginas: https://community.shopify.com/t/manual-collection-sorting-broken-across-pages/600931 . Se revisa la respuesta y el agradecimiento del autor. Antecedente distinto de administrador frente a tienda: https://community.shopify.com/t/my-manual-collection-sort-not-functioning-properly/405581 . No se declara vigente el límite de la interfaz descrito en los hilos.
+- Documentación primaria comprobada el 25-11-2026: https://help.shopify.com/en/manual/products/collections ; https://help.shopify.com/en/manual/products/collections/collection-layout ; https://shopify.dev/docs/storefronts/themes/architecture/templates/collection . Se verifica orden predeterminado, movimiento a posición, selección de visita mediante sort_by y uso de precios base en lugar de precios B2B/Markets. Sin prometer ordenar por tarifa contextual mediante un ajuste nativo.
+- Aportación: separar pertenencia, posición guardada, URL y contexto de precio; ficha propia para reproducir el síntoma y determinar responsable. Ejemplo y revisión hipotéticos, sin colección cambiada ni resultados de conversión. Distinto del precio B2B incorrecto, filtros SEO y búsqueda por SKU ya publicados.
+- ES `orden-productos-coleccion-shopify`; EN `shopify-collection-product-order`, mismo pair.
+
+**Descartadas:** repetir stock, CSV, redirecciones, logística dividida o reserva; atribuir fallos actuales a respuestas históricas; instalar herramientas o cambiar código sin localizar el síntoma. Sin volúmenes ni casos inventados, mensajes o promoción externos.
+
+**Validación:** build estricto y revisión de cuatro páginas, indexabilidad, canonical, hreflang recíprocos, selector, enlaces internos, RSS, sitemap y fechas visibles mes/año. Sin navegadores disponibles en CUA: lectura y revisión del CSS responsive existente, tablas con desplazamiento propio; no se declara nueva revisión visual móvil ni se cambia la plantilla.
+
 ## 2026-11-24 · Retirada de productos y entregas divididas
 
 **Elegida 1:** ¿qué debería encontrar un comprador en la URL de un producto descatalogado?
