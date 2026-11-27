@@ -1,5 +1,24 @@
 # Radar de preguntas
 
+## 2026-11-27 · Reposición recurrente y composición de packs
+
+**Elegida 1:** ¿cómo detectar a un mayorista que deja de repetir compra sin confundir temporada, sede o solicitudes pendientes?
+- Señal reciente indexada: https://community.shopify.com/t/selling-wholesale-on-shopify-how-do-you-notice-when-a-b2b-buyer-stops-reordering/699950 , resultado fechado en octubre de 2026. El extracto declara que su autor construye automatizaciones; no se presenta como testimonio de comprador ni como volumen de demanda. La apertura devuelve 404 hoy: se utiliza solo la pregunta visible del resultado, sin atribuir contenido adicional al hilo.
+- Investigación ES/EN mezcla recordatorios comerciales, suscripciones y repetición manual. Se elige una guía de criterio y diagnóstico, no una automatización ejecutada ni una afirmación de capacidad de un informe nativo.
+- Fuente primaria revisada el 27-11-2026: https://help.shopify.com/en/manual/b2b/customer-login-and-accounts . Se verifica sede, historial y repetición desde cuenta; no se prometen condiciones históricas conservadas, suscripciones ni recuperación de clientes.
+- Aportación: definir unidad de compra, compra válida y ritmo; lista interna con excepciones y responsable antes de contactar. Ejemplo ficticio de dos tiendas y matriz propuesta. Distinto de alta, permisos, pedido rápido y aprobación de solicitudes ya publicados.
+- ES `mayorista-deja-repetir-pedido-shopify`; EN `wholesale-buyer-stops-reordering-shopify`, mismo pair.
+
+**Elegida 2:** ¿qué representa un pack y quién descuenta sus componentes?
+- Pregunta real revisada: https://community.shopify.com/t/is-there-a-bundle-solution-that-treats-bundles-as-distinct-products/563878 . Autor de septiembre de 2025 y conversación con pruebas de un tercero en septiembre de 2026. No se generaliza el comportamiento de aquella app ni sus limitaciones a la aplicación oficial. Otra señal: https://community.shopify.com/t/why-is-my-shopify-bundles-app-not-tracking-inventory/288118 , con respuestas en 2026; no se copian recetas de borrar, recrear ni alternar venta sin stock.
+- Fuentes oficiales comprobadas el 27-11-2026: https://help.shopify.com/en/manual/products/bundles/eligibility-and-considerations ; https://help.shopify.com/en/manual/products/bundles/shopify-bundles . Se contrastan cálculo por composición, exclusiones de seguimiento, stock global y representación de componentes. Se comprueba disponibilidad de la app oficial en todos los planes sin prometer compatibilidad con todos los recorridos B2B, preventas o suscripciones.
+- Aportación: kit virtual frente a caja preparada, ejemplo aritmético propio y ficticio de cuadernos/estuches, responsabilidad de descuento y matriz de aceptación. No se afirma haber comprado un kit o conectado un ERP. Distinto de cantidades por caja y sincronización general ya publicadas.
+- ES `stock-packs-shopify-bundles`; EN `shopify-bundles-component-inventory`, mismo pair.
+
+**Descartadas:** repetir temas del plan inicial/reserva; recordatorios externos sin validación; recetas comunitarias destructivas; asumir compatibilidad de apps o capacidad de informes. Sin métricas, experiencia personal ni casos inventados. No hay mensajes o enlaces en servicios ajenos.
+
+**Validación:** build PENDING_GUARD=strict, cuatro páginas con canonical, indexabilidad, hreflang recíprocos, selector, enlaces internos válidos, RSS, sitemap y fechas mes/año. CUA no ofrece navegadores: revisión móvil limitada a estructura, lectura y CSS responsive existente con tablas desplazables; no se declara revisión visual nueva. Sin cambios de plantilla.
+
 ## 2026-11-25 · Contenido compartido y orden del catálogo
 
 **Elegida 1:** ¿por qué cambiar el contenido de una ficha modifica otros productos?

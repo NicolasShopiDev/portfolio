@@ -388,5 +388,33 @@
     "pair": "orden-productos-coleccion-shopify",
     "title": "You arranged the collection... but your customer sees another order",
     "date": "2026-11-25"
+  },
+  {
+    "lang": "es",
+    "slug": "mayorista-deja-repetir-pedido-shopify",
+    "pair": "mayorista-deja-repetir-pedido-shopify",
+    "title": "Ese mayorista que compraba siempre... ¿ha dejado de pedir?",
+    "date": "2026-11-27"
+  },
+  {
+    "lang": "en",
+    "slug": "wholesale-buyer-stops-reordering-shopify",
+    "pair": "mayorista-deja-repetir-pedido-shopify",
+    "title": "That regular wholesale buyer... have they stopped ordering?",
+    "date": "2026-11-27"
+  },
+  {
+    "lang": "es",
+    "slug": "stock-packs-shopify-bundles",
+    "pair": "stock-packs-shopify-bundles",
+    "title": "Vendes un pack... ¿quién descuenta las piezas de dentro?",
+    "date": "2026-11-27"
+  },
+  {
+    "lang": "en",
+    "slug": "shopify-bundles-component-inventory",
+    "pair": "stock-packs-shopify-bundles",
+    "title": "You sold a bundle... who deducts the pieces inside?",
+    "date": "2026-11-27"
   }
 ]
